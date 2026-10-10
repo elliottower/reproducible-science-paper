@@ -1,0 +1,17 @@
+{
+  "generated_by": "scripts/derive_codecheck_counts.py",
+  "sources": [
+    {
+      "path": "paper/artifacts/codecheck_indices.json",
+      "sha256": "bce3f8d037f7db030e9844d15f10c6c01d3be3c5571cbfe6479678a8a3a9bdca"
+    },
+    {
+      "path": "paper/artifacts/codecheck_eligibility_summary.json",
+      "sha256": "0aa9e72a15d9348a17bc98bb3f5163203f8a794d6ffb9027fc86032d5f7485dd"
+    }
+  ],
+  "certificates_in_register": 133,
+  "certificates_with_a_linked_table_file": 6,
+  "numbers_printed": 713,
+  "numbers_bound": 338
+}

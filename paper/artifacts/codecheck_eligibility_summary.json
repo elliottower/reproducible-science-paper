@@ -1,0 +1,46 @@
+{
+  "certificates": 133,
+  "by_status": {
+    "excluded": 120,
+    "candidate": 8,
+    "pending": 5
+  },
+  "excluded_by_reason": {
+    "value outputs marked not in manuscript": 1,
+    "figures only": 42,
+    "no output in a format the toolkit reads as a value": 76,
+    "manifest unparseable": 1
+  },
+  "outputs_by_kind": {
+    "figure": 419,
+    "value": 39,
+    "other": 87
+  },
+  "value_outputs_by_suffix": {
+    ".tsv": 2,
+    ".csv": 36,
+    ".xlsx": 1
+  },
+  "value_outputs_by_link": {
+    "not in manuscript": 2,
+    "table named": 22,
+    "title match pending": 15
+  },
+  "candidates": [
+    "2020-008",
+    "2020-011",
+    "2020-025",
+    "2022-001",
+    "2024-020",
+    "2025-018",
+    "2025-028",
+    "2026-006"
+  ],
+  "pending": [
+    "2021-001",
+    "2025-020",
+    "2025-002",
+    "2026-019",
+    "2026-009"
+  ]
+}

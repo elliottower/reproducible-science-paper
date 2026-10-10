@@ -1,0 +1,959 @@
+{
+  "generated": "2026-08-25T21:00:30+00:00",
+  "claims_dir": "~/Documents/GitHub/.worktrees/pin-the-claims/paper/prior_art/claims",
+  "engine": "citations.verify (citations 0.2.0)",
+  "quote_totals": {
+    "found": 56,
+    "not found": 0,
+    "unchecked": 0
+  },
+  "claim_totals": {
+    "found": 29,
+    "not found": 0,
+    "unchecked": 0
+  },
+  "sources": [
+    {
+      "file": "borg2013traceability.yaml",
+      "citation": "borg2013traceability",
+      "local": "reference/borg2013traceability.pdf",
+      "url": "https://lup.lub.lu.se/search/files/1690291/3737415.pdf",
+      "sha256": "746807f8f3de9ee068e438a3f1b0a1a5b84c777f56d46844d298dfb359cdc8f2",
+      "extract_cmd": "pdftotext -layout",
+      "note": "Author accepted manuscript deposited at Lund University Publications.",
+      "pin": {
+        "state": "ok",
+        "expected": "746807f8f3de9ee068e438a3f1b0a1a5b84c777f56d46844d298dfb359cdc8f2",
+        "actual": "746807f8f3de9ee068e438a3f1b0a1a5b84c777f56d46844d298dfb359cdc8f2"
+      },
+      "claims": [
+        {
+          "id": "evaluations-report-precision-and-recall-on-small-datasets",
+          "statement": "Most evaluations of IR-based trace recovery report precision and recall on datasets of fewer than 500 artifacts.",
+          "state": "found",
+          "notes": null,
+          "quotes": [
+            {
+              "exact": "most previous studies do not go beyond reporting precision and recall\nof candidate trace links from evaluations using datasets containing less than 500 artifacts.",
+              "section": "Abstract",
+              "page": null,
+              "state": "found",
+              "detail": "",
+              "warnings": []
+            }
+          ]
+        },
+        {
+          "id": "scaling-is-unanswered",
+          "statement": "Whether IR-based trace recovery scales to larger document spaces is unanswered.",
+          "state": "found",
+          "notes": "The manuscript characterized this as 'the precision-recall tradeoff at scale as a standing limitation'. The source reports two separate things: evaluations stop at precision and recall, and scaling is untested.",
+          "quotes": [
+            {
+              "exact": "of-the-art IR-based trace recovery scales to larger document spaces or not remains\nunanswered.",
+              "section": "Section 6.3",
+              "page": null,
+              "state": "found",
+              "detail": "",
+              "warnings": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "chudasama2026adduce.yaml",
+      "citation": "chudasama2026adduce",
+      "local": "sources/adduce_README_20260825.md",
+      "url": "https://raw.githubusercontent.com/QHarshil/adduce/main/README.md",
+      "sha256": "84a533e9f77e14c1573ddb3ef1ab29aac0ecc200f01da9e90d5eba7ecf032c64",
+      "extract_cmd": "none — Markdown is read directly",
+      "note": "Fetched 2026-08-25 from the default branch.",
+      "pin": {
+        "state": "ok",
+        "expected": "84a533e9f77e14c1573ddb3ef1ab29aac0ecc200f01da9e90d5eba7ecf032c64",
+        "actual": "84a533e9f77e14c1573ddb3ef1ab29aac0ecc200f01da9e90d5eba7ecf032c64"
+      },
+      "claims": [
+        {
+          "id": "audits-code-config-data-against-reported-numbers",
+          "statement": "adduce checks whether a paper's claims, code, configuration, data and generated results agree with each other.",
+          "state": "found",
+          "notes": null,
+          "quotes": [
+            {
+              "exact": "`adduce` checks whether a paper's claims, code, configs, data, dependencies, remote models, precision settings, and generated results still agree with each other before submission.",
+              "section": "Header",
+              "page": null,
+              "state": "found",
+              "detail": "",
+              "warnings": []
+            },
+            {
+              "exact": "The north-star question: *for every number in the paper, can I point to the artifact that produced it, and will that artifact still produce it elsewhere?*",
+              "section": "Header",
+              "page": null,
+              "state": "found",
+              "detail": "",
+              "warnings": []
+            }
+          ]
+        },
+        {
+          "id": "manifest-and-rules",
+          "statement": "adduce reads a manifest that declares claims and ships rules organised by category.",
+          "state": "found",
+          "notes": null,
+          "quotes": [
+            {
+              "exact": "When a manifest declares claims, the report adds a per-claim trail.",
+              "section": "What it reports",
+              "page": null,
+              "state": "found",
+              "detail": "",
+              "warnings": []
+            },
+            {
+              "exact": "Adduce ships **78 rules across 17 categories**",
+              "section": "Documentation",
+              "page": null,
+              "state": "found",
+              "detail": "",
+              "warnings": []
+            }
+          ]
+        },
+        {
+          "id": "version-and-release-date",
+          "statement": "The current release is 0.1.2.",
+          "state": "found",
+          "notes": "The bibliography's author, title, version and 2026-08-04 release date come from the project's CITATION.cff, which states date-released 2026-08-04 and version 0.1.2.",
+          "quotes": [
+            {
+              "exact": "[PyPI `0.1.2`](https://pypi.org/project/adduce/0.1.2/) is the current release.",
+              "section": "Install",
+              "page": null,
+              "state": "found",
+              "detail": "",
+              "warnings": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "clinifact2025.yaml",
+      "citation": "clinifact2025",
+      "local": "reference/clinifact2025.pdf",
+      "url": "https://www.nature.com/articles/s41597-025-04417-x.pdf",
+      "sha256": "b630d73456126899dcbebf98c5b7816c8288d5a52c3ba66cda4ef4c40ad078db",
+      "extract_cmd": "pdftotext -layout",
+      "note": null,
+      "pin": {
+        "state": "ok",
+        "expected": "b630d73456126899dcbebf98c5b7816c8288d5a52c3ba66cda4ef4c40ad078db",
+        "actual": "b630d73456126899dcbebf98c5b7816c8288d5a52c3ba66cda4ef4c40ad078db"
+      },
+      "claims": [
+        {
+          "id": "entailment-label-against-human-annotation",
+          "statement": "CliniFact labels clinical research claims against supporting publication text; the test labels were revised by human reviewers.",
+          "state": "found",
+          "notes": "CliniFact derives its labels from reported p-values first; human revision applies to the test split. The manuscript's 'score against human annotation' holds for the test labels.",
+          "quotes": [
+            {
+              "exact": "The test labels were further manually revised by two groups of reviewers. The inter-annotator agreement",
+              "section": "Methods",
+              "page": null,
+              "state": "found",
+              "detail": "",
+              "warnings": []
+            },
+            {
+              "exact": "the final judgment. The manual revisions and the original labels aligned in 80% of the instances.",
+              "section": "Methods",
+              "page": null,
+              "state": "found",
+              "detail": "",
+              "warnings": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "fellegi1969linkage.yaml",
+      "citation": "fellegi1969linkage",
+      "local": "reference/fellegi1969linkage.pdf",
+      "url": "https://www.cs.cornell.edu/~shmat/courses/cs6434/fellegi-sunter.pdf",
+      "sha256": "77262e3c19b5a5afa1d4753e4cb1dd24bac16dbc9af396baa78b61ca2220b4b0",
+      "extract_cmd": "pdftotext -layout",
+      "note": "Scanned single-column journal page; the OCR mangles the symbols for the three decisions, which is why the quotations below stop short of them.",
+      "pin": {
+        "state": "ok",
+        "expected": "77262e3c19b5a5afa1d4753e4cb1dd24bac16dbc9af396baa78b61ca2220b4b0",
+        "actual": "77262e3c19b5a5afa1d4753e4cb1dd24bac16dbc9af396baa78b61ca2220b4b0"
+      },
+      "claims": [
+        {
+          "id": "three-way-decision",
+          "statement": "Fellegi and Sunter assign a record pair one of three decisions: link, non-link, or possible link. The first two are the positive dispositions.",
+          "state": "found",
+          "notes": "The paper's names for the decisions are link, non-link and possible link. It never uses 'match/non-match/possible match' for the decisions, nor the phrase 'clerical review'.",
+          "quotes": [
+            {
+              "exact": "of these decisions at stipulated levels of error. These three decisions are",
+              "section": "Abstract",
+              "page": null,
+              "state": "found",
+              "detail": "",
+              "warnings": []
+            },
+            {
+              "exact": "first two decisions are called positive dispositions.",
+              "section": "Abstract",
+              "page": null,
+              "state": "found",
+              "detail": "",
+              "warnings": []
+            }
+          ]
+        },
+        {
+          "id": "optimality-at-fixed-error-levels",
+          "statement": "The optimal linkage rule minimizes the probability of failing to make a positive disposition at fixed levels of the two error rates. A possible link is resolved by hand.",
+          "state": "found",
+          "notes": null,
+          "quotes": [
+            {
+              "exact": "ently, it minimizes the probability of failing to make a positive disposition.",
+              "section": "Section 2",
+              "page": null,
+              "state": "found",
+              "detail": "",
+              "warnings": []
+            },
+            {
+              "exact": "This seems a reasonable approach since in applications the decision Az will require expensive manual linkage operations",
+              "section": "Section 2",
+              "page": null,
+              "state": "found",
+              "detail": "",
+              "warnings": []
+            }
+          ]
+        },
+        {
+          "id": "blocking-answers-the-comparison-count",
+          "statement": "Exhaustive pairwise comparison is infeasible, so comparisons are restricted to a subspace by blocking the files.",
+          "state": "found",
+          "notes": "The paper motivates blocking by the cost of the comparison count and then analyses its effect on the error levels. It does not state the failure mode the manuscript attributes to a coarse blocking key.",
+          "quotes": [
+            {
+              "exact": "sons (1010)would outstrip the economic capacity of even the largest and fastest",
+              "section": "Section 3",
+              "page": null,
+              "state": "found",
+              "detail": "",
+              "warnings": []
+            },
+            {
+              "exact": "Thus the number of comparisons we will examine explicitly will be restricted",
+              "section": "Section 3",
+              "page": null,
+              "state": "found",
+              "detail": "",
+              "warnings": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "gxl2026paperclip_docs.yaml",
+      "citation": "gxl2026paperclip",
+      "local": "sources/paperclip_docs_20260825.txt",
+      "url": "https://paperclip.gxl.ai/docs",
+      "sha256": "48d93928feb492920cb03ee0a30ef57a98ac4ab4cb13beac4d3d3874ae11f3c6",
+      "extract_cmd": "scripts/render_html_source.py paperclip_docs_20260825.html",
+      "note": "Fetched 2026-08-25. The page states version 0.7.38. A product page is not a fixed artifact, so the pins here record the bytes served on that date and nothing later. The page as served is kept beside this file as paperclip_docs_20260825.html (sha256 16e07b96d0470515923c6fd72b01d8ed6269fdb53fc1dfe6678c5c1a97c79cba); the .txt pinned below is that file rendered to text, because a quotation crossing an element boundary cannot resolve against raw markup.",
+      "pin": {
+        "state": "ok",
+        "expected": "48d93928feb492920cb03ee0a30ef57a98ac4ab4cb13beac4d3d3874ae11f3c6",
+        "actual": "48d93928feb492920cb03ee0a30ef57a98ac4ab4cb13beac4d3d3874ae11f3c6"
+      },
+      "claims": [
+        {
+          "id": "version",
+          "statement": "The documented Paperclip version on the fetch date is 0.7.38.",
+          "state": "found",
+          "notes": null,
+          "quotes": [
+            {
+              "exact": "# Current version: 0.7.38",
+              "section": "update",
+              "page": null,
+              "state": "found",
+              "detail": "",
+              "warnings": [
+                "short"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "claim-bound-to-document-and-line-range",
+          "statement": "An agent adds a claim to a repo naming a document identifier and a line range.",
+          "state": "found",
+          "notes": null,
+          "quotes": [
+            {
+              "exact": "paperclip repo add PMC10150846 \"Adagrasib ORR 42.9% in NSCLC\" --lines L210-L214",
+              "section": "Paper Repos - Overview",
+              "page": null,
+              "state": "found",
+              "detail": "",
+              "warnings": []
+            },
+            {
+              "exact": "Line-range hint for the claim, e.g. L45-L52 or L45,L120. Used to focus verification.",
+              "section": "paperclip repo add",
+              "page": null,
+              "state": "found",
+              "detail": "",
+              "warnings": []
+            }
+          ]
+        },
+        {
+          "id": "commit-verifies-by-subagent",
+          "statement": "A commit verifies each claim against the paper's full text by a dedicated subagent.",
+          "state": "found",
+          "notes": null,
+          "quotes": [
+            {
+              "exact": "Before committing, each paper's claim is verified against the paper's full text by a dedicated subagent, in parallel",
+              "section": "paperclip repo commit",
+              "page": null,
+              "state": "found",
+              "detail": "",
+              "warnings": []
+            }
+          ]
+        },
+        {
+          "id": "unsupported-claims-are-flagged-not-dropped",
+          "statement": "The command reference says unsupported claims are flagged for the author to correct or drop; the overview says commit drops them. `repo status` shows a mark for a claim the source does not support, so an unsupported claim survives the commit.",
+          "state": "found",
+          "notes": "The manuscript said commit drops unsupported claims. The two docs sentences disagree with each other and the status output settles it.",
+          "quotes": [
+            {
+              "exact": "unsupported claims are flagged so you can correct or drop them.",
+              "section": "paperclip repo commit",
+              "page": null,
+              "state": "found",
+              "detail": "",
+              "warnings": []
+            },
+            {
+              "exact": "= claim supported by source",
+              "section": "paperclip repo status",
+              "page": null,
+              "state": "found",
+              "detail": "",
+              "warnings": [
+                "short"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "commit-lands-without-verification",
+          "statement": "A commit can be made with verification skipped.",
+          "state": "found",
+          "notes": null,
+          "quotes": [
+            {
+              "exact": "paperclip repo commit -m \"quick snapshot\" --no-verify",
+              "section": "paperclip repo commit",
+              "page": null,
+              "state": "found",
+              "detail": "",
+              "warnings": []
+            }
+          ]
+        },
+        {
+          "id": "log-for-audit",
+          "statement": "Repo actions are recorded and reviewable through a log.",
+          "state": "found",
+          "notes": null,
+          "quotes": [
+            {
+              "exact": "Every action is recorded, so the corpus is auditable with",
+              "section": "Paper Repos - Overview",
+              "page": null,
+              "state": "found",
+              "detail": "",
+              "warnings": [
+                "short"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "pdfs-read-with-ocr",
+          "statement": "arXiv PDFs in the corpus are parsed with OCR, and each corpus source carries a last-updated date rather than a digest.",
+          "state": "found",
+          "notes": "The OCR statement is made of the arXiv source only. Nothing on the page states that the corpus is refetched, which the manuscript asserted.",
+          "quotes": [
+            {
+              "exact": "All arXiv categories. PDFs parsed with state-of-the-art OCR.",
+              "section": "Sources",
+              "page": null,
+              "state": "found",
+              "detail": "",
+              "warnings": []
+            }
+          ]
+        },
+        {
+          "id": "content-hash-used-only-for-upload-dedup",
+          "statement": "The only content hash the documentation mentions is the one that skips a duplicate upload; no digest is recorded against a claim or its source.",
+          "state": "found",
+          "notes": "The manuscript said no digest is recorded anywhere. A content hash does appear, for upload de-duplication.",
+          "quotes": [
+            {
+              "exact": "Duplicates (by content hash) are skipped automatically",
+              "section": "Clipboard - Adding Documents",
+              "page": null,
+              "state": "found",
+              "detail": "",
+              "warnings": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "gxl2026paperclip_readme.yaml",
+      "citation": "gxl2026paperclip",
+      "local": "sources/paperclip_README_20260825.md",
+      "url": "https://raw.githubusercontent.com/GXL-ai/paperclip/main/README.md",
+      "sha256": "c4a6af679f343b34d35ccf81d8ca264d3e6127d6136fc5a49f94d8f6758ee585",
+      "extract_cmd": "none — Markdown is read directly",
+      "note": "Fetched 2026-08-25 from the default branch of the CLI client repository.",
+      "pin": {
+        "state": "ok",
+        "expected": "c4a6af679f343b34d35ccf81d8ca264d3e6127d6136fc5a49f94d8f6758ee585",
+        "actual": "c4a6af679f343b34d35ccf81d8ca264d3e6127d6136fc5a49f94d8f6758ee585"
+      },
+      "claims": [
+        {
+          "id": "repo-verbs",
+          "statement": "The CLI client repository documents the Paper Repos verbs, including add and commit, and is licensed Apache-2.0.",
+          "state": "found",
+          "notes": "The README describes `add` as adding papers and says nothing about claims, line ranges, verification or OCR. Those are on the docs site only.",
+          "quotes": [
+            {
+              "exact": "Build versioned, annotated collections of papers with git-like workflows",
+              "section": "Paper Repos",
+              "page": null,
+              "state": "found",
+              "detail": "",
+              "warnings": []
+            },
+            {
+              "exact": "| `commit` | Snapshot with reasoning message |",
+              "section": "Commands",
+              "page": null,
+              "state": "found",
+              "detail": "",
+              "warnings": []
+            },
+            {
+              "exact": "Apache-2.0 — see [LICENSE](LICENSE).",
+              "section": "License",
+              "page": null,
+              "state": "found",
+              "detail": "",
+              "warnings": [
+                "short"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "kim2026ledger.yaml",
+      "citation": "kim2026ledger",
+      "local": "reference/kim2026ledger.pdf",
+      "url": "https://arxiv.org/pdf/2608.18398",
+      "sha256": "22b7ec84d991c03290280882c99ee2a6caa27685ba994402d6f599cae2486dea",
+      "extract_cmd": "pdftotext -layout",
+      "note": null,
+      "pin": {
+        "state": "ok",
+        "expected": "22b7ec84d991c03290280882c99ee2a6caa27685ba994402d6f599cae2486dea",
+        "actual": "22b7ec84d991c03290280882c99ee2a6caa27685ba994402d6f599cae2486dea"
+      },
+      "claims": [
+        {
+          "id": "claim-support-paths-for-review",
+          "statement": "LEDGER builds layered trace graphs over agent sessions so a reviewer can see which actions and artifacts bear on a conclusion.",
+          "state": "found",
+          "notes": "The paper describes what the traces expose for human audit. That it returns no verdict of its own is the manuscript's inference from that, not a sentence in the paper.",
+          "quotes": [
+            {
+              "exact": "a tracing and review system\nthat builds layered trace graphs over observed agent sessions.",
+              "section": "Abstract",
+              "page": null,
+              "state": "found",
+              "detail": "",
+              "warnings": []
+            },
+            {
+              "exact": "visibility alone still leaves reviewers to reconstruct which actions, artifacts, and validation\nsteps matter for a particular conclusion.",
+              "section": "Abstract",
+              "page": null,
+              "state": "found",
+              "detail": "",
+              "warnings": []
+            },
+            {
+              "exact": "we show how the resulting traces expose workflow deci-\nsions, artifact lineage, repair steps, validation coverage, and claim-support paths\nfor evidence-centered audit.",
+              "section": "Abstract",
+              "page": null,
+              "state": "found",
+              "detail": "",
+              "warnings": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "leisch2002sweave.yaml",
+      "citation": "leisch2002sweave",
+      "local": "reference/leisch2002sweave.pdf",
+      "url": "https://research.wu.ac.at/ws/files/18962396/document.pdf",
+      "sha256": "38d61b25006937a3921efe636857e7641588e9b32a11abad5ccc07b8ebb8bd62",
+      "extract_cmd": "pdftotext -layout",
+      "note": "WU Vienna SFB Report No. 69 (March 2002), the working-paper manifestation of the Compstat 2002 chapter the bibliography cites. Same text, different deposit; its own DOI is 10.57938/9f6e8c91-0b5a-4353-9802-f20479f0f5e2.",
+      "pin": {
+        "state": "ok",
+        "expected": "38d61b25006937a3921efe636857e7641588e9b32a11abad5ccc07b8ebb8bd62",
+        "actual": "38d61b25006937a3921efe636857e7641588e9b32a11abad5ccc07b8ebb8bd62"
+      },
+      "claims": [
+        {
+          "id": "document-generated-by-the-analysis",
+          "statement": "Sweave inserts analysis output into the document as the document is built, so the report can be regenerated when the data or the analysis change.",
+          "state": "found",
+          "notes": null,
+          "quotes": [
+            {
+              "exact": "documents. When run through R or Splus, all data analysis output (tables, graphs, . . . ) is created on the\nfly and inserted into a final LATEX document.",
+              "section": "Abstract",
+              "page": null,
+              "state": "found",
+              "detail": "",
+              "warnings": []
+            },
+            {
+              "exact": "to be learned. The report can be automatically updated if data or analysis change, which allows for truly\nreproducible research.",
+              "section": "Abstract",
+              "page": null,
+              "state": "found",
+              "detail": "",
+              "warnings": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "meyer1992contract.yaml",
+      "citation": "meyer1992contract",
+      "local": "reference/meyer1992contract.pdf",
+      "url": "http://se.ethz.ch/~meyer/publications/computer/contract.pdf",
+      "sha256": "bc1bab86f8753e5eafb40b7558e961b2c4bc9938c061e8dd8c141b839873ac07",
+      "extract_cmd": "pdftotext -layout",
+      "note": "Scanned three-column magazine page; OCR is imperfect and `pdftotext -layout` interleaves the columns, so quotations are single column-line fragments.",
+      "pin": {
+        "state": "ok",
+        "expected": "bc1bab86f8753e5eafb40b7558e961b2c4bc9938c061e8dd8c141b839873ac07",
+        "actual": "bc1bab86f8753e5eafb40b7558e961b2c4bc9938c061e8dd8c141b839873ac07"
+      },
+      "claims": [
+        {
+          "id": "precondition-postcondition-invariant",
+          "statement": "Design by Contract states a routine's obligations as a precondition on the caller, a postcondition on the supplier, and a class invariant over all routines of a class.",
+          "state": "found",
+          "notes": null,
+          "quotes": [
+            {
+              "exact": "ments that any call must satisfy if it is to",
+              "section": "The contract",
+              "page": null,
+              "state": "found",
+              "detail": "",
+              "warnings": []
+            },
+            {
+              "exact": "properties that are ensured in return by",
+              "section": "The contract",
+              "page": null,
+              "state": "found",
+              "detail": "",
+              "warnings": []
+            },
+            {
+              "exact": "class invariants, constrain all the rou",
+              "section": "The contract",
+              "page": null,
+              "state": "found",
+              "detail": "",
+              "warnings": [
+                "short"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "piccolo2016tools.yaml",
+      "citation": "piccolo2016tools",
+      "local": "reference/piccolo2016tools.xml",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4940747/fullTextXML",
+      "sha256": "42a26d1d7e957b9f09b4211815d04c40469b0533c02eeb030cc6476706ac3e97",
+      "extract_cmd": "none — JATS XML is read directly",
+      "note": null,
+      "pin": {
+        "state": "ok",
+        "expected": "42a26d1d7e957b9f09b4211815d04c40469b0533c02eeb030cc6476706ac3e97",
+        "actual": "42a26d1d7e957b9f09b4211815d04c40469b0533c02eeb030cc6476706ac3e97"
+      },
+      "claims": [
+        {
+          "id": "obstacles-are-packaging-installation-execution-documentation",
+          "statement": "Computational findings often cannot be reproduced because of how software is packaged, installed and executed, and because of how analysis steps are documented.",
+          "state": "found",
+          "notes": "The manuscript wrote 'packaging, environment drift and documentation staleness'. The source's terms are packaging, installation, execution and documentation of analysis steps.",
+          "quotes": [
+            {
+              "exact": "However, in practice, computational findings often cannot be reproduced because of complexities in how software is packaged, installed, and executed",
+              "section": "Abstract",
+              "page": null,
+              "state": "found",
+              "detail": "",
+              "warnings": []
+            },
+            {
+              "exact": "and because of limitations associated with how scientists document analysis steps.",
+              "section": "Abstract",
+              "page": null,
+              "state": "found",
+              "detail": "",
+              "warnings": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "pimentel2019notebooks.yaml",
+      "citation": "pimentel2019notebooks",
+      "local": "reference/pimentel2019notebooks.pdf",
+      "url": "https://www.ic.uff.br/~leomurta/papers/pimentel2019a.pdf",
+      "sha256": "6df8ff3e890a49d220de5a78d8705bc13212e4fa481ea94181a736618c676f67",
+      "extract_cmd": "pdftotext -layout",
+      "note": "Two-column PDF; quotations are single column-line fragments.",
+      "pin": {
+        "state": "ok",
+        "expected": "6df8ff3e890a49d220de5a78d8705bc13212e4fa481ea94181a736618c676f67",
+        "actual": "6df8ff3e890a49d220de5a78d8705bc13212e4fa481ea94181a736618c676f67"
+      },
+      "claims": [
+        {
+          "id": "execution-and-reproduction-rates",
+          "statement": "Of 863,878 notebooks with a declared Python version and an unambiguous execution order, 24.11% executed without errors and 4.03% produced the same results.",
+          "state": "found",
+          "notes": null,
+          "quotes": [
+            {
+              "exact": "we discuss in Section IV, out of 863,878 attempted executions",
+              "section": "Introduction",
+              "page": null,
+              "state": "found",
+              "detail": "",
+              "warnings": []
+            },
+            {
+              "exact": "of valid notebooks (i.e., notebooks with defined Python version",
+              "section": "Introduction",
+              "page": null,
+              "state": "found",
+              "detail": "",
+              "warnings": []
+            },
+            {
+              "exact": "and execution order), only 24.11% executed without errors and",
+              "section": "Introduction",
+              "page": null,
+              "state": "found",
+              "detail": "",
+              "warnings": [
+                "short"
+              ]
+            },
+            {
+              "exact": "only 4.03% produced the same results.",
+              "section": "Introduction",
+              "page": null,
+              "state": "found",
+              "detail": "",
+              "warnings": [
+                "short"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "corpus-size",
+          "statement": "The GitHub query returned 1,450,071 notebooks; 1,423,676 survived the exclusion of invalid and empty files, and 1,159,166 remained after duplicates were removed.",
+          "state": "found",
+          "notes": "The 24.11% and 4.03% rates are over 863,878 executions, not over the collected corpus. The manuscript attached them to '1.4 million notebooks'.",
+          "quotes": [
+            {
+              "exact": "query returned 265,143 repositories with 1,450,071 notebooks.",
+              "section": "Section III",
+              "page": null,
+              "state": "found",
+              "detail": "",
+              "warnings": []
+            },
+            {
+              "exact": "in 1,423,676 notebooks from 264,023 repositories. From this",
+              "section": "Section III",
+              "page": null,
+              "state": "found",
+              "detail": "",
+              "warnings": []
+            },
+            {
+              "exact": "1,159,166 notebooks for the analyses.",
+              "section": "Section III",
+              "page": null,
+              "state": "found",
+              "detail": "",
+              "warnings": [
+                "short"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "rougier2017rescience.yaml",
+      "citation": "rougier2017rescience",
+      "local": "reference/rougier2017rescience.xml",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8530091/fullTextXML",
+      "sha256": "63e857c9e61a5e84de78e6c7d34363aec40e96b786075cf63bdf8e9d70fb4556",
+      "extract_cmd": "none — JATS XML is read directly",
+      "note": null,
+      "pin": {
+        "state": "ok",
+        "expected": "63e857c9e61a5e84de78e6c7d34363aec40e96b786075cf63bdf8e9d70fb4556",
+        "actual": "63e857c9e61a5e84de78e6c7d34363aec40e96b786075cf63bdf8e9d70fb4556"
+      },
+      "claims": [
+        {
+          "id": "purposive-reproducibility-oriented-journal",
+          "statement": "ReScience publishes replications of computational research and requires the code to be available, which makes it a purposive population.",
+          "state": "found",
+          "notes": null,
+          "quotes": [
+            {
+              "exact": "ReScience is a peer-reviewed journal that targets computational research and encourages the explicit replication of already published research, promoting new and open-source implementations",
+              "section": "Abstract",
+              "page": null,
+              "state": "found",
+              "detail": "",
+              "warnings": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "siegel2024corebench.yaml",
+      "citation": "siegel2024corebench",
+      "local": "reference/siegel2024corebench.pdf",
+      "url": "https://arxiv.org/pdf/2409.11363",
+      "sha256": "1d1fbe8a3cf472fc468495e6a3bcd6b90224ba1eae3dac8d8174f98d666c3d76",
+      "extract_cmd": "pdftotext -layout",
+      "note": null,
+      "pin": {
+        "state": "ok",
+        "expected": "1d1fbe8a3cf472fc468495e6a3bcd6b90224ba1eae3dac8d8174f98d666c3d76",
+        "actual": "1d1fbe8a3cf472fc468495e6a3bcd6b90224ba1eae3dac8d8174f98d666c3d76"
+      },
+      "claims": [
+        {
+          "id": "human-verified-values-to-measure-recall-against",
+          "statement": "CORE-Bench is 270 tasks over 90 papers, built by reproducing each paper's results so the expected answers are known.",
+          "state": "found",
+          "notes": null,
+          "quotes": [
+            {
+              "exact": "We introduce CORE-Bench\n(Computational Reproducibility Agent Benchmark), a benchmark consisting of 270 tasks\nbased on 90 scientific papers across three disciplines (computer science, social science, and\nmedicine).",
+              "section": "Abstract",
+              "page": null,
+              "state": "found",
+              "detail": "",
+              "warnings": []
+            }
+          ]
+        },
+        {
+          "id": "best-agent-accuracy",
+          "statement": "The best agent evaluated in the paper reached 21% accuracy on the hardest level.",
+          "state": "found",
+          "notes": "Bears on the manuscript's box note that the low agent success rate belongs to a different benchmark. The 21% here is the paper's own 2024 baseline.",
+          "quotes": [
+            {
+              "exact": "The best agent achieved an accuracy\nof 21% on the hardest level of tasks",
+              "section": "Abstract",
+              "page": null,
+              "state": "found",
+              "detail": "",
+              "warnings": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "thorne2018fever.yaml",
+      "citation": "thorne2018fever",
+      "local": "reference/thorne2018fever.pdf",
+      "url": "https://aclanthology.org/N18-1074.pdf",
+      "sha256": "5d328bad901f488c4cff1dd073b55e30653b29c9c21c48700b926421cb84c9f7",
+      "extract_cmd": "pdftotext -layout",
+      "note": "Two-column PDF; quotations are single column-line fragments (see module docstring).",
+      "pin": {
+        "state": "ok",
+        "expected": "5d328bad901f488c4cff1dd073b55e30653b29c9c21c48700b926421cb84c9f7",
+        "actual": "5d328bad901f488c4cff1dd073b55e30653b29c9c21c48700b926421cb84c9f7"
+      },
+      "claims": [
+        {
+          "id": "entailment-label-against-human-annotation",
+          "statement": "FEVER predicts a label for a claim given retrieved text, and scores the prediction against human annotation.",
+          "state": "found",
+          "notes": "Supports the manuscript's contrast between match/mismatch and supported/refuted. The labels are semantic relations decided by annotators.",
+          "quotes": [
+            {
+              "exact": "ally verified against the introductory sections of",
+              "section": "Introduction",
+              "page": null,
+              "state": "found",
+              "detail": "",
+              "warnings": [
+                "short"
+              ]
+            },
+            {
+              "exact": "Wikipedia pages and classified as S UPPORTED,",
+              "section": "Introduction",
+              "page": null,
+              "state": "found",
+              "detail": "",
+              "warnings": [
+                "short"
+              ]
+            },
+            {
+              "exact": "classes, systems and annotators need to also return",
+              "section": "Introduction",
+              "page": null,
+              "state": "found",
+              "detail": "",
+              "warnings": []
+            },
+            {
+              "exact": "sary evidence supporting or refuting the claim",
+              "section": "Introduction",
+              "page": null,
+              "state": "found",
+              "detail": "",
+              "warnings": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "wadden2020scifact.yaml",
+      "citation": "wadden2020scifact",
+      "local": "reference/wadden2020scifact.pdf",
+      "url": "https://aclanthology.org/2020.emnlp-main.609.pdf",
+      "sha256": "e51a1fab569f2dcb00f7806fe95094e25a34c027140709725d3d05b7a0af9ac7",
+      "extract_cmd": "pdftotext -layout",
+      "note": "Two-column PDF; quotations are single column-line fragments.",
+      "pin": {
+        "state": "ok",
+        "expected": "e51a1fab569f2dcb00f7806fe95094e25a34c027140709725d3d05b7a0af9ac7",
+        "actual": "e51a1fab569f2dcb00f7806fe95094e25a34c027140709725d3d05b7a0af9ac7"
+      },
+      "claims": [
+        {
+          "id": "entailment-label-against-human-annotation",
+          "statement": "SciFact selects abstracts containing evidence that supports or refutes a scientific claim and identifies the rationale, against expert annotation.",
+          "state": "found",
+          "notes": null,
+          "quotes": [
+            {
+              "exact": "new task to select abstracts from the research literature containing evidence",
+              "section": "Abstract",
+              "page": null,
+              "state": "found",
+              "detail": "",
+              "warnings": []
+            },
+            {
+              "exact": "ports or R EFUTES a given scientific claim,",
+              "section": "Abstract",
+              "page": null,
+              "state": "found",
+              "detail": "",
+              "warnings": [
+                "short"
+              ]
+            },
+            {
+              "exact": "and to identify rationales justifying each de",
+              "section": "Abstract",
+              "page": null,
+              "state": "found",
+              "detail": "",
+              "warnings": []
+            },
+            {
+              "exact": "FACT, a dataset of 1.4K expert-written scien",
+              "section": "Abstract",
+              "page": null,
+              "state": "found",
+              "detail": "",
+              "warnings": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

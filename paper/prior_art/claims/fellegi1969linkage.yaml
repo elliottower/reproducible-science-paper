@@ -1,0 +1,39 @@
+source:
+  citation: fellegi1969linkage
+  local: reference/fellegi1969linkage.pdf
+  sha256: 77262e3c19b5a5afa1d4753e4cb1dd24bac16dbc9af396baa78b61ca2220b4b0
+  url: https://www.cs.cornell.edu/~shmat/courses/cs6434/fellegi-sunter.pdf
+  extract_cmd: pdftotext -layout {} -
+  note: Scanned single-column journal page; the OCR mangles the symbols for the three decisions, which
+    is why the quotations below stop short of them.
+claims:
+  three-way-decision:
+    statement: 'Fellegi and Sunter assign a record pair one of three decisions: link, non-link, or
+      possible link. The first two are the positive dispositions.'
+    quotes:
+    - exact: of these decisions at stipulated levels of error. These three decisions are
+      section: Abstract
+    - exact: first two decisions are called positive dispositions.
+      section: Abstract
+    notes: The paper's names for the decisions are link, non-link and possible link. It never uses
+      'match/non-match/possible match' for the decisions, nor the phrase 'clerical review'.
+  optimality-at-fixed-error-levels:
+    statement: The optimal linkage rule minimizes the probability of failing to make a positive disposition
+      at fixed levels of the two error rates. A possible link is resolved by hand.
+    quotes:
+    - exact: ently, it minimizes the probability of failing to make a positive disposition.
+      section: Section 2
+    - exact: This seems a reasonable approach since in applications the decision Az will require expensive
+        manual linkage operations
+      section: Section 2
+  blocking-answers-the-comparison-count:
+    statement: Exhaustive pairwise comparison is infeasible, so comparisons are restricted to a subspace
+      by blocking the files.
+    quotes:
+    - exact: sons (1010)would outstrip the economic capacity of even the largest and fastest
+      section: Section 3
+    - exact: Thus the number of comparisons we will examine explicitly will be restricted
+      section: Section 3
+    notes: The paper motivates blocking by the cost of the comparison count and then analyses its
+      effect on the error levels. It does not state the failure mode the manuscript attributes to
+      a coarse blocking key.

@@ -1,0 +1,217 @@
+% Supplement to "Evidence Assertions: Deterministic Verification of Quotations and Reported
+% Values". One table per defect class, carrying the worked case behind the class.
+%
+% No manuscript, repository, project or venue is named anywhere in this file. The cases come
+% from one author's corpus and are reported as classes that occur, never as a rate.
+\pdfoutput=1
+
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{caption}
+
+\hypersetup{colorlinks=true, linkcolor=black, citecolor=black, urlcolor=blue}
+\captionsetup{font=small}
+\captionsetup[table]{skip=8pt}
+
+% Same tags as the paper: an unresolved item renders in color and `make check-tags` counts it.
+\newcommand{\TODO}[1]{\textcolor{red}{\textbf{[TODO:}~#1\textbf{]}}}
+\newcommand{\FILLIN}[1]{\textcolor{red}{\textbf{[FILL-IN:}~#1\textbf{]}}}
+\newcommand{\REVIEW}[1]{\textcolor{orange}{\textbf{[REVIEW:}~#1\textbf{]}}}
+\newcommand{\code}[1]{\texttt{#1}}
+
+% One table per class: a label column and a wide content column, the class name as the table's
+% own italic heading, and the argument in the caption. #1 class, #2 caption, #3 label.
+\newenvironment{defect}[3]
+  {\def\dcap{#2}\def\dlab{#3}%
+   \begin{table}[H]\centering\small
+   \renewcommand{\arraystretch}{1.25}\setlength{\tabcolsep}{5pt}
+   \begin{tabular}{@{}l>{\raggedright\arraybackslash}p{12.6cm}@{}}
+   \toprule
+   \multicolumn{2}{@{}l}{\textit{#1}} \\
+   \midrule}
+  {\bottomrule
+   \end{tabular}
+   \caption{\dcap}\label{\dlab}
+   \end{table}}
+
+% An `l` column cannot wrap, so a status sentence longer than the table ran past the text
+% block. The width is the label column plus its gap plus the content column.
+\newcommand{\status}[1]{\midrule \multicolumn{2}{@{}>{\raggedright\arraybackslash}p{15.1cm}@{}}{\textbf{Status:} #1} \\}
+
+\title{Supplement: Defect Classes Surfaced}
+% Anonymous, as the manuscript and the other supplement are. A supplement carrying the
+% author's name de-anonymizes a submission whose paper was deliberately anonymized.
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{Scope}
+
+Each class below was surfaced by running the evidence engine over one author's corpus during
+ordinary research. Each is reported as a class that occurs and is mechanically detectable.
+No frequency is claimed, and no count here enters any rate the paper reports: the corpus is
+self-selected and its declarations were written with the tool being evaluated.
+
+What an outside auditor can report about a stranger's repository is that two values disagree.
+The mechanism that produced the disagreement, and the change that closes it, are recoverable by
+the author and by nobody else. Each table below carries both, together with a \emph{Missed by}
+row naming the checks that ran over the defect and returned success.
+
+\begin{table}[H]
+\centering\small
+\renewcommand{\arraystretch}{1.2}\setlength{\tabcolsep}{5pt}
+% Class names run to 44 characters, so a natural-width first column put the table 43.9pt
+% past the text block. All three columns are sized.
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{5.2cm}>{\raggedright\arraybackslash}p{7.8cm}>{\raggedright\arraybackslash}p{2.3cm}@{}}
+\toprule
+\textbf{Class} & \textbf{What is observably wrong} & \textbf{Status} \\
+\midrule
+Stored value disagrees with the printed value & Nine of ten table rows disagree with the file the row is read from & Open \\
+False mismatch under float equality & Three of thirty-nine agreements hold only under decimal comparison & Closed \\
+Recorded hash compared against nothing & Digests recorded and never compared to the bytes on disk & Closed \\
+Check that runs on no files & A glob matches nothing, the check exits zero, and the build is green & Open \\
+Claims separated from the evidence they name & 178 assertions marked verified, and no source in any commit & Closed locally \\
+Reported figure that stopped reproducing & A reported count no longer reproduces from the bibliography it described & Open \\
+\bottomrule
+\end{tabular}
+\caption{The six classes, in the order they are worked below. Status records whether a change
+has been made that prevents the class, not whether the instance was repaired. Two of the six are
+defects in a check rather than in a manuscript, which is why a report that returns success is
+not evidence that anything was examined.}
+\label{tab:defect-summary}
+\end{table}
+
+\begin{defect}{Stored value disagrees with the printed value}{Nine of the ten rows in one manuscript's table disagree with the pinned file each row is read from. Every artifact is intact, so no integrity check fires: the disagreement is reachable only by a check that compares a file to the sentence citing it.}{tab:defect-stored-value}
+Cause & Unrecorded. Every artifact resolves at its recorded digest, so the files hold the values
+the run wrote. What produced the different values in the manuscript's table is recorded nowhere a
+check can read. \\
+Effect & Nine of the ten rows disagree with the result file the row's value is read from. A value
+printed at \code{0.001} is stored as exactly zero, and one printed at \code{0.0003} is stored as
+\code{9.73e-7}. The remaining seven disagreements are not characterized here. \\
+Detected by & Ten \code{metric} assertions, one per row, each addressing the same JSON Pointer in
+a pinned result file and compared as a decimal at the precision the manuscript printed: nine
+\code{mismatch}, one \code{verified}. \\
+Missed by & Every integrity check, because the artifacts are intact. A broken pin, an absent
+file, and a declaration that fails to parse would each have fired, and none of the three applies.
+Nothing compared a file to the sentence citing it. \\
+Mitigation & One \code{metric} assertion per printed value, evaluated on every build. \\
+Cost & One declaration line per value: an artifact identifier, a pointer, and the value as the
+manuscript prints it. \\
+\status{Open. The finding is recorded against the commit that showed it, and the manuscript is
+not yet corrected.}
+\end{defect}
+
+\begin{defect}{False mismatch under float equality}{A checker comparing a printed decimal to a stored binary float reports three findings in thirty-nine that are not disagreements. Three spurious findings in thirty-nine is the rate at which a checker is switched off, so the comparison rule decides whether the tool is usable at all.}{tab:defect-float-equality}
+Cause & The manuscript prints a rounded decimal and the artifact stores a binary float. Comparing
+the two for equality compares values that were never equal. \\
+Effect & Three of the thirty-nine values a second manuscript prints agree only under decimal
+comparison at the precision printed: \code{0.012} against a stored \code{0.0122}, \code{0.038}
+against \code{0.0376}, \code{0.456} against \code{0.4556}. \\
+Detected by & Thirty-nine \code{metric} assertions against ten pinned result files, all thirty-nine
+\code{verified}. \\
+Missed by & Nothing, because the defect is in the checker rather than in the manuscript. Under
+float equality the same run over the same artifacts reports three mismatches in thirty-nine, none
+of which is a disagreement. \\
+Mitigation & Reported values are carried as strings and compared with \code{Decimal} at the
+precision the manuscript printed. \\
+Cost & Precision is taken from the manuscript, so a value printed at one significant figure is
+checked at one significant figure and constrains almost nothing. \\
+\status{Closed. The comparison rule is part of the contract and a conformance fixture covers it.}
+\end{defect}
+
+\begin{defect}{Recorded hash compared against nothing}{Digests were recorded for three hundred and fifty-five sources and compared to nothing. Quotation verification passed throughout, because a quotation resolves against the text as it stands: a digest that is never compared detects no edit at all.}{tab:defect-uncompared-hash}
+Cause & Recording a digest and comparing a digest are separate operations, and only the first
+ran. A source carried its digest from the moment it was declared, and nothing resolved the file
+that digest was taken from. \\
+Effect & Three hundred and fifty-five sources carried recorded hashes that nothing compared
+against the files on disk. A source edited after it was quoted therefore reported no change. \\
+Detected by & A positive control: write a fixture, pin it, substitute one word in it, and
+confirm that the altered file reports a broken pin while an untouched one matches its pin. The
+fixture is written for the test rather than copied from the corpus. \\
+Missed by & Quotation verification, which passed over every one of these sources. A quotation
+resolves against the text as it stands, so a source edited after the quotation was recorded
+verifies against the edit. \\
+Mitigation & Pins are resolved before any evidence is read, and a decision computed against a
+broken or unpinned artifact is reported and marked non-authoritative. The positive control runs
+with the suite. \\
+Cost & A digest per source, recomputed on every run, and a legitimate source update now requires
+the declaration to be updated with it. \\
+\status{Closed. The control fails if the comparison is removed.}
+\end{defect}
+
+\begin{defect}{Check that runs on no files}{A check whose input set is empty emits what a check whose input set passes emits. Three separate places ran this script and all three reported success, which is why a report that returns success is not evidence that anything was examined.}{tab:defect-empty-check}
+Cause & A script collected the digests cited by every registration under one directory and
+verified that each still matched a file. The directory was renamed. The glob still names the old
+directory and matches nothing. A spell-checker exclusion elsewhere still names it too, from the
+same rename. \\
+Effect & The script prints \code{no registrations to check} and exits zero. Over zero
+registrations it reports what it reports over a set that passes. \\
+Detected by & An audit of the check itself. No assertion covers it, because the failure is in a
+check and not in a claim. \\
+Missed by & Continuous integration, a pre-push hook, and a make target. All three run this script,
+and all three were green in this state. \\
+Mitigation & Not implemented. The glob still names the removed directory and the script still
+exits zero over zero registrations. The guard is an assertion that the set to be checked is
+non-empty, which is the condition the policy profiles already impose on a report: every profile
+requires that at least one assertion was evaluated. \\
+Cost & One assertion per check that its input is non-empty, and a decision about which checks may
+legitimately have nothing to do. \\
+\status{Open. The glob matches nothing today.}
+\end{defect}
+
+\begin{defect}{Claims separated from the evidence they name}{A repository split carried one hundred and seventy-eight verified assertions and left the sources behind. The stored verified marks survive the split, so the repository reports a fully verified claim set that a reader can recheck in no part.}{tab:defect-split}
+Cause & A repository was split from its working material so that a reader would not receive
+source extracts and caches that were not the authors' to redistribute. The split carried the
+claims and left the evidence. \\
+Effect & Forty-eight committed claim files carry one hundred and seventy-eight assertions, every
+one marked verified. The sources those assertions name appear in no commit on any branch. A
+reader cloning the repository can recheck none of the one hundred and seventy-eight. \\
+Detected by & Pin resolution, which runs before any evidence is read: forty-eight sources named,
+forty-eight absent. \\
+Missed by & The stored marks. Each of the one hundred and seventy-eight assertions carries a
+verified flag written by a run made where the sources resolved, so the repository reports a fully
+verified claim set while holding no evidence at all. \\
+Mitigation & All forty-eight sources resolve in the repository the split was made from, and all
+forty-eight digests match there byte for byte. A link into that tree, with an ignore entry so
+nothing is carried, lets verification resolve locally. \\
+Cost & The link is local. A reader cloning the split repository resolves nothing, so the
+assertions are checkable by the author and not by the reader. \\
+\status{Closed locally, open for a reader.}
+\end{defect}
+
+\begin{defect}{Reported figure that stopped reproducing}{An audit reported twenty-six of seventy-five entries whose stored metadata disagreed with the registry record their own identifier resolves to. The entries were repaired, and the same command over the same path now reports ten. The published count no longer reproduces, and nothing failed: the instrument worked and the artifact moved under a number that was never pinned.}{tab:defect-stopped-reproducing}
+Cause & A count was reported about a bibliography, and the bibliography was then corrected, in
+part because the count said it needed correcting. The reported count named no version and carried
+no digest, so it describes a state of a path rather than a set of bytes. \\
+Effect & An audit over a bibliography of seventy-five entries reported twenty-six whose stored
+metadata disagreed with the record their own identifier resolves to, across author list, author
+given name, title, volume and page range. The entries were repaired. The same command over the
+same path now reports ten. The twenty-six stands in the tool's own documentation and in the
+package description shipped with a release, and no longer reproduces from the file it
+described. \\
+Detected by & Re-running the command that produced the count. Nothing else distinguishes a
+figure that has stopped reproducing from one that was never run again. \\
+Missed by & Every check, because nothing is broken. The bibliography is correct, the audit is
+correct, and the command is unchanged. No pin on the bibliography existed to report the change,
+and no assertion bound the count to a version. \\
+Mitigation & The reported count becomes a \code{metric} assertion against a pinned artifact, so it
+states something about a version rather than about a path. \\
+Cost & A digest per reported figure, and a figure that has to be restated whenever the artifact
+it describes is deliberately changed --- which, for a figure describing defects that are then
+repaired, is every time the work succeeds. \\
+\status{Open. The count is not pinned.}
+\end{defect}
+
+\end{document}

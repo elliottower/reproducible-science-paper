@@ -1,0 +1,23 @@
+source:
+  citation: chudasama2026adduce
+  local: sources/adduce_scoring_20260829.txt
+  sha256: b86fe632b51c050624ce580f4fef1d76efab558a2f5e5bbddfa1a69a23ca0b25
+  url: https://raw.githubusercontent.com/QHarshil/adduce/main/src/adduce/scoring.py
+  extract_cmd: none - the module is read as the text it is
+  note: 'Fetched 2026-08-29 from the default branch: the scoring module of adduce 0.1.2, byte-for-byte,
+    stored with a .txt suffix. citations 0.4.0 routes an unrecognised suffix to pdftotext, and .py
+    was unrecognised, so the module arrived at a PDF reader and every quotation in it graded unchecked.
+    The suffix is a workaround for that and the fix is in citations; the URL above names what the
+    bytes are. Pinned at all because the claim it supports -- that adduce omits two statuses from
+    its score -- is about behaviour the project''s README does not mention.'
+claims:
+  unscored-statuses:
+    statement: adduce omits not-applicable and unknown findings from its score rather than counting
+      them as passes or failures.
+    quotes:
+    - exact: 'Not-applicable and unknown
+
+        findings are excluded entirely'
+      section: Module docstring
+    - exact: 'if value is None:  # not-applicable / unknown'
+      section: _category_score

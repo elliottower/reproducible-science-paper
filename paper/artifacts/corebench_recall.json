@@ -1,0 +1,34 @@
+{
+  "by_strength": {
+    "moderate": {
+      "located": 15,
+      "recall": 0.34091,
+      "stated": 44
+    },
+    "strong": {
+      "located": 37,
+      "recall": 0.60656,
+      "stated": 61
+    },
+    "trivial": {
+      "located": 54,
+      "recall": 0.91525,
+      "stated": 59
+    },
+    "weak": {
+      "located": 40,
+      "recall": 0.52632,
+      "stated": 76
+    }
+  },
+  "capsules_measured": 45,
+  "capsules_with_an_unread_record": 8,
+  "recall": 0.60833,
+  "source": {
+    "path": "paper/artifacts/corebench_recall.jsonl",
+    "records": 45,
+    "sha256": "6e2c61d52794c28910d668a13849c0e49eb8ca29dc67ae3b17f21ab0f2168321"
+  },
+  "values_located": 146,
+  "values_stated": 240
+}

@@ -1,0 +1,43 @@
+{
+  "fixtures": 25,
+  "by_group": {
+    "table_cell": 5,
+    "value": 4,
+    "prose_anchor": 3,
+    "correspondence": 3,
+    "artifact_availability": 3,
+    "pointer": 2,
+    "passage": 2,
+    "unpinned_artifact": 1,
+    "broken_pin": 1,
+    "no_evidence_offered": 1
+  },
+  "cases": [
+    "artifact_missing",
+    "artifact_undeclared",
+    "artifact_unreadable",
+    "broken_pin",
+    "correspondence_match",
+    "correspondence_mismatch",
+    "correspondence_side_absent",
+    "no_evidence_offered",
+    "passage_absent",
+    "passage_present",
+    "pointer_absent",
+    "pointer_escaped_key",
+    "prose_anchors_ambiguous",
+    "prose_number_as_word",
+    "prose_value_match",
+    "table_cell_match",
+    "table_cell_mismatch",
+    "table_column_absent",
+    "table_row_absent",
+    "table_row_ambiguous",
+    "unpinned_artifact",
+    "value_match",
+    "value_match_printed_precision",
+    "value_mismatch",
+    "value_not_numeric"
+  ],
+  "ungrouped": []
+}

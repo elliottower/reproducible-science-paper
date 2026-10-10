@@ -1,0 +1,139 @@
+{
+  "declared": {
+    "bibliography_entries_paper_refs_bib": 32,
+    "claim_records": 7,
+    "claims": 14,
+    "confirmatory_claims": 0,
+    "evidence_manifests": 0,
+    "file_digests_recorded": 12,
+    "ledger_events": 153,
+    "manuscript_claims_bound": 131,
+    "pinned_sources": 7,
+    "quotations": 18,
+    "registered_plans": 3,
+    "results_ledgers": 1,
+    "runs": 13,
+    "sources_carrying_a_digest": 7,
+    "tracked_files": 1267
+  },
+  "generated": "2026-10-06T21:44:26+00:00",
+  "pin": {
+    "commit": "cb82384606faa2e6e6f778015a17793b47af8215",
+    "commit_matches_pin": true,
+    "dirty": false,
+    "tree": "4b79a139d01e94cf5558f8713cf130c519a03275",
+    "tree_matches_pin": null
+  },
+  "skipped": {},
+  "steps": {
+    "citations.audit": {
+      "command": "citations audit --bib paper/refs.bib --cache /Users/elliottower/.cache/reproducible-science/audit/knockout_epistasis_dynamics-25f843e8/audit-cache",
+      "could_not": "",
+      "exit": 0,
+      "found": "checked 28; agree 22; disagree 6",
+      "note": "reaches Crossref, DataCite and PubMed",
+      "outcome": "failed",
+      "output": "bibtex  /Users/elliottower/.cache/reproducible-science/audit/knockout_epistasis_dynamics-25f843e8/checkout/paper/refs.bib\ncache   /Users/elliottower/.cache/reproducible-science/audit/knockout_epistasis_dynamics-25f843e8/audit-cache\n\n  mismatch   basu2018iterative  (vs crossref)\n               year: ours 2018 vs registry 2017\n  mismatch   bateson1909heredity  (vs crossref)\n               year: ours 1909 vs registry 1913/2011\n               author list stops at 1 of 2 with no 'and others' marker, so it reads as complete\n  mismatch   bordt2023shapley  (vs datacite)\n               year: ours 2023 vs registry 2022\n  mismatch   fisher1918correlation  (vs crossref, doi 10.1017/s0080456800012163 found by title search)\n               title: ours 'The Correlation between Relatives on the Supposition of {M}endelian Inheritance' vs registry 'XV.\u2014The Correlation between Relatives on the Supposition of Mendelian Inheritance.'\n               year: ours 1918 vs registry 1919/2012/2013\n  mismatch   muschalik2024shapiq  (vs crossref, doi 10.52202/079017-4141 found by title search)\n               author 2 surname: ours 'fumagalli' vs registry 'baniecki'\n               author 3 surname: ours 'kolpaczki' vs registry 'fumagalli'\n               author 4 surname: ours 'hullermeier' vs registry 'kolpaczki'\n               author list stops at 5 of 6 with no 'and others' marker, so it reads as complete\n  mismatch   wang2022interpretability  (vs datacite, arxiv 2211.00593 found by title search)\n               year: ours 2023 vs registry 2022\n\n32 entries\n\n  checked          28\n  agree            22\n  disagree          6\n  by search         6   of those checked, named no identifier and were found by title: 3 agree, 3 disagree\n  not found         4   no identifier, and a title search matched no record; usual for a book, report or thesis\n\nidentifiers found by title search, to add once read\n  conmy2023automated  doi 10.52202/075280-0719  (crossref)\n  fisher1918correlation  doi 10.1017/s0080456800012163  (crossref)\n  muschalik2024shapiq  doi 10.52202/079017-4141  (crossref)\n  neidhart2013adaptation  doi 10.1534/genetics.114.167668  (crossref)\n  wan2010boost  doi 10.1016/j.ajhg.2010.07.021  (crossref)\n  wang2022interpretability  arxiv 2211.00593  (openalex)\n\nwhat disagrees\n        5  year\n        3  surname\n        2  author list truncated with no marker\n        1  title\n\n6 disagree with the record their own identifier resolves to.\na wrong author list on a right DOI is invisible to every other check.\n3 of them against an identifier found by title search, which can be another version of the work."
+    },
+    "citations.verify": {
+      "command": "citations verify --claims claims",
+      "could_not": "unchecked 18 file not found",
+      "exit": 1,
+      "found": "not found 0",
+      "note": "",
+      "outcome": "could not check",
+      "output": "claims  /Users/elliottower/.cache/reproducible-science/audit/knockout_epistasis_dynamics-25f843e8/checkout/claims\n\n18 quotes\n\n  not found           0\n  unchecked          18   file not found\n\nnothing was measured. all 18 quotation(s) went unresolved, so this run says nothing about the manuscript either way. The reasons are above; a run that read no source is not a run that found no fault."
+    },
+    "prereg.check": {
+      "command": "prereg check",
+      "could_not": "",
+      "exit": 0,
+      "found": "3 plans: 3 unchanged, 0 changed, 0 not frozen",
+      "note": "",
+      "outcome": "passed",
+      "output": "unchanged    /Users/elliottower/.cache/reproducible-science/audit/knockout_epistasis_dynamics-25f843e8/checkout/experiments/2026-09-21_graded-perturbation-rerun/PREREG.md\n  timestamp  none. `prereg timestamp` makes one.\nunchanged    /Users/elliottower/.cache/reproducible-science/audit/knockout_epistasis_dynamics-25f843e8/checkout/experiments/2026-09-21_ode-primary-rerun/PREREG.md\n  timestamp  none. `prereg timestamp` makes one.\nunchanged    /Users/elliottower/.cache/reproducible-science/audit/knockout_epistasis_dynamics-25f843e8/checkout/experiments/2026-09-21_ode-sensitivity/PREREG.md\n  timestamp  none. `prereg timestamp` makes one.\n\n3 plans: 3 unchanged, 0 changed, 0 not frozen"
+    },
+    "repro.verify": {
+      "command": "repro verify",
+      "could_not": "",
+      "exit": 2,
+      "found": "no repro.yaml here or above.",
+      "note": "",
+      "outcome": "nothing to read",
+      "output": "no repro.yaml here or above.\n\nwrite one that pins this project's result files, with example claims to edit:\n\n    repro manifest init"
+    },
+    "results.verify": {
+      "command": "results verify --files",
+      "could_not": "",
+      "exit": 1,
+      "found": "chain intact: 153 events, anchored; 4 file(s) changed or missing since they were recorded.",
+      "note": "",
+      "outcome": "failed",
+      "output": "chain intact: 153 events, anchored\n\n  no outside timestamp. `results timestamp` makes one.\n\n  claim         131\n  init            1\n  run            13\n  seal            8\n\nfile hashes:\n  ok         results/direct_topology_fit.json\n  ok         results/empirical/consolidated_comparison.json\n  ok         results/gnk_control.json\n  ok         results/graded_perturbation_scored.json\n  ok         results/grn_v2/albert_segment_polarity_composition_blind.json\n  ok         results/grn_v2/blind_batch2_scorecard.md\n  ok         results/grn_v2/grieco_bladder_analysis.json\n  ok         results/grn_v2/ode_full/ode_sweep_summary.json\n  RESEALED   results/necb_abstract_numbers.json\n    recorded 2 different hashes for this path\n  RESEALED   results/paper_number_reconciliation.json\n    recorded 4 different hashes for this path\n  RESEALED   scripts/reconcile_paper_numbers.py\n    recorded 4 different hashes for this path\n  RESEALED   scripts/verify_necb_abstract_numbers.py\n    recorded 2 different hashes for this path\n\n4 file(s) changed or missing since they were recorded."
+    }
+  },
+  "target": {
+    "commit": "cb82384606faa2e6e6f778015a17793b47af8215",
+    "layout": {
+      "bibliographies": {
+        "paper_refs_bib": "paper/refs.bib"
+      },
+      "claims": "claims",
+      "ledger": ".results/ledger.jsonl",
+      "manifest": "repro.yaml"
+    },
+    "repository": "https://github.com/elliottower/knockout-epistasis-dynamics",
+    "steps": [
+      {
+        "argv": [
+          "prereg",
+          "check"
+        ],
+        "name": "prereg.check"
+      },
+      {
+        "argv": [
+          "results",
+          "verify",
+          "--files"
+        ],
+        "name": "results.verify"
+      },
+      {
+        "argv": [
+          "citations",
+          "verify",
+          "--claims",
+          "claims"
+        ],
+        "name": "citations.verify"
+      },
+      {
+        "argv": [
+          "citations",
+          "audit",
+          "--bib",
+          "paper/refs.bib",
+          "--cache",
+          "{cache}"
+        ],
+        "name": "citations.audit",
+        "network": true,
+        "note": "reaches Crossref, DataCite and PubMed"
+      },
+      {
+        "argv": [
+          "repro",
+          "verify"
+        ],
+        "name": "repro.verify"
+      }
+    ]
+  },
+  "tool_versions": {
+    "citations": "0.4.2",
+    "prereg": "0.4.2",
+    "reproducible-science": "0.4.2",
+    "results-cli": "0.4.2"
+  }
+}

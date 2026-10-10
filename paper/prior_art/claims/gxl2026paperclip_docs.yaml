@@ -1,0 +1,67 @@
+source:
+  citation: gxl2026paperclip
+  local: sources/paperclip_docs_20260825.txt
+  sha256: 48d93928feb492920cb03ee0a30ef57a98ac4ab4cb13beac4d3d3874ae11f3c6
+  url: https://paperclip.gxl.ai/docs
+  extract_cmd: none — the page was rendered to text before pinning
+  note: Fetched 2026-08-25. The page states version 0.7.38. A product page is not a fixed artifact,
+    so the pins here record the bytes served on that date and nothing later. The page as served is
+    kept beside this file as paperclip_docs_20260825.html (sha256 16e07b96d0470515923c6fd72b01d8ed6269fdb53fc1dfe6678c5c1a97c79cba);
+    the .txt pinned below is that file rendered to text by scripts/render_html_source.py, because
+    a quotation crossing an element boundary cannot resolve against raw markup.
+claims:
+  version:
+    statement: The documented Paperclip version on the fetch date is 0.7.38.
+    quotes:
+    - exact: '# Current version: 0.7.38'
+      section: update
+  claim-bound-to-document-and-line-range:
+    statement: An agent adds a claim to a repo naming a document identifier and a line range.
+    quotes:
+    - exact: paperclip repo add PMC10150846 "Adagrasib ORR 42.9% in NSCLC" --lines L210-L214
+      section: Paper Repos - Overview
+    - exact: Line-range hint for the claim, e.g. L45-L52 or L45,L120. Used to focus verification.
+      section: paperclip repo add
+  commit-verifies-by-subagent:
+    statement: A commit verifies each claim against the paper's full text by a dedicated subagent.
+    quotes:
+    - exact: Before committing, each paper's claim is verified against the paper's full text by a
+        dedicated subagent, in parallel
+      section: paperclip repo commit
+  unsupported-claims-are-flagged-not-dropped:
+    statement: The command reference says unsupported claims are flagged for the author to correct
+      or drop; the overview says commit drops them. `repo status` shows a mark for a claim the source
+      does not support, so an unsupported claim survives the commit.
+    quotes:
+    - exact: unsupported claims are flagged so you can correct or drop them.
+      section: paperclip repo commit
+    - exact: = claim supported by source
+      section: paperclip repo status
+    notes: The manuscript said commit drops unsupported claims. The two docs sentences disagree with
+      each other and the status output settles it.
+  commit-lands-without-verification:
+    statement: A commit can be made with verification skipped.
+    quotes:
+    - exact: paperclip repo commit -m "quick snapshot" --no-verify
+      section: paperclip repo commit
+  log-for-audit:
+    statement: Repo actions are recorded and reviewable through a log.
+    quotes:
+    - exact: Every action is recorded, so the corpus is auditable with
+      section: Paper Repos - Overview
+  pdfs-read-with-ocr:
+    statement: arXiv PDFs in the corpus are parsed with OCR, and each corpus source carries a last-updated
+      date rather than a digest.
+    quotes:
+    - exact: All arXiv categories. PDFs parsed with state-of-the-art OCR.
+      section: Sources
+    notes: The OCR statement is made of the arXiv source only. Nothing on the page states that the
+      corpus is refetched, which the manuscript asserted.
+  content-hash-used-only-for-upload-dedup:
+    statement: The only content hash the documentation mentions is the one that skips a duplicate
+      upload; no digest is recorded against a claim or its source.
+    quotes:
+    - exact: Duplicates (by content hash) are skipped automatically
+      section: Clipboard - Adding Documents
+    notes: The manuscript said no digest is recorded anywhere. A content hash does appear, for upload
+      de-duplication.

@@ -1,0 +1,21 @@
+{
+  "reports": 6,
+  "distinct_reviewers": 4,
+  "ran_code": {
+    "yes": 0,
+    "no": 5,
+    "cannot_tell": 1
+  },
+  "points_total": 45,
+  "points_by_kind_total": {
+    "design/argument": 20,
+    "statistical method": 10,
+    "reporting/presentation": 12,
+    "references/sources": 1,
+    "code/data availability": 0,
+    "other": 2
+  },
+  "input_values_checked_against_source_total": 0,
+  "entries_checked_against_source_total": 1,
+  "note": "Counts only. Coded from the review reports on 2026-10-05; the reports are not distributed."
+}

@@ -1,0 +1,815 @@
+{
+  "inputs": {
+    "bindings_lock": "bindings/LOCK.sha256",
+    "natural_reports": [
+      "2020-025.json",
+      "2022-001.json",
+      "2024-020.json",
+      "2025-018.json"
+    ],
+    "challenges": "reports/challenges.jsonl",
+    "generation": "reports/generation.jsonl"
+  },
+  "pooled": {
+    "printed": 713,
+    "bound": 338,
+    "output_bound": 364,
+    "end_to_end_coverage": 0.4741,
+    "output_address_coverage": 0.5105,
+    "natural": {
+      "mismatch": 69,
+      "verified": 254,
+      "not_found": 15
+    },
+    "natural_shares": {
+      "mismatch": 0.2041,
+      "verified": 0.7515,
+      "not_found": 0.0444
+    }
+  },
+  "macro": {
+    "end_to_end_coverage": 0.5849,
+    "output_address_coverage": 0.632
+  },
+  "low_coverage_label_applies": true,
+  "per_certificate": {
+    "2020-008": {
+      "printed": 300,
+      "bound": 0,
+      "output_bound": 0,
+      "unbindable": {
+        "output cell is formatted text, not one number": 100,
+        "paper side unanchored": 200
+      },
+      "natural": {},
+      "end_to_end_coverage": 0.0,
+      "output_address_coverage": 0.0
+    },
+    "2020-011": {
+      "printed": 33,
+      "bound": 0,
+      "output_bound": 0,
+      "unbindable": {
+        "no output column corresponds to this paper column": 11,
+        "paper side unanchored": 22
+      },
+      "natural": {},
+      "end_to_end_coverage": 0.0,
+      "output_address_coverage": 0.0
+    },
+    "2020-025": {
+      "printed": 90,
+      "bound": 86,
+      "output_bound": 86,
+      "unbindable": {
+        "inequality": 4
+      },
+      "natural": {
+        "mismatch": 57,
+        "verified": 29
+      },
+      "end_to_end_coverage": 0.9556,
+      "output_address_coverage": 0.9556
+    },
+    "2022-001": {
+      "printed": 92,
+      "bound": 64,
+      "output_bound": 90,
+      "unbindable": {
+        "paper side unanchored": 26,
+        "no output row corresponds to this paper row": 2
+      },
+      "natural": {
+        "verified": 47,
+        "mismatch": 8,
+        "not_found": 9
+      },
+      "end_to_end_coverage": 0.6957,
+      "output_address_coverage": 0.9783
+    },
+    "2024-020": {
+      "printed": 58,
+      "bound": 51,
+      "output_bound": 51,
+      "unbindable": {
+        "no output column corresponds to this paper column": 7
+      },
+      "natural": {
+        "not_found": 6,
+        "verified": 45
+      },
+      "end_to_end_coverage": 0.8793,
+      "output_address_coverage": 0.8793
+    },
+    "2025-018": {
+      "printed": 140,
+      "bound": 137,
+      "output_bound": 137,
+      "unbindable": {
+        "paper side unanchored": 3
+      },
+      "natural": {
+        "verified": 133,
+        "mismatch": 4
+      },
+      "end_to_end_coverage": 0.9786,
+      "output_address_coverage": 0.9786
+    }
+  },
+  "arms": {
+    "h1_control": {
+      "expected": "verified/value_match",
+      "generated": 254,
+      "inapplicable": 84,
+      "generation_failed": 0,
+      "as_expected": 254,
+      "verified_or_mismatch_where_absence_planted": null,
+      "observed": {
+        "verified/value_match": 254
+      }
+    },
+    "h2_paper": {
+      "expected": "mismatch/value_mismatch",
+      "generated": 254,
+      "inapplicable": 84,
+      "generation_failed": 0,
+      "as_expected": 240,
+      "verified_or_mismatch_where_absence_planted": null,
+      "observed": {
+        "mismatch/value_mismatch": 240,
+        "verified/value_match": 10,
+        "not_found/passage_absent": 4
+      }
+    },
+    "h3_output": {
+      "expected": "mismatch/value_mismatch",
+      "generated": 254,
+      "inapplicable": 84,
+      "generation_failed": 0,
+      "as_expected": 254,
+      "verified_or_mismatch_where_absence_planted": null,
+      "observed": {
+        "mismatch/value_mismatch": 254
+      }
+    },
+    "h4_row": {
+      "expected": "not_found/row_absent",
+      "generated": 338,
+      "inapplicable": 0,
+      "generation_failed": 0,
+      "as_expected": 338,
+      "verified_or_mismatch_where_absence_planted": 0,
+      "observed": {
+        "not_found/row_absent": 338
+      }
+    },
+    "h4_column": {
+      "expected": "not_found/column_absent",
+      "generated": 338,
+      "inapplicable": 0,
+      "generation_failed": 0,
+      "as_expected": 338,
+      "verified_or_mismatch_where_absence_planted": 0,
+      "observed": {
+        "not_found/column_absent": 338
+      }
+    },
+    "h4_key": {
+      "expected": "not_found/pointer_absent",
+      "generated": 0,
+      "inapplicable": 338,
+      "generation_failed": 0,
+      "as_expected": 0,
+      "verified_or_mismatch_where_absence_planted": 0,
+      "observed": {}
+    },
+    "h4_file": {
+      "expected": "unchecked/artifact_missing",
+      "generated": 338,
+      "inapplicable": 0,
+      "generation_failed": 0,
+      "as_expected": 338,
+      "verified_or_mismatch_where_absence_planted": 0,
+      "observed": {
+        "unchecked/artifact_missing": 338
+      }
+    }
+  },
+  "hypotheses": {
+    "H1": {
+      "tested": true,
+      "holds": true
+    },
+    "H2": {
+      "tested": true,
+      "holds": false
+    },
+    "H3": {
+      "tested": true,
+      "holds": true
+    },
+    "H4 field": {
+      "tested": true,
+      "holds": true
+    },
+    "H4 file": {
+      "tested": true,
+      "holds": true
+    },
+    "H4 reader": {
+      "tested": false,
+      "holds": null,
+      "note": "no bound output is in a format that needs an optional package"
+    }
+  },
+  "natural_not_verified": [
+    {
+      "certificate": "2020-025",
+      "claim": "t2-n000",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t2-n000: paper 771.1242, output 771.124266965405"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t2-n001",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t2-n001: paper 839.0020, output 839.002068416866"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t2-n002",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t2-n002: paper 102.1755, output 102.175598537549"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t2-n004",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t2-n004: paper 0.9999, output 0.999999999990605"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t2-n006",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t2-n006: paper 391.8997, output 391.899761336515"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t2-n007",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t2-n007: paper 59.9811, output 59.9811622359266"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t2-n008",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t2-n008: paper -5.9778, output -5.97787565763401"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t2-n009",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t2-n009: paper 0.9999, output 0.999999998869669"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t2-n012",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t2-n012: paper 9.9739, output 9.97397557272961"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t2-n014",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t2-n014: paper 0.3017, output 0.301773201307301"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t2-n017",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t2-n017: paper 139.3980, output 139.39805238042"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t2-n018",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t2-n018: paper -4.7604, output -4.76045267978206"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t2-n019",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t2-n019: paper 0.9999, output 0.999999034203897"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t2-n025",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t2-n025: paper 365.7601, output 365.760184327747"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t2-n026",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t2-n026: paper 288.9355, output 288.935560859189"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t2-n031",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t2-n031: paper 839.0020, output 839.002068416865"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t2-n032",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t2-n032: paper 30.9970, output 30.9970597003121"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t2-n034",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t2-n034: paper 0.4665, output 0.466564662095299"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t2-n036",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t2-n036: paper 391.8997, output 391.899761336515"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t2-n038",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t2-n038: paper 6.1506, output 6.15067428438054"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t2-n043",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t2-n043: paper 10.5550, output 10.555086541661"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t2-n050",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t2-n050: paper 425.2992, output 425.299296468639"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t2-n052",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t2-n052: paper 19.6594, output 19.6594957129564"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t2-n053",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t2-n053: paper 0.5792, output 0.579252585523923"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t2-n056",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t2-n056: paper 288.9355, output 288.935560859189"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t2-n058",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t2-n058: paper 2.2298, output 2.22985406540355"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t2-n059",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t2-n059: paper 0.0128, output 0.0128785663683074"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t3-n000",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t3-n000: paper 8.9154, output 9.225"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t3-n001",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t3-n001: paper 6.6320, output 6.28301886792453"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t3-n002",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t3-n002: paper 0.4851, output 0.471704071135989"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t3-n003",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t3-n003: paper 3.2783, output 4.28356213439922"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t3-n004",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t3-n004: paper 0.0005, output 0.0000091962352124027"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t3-n005",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t3-n005: paper 24.0440, output 25.3452380952381"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t3-n006",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t3-n006: paper 22.1320, output 22.7830188679245"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t3-n007",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t3-n007: paper 0.5678, output 0.55871969114412"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t3-n008",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t3-n008: paper 2.5372, output 3.42783017141456"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t3-n009",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t3-n009: paper 0.0055, output 0.000304212973522917"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t3-n010",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t3-n010: paper 20.5404, output 18.9297619047619"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t3-n011",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t3-n011: paper 24.7358, output 24.4339622641509"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t3-n012",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t3-n012: paper 1.8256, output 1.7839796427163"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t3-n013",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t3-n013: paper -3.1049, output -4.12096842743986"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t3-n014",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t3-n014: paper 0.9990, output 0.999981135843395"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t3-n015",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t3-n015: paper 7.7208, output 8.19146894771895"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t3-n016",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t3-n016: paper 6.6320, output 6.28301886792453"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t3-n017",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t3-n017: paper 0.3352, output 0.324143882258973"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t3-n018",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t3-n018: paper 1.8805, output 3.35206081865367"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t3-n019",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t3-n019: paper 0.0300, output 0.000401061977434293"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t3-n020",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t3-n020: paper 22.0019, output 24.1979721667222"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t3-n021",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t3-n021: paper 22.1320, output 22.7830188679245"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t3-n022",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t3-n022: paper 0.4986, output 0.496061417256215"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t3-n023",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t3-n023: paper -0.1841, output 2.00897430051251"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t3-n024",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t3-n024: paper 0.5730, output 0.0222699296356648"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t3-n025",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t3-n025: paper 23.7771, output 21.1105588855589"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t3-n026",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t3-n026: paper 24.7358, output 24.4339622641509"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t3-n027",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t3-n027: paper 1.1140, output 1.09340026040297"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t3-n028",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t3-n028: paper -0.9083, output -3.178289627382"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t3-n029",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t3-n029: paper 0.8181, output 0.999259266585922"
+    },
+    {
+      "certificate": "2022-001",
+      "claim": "t2-n010",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t2-n010: paper 23.78, output 23.7862727860325"
+    },
+    {
+      "certificate": "2022-001",
+      "claim": "t2-n011",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t2-n011: paper 30.33, output 30.3484535251829"
+    },
+    {
+      "certificate": "2022-001",
+      "claim": "t2-n021",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t2-n021: paper 21.80, output 21.8124005522565"
+    },
+    {
+      "certificate": "2022-001",
+      "claim": "t2-n045",
+      "outcome": "not_found",
+      "reason": "value_not_numeric",
+      "detail": "paper (paper) holds '59,734.11'"
+    },
+    {
+      "certificate": "2022-001",
+      "claim": "t2-n046",
+      "outcome": "not_found",
+      "reason": "value_not_numeric",
+      "detail": "paper (paper) holds '84,154.56'"
+    },
+    {
+      "certificate": "2022-001",
+      "claim": "t2-n047",
+      "outcome": "not_found",
+      "reason": "value_not_numeric",
+      "detail": "paper (paper) holds '38,960.24'"
+    },
+    {
+      "certificate": "2022-001",
+      "claim": "t2-n048",
+      "outcome": "not_found",
+      "reason": "value_not_numeric",
+      "detail": "paper (paper) holds '11,129.02'"
+    },
+    {
+      "certificate": "2022-001",
+      "claim": "t2-n049",
+      "outcome": "not_found",
+      "reason": "value_not_numeric",
+      "detail": "paper (paper) holds '827,067.40'"
+    },
+    {
+      "certificate": "2022-001",
+      "claim": "t2-n050",
+      "outcome": "not_found",
+      "reason": "value_not_numeric",
+      "detail": "paper (paper) holds '5,679.00'"
+    },
+    {
+      "certificate": "2022-001",
+      "claim": "t2-n051",
+      "outcome": "not_found",
+      "reason": "value_not_numeric",
+      "detail": "paper (paper) holds '3,132.90'"
+    },
+    {
+      "certificate": "2022-001",
+      "claim": "t2-n052",
+      "outcome": "not_found",
+      "reason": "value_not_numeric",
+      "detail": "paper (paper) holds '4,984.44'"
+    },
+    {
+      "certificate": "2022-001",
+      "claim": "t2-n054",
+      "outcome": "not_found",
+      "reason": "value_not_numeric",
+      "detail": "paper (paper) holds '24,090.09'"
+    },
+    {
+      "certificate": "2022-001",
+      "claim": "t2-n056",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t2-n056: paper 28.20, output 28.2116089823114"
+    },
+    {
+      "certificate": "2022-001",
+      "claim": "t3-n016",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t3-n016: paper -0.053, output -0.0535980790193068"
+    },
+    {
+      "certificate": "2022-001",
+      "claim": "t3-n020",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t3-n020: paper 0.005, output 0.00576377646544869"
+    },
+    {
+      "certificate": "2022-001",
+      "claim": "t3-n024",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t3-n024: paper 5.273, output 5.27309834788795E-7"
+    },
+    {
+      "certificate": "2022-001",
+      "claim": "t3-n026",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t3-n026: paper 0.0002, output 0.000275694111666087"
+    },
+    {
+      "certificate": "2024-020",
+      "claim": "t1-n000",
+      "outcome": "not_found",
+      "reason": "value_not_numeric",
+      "detail": "paper (paper) holds '14,466'"
+    },
+    {
+      "certificate": "2024-020",
+      "claim": "t1-n004",
+      "outcome": "not_found",
+      "reason": "value_not_numeric",
+      "detail": "paper (paper) holds '114,800'"
+    },
+    {
+      "certificate": "2024-020",
+      "claim": "t1-n008",
+      "outcome": "not_found",
+      "reason": "value_not_numeric",
+      "detail": "paper (paper) holds '19,873'"
+    },
+    {
+      "certificate": "2024-020",
+      "claim": "t1-n012",
+      "outcome": "not_found",
+      "reason": "value_not_numeric",
+      "detail": "paper (paper) holds '15,663'"
+    },
+    {
+      "certificate": "2024-020",
+      "claim": "t1-n016",
+      "outcome": "not_found",
+      "reason": "value_not_numeric",
+      "detail": "paper (paper) holds '54,702'"
+    },
+    {
+      "certificate": "2024-020",
+      "claim": "t1-n020",
+      "outcome": "not_found",
+      "reason": "value_not_numeric",
+      "detail": "paper (paper) holds '32,147'"
+    },
+    {
+      "certificate": "2025-018",
+      "claim": "t2-n012",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t2-n012: paper 12.659, output 12.658474978"
+    },
+    {
+      "certificate": "2025-018",
+      "claim": "t2-n029",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t2-n029: paper 3.1, output 2.897432"
+    },
+    {
+      "certificate": "2025-018",
+      "claim": "t2-n047",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t2-n047: paper 610.8, output 611.442908"
+    },
+    {
+      "certificate": "2025-018",
+      "claim": "t2-n057",
+      "outcome": "mismatch",
+      "reason": "value_mismatch",
+      "detail": "t2-n057: paper 2310.8, output 2329.968132"
+    }
+  ]
+}

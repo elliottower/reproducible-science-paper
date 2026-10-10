@@ -1,0 +1,832 @@
+\documentclass{article}
+
+% NeurIPS 2026 style, camera-ready: `final` names the author and drops the line numbers.
+\usepackage[final]{neurips_2026}
+
+% The workshop asks for this footnote: "Submitted to/Accepted at/Published in the AI for Science
+% workshop (NeurIPS 2026)."
+\makeatletter
+\renewcommand{\@noticestring}{Accepted at the AI for Science workshop (NeurIPS 2026).}
+\makeatother
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor}
+% One reference carries a 150-character URL, a single token wider than the text block.
+% url breaks it on any character rather than overflowing the margin.
+\usepackage{url}
+\def\UrlBreaks{\do\/\do\-\do\.\do\_\do\?\do\&\do\=\do\+}
+\usepackage{hyperref}
+\usepackage{natbib}
+\usepackage{caption}
+\usepackage{graphicx}
+% Appendix floats sit where they are written: a heading must not be parted from its table or figure.
+\usepackage{float}
+\usepackage{longtable}
+\usepackage{needspace}
+
+\hypersetup{colorlinks=true, linkcolor=black, citecolor=black, urlcolor=blue}
+\captionsetup{font=small}
+
+% Long unbreakable tokens (JSON pointers, command names) in narrow p-columns overflowed
+% six paragraphs. A final-pass stretch is the standard remedy and changes nothing else.
+\setlength{\emergencystretch}{3em}
+
+\newcommand{\TODO}[1]{\textcolor{red}{\textbf{[TODO:}~#1\textbf{]}}}
+\newcommand{\FILLIN}[1]{\textcolor{red}{\textbf{[FILL-IN:}~#1\textbf{]}}}
+\newcommand{\REVIEW}[1]{\textcolor{orange}{\textbf{[REVIEW:}~#1\textbf{]}}}
+\newcommand{\code}[1]{\texttt{#1}}
+
+% Float separation is one length for above and below, so a table set tight against the paragraph
+% under it needs both widened. The gap between a caption and the table it heads comes from the
+% style, which sets it for a caption placed above the tabular as NeurIPS requires.
+\setlength{\intextsep}{14pt plus 3pt minus 2pt}
+\setlength{\textfloatsep}{18pt plus 3pt minus 2pt}
+
+% The commands, named once so a rename is one edit.
+\newcommand{\sys}{Reproducible Science}
+\newcommand{\Sys}{Reproducible Science}
+\newcommand{\tPlan}{\code{prereg}}
+\newcommand{\tRun}{\code{results}}
+\newcommand{\tCite}{\code{citations}}
+\newcommand{\tVerify}{\code{repro}}
+\newcommand{\tVerifyCmd}{\code{repro verify}}
+
+\title{Reproducible Science: Machine-Checkable Claims\\from Preregistration to Publication}
+\author{Elliot Tower\\\texttt{elliot@elliottower.ai}}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Every claim in a paper comes from somewhere. AI tooling allows us to quickly generate hypotheses,
+run analyses, and draft manuscripts, but we identify verification and provenance as open issues:
+(1)~verifying that the finished paper agrees with the artifacts behind it typically requires
+manual or agentic verification, which is expensive and difficult to audit; (2)~verification
+usually does not include a denominator for the number of sources or artifacts checked;
+(3)~verification snapshots quickly become stale, and are not guaranteed to find every issue or
+reproduce the same issues on subsequent runs; (4)~more experiments means more researcher degrees
+of freedom and post-hoc analysis, even if unintentional, or done by an agent; and
+(5)~verification is typically done post-hoc, and does not cover all steps of the research
+lifecycle.
+
+We present Reproducible Science\footnote{Package: \url{https://github.com/elliottower/reproducible-science}}, a declarative, continuous, machine-checkable provenance layer
+for research claims, throughout the whole research lifecycle. \tPlan{} freezes a plan before the
+run, \tRun{} seals its inputs, records its outputs and binds numbers in the manuscript to the run
+that produced them, \tCite{} pins exact quotations inside cited sources, and \tVerify{} checks
+every declaration against the artifact it names. Our Claude Code plugin records provenance at the
+time of experimentation and reports drift on every edit through hooks. Applying this contract to
+this paper\footnote{Paper code and artifacts: \url{https://github.com/elliottower/reproducible-science-paper}} surfaced two errors, one of which had already gone stale twice. As agents take over more
+of the research lifecycle, the artifacts they leave behind are worth only as much as we can verify
+the claims inside them.
+\end{abstract}
+
+% AI tooling allows us to quickly generate hypotheses,
+% run analyses, and draft manuscripts, but verification and provenance remain open issues.
+% Every claim in a paper comes from somewhere. We present Reproducible Science, a continuous,
+% machine-checkable provenance layer for research claims. Command-line tools freeze a plan before
+% the run, seal its inputs and record its outputs, bind every number in the manuscript to the run
+% that produced it, and locate every quotation inside the source it cites. Our Claude Code plugin
+% records provenance at the time of experimentation and reports drift on every edit through hooks.
+% We are motivated by the following problems. 1.)~Verifying that the finished paper agrees with the artifacts behind it typically requires
+% manual or agentic verification---which produces yet another difficult-to-audit verdict;
+% 2.)~Verification usually does not include a denominator for the number of sources or artifacts
+% checked; 3.)~Verification snapshots quickly become stale, and are not guaranteed to find every
+% issue or reproduce the same issues on subsequent runs. 4.)~More experiments means more researcher
+% degrees of freedom and post-hoc analysis---even if unintentional, or done by an agent.
+% 5.)~Verification is typically done post-hoc, after results and context windows may have
+% disappeared.
+% 1.)~verifying that the finished paper agrees with the artifacts behind it typically requires
+% manual or agentic verification---which produces yet another difficult-to-audit verdict;
+% 2.)~verification usually does not include a denominator for the number of sources or artifacts
+% checked; 3.)~verification snapshots quickly become stale, and are not guaranteed to find every
+% issue or reproduce the same issues on subsequent runs. 4.)~more experiments means more researcher
+% degrees of freedom and post-hoc analysis---even if unintentional, or done by an agent.
+% 5.)~verification is typically done post-hoc, after results and context windows may have
+% disappeared.
+% This software solves the following problems: 1.)~verifying that the finished paper agrees with the artifacts behind it typically requires
+% manual or agentic verification---which produces yet another difficult-to-audit verdict;
+% 2.)~verification usually does not include a denominator for the number of sources or artifacts
+% checked; 3.)~verification snapshots quickly become stale, and are not guaranteed to find every
+% issue or reproduce the same issues on subsequent runs. 4.)~More experiments means more researcher
+% degrees of freedom and post-hoc analysis---even if unintentional, or done by an agent.
+% 5.)~Verification is typically done post-hoc, after results and context windows may have
+% disappeared.
+% Over an audit of 2{,}512 quotations against 125 content-addressed sources, 113 failed to resolve
+% and none was a misquotation. Every failure came from extraction --- which a two-state report
+% records as an accusation against the manuscript.
+% \end{abstract}
+
+\section{Introduction}
+\label{sec:intro}
+
+Surveys of research agents name verification as the step that has not kept pace
+\citep{ding2026verificationgap}. Re-running the analysis is the usual answer, and it is
+usually unavailable: across 863{,}878
+attempted executions of valid notebooks, 24.11\% ran without errors and 4.03\% produced the
+results the notebook recorded \citep{pimentel2019notebooks}. The deeper problem is that
+re-running checks the wrong object. A notebook that re-executes perfectly can still sit beside a
+manuscript printing a value no output contains, because execution establishes that the code runs
+and says nothing about what the paper claims the code produced. Reproducibility and verification
+are different properties. A project can preserve its code, its data and its logs and still
+print a value no output contains, quote a passage that was never read out of its source, or call an analysis
+confirmatory after its plan changed.
+
+We call what accumulates \textbf{verification debt}. Like debt in software, it is cheapest to
+detect when it is introduced and expensive to reconstruct afterwards. At the moment a value
+changes, the run that produced the old one is still on disk, the source still resolves, and the
+edit carries an author and a commit. Later the run has been overwritten, the source was fetched
+once without its address recorded, and which document a citation referred to is no longer
+recoverable from the citation. In 14 of 34 documented cases of retraction, correction, or
+misconduct, the toolkit's checks would flag a stated problem, including both Surgisphere
+COVID-19 studies (Appendix~\ref{sec:failure-cases}).
+
+\begin{table}[h]
+\centering
+\small
+\caption{Three boundaries of a research project, the failure each admits when nothing checks it,
+and the comparison the toolkit performs. All three are decided the same way, by a digest of a file
+and a comparison at a location the author declares in it, so one checking engine serves them.}
+\label{tab:boundaries}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.23\textwidth}>{\raggedright\arraybackslash}p{0.38\textwidth}>{\raggedright\arraybackslash}p{0.29\textwidth}@{}}
+\toprule
+\textbf{Boundary} & \textbf{What goes wrong when it is unchecked} & \textbf{What the toolkit compares} \\
+\midrule
+plan to run & a hypothesis or an analysis is rewritten after the outcome is visible & a run record against a plan pinned by digest \\
+run to manuscript & a printed value drifts from the output it was read from & a declared address in a sealed result file \\
+source to manuscript & a quotation or an identifier does not occur in the artifact cited for it & a passage against a content-addressed source \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Most of what a reader would want checked is not mechanically checkable: whether a design answers
+the question, whether a conclusion follows. A narrow part is. A number printed in a manuscript
+either matches the results file it came from or does not, and a quoted sentence either occurs in
+the cited source or does not. That part can be settled without a human and without a model, at a
+cost small enough to run on every commit rather than once before submission.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.56\textwidth]{figures/fig_commands.pdf}
+\caption{The toolkit's four commands. \tPlan{}, \tRun{} and \tCite{} each write declarations while the work
+is done, and \tVerifyCmd{} reads them and checks each against the artifact it names.}
+\label{fig:commands}
+\end{figure}
+
+\paragraph{Nothing failed because nothing ran.} In the toolkit's own code, a missing extractor, the program that pulls text out of a
+PDF, returned the empty string, the check recorded an unreadable document, and the run summary read
+\emph{nothing failed}. A check that read no text and a check that read the text and found it
+correct produced the same line. A separate incident is worse: a script collected the digests cited
+by every registration under one directory and verified each against a file; the directory was
+renamed, the glob matched nothing, the script exited zero, and continuous integration, a pre-push
+hook and a make target were all green in that state. A report that returns success is not evidence
+that anything was examined, and an outcome vocabulary with no term for non-execution cannot say so.
+
+\paragraph{Position.} Three claims follow, each against a live alternative. \emph{Prospective decisions
+require prospective records}: a frozen plan cannot establish that an author was honest, but it
+makes subsequent rewriting detectable and separates confirmatory work from exploratory work.
+\emph{Evidence requires declared addresses}: a reported \code{0.42} should name the pointer or
+selector it came from, because searching afterwards for a numerically similar value is not
+provenance and does not scale. The alternative is to recover the address afterwards, and a contemporaneous system does:
+Paperclip binds the same unit, a claim to a location in a source, and verifies it with a
+language-model subagent against line ranges into its own re-parse \citep{gxl2026paperclip}. A
+verdict from a model is not recomputable from the artifact, and an address into a re-parse moves
+when the parser improves. We make the opposite choice on both: the comparison is deterministic,
+and an address points into pinned bytes. \emph{Verification requires an explicit non-execution state}: a
+checker that cannot distinguish matched, disagreed, absent and could-not-run has no way to report
+that a green build examined nothing. Our own infrastructure violated the non-execution
+requirement twice.
+
+\paragraph{Contributions.} (1)~\textbf{Lifecycle verification}: a model spanning the
+plan-to-run, run-to-manuscript and source-to-manuscript boundaries of Table~\ref{tab:boundaries},
+designed to run while a project changes. (2)~\textbf{Evidence assertions}: typed assertions binding
+manuscript values and quotations to declared locations in content-addressed artifacts, with four
+implemented variants over a shared engine and report. (3)~\textbf{Staged outcomes}: a deterministic
+model separating execution, extraction and comparison, with a project's pass-or-fail policy applied
+to the resulting facts afterwards. We instantiate all three in a deployed toolkit (Figure~\ref{fig:commands}) and
+evaluate them through conformance tests, fault injection, a content-addressed quotation audit,
+defects met in ordinary use, and an audit of a project developed using this toolkit.
+
+
+\section{Model and Contract}
+\label{sec:construction}
+
+Section~\ref{sec:intro}'s two incidents fail differently --- one check never ran, the other ran
+and read no text --- and both reported what a passing check reports. The three boundaries of
+Table~\ref{tab:boundaries} share one architecture: declare an address, pin the
+artifact it points into, compare deterministically, and report each stage separately. Two of the three are decided by an \emph{evidence assertion}, which
+binds a manuscript claim to an artifact, a locator within it, and the value or passage expected
+there. A project lists its assertions in one file, the manifest. The plan-to-run boundary is decided by reading a run record beside a pinned plan, so no
+evidence assertion is defined for it. Four variants are implemented across the other two
+boundaries. They differ in how evidence is located and compared, and share artifact pinning,
+staged outcomes and one report. Appendix~\ref{sec:terms} provides the full definition of each term used here.
+
+\begin{table}[h]
+\centering
+\small
+\caption{The four implemented variants. A table cell is addressed by a selector over key columns,
+because a row index addresses a different cell when the table is reordered. A correspondence names
+no expected value: neither side is the reference, and a disagreement prints both readings.}
+\label{tab:contract}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.15\textwidth}>{\raggedright\arraybackslash}p{0.26\textwidth}>{\raggedright\arraybackslash}p{0.21\textwidth}>{\raggedright\arraybackslash}p{0.27\textwidth}@{}}
+\toprule
+\textbf{Kind} & \textbf{Assertion} & \textbf{Located by} & \textbf{Compared how} \\
+\midrule
+metric & this artifact holds this value here & RFC 6901 JSON Pointer & decimal, at the precision the manuscript printed \\
+table & this table holds this value in this cell & column plus a row selector & decimal, at the precision the manuscript printed \\
+quote & this passage occurs in this artifact & page, optionally & verbatim after normalization that preserves which words appear \\
+correspondence & two artifacts hold the same value & a locator on each side, prose anchors or a pointer & decimal, at the precision the manuscript printed \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Three stages.} A check must execute, extract, and compare, and the three fail
+independently. Table~\ref{tab:stages} gives the outcomes and the flattened view derived from them.
+The rows differ in what a reader should do: revise the claim, fix the pointer or run the analysis
+that produces the value, install a package, file a bug. A report that cannot distinguish them
+directs none of those actions.
+
+\begin{table}[h]
+\centering
+\small
+\caption{The three stages and the flattened view derived from them, the single label a report
+prints. A pointer to a key the results file lacks is reported \code{not\_found}: nothing is
+asserted about whether the value differs. An extractor that is not installed yields
+\code{unchecked}, and an extractor that raises yields \code{error} and never \code{unchecked}.}
+\label{tab:stages}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}lll>{\raggedright\arraybackslash}p{0.15\textwidth}@{}}
+\toprule
+\textbf{Situation} & \textbf{Execution} & \textbf{Extraction} & \textbf{Comparison} & \textbf{Flattened} \\
+\midrule
+value present & completed & extracted & match & \code{verified} \\
+value differs in a readable artifact & completed & extracted & mismatch & \code{mismatch} \\
+pointer does not resolve & completed & absent & --- & \code{not\_found} \\
+extractor not installed & unavailable & not attempted & --- & \code{unchecked} \\
+backend defect & failed & not attempted & --- & \code{error} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Pins.} Artifacts are content-addressed, and pins are resolved before any evidence is
+read, so a source that moved is known before decisions are computed against it. Decisions against
+a broken or unpinned artifact still run and are reported, marked non-authoritative, because a
+diagnostic is more useful than a blank.
+
+\paragraph{Facts, then policy.} Verification returns facts. Whether they constitute a pass depends
+on what the project is for: an unchecked citation is acceptable in a draft and disqualifying in a
+submission, and both readings are correct about the same run. The engine therefore reports the
+three stages and computes no verdict, and a profile maps outcomes to severities
+(Table~\ref{tab:policy}, Appendix~\ref{sec:suite}). Re-grading under
+a stricter profile re-reads the stored report and executes nothing, so a submission is judged on
+the facts the draft was checked with rather than on a second run that may not reproduce them.
+
+\section{Implementation and Workflow}
+\label{sec:use}
+
+The toolkit runs on ordinary files. It does not require an experiment to be conducted in a
+particular language, notebook system, analysis framework or agent runtime, and it does not require
+a manuscript to be authored inside its toolchain. The fifteen papers in the quotation audit of Section~\ref{sec:quote} were
+written without this contract in mind, and none was modified to be auditable. A value is read
+from JSON, delimited text, a workbook, Parquet, Stata, SPSS, R data, HDF5 or NetCDF, and a
+quotation from a PDF, plain text, a workbook, a Word document or JATS XML.
+
+A new or existing project adopts the toolkit with one command, \code{repro init}. A project declares as it goes. A plan is frozen before the run it governs, against a commit and a
+content hash. Inputs are sealed before an analysis and outputs recorded after it. The script is
+committed, its inputs are sealed and its outputs are recorded, so every result can be regenerated:
+\code{repro reproduce} runs the declared command again and checks the manuscript's assertions
+against the file it writes. Misconduct that alters a reported result now requires more than an edit to the
+manuscript: the committed script must produce the altered value from the sealed inputs, and a
+re-run by a reader reveals any inconsistency. For each sentence that prints a number, the manifest records the address the number came from,
+written when the sentence is. Verification then reads the declarations and reports on each.
+
+\begin{table}[h]
+\centering
+\small
+\caption{The toolkit's four commands and the boundary each decides. The first three write declarations
+and the fourth reads them, applying a policy to the result.}
+\label{tab:commands}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.13\textwidth}>{\raggedright\arraybackslash}p{0.80\textwidth}@{}}
+\toprule
+\textbf{Command} & \textbf{What it establishes} \\
+\midrule
+\tPlan{} & that the plan which ran is the plan that was frozen, against a commit and a content hash \\
+\tRun{} & that a reported number came from a recorded run over sealed inputs \\
+\tCite{} & that a quoted passage occurs in the source cited for it \\
+\tVerify{} & that every declared assertion holds against its pinned artifact, and which do not \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{A worked example.} Appendix~\ref{sec:suite} states that the conformance suite holds 25
+fixtures, and this paper's manifest binds that sentence with two assertions: a \code{quote}
+assertion checking that the manuscript still prints it, and the \code{metric} assertion below,
+checking that the pinned inventory of the suite holds the number at the declared pointer.
+{\footnotesize
+\begin{verbatim}
+- kind: metric
+  artifact: conformance     # pinned: sha256 b9840b9d...
+  pointer: /fixtures
+  reported: '25'
+
+$ repro verify --policy strict
+  ok    conformance-fixtures metric   /fixtures = 25
+  72 verified
+  policy strict: passed  (0 errors, 0 warnings)
+\end{verbatim}}
+\noindent With \code{reported: '19'}, the stale count of Section~\ref{sec:selfaudit}, the line is
+marked \code{MISS}, the run exits 1, and the report reads \emph{manuscript prints 19,
+conformance\_inventory.json holds 25}. The Claude Code plugin prompts for such
+declarations while the artifacts are produced: after each edit it names any number or quotation in
+a manuscript that nothing yet backs, and before an analysis runs it says when the governing plan is
+unfrozen, never blocking the work it observes. A companion Claude Code mod shows the state of a project's
+records in the session, one row per command, with a warning when a frozen plan was edited or a run
+was recorded with nothing sealed (Appendix~\ref{sec:status}, Figure~\ref{fig:status}).
+
+Preregistration is optional and per claim. A claim is marked confirmatory, exploratory, or not
+applicable, and only the first requires a plan behind it. This matters for the honesty of the
+report: a project that registers nothing is not failed for it, and a project that calls a claim
+confirmatory is held to the plan it named.
+
+Cost is what makes the check a commit-time one. Verifying this paper's 76 assertions over 25 artifacts takes 0.53 seconds; resolving its
+63 quotations against 17 content-addressed sources takes 4.10 seconds
+(Appendix~\ref{sec:timing}).
+
+\section{Evaluation}
+\label{sec:eval}
+
+The conformance suite and the fault injections are in Appendix~\ref{sec:suite}: 25 fixtures,
+each recording its expected outcome, reason and artifact validity as a triple so a case
+cannot pass by reaching the right verdict for the wrong cause, and four injected faults each
+distinguishing a class the flattened view would otherwise merge.
+
+\subsection{Self-audit}
+\label{sec:selfaudit}
+
+This paper is an instance of what it describes. Each number its manifest binds carries two assertions: that the manuscript states
+the sentence, and that a pinned artifact holds the value at a declared pointer. Thirty-eight claims are
+bound this way, 76 assertions over twenty-five artifacts, and they pass under the \code{strict} policy
+profile. The manifest and the artifacts it pins are in the repository, so the check is one a
+reader runs rather than a result they take on trust. No claim here is confirmatory, so none requires a
+registered plan.
+
+Building the manifest surfaced two defects in this paper's own numbers. Four counts in
+Table~\ref{tab:readers} had been computed correctly and written to no file, so nothing could
+re-check them; derived into an artifact, all four match what the manuscript prints. The count of
+conformance fixtures was recorded and stale: a stored figure gave nineteen where the suite holds
+25, and the specification had earlier stated eighteen against a count of nineteen.
+
+\subsection{Quotation audit}
+\label{sec:quote}
+
+Six extractors read the same 2{,}364 passages, quoted from fifteen published papers, out of the same pinned bytes and returned six
+different answers, from 2{,}314 down to 1{,}716 (Table~\ref{tab:readers}). A verification snapshot therefore records the
+reader as much as the corpus, and a rerun under a different toolchain is not guaranteed to find
+the same issues. Under poppler's layout mode 113 quotations fail to resolve and every failure
+traces to extraction (Appendix~\ref{sec:suite}), so a checker with only pass and fail would have
+accused the manuscripts 113 times with no misquotation present.
+
+\subsection{Recall against CORE-Bench}
+
+The corpora above carry no ground truth: nobody has labelled which of a paper's numbers its
+artifact really holds, so a located value is evidence of an occurrence. CORE-Bench supplies the missing half, and a bound: a value no reader finds in an artifact is a
+value no assertion can point to. Each capsule, CORE-Bench's package of a paper's code and
+data, names the values its analysis produces, so recall is measured against a stated answer set
+rather than estimated \citep{siegel2024corebench}.
+
+Over 45 capsules the benchmark states 240 values, of which 146 are located in the capsule's files
+without running it: a recall of 61\%. Table~\ref{tab:recall} gives it by the strength of the value, where strength is the
+number of constraining digits. Recall falls as values carry more digits and then rises again,
+because the tiers differ in what they are made of rather than in difficulty: a two-digit
+integer is found in almost any artifact and a long decimal is found only where it was written.
+A second run on a separate machine produces a byte-identical record for all 45 capsules, with the
+same 146 values located.
+
+\begin{table}[h]
+\centering
+\small
+\caption{Recall over 45 CORE-Bench capsules, against the values each capsule states it
+produces. Eight capsules hold a record no reader here opened, so their misses are
+\code{unchecked} rather than \code{absent}: a two-state report would count all of them against
+the capsule. This is the same separation Section~\ref{sec:quote}'s quotation audit makes, on a
+third party's corpus and against a known answer set.}
+\label{tab:recall}
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+\textbf{Strength} & \textbf{Stated} & \textbf{Located} & \textbf{Recall} \\
+\midrule
+trivial & 59 & 54 & 92\% \\
+weak & 76 & 40 & 53\% \\
+moderate & 44 & 15 & 34\% \\
+strong & 61 & 37 & 61\% \\
+\midrule
+all & 240 & 146 & 61\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Findings from Deployment}
+\label{sec:failures}
+
+\subsection{Defect classes surfaced in ordinary use}
+
+Running the toolkit over our own corpus during ordinary research surfaced six defect classes.
+Table~\ref{tab:defects} lists them. Each is reported as a class that occurs and is mechanically
+detectable; no frequency is claimed, and none of these counts enters any rate in
+Section~\ref{sec:eval}. Two of the six are defects in a check rather than in a manuscript, which
+is the case the three-stage model exists for.
+
+\begin{table}[h]
+\centering
+\small
+\caption{Six defect classes surfaced by running the toolkit over one author's corpus. Status
+records whether a change has been made that prevents the class, not whether the instance was
+repaired.}
+\label{tab:defects}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.51\textwidth}>{\raggedright\arraybackslash}p{0.12\textwidth}@{}}
+\toprule
+\textbf{Class} & \textbf{What is observably wrong} & \textbf{Status} \\
+\midrule
+stored value disagrees with the printed value & nine of ten table rows disagree with the file the row is read from & open \\
+false mismatch under float equality & three of thirty-nine agreements hold only under decimal comparison & closed \\
+recorded hash compared against nothing & digests recorded and never compared to the bytes on disk & closed \\
+check that runs on no files & a glob matches nothing, the check exits zero, and the build is green & open \\
+claims separated from the evidence they name & 178 assertions marked verified, and no source in any commit & closed locally \\
+reported figure that stopped reproducing & a reported count no longer reproduces from the bibliography it described & open \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Two that integrity checking cannot reach.} In the first row every artifact resolves at
+its recorded digest, so no integrity check fires: the files hold the values the run wrote, and the
+manuscript's table holds different values. A value printed at \code{0.001} is stored as exactly
+zero, and one printed at \code{0.0003} as \code{9.73e-7}. The disagreement is reachable only by a
+check that compares a file to the sentence citing it. In the fifth, a repository split carried 178
+assertions and left the sources they named behind; the stored \code{verified} marks survived the
+split, so the repository reported a fully verified claim set that a reader could recheck in no
+part. Quotation verification had passed over every one of those sources, because a quotation
+resolves against the text as it stands.
+
+\subsection{What a reader can re-check from a clone}
+\label{sec:comparative}
+
+One command, \code{repro audit}, runs the toolkit over a clone of the public repository for a
+project developed with it, at a pinned commit.\footnote{\url{https://github.com/elliottower/knockout-epistasis-dynamics},
+commit \code{cb82384}.} The project keeps registered plans, a results ledger and pinned quotations,
+and declares no evidence manifest. The clone carries 1{,}267 tracked files, three registered
+plans, a ledger of 153 events binding 131 manuscript claims to 13 runs, and seven claim records
+holding 18 quotations. Table~\ref{tab:audit} gives what each command established from the clone
+alone and what it could not.
+
+\begin{table}[h]
+\centering
+\small
+\caption{The toolkit's four commands over a clone of the project's public repository. Two establish their result
+from the clone alone, because the plans and the ledger are committed with it. The quotation check
+reads no source and reports that, where a two-state report would have to print a pass or a
+failure.}
+\label{tab:audit}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.11\textwidth}>{\raggedright\arraybackslash}p{0.41\textwidth}>{\raggedright\arraybackslash}p{0.40\textwidth}@{}}
+\toprule
+\textbf{Command} & \textbf{What it found} & \textbf{What it could not establish} \\
+\midrule
+\tPlan{} & three plans, each unchanged against the digest recorded when it was frozen & whether a plan was written before the outcomes it governs were seen \\
+\tRun{} & the chain is intact and anchored at 153 events; 8 of 12 recorded files match their digest, and 4 carry more than one recorded digest & what share of the manuscript's numbers the 131 claims cover: the manuscript is not in the repository \\
+\tCite{} & quotations: 18 against 7 sources, none checked; bibliography: 28 of 32 entries checked, 6 differ from their registry record & whether any quotation occurs in its source \\
+\tVerify{} & no evidence manifest; exit 2, nothing addressed & any assertion, none having been declared \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The plans and the ledger verify from a clone because both are committed with the repository. The
+quotations do not: a publisher's PDF is not the author's to redistribute, so the repository
+carries each source's digest and not the source, and all 18 quotations come back
+\code{unchecked}.
+
+In a preregistered study of drug-trial outcomes, four rounds of journal review raised 45 comments
+and the toolkit reported 31 findings, with no overlap (Appendix~\ref{sec:audit-cross-design}). Reviewers
+assess the argument; the toolkit checks each value against its source.
+
+A certificate of reproduction does not make a paper's numbers checkable. Of 133 certified
+reproductions in the CODECHECK register \citep{nust2021codecheck}, 6 leave a file holding one of
+the paper's tables, and under half the numbers in those tables have a cell to check against
+(338 of 713). Of the 338, 326 match the certified file and 12 differ
+(Appendix~\ref{sec:codecheck}).
+
+The toolkit also runs under a literature census conducted by a language model and coding agents.
+The model screens 43{,}462 abstracts and extracts 14{,}053 claim records, each carrying the
+sentence it was drawn from. The toolkit checks every sentence against the stored abstract:
+13{,}989 match exactly, 27 match in two places, and 37 leave out one word
+(Appendix~\ref{sec:census}).
+
+\subsection{An edit to a registered plan}
+
+A preregistration carries a recorded digest, and an edit to it is detected by recomputing that
+digest rather than by asking the author what changed. In ordinary use \code{prereg check} caught
+a subagent that had edited a frozen plan partway through an analysis, and the edit was reverted.
+The hook that watches for it fires on every
+edit and never refuses one, because a check that can halt the work it observes gets switched off.
+Once frozen, a plan is a sealed record: any edit breaks the digest, and with it the proof of what
+was registered before the run. Changes go in a separate amendment, sealed the same way.
+
+\section{Related Work}
+\label{sec:related}
+
+\paragraph{Claim-to-location binding.} Paperclip binds individual claims to individual locations
+in sources: an agent adds a claim naming a document identifier and a line range, and a commit
+verifies each claim against the source text, dropping unsupported claims, with a log for audit
+\citep{gxl2026paperclip}. The unit is the same as ours and three properties differ. Verification
+is performed by a language-model subagent, so the verdict is not reproducible from the artifact.
+Line ranges address the system's own parse of a document, which is refetched and re-read, so an
+address points into a mutable representation and improving the parse moves every stored range. No
+digest is recorded, which under Section~\ref{sec:construction} leaves every such artifact unpinned
+and every decision against it non-authoritative. A commit also lands when verification is skipped,
+which is the condition Section~\ref{sec:intro} describes.
+
+\paragraph{Repository auditing.} adduce audits a research repository against 78 rules and
+returns a score, asking whether ``for every number in the paper, can I point to the artifact that
+produced it, and will that artifact still produce it elsewhere?'' \citep{chudasama2026adduce}, which
+is this paper's question reached independently. The agreement runs deeper: a rule there returns one
+of five statuses, and two of them, \code{unknown} and \code{not-applicable}, are excluded from the
+score rather than counted as passes. The unit differs, and so does where an outcome comes from.
+adduce grades a repository and a rule author selects among five flat statuses, where one assertion
+here binds one printed value to one declared address, no score is computed, and the outcome follows
+from which of the three stages stopped. The two compose: adduce runs the toolkit's verification as one of its rules.
+
+\paragraph{Artifact-level verification.} Code Ocean verifies a capsule before publication and
+states that the check establishes mechanical reproducibility, a user pressing run and obtaining
+results, and separately that it does not check whether a capsule's results match the article it
+accompanies \citep{codeocean2026verification}. Whole Tale packages code, data, methods and
+environment with the narrative as a re-instantiable tale \citep{brinckman2019wholetale}. In both,
+the unit of citation and the unit of verification are the same object, so the outcome is one
+property of the whole. Here the unit of verification is finer than the unit of citation, and a
+report states which of a manuscript's values an artifact still supports rather than whether the
+artifact runs.
+
+\paragraph{Entailment, markup and write-time binding.} FEVER, SciFact and CliniFact predict a
+label given retrieved text and score it against human annotation
+\citep{thorne2018fever,wadden2020scifact,clinifact2025}, and ClaimReview binds claim text to the
+work it appeared in while recording no digest and enumerating no outcomes
+\citep{schemaorg2026claimreview}. Our outcomes name what a byte or decimal comparison found.
+Literate programming generates the document from the execution producing its values
+\citep{leisch2002sweave}, which removes the drift, requires the manuscript to be authored inside
+the toolchain, and absorbs a change where this reports one.
+
+\paragraph{Abstention as an outcome.} Fellegi and Sunter classify a candidate pair as match,
+non-match, or possible match held for review, and prove that rule minimizes the review region at
+fixed error bounds \citep{fellegi1969linkage}. The three-way structure, with abstention as a
+first-class outcome rather than a failure, is the shape Table~\ref{tab:stages} takes. Their third
+state is reached probabilistically from estimated agreement patterns; ours is reached because an
+extractor was absent or a pointer did not resolve.
+
+\paragraph{Verification in other fields.} Metrology defines verification as evidence that specified
+requirements are met, and keeps verification apart from validation, which asks whether those
+requirements suit an intended use \citep{jcgm2012vim}; the toolkit performs verification. The
+philosophy of measurement separates an instrument's reading from the result inferred from the
+reading \citep{tal2017calibration}, and an extractor is an instrument in this sense: in
+Section~\ref{sec:quote}, six extractors read the same bytes and returned six results. In formal
+verification, many early automated theorem provers performed proofs without recording them, so a
+result could not be checked afterwards \citep{mackenzie2001mechanizing}; here every verdict is
+stored with the pinned artifacts it was computed against.
+
+\section{Limitations}
+\label{sec:limits}
+
+\paragraph{The extractor is trusted.} Content addressing establishes that an artifact's bytes did
+not change and nothing about whether the extractor read them correctly. A layout parser that
+splices a value from the wrong column, or an optical pass that reads \code{0.9489} as
+\code{0.9439}, leaves the digest intact and returns a confident answer. The blockchain literature calls this the
+oracle problem \citep{albizri2021oracle}. Recording the extractor's identity and a digest of the text it produced
+makes a changed reading visible, which addresses drift and not correctness.
+
+\paragraph{Registration establishes order, not honesty.} A run record states when a plan was
+registered and when the run began, and the check establishes that those two are consistent. It
+does not establish that the registration is contemporaneous with what it claims. Each
+freeze requests a date from outside the repository \citep{adams2001rfc3161}: its digest goes to OpenTimestamps
+\citep{todd2016opentimestamps} and the returned proof fixes the latest date the plan could have been
+written (Appendix~\ref{sec:timestamps}). A timestamp cannot show that a plan was not written earlier
+and withheld.
+
+\paragraph{Declaration is authored, and coverage is gameable.} Only declared numbers are checked,
+so a project can pass by declaring only the numbers it expects to match. We state coverage
+alongside outcomes so that a reader can see what fraction of the manuscript's numbers was
+checked.
+
+\section{Conclusion}
+
+Re-running an analysis establishes that the code runs. Verification debt accumulates in the
+difference between that and what a manuscript says it produced. Values, quotations and registered
+plans differ in how each is extracted and little else, so one engine reports all three. The three
+stages exist because disagreement, absence and non-execution have different remedies, and because
+collapsing them produced a run that examined nothing.
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\clearpage
+\appendix
+
+\input{appendix_failure_cases}
+
+\section{Terms}
+\label{sec:terms}
+
+Table~\ref{tab:terms} defines the terms used in this paper.
+
+\begin{table}[H]
+\centering
+\small
+\caption{Terms as this paper uses them.}
+\label{tab:terms}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.19\textwidth}>{\raggedright\arraybackslash}p{0.74\textwidth}@{}}
+\toprule
+\textbf{Term} & \textbf{Meaning} \\
+\midrule
+toolkit & the \Sys{} package (containing four commands: \tPlan{}, \tRun{}, \tCite{} and \tVerify{}) and the optional Claude Code plugin and mod \\
+engine & the code in \tVerify{} that resolves pins, evaluates each assertion and reports the three stages \\
+artifact & a file a claim rests on, pinned by its SHA-256 digest \\
+claim & a sentence in the manuscript that states a number or a quotation \\
+evidence assertion & one check bound to a claim: an artifact, a location in it, and the value or passage expected there \\
+manifest & the file, \code{repro.yaml}, listing a project's artifacts, claims and assertions \\
+claim record & a file pinning the quotations taken from one source, read by \tCite{} \\
+plan & the preregistration document \\
+freeze & the record of a plan's digest, commit and time, after which the plan does not change \\
+ledger & the append-only record of sealed inputs, runs and the claims bound to them, kept by \tRun{} \\
+declaration & a frozen plan, a sealed input, a recorded run, a pinned quotation or an assertion: what a project writes for the toolkit to read \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Conformance suite and fault injection}
+\label{sec:suite}
+
+\paragraph{Conformance.}
+
+The suite holds 25 fixtures: five addressing a table cell, four
+comparing a value, three each for prose anchors, two-sided correspondences and artifact
+availability, two each for a pointer and a passage, and one each for an unpinned artifact, a
+broken pin, and a claim offering no evidence. Each records its canonical expected output as an
+(outcome, reason, artifact validity) triple, so a case cannot pass by reaching the right verdict
+for the wrong cause. Assertions over them include that an absent pointer yields
+\code{extraction=absent} and never \code{comparison=mismatch}, and that an injected
+\code{TypeError} yields \code{error} and never \code{unchecked}.
+
+\paragraph{Fault injection.}
+
+Four faults are injected and the reported outcome recorded: a results
+file edited after drafting yields a broken pin with decisions against it marked non-authoritative;
+an absent extraction toolchain yields \code{unchecked} with reason \code{extractor\_missing}; a
+registered plan edited after registration yields a broken pin on the plan artifact; a backend
+raising \code{TypeError} yields \code{error} with reason \code{backend\_defect}. Each distinguishes
+a class the flattened view would otherwise merge.
+
+The quote variant was run over an audit of sixteen published claims:
+2{,}512 quotations against 125 content-addressed sources, of which the fifteen PDFs of the papers
+under audit carry 2{,}364. Every source carries a digest, so the document a failing quotation was
+checked against is byte-identical to the one the manuscript cited. Under poppler's layout mode,
+113 quotations did not resolve. One rater, who also wrote the quotations, attributed every one to
+extraction rather than to misquotation, each cause being recoverable from the recorded extractor
+output: 110 came from the mode's preservation of page geometry, which severs every sentence
+crossing the gutter of a two-column paper, 2 from a text layer omitting a character the passage contains, and 1 from a
+hyphen at a line end that de-hyphenation cannot attribute. On this corpus a two-state checker therefore carries a false-accusation rate of 4.5\%: it would
+have recorded all 113 as misquotations, each an accusation against the manuscript, and the corpus
+held no misquotation for it to find.
+
+\begin{table}[H]
+\centering
+\small
+\caption{Passages resolved per extractor over one corpus, and the cost of each. The two poppler
+modes fail in opposite directions and together reach 2{,}360. Ranking by total resolved is a poor
+guide to which extractors to consult: the low-level parser resolves 598 fewer passages than the
+best single extractor and is the only one that extends the union, reaching 2{,}362. Two quotations
+resolve under no extractor.}
+\label{tab:readers}
+\begin{tabular}{@{}lrr@{}}
+\toprule
+\textbf{Extractor} & \textbf{Resolved of 2{,}364} & \textbf{Seconds} \\
+\midrule
+poppler, reading order & 2{,}314 & 6.9 \\
+poppler, layout & 2{,}250 & 6.9 \\
+pure-Python reader & 2{,}229 & 43.9 \\
+rendering-engine binding & 2{,}092 & 4.8 \\
+structural extractor & 1{,}973 & 6.2 \\
+low-level parser & 1{,}716 & 2.7 \\
+\midrule
+both poppler modes & 2{,}360 & 13.8 \\
+all six & 2{,}362 & 71.4 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\small
+\caption{Policy profiles over identical facts. Every profile requires that at least one assertion
+was evaluated, because a project with no evidence anywhere otherwise satisfies every condition
+trivially. \code{not\_offered} marks a claim that offers no evidence.}
+\label{tab:policy}
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+\textbf{Profile} & \textbf{mismatch} & \textbf{not\_found} & \textbf{unchecked} & \textbf{not\_offered} & \textbf{unpinned} \\
+\midrule
+exploratory & error & warning & warning & ignore & ignore \\
+publication & error & error & warning & warning & warning \\
+publication, confirmatory claims & error & error & \textbf{error} & \textbf{error} & --- \\
+strict & error & error & error & error & error \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\needspace{16\baselineskip}
+\section{Session status}
+\label{sec:status}
+
+The Claude Code mod reads the project's records at the end of each turn and draws them above the
+prompt, one row per command: the plans frozen out of the plans present, the runs sealed and the
+claims bound to them, the quotations pinned, and the manifest's checks verified. A row for a
+record the project lacks names the command that creates it. A line appears under the prompt only
+when a record no longer matches.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.92\textwidth]{figures/status_number_mismatch_2026-10-06b.png}
+\caption{The state of a project's records as a session shows it. One plan is frozen, one run is
+sealed with one claim bound to it, no quotation is pinned, and three of the manifest's four checks
+verify. The line under the prompt reports the fourth: a number in the manuscript no longer matches
+its results file.}
+\label{fig:status}
+\end{figure}
+
+\section{Timing}
+\label{sec:timing}
+
+Each time in Section~\ref{sec:use} is the median of 10 runs of the command a user types, each in a
+new process, on a 2019 16-inch MacBook Pro (\code{MacBookPro16,1}: 6-core Intel Core i7-9750H at
+2.6\,GHz, 16\,GB of memory, macOS 26.5, Python 3.13.12), with version 0.5.2. \tVerifyCmd{} over
+this paper's manifest ranges from 0.53 to 0.66 seconds, and \code{citations verify} over the
+quotations this paper pins from 3.92 to 4.88 when every run reads every source. By default
+\code{citations verify} keeps the text extracted from a source whose bytes have not changed, and
+then takes 1.47 seconds.
+
+Table~\ref{tab:timing} gives \tVerifyCmd{} over generated projects of increasing size, beside
+\code{sha256sum -c} over the same artifacts, the least any check of pinned files can cost. Each
+project holds a text, a table and a manifest of correspondence assertions, each tying a number in
+the text to a cell of the table. The command starts in 0.192 seconds, which is most of its cost
+up to 100 assertions. Artifact size adds what hashing adds: over 4\,GB the check takes 2.416
+seconds and hashing alone takes 2.163. Time grows faster than the number of assertions past
+10{,}000, because each text anchor is searched for across the whole text.
+
+\begin{table}[H]
+\centering
+\small
+\caption{Seconds to verify a generated project, by the number of assertions and by the bytes of
+the artifacts they are checked against. Each time is the median of 5 runs, each in a new process,
+of version 0.5.2 on a GitHub-hosted runner (\code{ubuntu-24.04}: AMD EPYC 9V45, 2 processors,
+7\,GB of memory, Python 3.12.15). The last four rows hold the assertions at 100 and add pinned
+files that no assertion reads.}
+\label{tab:timing}
+\begin{tabular}{@{}rrrr@{}}
+\toprule
+\textbf{Assertions} & \textbf{Artifact bytes} & \textbf{\tVerifyCmd{}} & \textbf{\code{sha256sum -c}} \\
+\midrule
+10 & 647 & 0.213 & 0.001 \\
+100 & 6{,}389 & 0.238 & 0.001 \\
+1{,}000 & 63{,}807 & 0.556 & 0.001 \\
+10{,}000 & 638{,}009 & 6.733 & 0.002 \\
+100{,}000 & 6{,}380{,}011 & 193.128 & 0.005 \\
+\midrule
+100 & 1{,}054{,}965 & 0.223 & 0.002 \\
+100 & 16{,}783{,}605 & 0.246 & 0.010 \\
+100 & 268{,}441{,}845 & 0.372 & 0.142 \\
+100 & 4{,}294{,}973{,}685 & 2.416 & 2.163 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\input{appendix_certified_reproductions_v15zn}
+
+\section{Outside timestamps}
+\label{sec:timestamps}
+
+\code{prereg freeze} takes one SHA-256 digest over the plan and sends that digest, and nothing
+else, to the OpenTimestamps calendar servers \citep{todd2016opentimestamps}. The proof they return
+is kept beside the plan and committed with it. A proof is pending until the calendars commit it
+into a Bitcoin block, whose date neither the author nor a calendar operator can change, usually
+within hours; \code{prereg timestamp} then completes it and reports
+the block and its date, the latest date at which the plan could have been written.
+\code{prereg check} reads the proof without the network and fails when the proof is of a digest
+other than the frozen one. No option skips the request: a freeze made with no network succeeds and
+reports the timestamp as owed on every check until it is made. \code{results timestamp} dates the
+head of the ledger the same way. The date is then held by a public record the author cannot
+rewrite, which a repository's own history is not.
+
+\input{generated/audit_appendix}
+
+\clearpage
+\input{appendix_literature_census_v15zk}
+
+\end{document}

@@ -1,0 +1,154 @@
+{
+  "generated_by": "scripts/compare_corebench_rerun.py",
+  "recorded": {
+    "path": "paper/artifacts/corebench_recall.jsonl",
+    "sha256": "6ca67bc12bf9ef193196b1616716573b55b3f7695d3cc3eb18b644eeb5496245"
+  },
+  "rerun": {
+    "path": "paper/artifacts/corebench_recall_rerun_sorted_2026-10-06.jsonl",
+    "sha256": "6e2c61d52794c28910d668a13849c0e49eb8ca29dc67ae3b17f21ab0f2168321"
+  },
+  "capsules_recorded": 45,
+  "capsules_rerun": 45,
+  "only_in_recorded": [],
+  "only_in_rerun": [],
+  "identical": 36,
+  "differing": [
+    {
+      "capsule_id": "capsule-0220918",
+      "fields": [
+        "answers"
+      ],
+      "recorded_located": [
+        6,
+        6
+      ],
+      "rerun_located": [
+        6,
+        6
+      ]
+    },
+    {
+      "capsule_id": "capsule-0325493",
+      "fields": [
+        "answers"
+      ],
+      "recorded_located": [
+        6,
+        6
+      ],
+      "rerun_located": [
+        6,
+        6
+      ]
+    },
+    {
+      "capsule_id": "capsule-1108125",
+      "fields": [
+        "answers"
+      ],
+      "recorded_located": [
+        9,
+        9
+      ],
+      "rerun_located": [
+        9,
+        9
+      ]
+    },
+    {
+      "capsule_id": "capsule-2011424",
+      "fields": [
+        "answers"
+      ],
+      "recorded_located": [
+        3,
+        3
+      ],
+      "rerun_located": [
+        3,
+        3
+      ]
+    },
+    {
+      "capsule_id": "capsule-3137115",
+      "fields": [
+        "answers"
+      ],
+      "recorded_located": [
+        12,
+        12
+      ],
+      "rerun_located": [
+        12,
+        12
+      ]
+    },
+    {
+      "capsule_id": "capsule-3894632",
+      "fields": [
+        "answers"
+      ],
+      "recorded_located": [
+        3,
+        3
+      ],
+      "rerun_located": [
+        3,
+        3
+      ]
+    },
+    {
+      "capsule_id": "capsule-5496369",
+      "fields": [
+        "answers"
+      ],
+      "recorded_located": [
+        6,
+        6
+      ],
+      "rerun_located": [
+        6,
+        6
+      ]
+    },
+    {
+      "capsule_id": "capsule-7935517",
+      "fields": [
+        "answers"
+      ],
+      "recorded_located": [
+        3,
+        3
+      ],
+      "rerun_located": [
+        3,
+        3
+      ]
+    },
+    {
+      "capsule_id": "capsule-7981862",
+      "fields": [
+        "answers"
+      ],
+      "recorded_located": [
+        3,
+        3
+      ],
+      "rerun_located": [
+        3,
+        3
+      ]
+    }
+  ],
+  "located_of_stated": {
+    "recorded": {
+      "located": 146,
+      "stated": 240
+    },
+    "rerun": {
+      "located": 146,
+      "stated": 240
+    }
+  }
+}

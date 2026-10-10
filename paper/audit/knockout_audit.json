@@ -1,0 +1,111 @@
+{
+  "declared": {
+    "claim_records": 7,
+    "claims": 14,
+    "confirmatory_claims": 0,
+    "evidence_manifests": 0,
+    "file_digests_recorded": 12,
+    "ledger_events": 153,
+    "manuscript_claims_bound": 131,
+    "pinned_sources": 7,
+    "quotations": 18,
+    "registered_plans": 3,
+    "registered_plans_in_experiments": 3,
+    "results_ledgers": 1,
+    "runs": 13,
+    "sources_carrying_a_digest": 7,
+    "tracked_files": 1267
+  },
+  "generated": "2026-10-05T17:46:00+00:00",
+  "pin": {
+    "commit": "cb82384606faa2e6e6f778015a17793b47af8215",
+    "commit_matches_pin": true,
+    "dirty": true,
+    "tree": "4b79a139d01e94cf5558f8713cf130c519a03275",
+    "tree_matches_pin": true
+  },
+  "steps": {
+    "citations.verify": {
+      "command": "citations verify --claims claims/ --allow-extractor cat --allow-extractor curl",
+      "exit": 1,
+      "note": "",
+      "output": "claims  /Users/elliottower/.cache/repo-audit-knockout/checkout/claims\n\n18 quotes\n\n  not found           0\n  unchecked          18   file not found\n\nnothing was measured. all 18 quotation(s) went unresolved, so this run says nothing about the manuscript either way. The reasons are above; a run that read no source is not a run that found no fault."
+    },
+    "prereg.check": {
+      "command": "prereg check",
+      "exit": 0,
+      "note": "",
+      "output": "unchanged    /Users/elliottower/.cache/repo-audit-knockout/checkout/experiments/2026-09-21_graded-perturbation-rerun/PREREG.md\n  timestamp  none. `prereg timestamp` makes one.\nunchanged    /Users/elliottower/.cache/repo-audit-knockout/checkout/experiments/2026-09-21_ode-primary-rerun/PREREG.md\n  timestamp  none. `prereg timestamp` makes one.\nunchanged    /Users/elliottower/.cache/repo-audit-knockout/checkout/experiments/2026-09-21_ode-sensitivity/PREREG.md\n  timestamp  none. `prereg timestamp` makes one.\n\n3 plans: 3 unchanged, 0 changed, 0 not frozen"
+    },
+    "repro.verify": {
+      "command": "repro verify --policy publication",
+      "exit": 2,
+      "note": "",
+      "output": "no repro.yaml here or above.\n\ndeclare the artifacts and claims to check:\n\n    repro.yaml:\n      artifacts: [...]\n      claims: [...]"
+    },
+    "results.verify": {
+      "command": "results verify --files",
+      "exit": 1,
+      "note": "",
+      "output": "chain intact: 153 events, anchored\n\n  no outside timestamp. `results timestamp` makes one.\n\n  claim         131\n  init            1\n  run            13\n  seal            8\n\nfile hashes:\n  ok         results/direct_topology_fit.json\n  ok         results/empirical/consolidated_comparison.json\n  ok         results/gnk_control.json\n  ok         results/graded_perturbation_scored.json\n  ok         results/grn_v2/albert_segment_polarity_composition_blind.json\n  ok         results/grn_v2/blind_batch2_scorecard.md\n  ok         results/grn_v2/grieco_bladder_analysis.json\n  ok         results/grn_v2/ode_full/ode_sweep_summary.json\n  RESEALED   results/necb_abstract_numbers.json\n    recorded 2 different hashes for this path\n  RESEALED   results/paper_number_reconciliation.json\n    recorded 4 different hashes for this path\n  RESEALED   scripts/reconcile_paper_numbers.py\n    recorded 4 different hashes for this path\n  RESEALED   scripts/verify_necb_abstract_numbers.py\n    recorded 2 different hashes for this path\n\n4 file(s) changed or missing since they were recorded."
+    }
+  },
+  "target": {
+    "commit": "cb82384606faa2e6e6f778015a17793b47af8215",
+    "layout": {
+      "claims": "claims",
+      "globs": {
+        "registered_plans_in_experiments": "experiments/*/PREREG.md"
+      },
+      "ledger": ".results/ledger.jsonl",
+      "manifest": "repro.yaml"
+    },
+    "repository": "https://github.com/elliottower/knockout-epistasis-dynamics.git",
+    "steps": [
+      {
+        "argv": [
+          "citations",
+          "verify",
+          "--claims",
+          "claims/",
+          "--allow-extractor",
+          "cat",
+          "--allow-extractor",
+          "curl"
+        ],
+        "name": "citations.verify"
+      },
+      {
+        "argv": [
+          "results",
+          "verify",
+          "--files"
+        ],
+        "name": "results.verify"
+      },
+      {
+        "argv": [
+          "prereg",
+          "check"
+        ],
+        "name": "prereg.check"
+      },
+      {
+        "argv": [
+          "repro",
+          "verify",
+          "--policy",
+          "publication"
+        ],
+        "name": "repro.verify"
+      }
+    ],
+    "tree": "4b79a139d01e94cf5558f8713cf130c519a03275"
+  },
+  "tool_versions": {
+    "citations": "0.4.2",
+    "prereg": "0.4.2",
+    "reproducible-science": "0.4.2",
+    "results-cli": "0.4.2"
+  }
+}

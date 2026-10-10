@@ -1,0 +1,160 @@
+{
+  "declared": {
+    "bibliography_entries_cited_by_the_manuscript": 75,
+    "claim_records": 94,
+    "claims": 173,
+    "evidence_manifests": 0,
+    "pinned_sources": 94,
+    "quotations": 175,
+    "registered_plans": 0,
+    "registration_documents": 6,
+    "results_ledgers": 0,
+    "sources_carrying_a_digest": 94,
+    "tracked_files": 365,
+    "tracked_manuscripts": 3
+  },
+  "generated": "2026-10-05T17:45:16+00:00",
+  "pin": {
+    "commit": "c6a7a06d420e11b1a37e277fbd28a811c5b451e5",
+    "commit_matches_pin": true,
+    "dirty": false,
+    "tree": "05dbb527895696368a393309e445e1dbd6ef77ef",
+    "tree_matches_pin": true
+  },
+  "steps": {
+    "citations.audit": {
+      "command": "citations audit --bib paper/references.bib --cache /Users/elliottower/.cache/repo-audit-cross_design/audit-cache",
+      "exit": 0,
+      "note": "reaches DataCite, Crossref, OpenAlex and Semantic Scholar",
+      "output": "bibtex  /Users/elliottower/.cache/repo-audit-cross_design/checkout/paper/references.bib\ncache   /Users/elliottower/.cache/repo-audit-cross_design/audit-cache\n\n  mismatch   elliott2009  (vs crossref)\n               author list has 3 names, registry has 1\n  mismatch   hernan2008  (vs crossref)\n               title (one is a prefix of the other): registry has 'Observational Studies Analyzed Like Randomized Experiments'\n  mismatch   hernan2016  (vs crossref)\n               title (one is a prefix of the other): registry has 'Using Big Data to Emulate a Target Trial When a Randomized Trial Is Not Available: Table\\xa01.'\n  mismatch   hu2019  (vs crossref)\n               volume: ours 11 vs registry 2021\n  mismatch   juergens2023ganitumab  (vs crossref)\n               title (one is a prefix of the other): registry has \"Randomized Phase III Trial of Ganitumab With Interval-Compressed Chemotherapy for Patients With Newly Diagnosed Metastatic Ewing Sarcoma: A Report From the Children's Oncology Group\"\n  mismatch   lawlor2016  (vs crossref)\n               pages: ours '1866--1886' vs registry 'dyw314'\n  mismatch   li2019uratemr  (vs crossref)\n               author 6 given name: ours 'john p a' vs registry 'p a'\n  mismatch   ogawa2014  (vs crossref)\n               title (one is a prefix of the other): registry has 'Plasma\\n                    <scp>L</scp>\\n                    -Tryptophan Concentration in Major Depressive Disorder'\n  mismatch   shumaker2003  (vs crossref)\n               title (one is a prefix of the other): registry has 'Estrogen Plus Progestin and the Incidence of Dementia and Mild Cognitive Impairment in Postmenopausal Women'\n  mismatch   thakkinstian2006  (vs crossref)\n               title: ours 'Systematic review and meta-analysis of the association between complement factor {H} {Y402H} polymorphisms and age-related macular degeneration' vs registry 'Systematic review and meta-analysis of the association between complementary factor H Y402H polymorphisms and age-related macular\\xa0degeneration'\n\n75 entries\n\n  checked          74\n  agree            64\n  disagree         10\n  no id             1   nothing can check these until they have a DOI or PMID\n\nwhat disagrees\n        5  title (one continues the other)\n        1  author list longer than the registry's\n        1  volume\n        1  pages\n        1  given name\n        1  title\n\n10 disagree with the record their own identifier resolves to.\na wrong author list on a right DOI is invisible to every other check."
+    },
+    "citations.verify": {
+      "command": "citations verify --claims claims/ --strict",
+      "exit": 0,
+      "note": "",
+      "output": "claims  /Users/elliottower/.cache/repo-audit-cross_design/checkout/claims\n\n175 quotes\n\n  found             175\n  not found           0\n\nread by\n       72  pdftotext   fallback: pdftotext -layout did not find this passage; pdfto\n       53  text\n       47  pdftotext -layout\n        3  pypdf   fallback: pdftotext -layout did not find this passage; pypdf\n\n67 sources absent at the path the record names and read from the library, matched to the pinned sha256\n  /Users/elliottower/Documents/GitHub/citations-library/pdfs\n\nwarnings\n        5  short \u2014 the source may qualify this in the next clause\n\nall found.\nfontTools is required to fully parse the encoding of a CFF Type1 font in font dictionary {'/BaseFont': '/OELBSQ+ArialMT', '/Encoding': '/WinAnsiEncoding', '/FirstChar': 32, '/FontDescriptor': IndirectObject(59, 0, 4534990032), '/LastChar': 122, '/Subtype': '/Type1', '/Type': '/Font', '/Widths': [278, 0, 0, 0, 0, 0, 0, 0, 333, 333, 0, 0, 278, 333, 0, 278, 556, 556, 556, 556, 556, 556, 556, 556, 556, 556, 278, 0, 0, 0, 584, 0, 0, 667, 667, 722, 722, 667, 611, 778, 722, 278, 0, 667, 556, 833, 722, 778, 667, 0, 722, 667, 611, 722, 0, 0, 0, 667, 0, 278, 0, 278, 0, 0, 0, 556, 556, 500, 556, 556, 278, 556, 556, 222, 0, 0, 222, 833, 556, 556, 556, 0, 333, 500, 278, 556, 500, 0, 500, 500, 500]}, but is not installed. Consider installing fontTools if you encounter encoding problems.\nfontTools is required to fully parse the encoding of a CFF Type1 font in font dictionary {'/BaseFont': '/ArialMT2', '/Encoding': '/WinAnsiEncoding', '/FirstChar': 32, '/FontDescriptor': IndirectObject(115, 0, 4534990032), '/LastChar': 122, '/Subtype': '/Type1', '/Type': '/Font', '/Widths': [278, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 667, 0, 0, 0, 278, 0, 0, 0, 0, 0, 778, 0, 0, 722, 0, 0, 722, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 556, 556, 500, 0, 556, 278, 0, 0, 222, 0, 0, 222, 833, 556, 556, 556, 0, 333, 0, 278, 556, 0, 0, 500, 0, 500]}, but is not installed. Consider installing fontTools if you encounter encoding problems.\nfontTools is required to fully parse the encoding of a CFF Type1 font in font dictionary {'/BaseFont': '/OELBSQ+Arial-BoldMT', '/Encoding': '/WinAnsiEncoding', '/FirstChar': 32, '/FontDescriptor': IndirectObject(117, 0, 4534990032), '/LastChar': 117, '/Subtype': '/Type1', '/Type': '/Font', '/Widths': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 333, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 722, 0, 722, 0, 667, 611, 778, 722, 278, 0, 722, 611, 833, 722, 0, 667, 778, 722, 667, 611, 0, 0, 0, 0, 667, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 556, 0, 0, 0, 278, 0, 0, 0, 889, 611, 0, 0, 0, 389, 556, 333, 611]}, but is not installed. Consider installing fontTools if you encounter encoding problems.\nfontTools is required to fully parse the encoding of a CFF Type1 font in font dictionary {'/BaseFont': '/Arial-BoldMT2', '/Encoding': '/WinAnsiEncoding', '/FirstChar': 32, '/FontDescriptor': IndirectObject(310, 0, 4534990032), '/LastChar': 121, '/Subtype': '/Type1', '/Type': '/Font', '/Widths': [278, 0, 0, 0, 0, 0, 0, 0, 333, 333, 0, 0, 0, 333, 0, 0, 556, 0, 556, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 722, 722, 722, 722, 0, 0, 0, 0, 0, 0, 0, 0, 833, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 556, 611, 556, 611, 556, 333, 611, 611, 278, 0, 556, 278, 889, 611, 611, 611, 0, 389, 556, 333, 611, 0, 778, 0, 556]}, but is not installed. Consider installing fontTools if you encounter encoding problems.\nfontTools is required to fully parse the encoding of a CFF Type1 font in font dictionary {'/BaseFont': '/ArialMT3', '/Encoding': IndirectObject(311, 0, 4534990032), '/FirstChar': 31, '/FontDescriptor': IndirectObject(313, 0, 4534990032), '/LastChar': 150, '/Subtype': '/Type1', '/Type': '/Font', '/Widths': [584, 278, 0, 0, 0, 0, 0, 0, 0, 333, 333, 0, 0, 0, 0, 278, 0, 556, 556, 556, 556, 556, 556, 556, 556, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 778, 0, 0, 0, 0, 0, 722, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 556, 556, 500, 0, 556, 278, 0, 0, 222, 0, 0, 222, 833, 0, 0, 0, 0, 333, 0, 278, 556, 0, 0, 500, 0, 500, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1000]}, but is not installed. Consider installing fontTools if you encounter encoding problems.\nfontTools is required to fully parse the encoding of a CFF Type1 font in font dictionary {'/FirstChar': 1, '/Subtype': '/Type1', '/BaseFont': '/DVVWFP+OTNEJMScalaSansLF', '/FontDescriptor': IndirectObject(119, 0, 4535334416), '/Type': '/Font', '/Encoding': IndirectObject(68, 0, 4535334416), '/LastChar': 173, '/Widths': [499, 447, 536, 543, 276, 541, 539, 500, 711, 500, 460, 533, 668, 700, 500, 500, 545, 847, 476, 337, 309, 539, 447, 247, 444, 469, 584, 250, 500, 500, 500, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 500, 507, 864, 402, 500, 252, 363, 850, 363, 454, 605, 251, 534, 878, 527, 522, 405, 771, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 239, 0, 0, 556, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 282]}, but is not installed. Consider installing fontTools if you encounter encoding problems.\nfontTools is required to fully parse the encoding of a CFF Type1 font in font dictionary {'/FirstChar': 1, '/Subtype': '/Type1', '/BaseFont': '/DVVWFP+OTNEJMScalaSansLF-Bold', '/FontDescriptor': IndirectObject(121, 0, 4535334416), '/Type': '/Font', '/Encoding': IndirectObject(67, 0, 4535334416), '/LastChar': 157, '/Widths': [433, 534, 309, 431, 832, 476, 288, 518, 467, 701, 500, 500, 309, 531, 516, 337, 468, 556, 276, 545, 545, 584, 500, 500, 250, 309, 447, 247, 583, 595, 591, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 711, 0, 507, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 539, 0, 444, 763, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 864]}, but is not installed. Consider installing fontTools if you encounter encoding problems.\nfontTools is required to fully parse the encoding of a CFF Type1 font in font dictionary {'/FirstChar': 1, '/Subtype': '/Type1', '/BaseFont': '/DVVWFP+OTNEJMScalaSansLF-Bold', '/FontDescriptor': IndirectObject(121, 0, 4535334416), '/Type': '/Font', '/Encoding': IndirectObject(90, 0, 4535334416), '/LastChar': 141, '/Widths': [288, 850, 309, 545, 518, 337, 444, 456, 545, 447, 595, 500, 583, 539, 522, 591, 467, 864, 251, 516, 759, 250, 468, 464, 247, 309, 476, 239, 832, 545, 605, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 538, 0, 531, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 309]}, but is not installed. Consider installing fontTools if you encounter encoding problems.\nfontTools is required to fully parse the encoding of a CFF Type1 font in font dictionary {'/FirstChar': 1, '/Subtype': '/Type1', '/BaseFont': '/DVVWFP+OTNEJMScalaSansLF', '/FontDescriptor': IndirectObject(119, 0, 4535334416), '/Type': '/Font', '/Encoding': IndirectObject(91, 0, 4535334416), '/LastChar': 31, '/Widths': [405, 447, 447, 337, 309, 545, 252, 507, 500, 250, 847, 541, 460, 247, 543, 878, 533, 527, 469, 444, 476, 239, 556, 500, 500, 500, 500, 499, 500, 500, 500]}, but is not installed. Consider installing fontTools if you encounter encoding problems."
+    },
+    "prereg.check": {
+      "command": "prereg check",
+      "exit": 1,
+      "note": "",
+      "output": "\nregistrations frozen by a commit line:\nCHANGED      PREREGISTRATION.md  at b96d10a\n  23 lines added, 3 removed\n  first difference at line 107:\n  - | Anti-CD20/MS | Per allele (FCRL3) | **Yes \u2014 must rescale to per-SD CD20 expression** |\n  + | Anti-CD20/MS | Per SD circulating FCRL3 (Lin 2023, PMID 36864689) | No (already per-SD; proteomics\nunchanged    PREREGISTRATION_AMENDMENT_2_BLIND.md  at 12ea0ed\nunchanged    PREREGISTRATION_AMENDMENT_3_REFERENCE_CORRECTION.md  at 5d12b37\nunchanged    PREREGISTRATION_AMENDMENT_4_REVISED_PRIMARY_ANALYSIS.md  at 38b8f33\nappended     PREREGISTRATION_AMENDMENT_5_SCREEN_MR_STATES_OUTCOME_CODING.md  at fbc7d33\n  8 lines added after the frozen text\nunchanged    PREREGISTRATION_AMENDMENT_EXPLORATORY.md  at 1f300a9\n\n6 commit-pinned: 4 unchanged, 1 appended, 1 changed, 0 pending, 0 unknown commit"
+    },
+    "repro.verify": {
+      "command": "repro verify --policy publication",
+      "exit": 2,
+      "note": "",
+      "output": "no repro.yaml here or above.\n\ndeclare the artifacts and claims to check:\n\n    repro.yaml:\n      artifacts: [...]\n      claims: [...]"
+    },
+    "results.coverage.manuscript": {
+      "command": "results coverage paper/paper_v4_bmc.tex --limit 25",
+      "exit": 2,
+      "note": "",
+      "output": "no .results/ in /Users/elliottower/.cache/repo-audit-cross_design/checkout or above; `results init` makes one"
+    },
+    "results.coverage.readme": {
+      "command": "results coverage README.md --limit 25",
+      "exit": 2,
+      "note": "",
+      "output": "no .results/ in /Users/elliottower/.cache/repo-audit-cross_design/checkout or above; `results init` makes one"
+    },
+    "results.verify": {
+      "command": "results verify --files",
+      "exit": 2,
+      "note": "",
+      "output": "no .results/ in /Users/elliottower/.cache/repo-audit-cross_design/checkout or above; `results init` makes one"
+    }
+  },
+  "target": {
+    "commit": "c6a7a06d420e11b1a37e277fbd28a811c5b451e5",
+    "layout": {
+      "bibliographies": {
+        "cited_by_the_manuscript": "paper/references.bib"
+      },
+      "claims": "claims",
+      "globs": {
+        "registration_documents": "PREREGISTRATION*.md",
+        "tracked_manuscripts": "paper/paper_v*.tex"
+      },
+      "ledger": ".results/ledger.jsonl",
+      "manifest": "repro.yaml"
+    },
+    "repository": "https://github.com/elliottower/cross-design-evidence-discordance.git",
+    "steps": [
+      {
+        "argv": [
+          "citations",
+          "verify",
+          "--claims",
+          "claims/",
+          "--strict"
+        ],
+        "name": "citations.verify"
+      },
+      {
+        "argv": [
+          "results",
+          "verify",
+          "--files"
+        ],
+        "name": "results.verify"
+      },
+      {
+        "argv": [
+          "results",
+          "coverage",
+          "paper/paper_v4_bmc.tex",
+          "--limit",
+          "25"
+        ],
+        "name": "results.coverage.manuscript"
+      },
+      {
+        "argv": [
+          "results",
+          "coverage",
+          "README.md",
+          "--limit",
+          "25"
+        ],
+        "name": "results.coverage.readme"
+      },
+      {
+        "argv": [
+          "prereg",
+          "check"
+        ],
+        "name": "prereg.check"
+      },
+      {
+        "argv": [
+          "repro",
+          "verify",
+          "--policy",
+          "publication"
+        ],
+        "name": "repro.verify"
+      },
+      {
+        "argv": [
+          "citations",
+          "audit",
+          "--bib",
+          "paper/references.bib",
+          "--cache",
+          "{cache}"
+        ],
+        "name": "citations.audit",
+        "network": true,
+        "note": "reaches DataCite, Crossref, OpenAlex and Semantic Scholar"
+      }
+    ],
+    "tree": "05dbb527895696368a393309e445e1dbd6ef77ef"
+  },
+  "tool_versions": {
+    "citations": "0.4.2",
+    "prereg": "0.4.2",
+    "reproducible-science": "0.4.2",
+    "results-cli": "0.4.2"
+  }
+}

@@ -1,0 +1,18 @@
+source:
+  citation: piccolo2016tools
+  local: reference/piccolo2016tools.xml
+  sha256: 42a26d1d7e957b9f09b4211815d04c40469b0533c02eeb030cc6476706ac3e97
+  url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4940747/fullTextXML
+  extract_cmd: none — JATS XML is read directly
+claims:
+  obstacles-are-packaging-installation-execution-documentation:
+    statement: Computational findings often cannot be reproduced because of how software is packaged,
+      installed and executed, and because of how analysis steps are documented.
+    quotes:
+    - exact: However, in practice, computational findings often cannot be reproduced because of complexities
+        in how software is packaged, installed, and executed
+      section: Abstract
+    - exact: and because of limitations associated with how scientists document analysis steps.
+      section: Abstract
+    notes: The manuscript wrote 'packaging, environment drift and documentation staleness'. The source's
+      terms are packaging, installation, execution and documentation of analysis steps.

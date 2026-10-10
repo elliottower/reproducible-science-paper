@@ -1,0 +1,28 @@
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+.DS_Store
+
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# An audit's raw output is an artifact, not a build product: every number reported from one is
+# checked against the log beside it. Named against `*.log` above, which would otherwise take it.
+!paper/audit/**/*.log
+
+# The CORE-Bench run's console output is an artifact, not a build product.
+!evaluation/recall.log
+
+# Lock sidecars hold nothing.
+*.provenance-lock
+
+# Other projects' web pages and publishers' PDFs that quotations are pinned to. Not redistributed.
+paper/prior_art/sources/
+paper/prior_art/reference/

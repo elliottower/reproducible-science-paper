@@ -1,0 +1,173 @@
+% The toolkit over CODECHECK certificates. Drafted in the reproducible-science-codecheck
+% repository (paper/appendix_certified_reproductions_v1c.tex). Every number is in
+% artifacts/codecheck_indices.json, artifacts/codecheck_agreement_summary.json,
+% artifacts/codecheck_mismatch_review.json or artifacts/codecheck_eligibility_summary.json.
+
+\section{Certified reproductions}
+\label{sec:codecheck}
+
+CODECHECK issues a certificate when an independent codechecker regenerates a paper's outputs, and
+each certificate's manifest names the regenerated files and the figure or table each belongs to
+\citep{nust2021codecheck}. The correspondence between file and table
+is therefore written by a third party. We run \tVerifyCmd{} over the public register to measure
+how much of a certified reproduction can be checked number by number. The plan is registered
+before any output file is opened.
+
+\paragraph{Result.} Six certificates link fifteen tables to regenerated files, and 338 of the
+713 numbers those tables print are bound to a cell of a file. In 326 of the 338, the paper and the
+certificate's file hold the same number. Twelve differ, in two certificates, and each difference
+has a cause that can be read from the files (Table~\ref{tab:cc-differences}). The counts describe
+what can be checked in certified reproductions and do not estimate how often published numbers
+are wrong.
+
+\paragraph{From the register to checkable tables.} Table~\ref{tab:cc-funnel} follows the
+register down to the certificates the toolkit can use. The manifests name 545 outputs, of which
+419 are figures. Six certificates name a file the toolkit reads, keep it in their repository,
+and say which table of the paper it holds.
+
+\vspace{0.5em}
+\begin{table}[H]
+\centering
+\small
+\caption{Certificates in the CODECHECK register that reach each condition. Three certificates
+describe their files without naming a table, and four name a file their repository does not
+hold under that name.}
+\label{tab:cc-funnel}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.74\textwidth}r@{}}
+\toprule
+condition & certificates \\
+\midrule
+in the register & 133 \\
+names an output in a format read as values, not marked as outside the manuscript & 13 \\
+that output is in the certificate's repository & 9 \\
+its manifest comment names a table the paper has & 6 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Coverage.} A number is bound when it has one address in the paper's extracted text
+and one cell in the regenerated file. The bindings are written with Claude Code (Anthropic) from
+views of each output in which every value is masked, and are locked before any comparison runs.
+Four certificates bind between 64 of 92 and 137 of 140
+numbers (Table~\ref{tab:cc-coverage}). Two bind none: their outputs hold formatted text, in one
+a median with its interval and units in each cell and in the other a single column named
+\code{text}. An output that reproduces a table's appearance has no cell to compare a number
+against.
+
+\vspace{0.5em}
+\begin{table}[H]
+\centering
+\small
+\caption{Numbers printed in linked tables, counting at most 60 per table, numbers bound on both
+sides, and bound numbers that are the same in the paper and in the certificate's file.}
+\label{tab:cc-coverage}
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+certificate & printed & bound & same number & differ \\
+\midrule
+2025-018 & 140 & 137 & 133 & 4 \\
+2020-025 & 90 & 86 & 86 & 0 \\
+2022-001 & 92 & 64 & 56 & 8 \\
+2024-020 & 58 & 51 & 51 & 0 \\
+2020-011 & 33 & 0 & --- & --- \\
+2020-008 & 300 & 0 & --- & --- \\
+\midrule
+all & 713 & 338 & 326 & 12 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Agreement.} The toolkit reports 254 of the 338 bound numbers as agreeing at the
+precision the paper prints. It reports 69 as disagreeing and does not read 15, and 72 of those
+84 are the same number (Table~\ref{tab:cc-agreement}). The registered rule reads each output at the last commit before the certificate's check time.
+Sixteen of 37 linked outputs exist there, so each output is read at the first commit holding
+it, a change logged before any output is opened. The 30 numbers of one table of certificate
+2020-025 differ from that first revision of its output file and equal the revision at the check
+time in every cell; the certificate does not record which revision was certified. The 15 unread numbers, 11 of them equal to the file, expose a defect in the toolkit, whose
+numeric parser rejects a thousands separator.
+
+\vspace{0.5em}
+\begin{table}[H]
+\centering
+\small
+\caption{The 338 bound numbers, by how the paper's numeral compares with the certificate's
+file.}
+\label{tab:cc-agreement}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.66\textwidth}r@{}}
+\toprule
+comparison & numbers \\
+\midrule
+the toolkit reports agreement & 254 \\
+the paper truncates where the toolkit rounds & 31 \\
+equal at the output file's revision at the check time & 30 \\
+equal once a thousands separator is removed & 11 \\
+differ & 12 \\
+\midrule
+all & 338 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Differences.} Table~\ref{tab:cc-differences} lists the 12 numbers that differ. Five
+are standard deviations that equal the file's value multiplied by $\sqrt{(n-1)/n}$ with
+$n = 1{,}070$, which is consistent with a paper that divides by $n$ where the regenerated file
+divides by $n-1$; the same factor reproduces all 12 standard deviations counted in that table.
+One regression coefficient is printed without its exponent. Three are memory measurements, 0.1\%
+to 6.5\% from the file's value.
+
+\vspace{0.5em}
+\begin{table}[!ht]
+\centering
+\small
+\caption{The 12 bound numbers that differ between the paper and the certificate's file. File
+values are shortened to the digits needed to show the difference.}
+\label{tab:cc-differences}
+\begin{tabular}{@{}l>{\raggedright\arraybackslash}p{0.25\textwidth}rr>{\raggedright\arraybackslash}p{0.27\textwidth}@{}}
+\toprule
+certificate & quantity & paper & file & difference \\
+\midrule
+2022-001 & standard deviation & 30.33 & 30.3485 & divisor $n$ or $n-1$ \\
+2022-001 & standard deviation & 21.80 & 21.8124 & divisor $n$ or $n-1$ \\
+2022-001 & standard deviation & 28.20 & 28.2116 & divisor $n$ or $n-1$ \\
+2022-001 & standard deviation & 84,154.56 & 84,193.92 & divisor $n$ or $n-1$ \\
+2022-001 & standard deviation & 3,132.90 & 3,134.36 & divisor $n$ or $n-1$ \\
+2022-001 & regression coefficient & 5.273 & $5.273 \times 10^{-7}$ & exponent not printed \\
+2022-001 & median & 4,984.44 & 4,984.4349 & last printed digit \\
+2022-001 & maximum & 827,067.40 & 827,067.43 & 0.03 \\
+2025-018 & run time, seconds & 12.659 & 12.658475 & last printed digit \\
+2025-018 & memory, megabytes & 3.1 & 2.897 & 6.5\% \\
+2025-018 & memory, megabytes & 610.8 & 611.443 & 0.1\% \\
+2025-018 & memory, megabytes & 2310.8 & 2329.968 & 0.8\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Planted changes.} Agreement means little if the toolkit cannot report a
+disagreement, so each bound number is checked again on copies carrying one planted change
+(Table~\ref{tab:cc-planted}). The toolkit reports a one-unit change in the last printed digit of
+the file in all 254 cases and of the paper in 240. In ten of the fourteen misses the file stores
+fewer digits than the paper prints, and in four the changed numeral sits among identical
+neighbors that serve as its anchors. No deleted row, column or file is reported as agreement or
+as a disagreement.
+
+\vspace{0.5em}
+\begin{table}[H]
+\centering
+\small
+\caption{Planted changes on copies of the bound numbers, and how many the toolkit reports with
+the outcome and reason its specification gives. The first three rows use the 254 numbers that
+agree; the last three use all 338.}
+\label{tab:cc-planted}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.44\textwidth}>{\raggedright\arraybackslash}p{0.30\textwidth}r@{}}
+\toprule
+planted change & expected report & as expected \\
+\midrule
+none & agreement & 254 of 254 \\
+last printed digit of the file's value & disagreement & 254 of 254 \\
+last printed digit of the paper's value & disagreement & 240 of 254 \\
+addressed row deleted & row absent & 338 of 338 \\
+addressed column deleted & column absent & 338 of 338 \\
+output file deleted & not checked, file missing & 338 of 338 \\
+\bottomrule
+\end{tabular}
+\end{table}

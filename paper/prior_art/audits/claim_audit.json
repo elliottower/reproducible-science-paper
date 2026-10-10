@@ -1,0 +1,318 @@
+{
+  "generated": "2026-08-25T21:01:26+00:00",
+  "scope": "every statement in paper/evidence_assertions_v3.tex that attributes a fact to an outside source, plus the two internal counts the brief named",
+  "manuscript": "paper/evidence_assertions_v3.tex",
+  "verdicts": {
+    "verified": "the source says it",
+    "mismatch": "the source says something the manuscript sentence misstated; the manuscript was corrected",
+    "not_found": "the source was read and does not say it; the manuscript was corrected",
+    "unchecked": "the source could not be obtained or does not exist on disk; the manuscript carries a REVIEW tag"
+  },
+  "totals": {
+    "verified": 15,
+    "mismatch": 10,
+    "not_found": 1,
+    "unchecked": 3,
+    "all": 29
+  },
+  "claims": [
+    {
+      "id": "entailment-datasets",
+      "manuscript_passage": "Entailment between evidence and claim is the subject of FEVER, SciFact and CliniFact, which predict a label given retrieved text and score against human annotation.",
+      "source": [
+        "thorne2018fever",
+        "wadden2020scifact",
+        "clinifact2025"
+      ],
+      "verdict": "verified",
+      "claim_record": "claims/thorne2018fever.yaml, claims/wadden2020scifact.yaml, claims/clinifact2025.yaml",
+      "reason": "CliniFact derives its labels from reported p-values first; the test labels were then revised by two groups of reviewers, so 'human annotation' holds for the split the benchmark scores on."
+    },
+    {
+      "id": "meyer-contract",
+      "manuscript_passage": "The specification is a contract in Meyer's sense: precondition, postcondition, invariant.",
+      "source": [
+        "meyer1992contract"
+      ],
+      "verdict": "verified",
+      "claim_record": "claims/meyer1992contract.yaml"
+    },
+    {
+      "id": "fellegi-blocking",
+      "manuscript_passage": "Record linkage meets the same wall and answers it with blocking, where a comparison key too coarse to discriminate produces candidate sets that swamp the signal.",
+      "source": [
+        "fellegi1969linkage"
+      ],
+      "verdict": "mismatch",
+      "claim_record": "claims/fellegi1969linkage.yaml",
+      "was": "blocking answers a coarse comparison key that swamps the signal",
+      "now": "comparing every pair across two files of 10^5 records runs to 10^10 comparisons, so the comparisons are restricted to a subspace by blocking, and the paper analyzes what that costs in error levels",
+      "reason": "The paper motivates blocking by the cost of the comparison count and analyses its effect on the error levels. The failure mode of a coarse blocking key is not in it."
+    },
+    {
+      "id": "fellegi-three-way",
+      "manuscript_passage": "Fellegi and Sunter classify a candidate pair as match, non-match, or possible match held for clerical review, and prove that rule minimizes the review region at fixed error bounds.",
+      "source": [
+        "fellegi1969linkage"
+      ],
+      "verdict": "mismatch",
+      "claim_record": "claims/fellegi1969linkage.yaml",
+      "was": "match, non-match, or possible match held for clerical review; minimizes the review region",
+      "now": "link, non-link, or possible link, the third left for expensive manual resolution; the optimal rule minimizes the probability of the third at fixed levels of the two error rates",
+      "reason": "'match/non-match' name the underlying states, not the decisions. 'Clerical review' is later terminology and does not appear in the paper."
+    },
+    {
+      "id": "borg-traceability",
+      "manuscript_passage": "Information-retrieval traceability recovers links between artifacts by content similarity, and reports the precision-recall tradeoff at scale as a standing limitation.",
+      "source": [
+        "borg2013traceability"
+      ],
+      "verdict": "mismatch",
+      "claim_record": "claims/borg2013traceability.yaml",
+      "was": "reports the precision-recall tradeoff at scale as a standing limitation",
+      "now": "most evaluations stop at precision and recall over datasets of fewer than 500 artifacts, which leaves whether the approach scales to larger document spaces unanswered",
+      "reason": "Two separate observations in the source were fused into one that neither supports. The mapping study criticizes the evaluation practice; it does not report a precision-recall tradeoff at scale."
+    },
+    {
+      "id": "paperclip-claim-and-line-range",
+      "manuscript_passage": "An agent adds a claim naming a document identifier and a line range.",
+      "source": [
+        "gxl2026paperclip"
+      ],
+      "verdict": "verified",
+      "claim_record": "claims/gxl2026paperclip_docs.yaml"
+    },
+    {
+      "id": "paperclip-commit-verifies",
+      "manuscript_passage": "A commit verifies each claim against the source text.",
+      "source": [
+        "gxl2026paperclip"
+      ],
+      "verdict": "verified",
+      "claim_record": "claims/gxl2026paperclip_docs.yaml"
+    },
+    {
+      "id": "paperclip-drops-unsupported",
+      "manuscript_passage": "...dropping unsupported ones, with a log for audit.",
+      "source": [
+        "gxl2026paperclip"
+      ],
+      "verdict": "mismatch",
+      "claim_record": "claims/gxl2026paperclip_docs.yaml",
+      "was": "a commit drops unsupported claims",
+      "now": "a commit marks the claims the source does not support",
+      "reason": "The docs contradict themselves: the Paper Repos overview says commit drops unsupported claims, the repo commit reference says they are flagged so the author can correct or drop them. `repo status` renders a mark for a claim the source does not support, so an unsupported claim survives the commit."
+    },
+    {
+      "id": "paperclip-lm-subagent",
+      "manuscript_passage": "Verification is performed by a language-model subagent, so the verdict is not reproducible from the artifact.",
+      "source": [
+        "gxl2026paperclip"
+      ],
+      "verdict": "verified",
+      "claim_record": "claims/gxl2026paperclip_docs.yaml"
+    },
+    {
+      "id": "paperclip-ocr",
+      "manuscript_passage": "PDFs are read with OCR.",
+      "source": [
+        "gxl2026paperclip"
+      ],
+      "verdict": "mismatch",
+      "claim_record": "claims/gxl2026paperclip_docs.yaml",
+      "was": "PDFs are read with OCR",
+      "now": "arXiv PDFs are read with OCR",
+      "reason": "The statement is made of the arXiv source alone in the corpus table; the other sources are not described that way."
+    },
+    {
+      "id": "paperclip-corpus-refetched",
+      "manuscript_passage": "...and the corpus is refetched.",
+      "source": [
+        "gxl2026paperclip"
+      ],
+      "verdict": "not_found",
+      "claim_record": "claims/gxl2026paperclip_docs.yaml",
+      "was": "the corpus is refetched",
+      "now": "each corpus source carries a date on which it was last updated",
+      "reason": "No sentence on the documentation page states that the corpus is refetched. The corpus table does carry a per-source last-updated date, which supports the mutability the sentence is arguing for."
+    },
+    {
+      "id": "paperclip-no-digest",
+      "manuscript_passage": "And no digest is recorded anywhere.",
+      "source": [
+        "gxl2026paperclip"
+      ],
+      "verdict": "mismatch",
+      "claim_record": "claims/gxl2026paperclip_docs.yaml",
+      "was": "no digest is recorded anywhere",
+      "now": "no digest is recorded against a claim or its source; the only content hash the documentation describes is the one that skips a duplicate upload",
+      "reason": "A content hash does appear on the page, for upload de-duplication. 'Anywhere' is contradicted by it; the narrower statement is what the argument needs."
+    },
+    {
+      "id": "paperclip-commit-without-verification",
+      "manuscript_passage": "A commit also lands when verification is skipped.",
+      "source": [
+        "gxl2026paperclip"
+      ],
+      "verdict": "verified",
+      "claim_record": "claims/gxl2026paperclip_docs.yaml"
+    },
+    {
+      "id": "paperclip-log",
+      "manuscript_passage": "...with a log for audit.",
+      "source": [
+        "gxl2026paperclip"
+      ],
+      "verdict": "verified",
+      "claim_record": "claims/gxl2026paperclip_docs.yaml"
+    },
+    {
+      "id": "sweave-write-time-binding",
+      "manuscript_passage": "Sweave and its successors generate a document from the same execution that produces the values it reports.",
+      "source": [
+        "leisch2002sweave"
+      ],
+      "verdict": "verified",
+      "claim_record": "claims/leisch2002sweave.yaml",
+      "reason": "Pinned against the WU Vienna SFB Report No. 69 deposit of the same text, since the Compstat chapter the bibliography cites is behind a paywall. Recorded in the claim file's note."
+    },
+    {
+      "id": "piccolo-obstacles",
+      "manuscript_passage": "The obstacles surveyed are packaging, environment drift and documentation staleness rather than the binding mechanism.",
+      "source": [
+        "piccolo2016tools"
+      ],
+      "verdict": "mismatch",
+      "claim_record": "claims/piccolo2016tools.yaml",
+      "was": "packaging, environment drift and documentation staleness",
+      "now": "how software is packaged, installed and executed, and how analysis steps are documented",
+      "reason": "'Environment drift' and 'documentation staleness' are not the survey's terms and narrow what it says."
+    },
+    {
+      "id": "pimentel-notebooks",
+      "manuscript_passage": "Over 1.4 million notebooks, a quarter executed without error and a small fraction reproduced their recorded results.",
+      "source": [
+        "pimentel2019notebooks"
+      ],
+      "verdict": "mismatch",
+      "claim_record": "claims/pimentel2019notebooks.yaml",
+      "was": "over 1.4 million notebooks, a quarter executed without error and a small fraction reproduced their recorded results",
+      "now": "of 863,878 Jupyter notebooks with a declared Python version and an unambiguous execution order, 24.11% ran without error and 4.03% reproduced the results stored in the notebook",
+      "reason": "The rates are over the 863,878 notebooks that were executed, not over the collected corpus. The GitHub query returned 1,450,071 notebooks; 1,423,676 survived exclusion and 1,159,166 the removal of duplicates. Attaching a 24% rate to 1.4 million overstates the denominator by 65%."
+    },
+    {
+      "id": "adduce-audits",
+      "manuscript_passage": "adduce audits whether a repository's code, configuration and data agree with the numbers a paper reports.",
+      "source": [
+        "chudasama2026adduce"
+      ],
+      "verdict": "verified",
+      "claim_record": "claims/chudasama2026adduce.yaml"
+    },
+    {
+      "id": "adduce-manifest-and-rules",
+      "manuscript_passage": "The two interoperate through a manifest format rather than a shared dependency.",
+      "source": [
+        "chudasama2026adduce"
+      ],
+      "verdict": "verified",
+      "claim_record": "claims/chudasama2026adduce.yaml"
+    },
+    {
+      "id": "adduce-run-output",
+      "manuscript_passage": "Run against one of our own manuscripts it reports, correctly, that results are reported and run commands exist, but nothing maps commands to specific results.",
+      "source": [
+        "chudasama2026adduce"
+      ],
+      "verdict": "unchecked",
+      "reason": "A quotation of the tool's output on the author's own repository. No run record on disk holds it; the string appears only in the manuscript drafts. Marked in the manuscript with REVIEW."
+    },
+    {
+      "id": "adduce-bibliography",
+      "manuscript_passage": "adduce, version 0.1.2, released 2026-08-04; author and title from the project's CITATION.cff.",
+      "source": [
+        "chudasama2026adduce"
+      ],
+      "verdict": "verified",
+      "claim_record": "claims/chudasama2026adduce.yaml",
+      "reason": "CITATION.cff gives title 'adduce: a local research-artifact auditor', author Harshil Chudasama, version 0.1.2, date-released 2026-08-04. The GitHub release v0.1.2 is stamped 2026-08-05T03:39Z, which is 2026-08-04 in US Eastern time."
+    },
+    {
+      "id": "albizri-oracle-problem",
+      "manuscript_passage": "This is the structure the blockchain literature calls the oracle problem, where a cryptographic mechanism can establish that an off-chain report arrived unaltered and cannot establish that it is true.",
+      "source": [
+        "albizri2021oracle"
+      ],
+      "verdict": "unchecked",
+      "reason": "Journal of Information Systems 35(2):1-16 is paywalled. The publisher PDF returns HTTP 403, Unpaywall reports no open location, and no repository copy was found. Marked in the manuscript with REVIEW."
+    },
+    {
+      "id": "ledger-claim-support-paths",
+      "manuscript_passage": "LEDGER exposes claim-support paths for review; returns no verdict.",
+      "source": [
+        "kim2026ledger"
+      ],
+      "verdict": "verified",
+      "claim_record": "claims/kim2026ledger.yaml",
+      "reason": "'claim-support paths for evidence-centered audit' is verbatim. That it returns no verdict of its own is an inference from what the paper says it exposes, not a sentence in the paper."
+    },
+    {
+      "id": "corebench-known-values",
+      "manuscript_passage": "CORE-Bench enters here only as a source of human-verified values against which recall is measurable.",
+      "source": [
+        "siegel2024corebench"
+      ],
+      "verdict": "verified",
+      "claim_record": "claims/siegel2024corebench.yaml"
+    },
+    {
+      "id": "corebench-solved",
+      "manuscript_passage": "It is reported solved (Opus 4.5 with Claude Code, December 2025).",
+      "source": [
+        "siegel2024corebench"
+      ],
+      "verdict": "unchecked",
+      "reason": "The Holistic Agent Leaderboard paper (arXiv 2510.11977) is named there as the official leaderboard for CORE-Bench Hard, but it predates the December 2025 result and does not carry it. The claim traces to a post by one of the CORE-Bench authors. The REVIEW tag in the manuscript now records this and keeps the claim out of prose."
+    },
+    {
+      "id": "rescience-purposive",
+      "manuscript_passage": "ReScience is a purposive, reproducibility-oriented population.",
+      "source": [
+        "rougier2017rescience"
+      ],
+      "verdict": "verified",
+      "claim_record": "claims/rougier2017rescience.yaml"
+    },
+    {
+      "id": "conformance-fixture-count",
+      "manuscript_passage": "We report a conformance suite of nineteen fixtures.",
+      "source": [
+        "packages/repro/tests/conformance/cases (reproducible-science)"
+      ],
+      "verdict": "verified",
+      "reason": "The fixture directory holds nineteen case directories. The enumeration that followed the count summed to fourteen and was rewritten to add to nineteen: two for quote, six for metric, five for the table cases, four for source states, two for pin states."
+    },
+    {
+      "id": "bib-rougier-author",
+      "manuscript_passage": "references.bib listed author 37 of the ReScience paper as 'Stachelek, Joseph'.",
+      "source": [
+        "rougier2017rescience"
+      ],
+      "verdict": "mismatch",
+      "was": "Stachelek, Joseph",
+      "now": "Stachelek, Jemma",
+      "reason": "Found by `citations audit --bib`. The pinned JATS source gives <surname>Stachelek</surname><given-names>Jemma</given-names>; Crossref agrees."
+    },
+    {
+      "id": "bib-corebench-author",
+      "manuscript_passage": "references.bib listed author 3 of CORE-Bench as 'Nagdir, Nitya'.",
+      "source": [
+        "siegel2024corebench"
+      ],
+      "verdict": "mismatch",
+      "was": "Nagdir, Nitya",
+      "now": "Nadgir, Nitya",
+      "reason": "Found by `citations audit --bib`. The pinned PDF's author line reads Nitya Nadgir; DataCite agrees."
+    }
+  ]
+}

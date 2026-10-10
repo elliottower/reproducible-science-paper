@@ -1,0 +1,31 @@
+source:
+  citation: abeysooriya2021genenames
+  local: reference/abeysooriya2021genenames.pdf
+  sha256: 9771216fa3f5cbea870a796bc7b297c695bc8d9fd9f192571d4a6970d1197638
+  url: https://doi.org/10.1371/journal.pcbi.1008984
+  extract_cmd: pdftotext -layout {} -
+  note: Single-column PDF, but the running text is indented under -layout and the keyword 'genom*'
+    loses its asterisk to the text layer, so quotations stop short of it.
+claims:
+  supplementary-excel-prevalence:
+    statement: Of the genomics publications screened, 32,841 carried supplementary files in Excel
+      format, and 11,117 of those held at least one gene list.
+    quotes:
+    - exact: The results of this screen are shown in Table 3. From this set of publications, 32,841
+        had
+      section: Results
+    - exact: supplementary files in Excel format (with
+      section: Results
+    - exact: Of these, 11,117 publications
+      section: Results
+    notes: The screen looked for the 'xls' and 'xlsx' suffixes alone, so 32,841 bounds spreadsheet
+      publication from below and says nothing about how often results appear in a structured format.
+  screen-scope:
+    statement: The screen covered open-access PubMed Central publications from 2014 to 2020, shortlisted
+      by a genomics keyword in the title or abstract.
+    quotes:
+    - exact: access publications to screen. We did not screen every publication in PMC because most
+        do
+      section: Methods
+    - exact: for the period 2014 to 2020.
+      section: Methods

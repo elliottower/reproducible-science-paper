@@ -1,0 +1,227 @@
+{
+  "inputs": [
+    "indices.json",
+    "natural_mismatch_review.json"
+  ],
+  "same_relations": [
+    "truncation",
+    "check-time file",
+    "agrees"
+  ],
+  "per_certificate": {
+    "2020-025": {
+      "printed": 90,
+      "bound": 86,
+      "checker_agrees": 29,
+      "truncation": 27,
+      "check-time file": 30,
+      "agrees": 0,
+      "same_number": 86,
+      "differ": 0
+    },
+    "2022-001": {
+      "printed": 92,
+      "bound": 64,
+      "checker_agrees": 47,
+      "truncation": 4,
+      "check-time file": 0,
+      "agrees": 5,
+      "same_number": 56,
+      "differ": 8
+    },
+    "2024-020": {
+      "printed": 58,
+      "bound": 51,
+      "checker_agrees": 45,
+      "truncation": 0,
+      "check-time file": 0,
+      "agrees": 6,
+      "same_number": 51,
+      "differ": 0
+    },
+    "2025-018": {
+      "printed": 140,
+      "bound": 137,
+      "checker_agrees": 133,
+      "truncation": 0,
+      "check-time file": 0,
+      "agrees": 0,
+      "same_number": 133,
+      "differ": 4
+    }
+  },
+  "all": {
+    "printed": 380,
+    "bound": 338,
+    "checker_agrees": 254,
+    "truncation": 31,
+    "check-time file": 30,
+    "agrees": 11,
+    "same_number": 326,
+    "differ": 12
+  },
+  "differences_by_relation": {
+    "n divisor": 5,
+    "differs": 4,
+    "last digit": 2,
+    "exponent": 1
+  },
+  "differences": [
+    {
+      "certificate": "2022-001",
+      "claim": "t2-n011",
+      "checker": "disagree",
+      "relation": "n divisor",
+      "column": "std.dev",
+      "where": {
+        "": "MurderRate"
+      },
+      "paper": "30.33",
+      "stored": "30.3484535251829",
+      "relative_difference": "0.0006084248329343883943290471480382459610946"
+    },
+    {
+      "certificate": "2022-001",
+      "claim": "t2-n021",
+      "checker": "disagree",
+      "relation": "n divisor",
+      "column": "std.dev",
+      "where": {
+        "": "Poverty"
+      },
+      "paper": "21.80",
+      "stored": "21.8124005522565",
+      "relative_difference": "0.0005688326723165137614678899082568807339450"
+    },
+    {
+      "certificate": "2022-001",
+      "claim": "t2-n046",
+      "checker": "not read",
+      "relation": "n divisor",
+      "column": "std.dev",
+      "where": {
+        "": "TransEducP"
+      },
+      "paper": "84,154.56",
+      "stored": "84193.91610717",
+      "relative_difference": "0.0004676645825252963119289079522250487674108"
+    },
+    {
+      "certificate": "2022-001",
+      "claim": "t2-n049",
+      "checker": "not read",
+      "relation": "differs",
+      "column": "max",
+      "where": {
+        "": "TransEducP"
+      },
+      "paper": "827,067.40",
+      "stored": "827067.431388958",
+      "relative_difference": "3.795211611532506298761140869534937539552E-8"
+    },
+    {
+      "certificate": "2022-001",
+      "claim": "t2-n051",
+      "checker": "not read",
+      "relation": "n divisor",
+      "column": "std.dev",
+      "where": {
+        "": "TransAlimE"
+      },
+      "paper": "3,132.90",
+      "stored": "3134.36208840873",
+      "relative_difference": "0.0004666885022598870056497175141242937853107"
+    },
+    {
+      "certificate": "2022-001",
+      "claim": "t2-n052",
+      "checker": "not read",
+      "relation": "last digit",
+      "column": "median",
+      "where": {
+        "": "TransAlimE"
+      },
+      "paper": "4,984.44",
+      "stored": "4984.43486993302",
+      "relative_difference": "0.000001029216317179061238574443668696985017374"
+    },
+    {
+      "certificate": "2022-001",
+      "claim": "t2-n056",
+      "checker": "disagree",
+      "relation": "n divisor",
+      "column": "std.dev",
+      "where": {
+        "": "HS_Cober_7"
+      },
+      "paper": "28.20",
+      "stored": "28.2116089823114",
+      "relative_difference": "0.0004116660394113475177304964539007092198582"
+    },
+    {
+      "certificate": "2022-001",
+      "claim": "t3-n024",
+      "checker": "disagree",
+      "relation": "exponent",
+      "column": "estimate",
+      "where": {
+        "term": "TransEducP"
+      },
+      "paper": "5.273",
+      "stored": "5.27309834788795e-07",
+      "relative_difference": "0.9999998999981348779072634174094443390859"
+    },
+    {
+      "certificate": "2025-018",
+      "claim": "t2-n012",
+      "checker": "disagree",
+      "relation": "last digit",
+      "column": "imdp_abstraction_time",
+      "where": {
+        "name": "robot_2d_reachability"
+      },
+      "paper": "12.659",
+      "stored": "12.658474978",
+      "relative_difference": "0.00004147420807330752824077731258393238012481"
+    },
+    {
+      "certificate": "2025-018",
+      "claim": "t2-n029",
+      "checker": "disagree",
+      "relation": "differs",
+      "column": "odimdp_prob_mem",
+      "where": {
+        "name": "bas4d"
+      },
+      "paper": "3.1",
+      "stored": "2.897432",
+      "relative_difference": "0.06534451612903225806451612903225806451613"
+    },
+    {
+      "certificate": "2025-018",
+      "claim": "t2-n047",
+      "checker": "disagree",
+      "relation": "differs",
+      "column": "odimdp_prob_mem",
+      "where": {
+        "name": "nndm_cartpole"
+      },
+      "paper": "610.8",
+      "stored": "611.442908",
+      "relative_difference": "0.001052567125081859855926653569089718402096"
+    },
+    {
+      "certificate": "2025-018",
+      "claim": "t2-n057",
+      "checker": "disagree",
+      "relation": "differs",
+      "column": "odimdp_prob_mem",
+      "where": {
+        "name": "linear7d"
+      },
+      "paper": "2310.8",
+      "stored": "2329.968132",
+      "relative_difference": "0.008295019906525878483642028734637355028562"
+    }
+  ]
+}

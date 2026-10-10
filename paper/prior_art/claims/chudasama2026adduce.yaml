@@ -1,0 +1,36 @@
+source:
+  citation: chudasama2026adduce
+  local: sources/adduce_README_20260825.md
+  sha256: 84a533e9f77e14c1573ddb3ef1ab29aac0ecc200f01da9e90d5eba7ecf032c64
+  url: https://raw.githubusercontent.com/QHarshil/adduce/main/README.md
+  extract_cmd: none — Markdown is read directly
+  note: Fetched 2026-08-25 from the default branch.
+claims:
+  audits-code-config-data-against-reported-numbers:
+    statement: adduce checks whether a paper's claims, code, configuration, data and generated results
+      agree with each other.
+    quotes:
+    - exact: '`adduce` checks whether a paper''s claims, code, configs, data, dependencies, remote
+        models, precision settings, and generated results still agree with each other before submission.'
+      section: Header
+    - exact: 'The north-star question: *for every number in the paper, can I point to the artifact
+        that produced it, and will that artifact still produce it elsewhere?*'
+      section: Header
+  manifest-and-rules:
+    statement: adduce reads a manifest that declares claims and ships rules organised by category.
+    quotes:
+    - exact: When a manifest declares claims, the report adds a per-claim trail.
+      section: What it reports
+    - exact: Adduce ships **78 rules across 17 categories**
+      section: Documentation
+  version-and-release-date:
+    statement: The README pinned here calls 0.1.2 its current release. The version this work cites
+      is 0.1.2, released 2026-08-04.
+    quotes:
+    - exact: '[PyPI `0.1.2`](https://pypi.org/project/adduce/0.1.2/) is the current release.'
+      section: Install
+    notes: 'The bibliography''s author, title, version and 2026-08-04 release date come from the project''s
+      CITATION.cff, which states date-released 2026-08-04 and version 0.1.2. The statement is scoped
+      to the pinned bytes rather than to the project: ''the current release is 0.1.2'' is a claim
+      about today that a later release falsifies, while the quotation below stays true of the README
+      this record pins, whatever the project does next.'

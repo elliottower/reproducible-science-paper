@@ -1,0 +1,64 @@
+{
+  "generated_by": "scripts/derive_audit_counts.py",
+  "rule": "a finding is a catch-log row whose id the audit file does not list under excluded_ids",
+  "severity_printed_as": {
+    "claim": "claim",
+    "integrity": "source",
+    "record": "record",
+    "cosmetic": "cosmetic"
+  },
+  "audit_files": [
+    {
+      "path": "paper/audit/audits/cross_design.yaml",
+      "sha256": "6dd26ac90558a4553d6905a8890ca13e8b3f5076d2b0f1f916a8f2800d171fec"
+    },
+    {
+      "path": "paper/audit/audits/knockout.yaml",
+      "sha256": "6508137220852951fc2e682b3d51de88ae20d629a498801b98d36cde7fc5b515"
+    }
+  ],
+  "audits": {
+    "cross_design": {
+      "title": "Cross-design evidence discordance",
+      "catch_log": {
+        "path": "paper/audit/catch_logs/cross_design/catch_log.jsonl",
+        "sha256": "5138a96e5641fc9aea0db60bf2240cbe2be092c209ee0dd6d6b8e3c2caad2f9f"
+      },
+      "catch_log_rows": 38,
+      "excluded": 7,
+      "findings": 31,
+      "by_severity": {
+        "claim": 5,
+        "integrity": 14,
+        "record": 8,
+        "cosmetic": 4
+      }
+    },
+    "knockout": {
+      "title": "Knockout epistasis",
+      "catch_log": {
+        "path": "paper/audit/catch_logs/knockout/catch_log.jsonl",
+        "sha256": "53afc2191008a95de1f732b03fb083b05c9df52c87f390f77ac8fac585a9a42e"
+      },
+      "catch_log_rows": 18,
+      "excluded": 0,
+      "findings": 18,
+      "by_severity": {
+        "claim": 3,
+        "integrity": 2,
+        "record": 10,
+        "cosmetic": 3
+      }
+    }
+  },
+  "total": {
+    "audits": 2,
+    "findings": 49,
+    "by_severity": {
+      "claim": 8,
+      "integrity": 16,
+      "record": 18,
+      "cosmetic": 7
+    }
+  }
+}

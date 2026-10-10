@@ -1,0 +1,27 @@
+{
+  "generated_by": "scripts/compare_corebench_rerun.py",
+  "recorded": {
+    "path": "paper/artifacts/corebench_recall.jsonl",
+    "sha256": "6e2c61d52794c28910d668a13849c0e49eb8ca29dc67ae3b17f21ab0f2168321"
+  },
+  "rerun": {
+    "path": "paper/artifacts/corebench_recall_rerun_confirm_2026-10-06.jsonl",
+    "sha256": "6e2c61d52794c28910d668a13849c0e49eb8ca29dc67ae3b17f21ab0f2168321"
+  },
+  "capsules_recorded": 45,
+  "capsules_rerun": 45,
+  "only_in_recorded": [],
+  "only_in_rerun": [],
+  "identical": 45,
+  "differing": [],
+  "located_of_stated": {
+    "recorded": {
+      "located": 146,
+      "stated": 240
+    },
+    "rerun": {
+      "located": 146,
+      "stated": 240
+    }
+  }
+}

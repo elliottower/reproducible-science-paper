@@ -1,0 +1,26 @@
+source:
+  citation: borg2013traceability
+  local: reference/borg2013traceability.pdf
+  sha256: 6c2ff076b973d6fe5cd65381505bffc31866e78e8eec259112590909f836636d
+  url: https://lup.lub.lu.se/search/files/1690291/3737415.pdf
+  extract_cmd: pdftotext -layout {} -
+  note: Author accepted manuscript deposited at Lund University Publications.
+claims:
+  evaluations-report-precision-and-recall-on-small-datasets:
+    statement: Most evaluations of IR-based trace recovery report precision and recall on datasets
+      of fewer than 500 artifacts.
+    quotes:
+    - exact: 'most previous studies do not go beyond reporting precision and recall
+
+        of candidate trace links from evaluations using datasets containing less than 500 artifacts.'
+      section: Abstract
+  scaling-is-unanswered:
+    statement: Whether IR-based trace recovery scales to larger document spaces is unanswered.
+    quotes:
+    - exact: 'of-the-art IR-based trace recovery scales to larger document spaces or not remains
+
+        unanswered.'
+      section: Section 6.3
+    notes: 'The manuscript characterized this as ''the precision-recall tradeoff at scale as a standing
+      limitation''. The source reports two separate things: evaluations stop at precision and recall,
+      and scaling is untested.'

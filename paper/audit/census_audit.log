@@ -1,0 +1,505 @@
+# audit of https://github.com/elliottower/proteome-mr-claim-audit.git, 2026-10-08T12:20:34+00:00
+# commit 62f181cb08c1e18ae292f7640491c3f0f20bb343
+# tree   f89fa47d73fa07addf4b229c00f36cd42711138c  matches pin: True  dirty: False
+
+$ citations verify --claims experiments/02_claims_meta/outputs/citations/sol_extraction_search_0b97103cd7a4/claims
+claims  /Users/elliottower/.cache/repo-audit-census/checkout/experiments/02_claims_meta/outputs/citations/sol_extraction_search_0b97103cd7a4/claims
+
+12,601 quotes
+
+  found          12,601
+  not found           0
+
+read by
+   12,601  text
+
+warnings
+       17  short — the source may qualify this in the next clause
+
+all found.
+[exit 0]
+
+$ citations verify --claims experiments/02_claims_meta/outputs/citations/sol_extraction_chase1_0b97103cd7a4/claims
+claims  /Users/elliottower/.cache/repo-audit-census/checkout/experiments/02_claims_meta/outputs/citations/sol_extraction_chase1_0b97103cd7a4/claims
+
+980 quotes
+
+  found             980
+  not found           0
+
+read by
+      980  text
+
+all found.
+[exit 0]
+
+$ citations verify --claims experiments/02_claims_meta/outputs/citations/sol_extraction_chase2_0b97103cd7a4/claims
+claims  /Users/elliottower/.cache/repo-audit-census/checkout/experiments/02_claims_meta/outputs/citations/sol_extraction_chase2_0b97103cd7a4/claims
+
+326 quotes
+
+  found             326
+  not found           0
+
+read by
+      326  text
+
+all found.
+[exit 0]
+
+$ citations verify --claims experiments/02_claims_meta/outputs/citations/sol_extraction_chase3_0b97103cd7a4/claims
+claims  /Users/elliottower/.cache/repo-audit-census/checkout/experiments/02_claims_meta/outputs/citations/sol_extraction_chase3_0b97103cd7a4/claims
+
+82 quotes
+
+  found              82
+  not found           0
+
+read by
+       82  text
+
+all found.
+[exit 0]
+
+$ citations verify --claims experiments/02_claims_meta/outputs/citations/manual_coding_2026-10-03/claims
+claims  /Users/elliottower/.cache/repo-audit-census/checkout/experiments/02_claims_meta/outputs/citations/manual_coding_2026-10-03/claims
+
+2,167 quotes
+
+  found           2,167
+  not found           0
+
+read by
+    2,167  text
+
+warnings
+        1  short — the source may qualify this in the next clause
+
+all found.
+[exit 0]
+
+$ citations verify --claims claims/
+claims  /Users/elliottower/.cache/repo-audit-census/checkout/claims
+
+7,783 quotes
+
+  not found           0
+  unchecked       7,783   file not found
+
+warnings
+    2,655  short — the source may qualify this in the next clause
+
+nothing was measured. all 7783 quotation(s) went unresolved, so this run says nothing about the manuscript either way. The reasons are above; a run that read no source is not a run that found no fault.
+[exit 1]
+
+$ results verify --files
+chain intact: 233 events, anchored
+
+  events 1–22 dated by Bitcoin block 969761. `results timestamp` checks the block.
+  events 1–28 stamped, pending at 4 calendars.
+
+  access         26
+  claim          76
+  init            1
+  run            40
+  seal           90
+
+file hashes:
+  ok         docs/run/manual_coding_queue_size_2026-10-07.json
+  ok         docs/run/mutation_check_amendment01.py
+  ok         experiments/02_claims_meta/AMENDMENT_01_extraction_system_comparison.md
+  ok         experiments/02_claims_meta/AMENDMENT_02_span_check_and_restoration.md
+  ok         experiments/02_claims_meta/dataset_dictionary.csv
+  ok         experiments/02_claims_meta/modal_inputs_manifest.json
+  ok         experiments/02_claims_meta/modal_inputs_verification.json
+  ok         experiments/02_claims_meta/outputs/dry_run_drug/modal_wiring_ledger_proof_20261002/drug_tables.json
+  ok         experiments/02_claims_meta/outputs/fulltext/smoke_pre2019_20261002/fulltext_status.json
+  ok         experiments/02_claims_meta/outputs/fulltext/smoke_pre2019_20261002_window/fulltext_status.json
+  ok         experiments/02_claims_meta/outputs/funnel/smoke_pre2019_20261002_no_abstract_rule/funnel.json
+  ok         experiments/02_claims_meta/outputs/funnel/smoke_pre2019_20261002_window/funnel.json
+  ok         experiments/02_claims_meta/outputs/manual_coding/2026-10-03/check3_author_table.csv
+  ok         experiments/02_claims_meta/outputs/manual_coding/2026-10-03/check3_coverage_after_second_look_save2.json
+  ok         experiments/02_claims_meta/outputs/manual_coding/2026-10-03/check3_extra_30/check3_extra_30_marks_author.json
+  ok         experiments/02_claims_meta/outputs/manual_coding/2026-10-03/check3_extra_30/check3_extra_30_seed20261010_manifest.json
+  ok         experiments/02_claims_meta/outputs/manual_coding/2026-10-03/check3_remaining/check3_remaining_149.html
+  ok         experiments/02_claims_meta/outputs/manual_coding/2026-10-03/check3_remaining/check3_remaining_149_discussed_lines.json
+  ok         experiments/02_claims_meta/outputs/manual_coding/2026-10-03/check3_remaining/check3_remaining_149_manifest.json
+  ok         experiments/02_claims_meta/outputs/manual_coding/2026-10-03/check3_remaining/check3_remaining_149_marks_author_save1.json
+  ok         experiments/02_claims_meta/outputs/manual_coding/2026-10-03/check3_remaining/check3_remaining_149_marks_author_save2.json
+  ok         experiments/02_claims_meta/outputs/manual_coding/2026-10-03/check3_sample/check3_sample_20_discussed_lines.json
+  ok         experiments/02_claims_meta/outputs/manual_coding/2026-10-03/check3_sample/check3_sample_20_marks_author.json
+  ok         experiments/02_claims_meta/outputs/manual_coding/2026-10-03/check3_sample/check3_sample_20_seed20261008_v2_manifest.json
+  ok         experiments/02_claims_meta/outputs/manual_coding/2026-10-03/check3_second_look/check3_second_look_55.html
+  ok         experiments/02_claims_meta/outputs/manual_coding/2026-10-03/check3_second_look/check3_second_look_55_discussed_lines.json
+  ok         experiments/02_claims_meta/outputs/manual_coding/2026-10-03/check3_second_look/check3_second_look_55_manifest.json
+  ok         experiments/02_claims_meta/outputs/manual_coding/2026-10-03/check3_second_look/check3_second_look_55_marks_author_save1.json
+  ok         experiments/02_claims_meta/outputs/manual_coding/2026-10-03/check3_second_look/check3_second_look_55_marks_author_save2.json
+  ok         experiments/02_claims_meta/outputs/manual_coding/2026-10-03/check3_second_look/flagged_reference_rows_v2.json
+  ok         experiments/02_claims_meta/outputs/manual_coding/2026-10-03/check3_second_look/second_look_lines.json
+  ok         experiments/02_claims_meta/outputs/manual_coding/2026-10-03/manual_coding_queue.csv
+  ok         experiments/02_claims_meta/outputs/manual_coding/2026-10-03/manual_dataset_codes.csv
+  ok         experiments/02_claims_meta/outputs/manual_coding/2026-10-03/manual_dataset_codes_extended_1_first_check.csv
+  ok         experiments/02_claims_meta/outputs/manual_coding/2026-10-03/manual_dataset_codes_extended_2_second_check.csv
+  ok         experiments/02_claims_meta/outputs/manual_coding/2026-10-03/manual_dataset_codes_extended_3_reread.csv
+  ok         experiments/02_claims_meta/outputs/manual_coding/2026-10-03/manual_dataset_codes_extended_4_third_check.csv
+  ok         experiments/02_claims_meta/outputs/manual_coding/2026-10-03/manual_dataset_codes_extended_4_third_check.third_check.json
+  ok         experiments/02_claims_meta/outputs/manual_coding/2026-10-03/manual_dataset_codes_extended_5_context.context.json
+  ok         experiments/02_claims_meta/outputs/manual_coding/2026-10-03/manual_dataset_codes_extended_5_context.csv
+  ok         experiments/02_claims_meta/outputs/manual_coding/2026-10-03/manual_dataset_codes_extended_6_voluntary_30.csv
+  ok         experiments/02_claims_meta/outputs/manual_coding/2026-10-03/manual_dataset_codes_extended_6_voluntary_30.voluntary.json
+  ok         experiments/02_claims_meta/outputs/manual_coding/2026-10-03/manual_dataset_codes_extended_7_remaining_page_50.csv
+  ok         experiments/02_claims_meta/outputs/manual_coding/2026-10-03/manual_dataset_codes_extended_7_remaining_page_50.voluntary.json
+  ok         experiments/02_claims_meta/outputs/manual_coding/2026-10-03/manual_dataset_codes_extended_8_second_look.csv
+  ok         experiments/02_claims_meta/outputs/manual_coding/2026-10-03/manual_dataset_codes_extended_8_second_look.second_look.json
+  ok         experiments/02_claims_meta/outputs/manual_coding/2026-10-03/manual_dataset_codes_extended_9_second_look_save2.csv
+  ok         experiments/02_claims_meta/outputs/manual_coding/2026-10-03/manual_dataset_codes_extended_9_second_look_save2.second_look.json
+  ok         experiments/02_claims_meta/outputs/manual_coding/2026-10-03/manual_dataset_coding_report.json
+  ok         experiments/02_claims_meta/outputs/manual_coding/2026-10-03/run_manifest.json
+  ok         experiments/02_claims_meta/outputs/manual_coding/2026-10-03_new_rows/check2_quotation_pins_run_01.json
+  ok         experiments/02_claims_meta/outputs/manual_coding/2026-10-03_new_rows/check2_quotation_pins_verify_run_01.txt
+  ok         experiments/02_claims_meta/outputs/manual_coding/2026-10-03_new_rows/check3_author_table.csv
+  ok         experiments/02_claims_meta/outputs/manual_coding/2026-10-03_new_rows/check3_new_rows/check3_new_rows_1_manifest.json
+  ok         experiments/02_claims_meta/outputs/manual_coding/2026-10-03_new_rows/citations_verify_strict_pinned_build.txt
+  ok         experiments/02_claims_meta/outputs/manual_coding/2026-10-03_new_rows/first_check_result.json
+  ok         experiments/02_claims_meta/outputs/manual_coding/2026-10-03_new_rows/manual_coding_queue.csv
+  ok         experiments/02_claims_meta/outputs/manual_coding/2026-10-03_new_rows/manual_dataset_codes_extended_1_first_check.csv
+  ok         experiments/02_claims_meta/outputs/manual_coding/2026-10-03_new_rows/manual_dataset_codes_extended_2_second_check.csv
+  ok         experiments/02_claims_meta/outputs/negative_controls/negative_control_specificity.json
+  ok         experiments/02_claims_meta/outputs/parsed/luna_extraction_chase1_run1_e4e4ee731887.jsonl
+  ok         experiments/02_claims_meta/outputs/parsed/luna_extraction_chase2_run1_e4e4ee731887.jsonl
+  ok         experiments/02_claims_meta/outputs/parsed/luna_extraction_chase3_run1_e4e4ee731887.jsonl
+  ok         experiments/02_claims_meta/outputs/parsed/luna_extraction_search_run1_e4e4ee731887.jsonl
+  ok         experiments/02_claims_meta/outputs/parsed/sol_eligibility_chase1_2811496ef424.decisions.jsonl
+  ok         experiments/02_claims_meta/outputs/parsed/sol_eligibility_chase2_2811496ef424.decisions.jsonl
+  ok         experiments/02_claims_meta/outputs/parsed/sol_eligibility_gateall1_2811496ef424.decisions.jsonl
+  ok         experiments/02_claims_meta/outputs/parsed/sol_eligibility_gateall3_2811496ef424.decisions.jsonl
+  ok         experiments/02_claims_meta/outputs/parsed/sol_eligibility_search_complete_2811496ef424.decisions.jsonl
+  ok         experiments/02_claims_meta/outputs/parsed/sol_extraction_chase1_0b97103cd7a4.jsonl
+  ok         experiments/02_claims_meta/outputs/parsed/sol_extraction_chase2_0b97103cd7a4.jsonl
+  ok         experiments/02_claims_meta/outputs/parsed/sol_extraction_chase3_0b97103cd7a4.jsonl
+  ok         experiments/02_claims_meta/outputs/parsed/sol_extraction_search_0b97103cd7a4.jsonl
+  ok         experiments/02_claims_meta/outputs/process_counts/process_counts_2026-10-08.json
+  ok         experiments/02_claims_meta/outputs/raw/search/2026-10-03_openalex_q1_rerequest/comparison.json
+  ok         experiments/02_claims_meta/outputs/registry/smoke_pre2019_20261002_coded/registry_assembly.json
+  ok         experiments/02_claims_meta/outputs/registry/smoke_pre2019_20261002_window_coded/registry_assembly.json
+  ok         experiments/02_claims_meta/outputs/results_manifests/a1_luna_dev_rehearsal_e4e4ee731887.json
+  ok         experiments/02_claims_meta/outputs/results_manifests/a1_luna_extraction_chase1_e4e4ee731887.json
+  ok         experiments/02_claims_meta/outputs/results_manifests/a1_luna_extraction_chase2_e4e4ee731887.json
+  ok         experiments/02_claims_meta/outputs/results_manifests/a1_luna_extraction_chase3_e4e4ee731887.json
+  ok         experiments/02_claims_meta/outputs/results_manifests/a1_luna_extraction_search_e4e4ee731887.json
+  ok         experiments/02_claims_meta/outputs/results_manifests/controls_2811496ef424.json
+  ok         experiments/02_claims_meta/outputs/results_manifests/ledger_proof_20261002.volume.json
+  ok         experiments/02_claims_meta/outputs/results_manifests/prefreeze_ledger_proof_20261002.json
+  ok         experiments/02_claims_meta/outputs/results_manifests/prereg_freeze.plan.json
+  ok         experiments/02_claims_meta/outputs/results_manifests/s1_search_2026-10-03.json
+  ok         experiments/02_claims_meta/outputs/results_manifests/s1_search_2026-10-03_openalex_q1_rerequest.json
+  ok         experiments/02_claims_meta/outputs/results_manifests/s1b_chase_1.json
+  ok         experiments/02_claims_meta/outputs/results_manifests/s1b_chase_1.volume.json
+  ok         experiments/02_claims_meta/outputs/results_manifests/s1b_chase_2.json
+  ok         experiments/02_claims_meta/outputs/results_manifests/s1b_chase_2.volume.json
+  ok         experiments/02_claims_meta/outputs/results_manifests/s1b_chase_3.json
+  ok         experiments/02_claims_meta/outputs/results_manifests/s1b_chase_3.volume.json
+  ok         experiments/02_claims_meta/outputs/results_manifests/s2_eligibility_chase1_2811496ef424.json
+  ok         experiments/02_claims_meta/outputs/results_manifests/s2_eligibility_chase2_2811496ef424.json
+  ok         experiments/02_claims_meta/outputs/results_manifests/s2_eligibility_chase3_2811496ef424.json
+  ok         experiments/02_claims_meta/outputs/results_manifests/s2_eligibility_gateall1_2811496ef424.json
+  ok         experiments/02_claims_meta/outputs/results_manifests/s2_eligibility_search_2811496ef424.json
+  ok         experiments/02_claims_meta/outputs/results_manifests/s3_extraction_chase1_0b97103cd7a4.json
+  ok         experiments/02_claims_meta/outputs/results_manifests/s3_extraction_chase2_0b97103cd7a4.json
+  ok         experiments/02_claims_meta/outputs/results_manifests/s3_extraction_chase3_0b97103cd7a4.json
+  ok         experiments/02_claims_meta/outputs/results_manifests/s3_extraction_search_0b97103cd7a4.json
+  ok         experiments/02_claims_meta/outputs/results_manifests/s4_amendment02_2026-10-08.json
+  ok         experiments/02_claims_meta/outputs/results_manifests/s4_manual_coding_2026-10-03.json
+  ok         experiments/02_claims_meta/outputs/results_manifests/s4_verification_queue_2026-10-03.json
+  ok         experiments/02_claims_meta/outputs/results_manifests/s4_verification_queue_2026-10-03.volume.json
+  ok         experiments/02_claims_meta/outputs/results_manifests/smoke_pre2019_20261002_no_abstract_rule.json
+  ok         experiments/02_claims_meta/outputs/results_manifests/smoke_pre2019_20261002_s1_search.json
+  ok         experiments/02_claims_meta/outputs/results_manifests/smoke_pre2019_20261002_s1b_chase_1.json
+  ok         experiments/02_claims_meta/outputs/results_manifests/smoke_pre2019_20261002_s1b_chase_1.volume.json
+  ok         experiments/02_claims_meta/outputs/results_manifests/smoke_pre2019_20261002_s1b_gate_audit_1.json
+  ok         experiments/02_claims_meta/outputs/results_manifests/smoke_pre2019_20261002_s2_eligibility_2811496ef424.json
+  ok         experiments/02_claims_meta/outputs/results_manifests/smoke_pre2019_20261002_s3_extraction_0b97103cd7a4.json
+  ok         experiments/02_claims_meta/outputs/results_manifests/smoke_pre2019_20261002_s3_extraction_chase1gate_0b97103cd7a4.json
+  ok         experiments/02_claims_meta/outputs/results_manifests/smoke_pre2019_20261002_s4.volume.json
+  ok         experiments/02_claims_meta/outputs/results_manifests/smoke_pre2019_20261002_s4_registry.json
+  ok         experiments/02_claims_meta/outputs/results_manifests/smoke_pre2019_20261002_s5.volume.json
+  ok         experiments/02_claims_meta/outputs/results_manifests/smoke_pre2019_20261002_s5_biology.json
+  ok         experiments/02_claims_meta/outputs/results_manifests/smoke_pre2019_20261002_s5_drug.json
+  ok         experiments/02_claims_meta/outputs/results_manifests/smoke_pre2019_20261002_s6_fulltext.json
+  ok         experiments/02_claims_meta/outputs/results_manifests/smoke_pre2019_20261002_window_s4.volume.json
+  ok         experiments/02_claims_meta/outputs/results_manifests/smoke_pre2019_20261002_window_s4_registry.json
+  ok         experiments/02_claims_meta/outputs/results_manifests/smoke_pre2019_20261002_window_s5.volume.json
+  ok         experiments/02_claims_meta/outputs/results_manifests/smoke_pre2019_20261002_window_s5_biology.json
+  ok         experiments/02_claims_meta/outputs/results_manifests/smoke_pre2019_20261002_window_s5_drug.json
+  ok         experiments/02_claims_meta/outputs/results_manifests/smoke_pre2019_20261002_window_s6_fulltext.json
+  ok         experiments/02_claims_meta/outputs/screening/2026-10-03/screening_set.jsonl
+  ok         experiments/02_claims_meta/outputs/screening_smoke/smoke_pre2019_20261002/chase_round_1/gate_audit_after_batch_01.json
+  ok         experiments/02_claims_meta/outputs/screening_smoke/smoke_pre2019_20261002/screening_set.jsonl
+  ok         experiments/02_claims_meta/outputs/span_restoration/tool_trial/restored_passage_sha256_round6_final.json
+  ok         experiments/02_claims_meta/outputs/span_step_amendment02/fold_digest_corrected_build.json
+  ok         experiments/02_claims_meta/outputs/span_step_amendment02/fold_digest_registered_build.json
+  ok         experiments/02_claims_meta/outputs/span_step_amendment02/span_step_comparison.json
+  ok         experiments/02_claims_meta/outputs/stage5_biology/smoke_pre2019_20261002/sensitivity_tables.json
+  ok         experiments/02_claims_meta/outputs/stage5_biology/smoke_pre2019_20261002_window/sensitivity_tables.json
+  ok         experiments/02_claims_meta/outputs/stage5_drug/smoke_pre2019_20261002/drug_tables.json
+  ok         experiments/02_claims_meta/outputs/stage5_drug/smoke_pre2019_20261002_window/drug_tables.json
+  ok         experiments/02_claims_meta/outputs/tests/pytest_all_modal_20261008T120511Z.txt
+  ok         experiments/02_claims_meta/outputs/tests/verify_spans_occurrence_modal_20261008T043228Z.json
+  ok         experiments/02_claims_meta/prompts/eligibility_prompt.md
+  ok         experiments/02_claims_meta/prompts/extraction_prompt.md
+  ok         experiments/02_claims_meta/prompts/fulltext_extraction_prompt.md
+  ok         experiments/02_claims_meta/prompts/luna_extraction_prompt.md
+  ok         experiments/02_claims_meta/prompts/manual_coding_coder_instructions.md
+  ok         experiments/02_claims_meta/prompts/manual_coding_coder_instructions_v2.md
+  ok         experiments/02_claims_meta/prompts/manual_coding_coder_instructions_v3.md
+  ok         experiments/02_claims_meta/prompts/manual_coding_coder_instructions_v4.md
+  ok         experiments/02_claims_meta/prompts/manual_coding_coder_instructions_v5.md
+  ok         experiments/02_claims_meta/prompts/manual_coding_coder_instructions_v6.md
+  ok         experiments/02_claims_meta/prompts/manual_coding_reread_instructions.md
+  ok         experiments/02_claims_meta/prompts/schema.json
+  ok         experiments/02_claims_meta/reference/MANIFEST.json
+  ok         experiments/02_claims_meta/scripts/abstract_floor.py
+  ok         experiments/02_claims_meta/scripts/apply_eligibility.py
+  ok         experiments/02_claims_meta/scripts/assay_backgrounds.py
+  ok         experiments/02_claims_meta/scripts/assemble_negative_controls.py
+  ok         experiments/02_claims_meta/scripts/assemble_registry.py
+  ok         experiments/02_claims_meta/scripts/assemble_screening_set.py
+  ok         experiments/02_claims_meta/scripts/author_lists.py
+  ok         experiments/02_claims_meta/scripts/biology_joins.py
+  ok         experiments/02_claims_meta/scripts/biology_resource_tables.py
+  ok         experiments/02_claims_meta/scripts/build_collision_table.py
+  ok         experiments/02_claims_meta/scripts/build_outcome_aliases.py
+  ok         experiments/02_claims_meta/scripts/build_registry.py
+  ok         experiments/02_claims_meta/scripts/canonical_ids.py
+  ok         experiments/02_claims_meta/scripts/chembl_extract.py
+  ok         experiments/02_claims_meta/scripts/citation_chase.py
+  ok         experiments/02_claims_meta/scripts/citations_fold_digest.py
+  ok         experiments/02_claims_meta/scripts/claim_tags.py
+  ok         experiments/02_claims_meta/scripts/classify_failed_spans.py
+  ok         experiments/02_claims_meta/scripts/coding_assignment.py
+  ok         experiments/02_claims_meta/scripts/coding_gates.py
+  ok         experiments/02_claims_meta/scripts/coding_passages.py
+  ok         experiments/02_claims_meta/scripts/coding_passages_whitespace.py
+  ok         experiments/02_claims_meta/scripts/dataset_pairings_report.py
+  ok         experiments/02_claims_meta/scripts/dataset_relations.py
+  ok         experiments/02_claims_meta/scripts/derive_published_lists.py
+  ok         experiments/02_claims_meta/scripts/dev_report.py
+  ok         experiments/02_claims_meta/scripts/drug_joins.py
+  ok         experiments/02_claims_meta/scripts/drug_schema_check.py
+  ok         experiments/02_claims_meta/scripts/drug_tables.py
+  ok         experiments/02_claims_meta/scripts/dry_run_biology_synthetic.py
+  ok         experiments/02_claims_meta/scripts/dry_run_drug_synthetic.py
+  ok         experiments/02_claims_meta/scripts/dry_run_extraction_system_comparison_synthetic.py
+  ok         experiments/02_claims_meta/scripts/dry_run_synthetic.py
+  ok         experiments/02_claims_meta/scripts/eldjarn_pleiotropic_loci.py
+  ok         experiments/02_claims_meta/scripts/extraction_system_comparison.py
+  ok         experiments/02_claims_meta/scripts/fetch_dev_abstracts.py
+  ok         experiments/02_claims_meta/scripts/fetch_fulltext.py
+  ok         experiments/02_claims_meta/scripts/fetch_known_item_abstracts.py
+  ok         experiments/02_claims_meta/scripts/fetch_reference_files.py
+  ok         experiments/02_claims_meta/scripts/fulltext_concordance.py
+  ok         experiments/02_claims_meta/scripts/funnel.py
+  ok         experiments/02_claims_meta/scripts/gate_audit.py
+  ok         experiments/02_claims_meta/scripts/gated_out_remaining.py
+  ok         experiments/02_claims_meta/scripts/hierarchy_relations.py
+  ok         experiments/02_claims_meta/scripts/hub_proteins.py
+  ok         experiments/02_claims_meta/scripts/keyword_prefilter.py
+  ok         experiments/02_claims_meta/scripts/link_families.py
+  ok         experiments/02_claims_meta/scripts/manual_coding_check2_ingest.py
+  ok         experiments/02_claims_meta/scripts/manual_coding_check2_ingest_v2.py
+  ok         experiments/02_claims_meta/scripts/manual_coding_check2_ingest_v3.py
+  ok         experiments/02_claims_meta/scripts/manual_coding_check3_followup.py
+  ok         experiments/02_claims_meta/scripts/manual_coding_check3_followup_v2.py
+  ok         experiments/02_claims_meta/scripts/manual_coding_check3_marks.py
+  ok         experiments/02_claims_meta/scripts/manual_coding_check3_sample.py
+  ok         experiments/02_claims_meta/scripts/manual_coding_check3_sample_json.py
+  ok         experiments/02_claims_meta/scripts/manual_coding_check3_second_look.py
+  ok         experiments/02_claims_meta/scripts/manual_coding_check3_table.py
+  ok         experiments/02_claims_meta/scripts/manual_coding_check3_table_v2.py
+  ok         experiments/02_claims_meta/scripts/manual_coding_gates.py
+  ok         experiments/02_claims_meta/scripts/manual_coding_gates_v2.py
+  ok         experiments/02_claims_meta/scripts/manual_coding_manifest.py
+  ok         experiments/02_claims_meta/scripts/manual_coding_missed_identifier_screen.py
+  ok         experiments/02_claims_meta/scripts/manual_coding_new_rows.py
+  ok         experiments/02_claims_meta/scripts/manual_coding_passages.py
+  ok         experiments/02_claims_meta/scripts/manual_coding_passages_v2.py
+  ok         experiments/02_claims_meta/scripts/manual_coding_passages_v3.py
+  ok         experiments/02_claims_meta/scripts/manual_coding_reread.py
+  ok         experiments/02_claims_meta/scripts/manual_coding_table.py
+  ok         experiments/02_claims_meta/scripts/manual_coding_table_v2.py
+  ok         experiments/02_claims_meta/scripts/manual_coding_table_v3.py
+  ok         experiments/02_claims_meta/scripts/manual_coding_table_v4.py
+  ok         experiments/02_claims_meta/scripts/manual_coding_table_v5.py
+  ok         experiments/02_claims_meta/scripts/manual_coding_table_v6.py
+  ok         experiments/02_claims_meta/scripts/manual_dataset_coding.py
+  ok         experiments/02_claims_meta/scripts/manual_dataset_coding_reasons.py
+  ok         experiments/02_claims_meta/scripts/merge_search_requests.py
+  ok         experiments/02_claims_meta/scripts/modal_all_tests.py
+  ok         experiments/02_claims_meta/scripts/modal_biology_joins.py
+  ok         experiments/02_claims_meta/scripts/modal_chembl_extract.py
+  ok         experiments/02_claims_meta/scripts/modal_drug_joins.py
+  ok         experiments/02_claims_meta/scripts/modal_extraction_system_comparison.py
+  ok         experiments/02_claims_meta/scripts/modal_hash_volume.py
+  ok         experiments/02_claims_meta/scripts/modal_verify_claims_amended.py
+  ok         experiments/02_claims_meta/scripts/modal_verify_claims_whitespace.py
+  ok         experiments/02_claims_meta/scripts/modal_verify_spans_occurrence.py
+  ok         experiments/02_claims_meta/scripts/negative_control_specificity.py
+  ok         experiments/02_claims_meta/scripts/novelty.py
+  ok         experiments/02_claims_meta/scripts/ontology_graph.py
+  ok         experiments/02_claims_meta/scripts/outcome_alias_completion.py
+  ok         experiments/02_claims_meta/scripts/pathway_enrichment.py
+  ok         experiments/02_claims_meta/scripts/pin_check2_quotations.py
+  ok         experiments/02_claims_meta/scripts/pin_epigraphdb_pqtl.py
+  ok         experiments/02_claims_meta/scripts/pin_passage_occurrence.py
+  ok         experiments/02_claims_meta/scripts/pin_passage_occurrence_v2.py
+  ok         experiments/02_claims_meta/scripts/platform_list_sources.py
+  ok         experiments/02_claims_meta/scripts/process_counts.py
+  ok         experiments/02_claims_meta/scripts/queue_rebuild_comparison.py
+  ok         experiments/02_claims_meta/scripts/queue_rebuild_comparison_v2.py
+  ok         experiments/02_claims_meta/scripts/record_metadata.py
+  ok         experiments/02_claims_meta/scripts/reference_screen.py
+  ok         experiments/02_claims_meta/scripts/registry_indices.py
+  ok         experiments/02_claims_meta/scripts/registry_secondaries.py
+  ok         experiments/02_claims_meta/scripts/repeat_run_agreement.py
+  ok         experiments/02_claims_meta/scripts/rerequest_unanswered.py
+  ok         experiments/02_claims_meta/scripts/run_extraction.py
+  ok         experiments/02_claims_meta/scripts/run_extraction_luna.py
+  ok         experiments/02_claims_meta/scripts/run_extraction_luna_workers.py
+  ok         experiments/02_claims_meta/scripts/run_extraction_parallel.py
+  ok         experiments/02_claims_meta/scripts/run_search.py
+  ok         experiments/02_claims_meta/scripts/sample_repeat_run.py
+  ok         experiments/02_claims_meta/scripts/search_queries.py
+  ok         experiments/02_claims_meta/scripts/select_eligible.py
+  ok         experiments/02_claims_meta/scripts/sensitivity_analyses.py
+  ok         experiments/02_claims_meta/scripts/smoke_guard.py
+  ok         experiments/02_claims_meta/scripts/sol_usage.py
+  ok         experiments/02_claims_meta/scripts/span_failure_followup_counts.py
+  ok         experiments/02_claims_meta/scripts/span_omitted_token_kinds.py
+  ok         experiments/02_claims_meta/scripts/span_restoration.py
+  ok         experiments/02_claims_meta/scripts/span_restoration_tool_side.py
+  ok         experiments/02_claims_meta/scripts/span_restoration_v2.py
+  ok         experiments/02_claims_meta/scripts/span_shards.py
+  ok         experiments/02_claims_meta/scripts/span_step_comparison.py
+  ok         experiments/02_claims_meta/scripts/stage_record.py
+  ok         experiments/02_claims_meta/scripts/tag_wording.py
+  ok         experiments/02_claims_meta/scripts/therapeutic_areas.py
+  ok         experiments/02_claims_meta/scripts/upload_inputs_to_modal.py
+  ok         experiments/02_claims_meta/scripts/verify_claims.py
+  ok         experiments/02_claims_meta/scripts/verify_claims_whitespace.py
+  ok         experiments/02_claims_meta/scripts/verify_spans.py
+  ok         experiments/02_claims_meta/scripts/verify_spans_occurrence.py
+  ok         experiments/02_claims_meta/scripts/volume_hash.py
+  ok         experiments/02_claims_meta/search/known_items.md
+  ok         experiments/02_claims_meta/search/negative_controls.jsonl
+  ok         experiments/02_claims_meta/search/negative_controls_meta.json
+  ok         experiments/02_claims_meta/search/prefilter_terms.json
+  ok         experiments/02_claims_meta/search/queries.md
+  RESEALED   experiments/02_claims_meta/tests/test_classify_failed_spans.py
+    recorded 2 different hashes for this path
+  ok         experiments/02_claims_meta/tests/test_classify_failed_spans_fixture.py
+  ok         experiments/02_claims_meta/tests/test_coding_gates.py
+  ok         experiments/02_claims_meta/tests/test_coding_passages.py
+  ok         experiments/02_claims_meta/tests/test_coding_passages_whitespace.py
+  ok         experiments/02_claims_meta/tests/test_extraction_system_comparison.py
+  ok         experiments/02_claims_meta/tests/test_gated_out_remaining.py
+  ok         experiments/02_claims_meta/tests/test_manual_coding_check2_ingest.py
+  ok         experiments/02_claims_meta/tests/test_manual_coding_check2_ingest_v2.py
+  ok         experiments/02_claims_meta/tests/test_manual_coding_check2_ingest_v3.py
+  ok         experiments/02_claims_meta/tests/test_manual_coding_check3_followup.py
+  ok         experiments/02_claims_meta/tests/test_manual_coding_check3_followup_v2.py
+  ok         experiments/02_claims_meta/tests/test_manual_coding_check3_marks.py
+  ok         experiments/02_claims_meta/tests/test_manual_coding_check3_sample.py
+  ok         experiments/02_claims_meta/tests/test_manual_coding_check3_sample_json.py
+  ok         experiments/02_claims_meta/tests/test_manual_coding_check3_second_look.py
+  ok         experiments/02_claims_meta/tests/test_manual_coding_check3_table.py
+  ok         experiments/02_claims_meta/tests/test_manual_coding_check3_table_v2.py
+  ok         experiments/02_claims_meta/tests/test_manual_coding_gates.py
+  ok         experiments/02_claims_meta/tests/test_manual_coding_gates_v2.py
+  ok         experiments/02_claims_meta/tests/test_manual_coding_manifest.py
+  ok         experiments/02_claims_meta/tests/test_manual_coding_missed_identifier_screen.py
+  ok         experiments/02_claims_meta/tests/test_manual_coding_new_rows.py
+  ok         experiments/02_claims_meta/tests/test_manual_coding_passages.py
+  ok         experiments/02_claims_meta/tests/test_manual_coding_passages_v2.py
+  ok         experiments/02_claims_meta/tests/test_manual_coding_passages_v3.py
+  ok         experiments/02_claims_meta/tests/test_manual_coding_reread.py
+  ok         experiments/02_claims_meta/tests/test_manual_coding_table.py
+  ok         experiments/02_claims_meta/tests/test_manual_coding_table_v2.py
+  ok         experiments/02_claims_meta/tests/test_manual_dataset_coding_reasons.py
+  ok         experiments/02_claims_meta/tests/test_merge_search_requests.py
+  ok         experiments/02_claims_meta/tests/test_pin_check2_quotations.py
+  ok         experiments/02_claims_meta/tests/test_pin_passage_occurrence.py
+  ok         experiments/02_claims_meta/tests/test_pin_passage_occurrence_v2.py
+  ok         experiments/02_claims_meta/tests/test_process_counts.py
+  ok         experiments/02_claims_meta/tests/test_queue_rebuild_comparison.py
+  ok         experiments/02_claims_meta/tests/test_queue_rebuild_comparison_v2.py
+  ok         experiments/02_claims_meta/tests/test_rerequest_unanswered.py
+  ok         experiments/02_claims_meta/tests/test_run_extraction_luna.py
+  ok         experiments/02_claims_meta/tests/test_run_extraction_luna_workers.py
+  ok         experiments/02_claims_meta/tests/test_run_extraction_parallel.py
+  ok         experiments/02_claims_meta/tests/test_sol_usage.py
+  ok         experiments/02_claims_meta/tests/test_span_omitted_token_kinds.py
+  ok         experiments/02_claims_meta/tests/test_span_restoration.py
+  ok         experiments/02_claims_meta/tests/test_span_restoration_v2.py
+  ok         experiments/02_claims_meta/tests/test_span_step_amendment.py
+  ok         experiments/02_claims_meta/tests/test_verify_claims_whitespace.py
+  ok         experiments/02_claims_meta/tests/test_verify_spans_occurrence.py
+  ok         experiments/02_claims_meta/verification/author_supplied_lists.csv
+  ok         experiments/02_claims_meta/verification/dataset_components.csv
+  ok         experiments/02_claims_meta/verification/direction_lexicon.json
+  ok         experiments/02_claims_meta/verification/epigraphdb_protein_mapping.csv
+  ok         experiments/02_claims_meta/verification/epigraphdb_trait_alias_seed.csv
+  ok         experiments/02_claims_meta/verification/epigraphdb_trait_aliases.csv
+  ok         experiments/02_claims_meta/verification/epigraphdb_trait_mapping.csv
+  ok         experiments/02_claims_meta/verification/mondo_efo_collision_table.csv
+  ok         experiments/02_claims_meta/verification/mondo_efo_collision_table.meta.json
+  ok         experiments/02_claims_meta/verification/obsolete_label_replacements.csv
+  ok         experiments/02_claims_meta/verification/obsolete_label_replacements.meta.json
+  ok         experiments/02_claims_meta/verification/ontology_edges.csv
+  ok         experiments/02_claims_meta/verification/ontology_edges.meta.json
+  ok         experiments/02_claims_meta/verification/outcome_alias_seed.csv
+  ok         experiments/02_claims_meta/verification/outcome_aliases.csv
+  ok         experiments/02_claims_meta/verification/phenotype_cross_references.csv
+  ok         experiments/02_claims_meta/verification/phenotype_cross_references.meta.json
+  ok         experiments/02_claims_meta/verification/platform_assay_attachments.csv
+  ok         experiments/02_claims_meta/verification/platform_assay_lists.csv
+  ok         experiments/02_claims_meta/verification/platform_assay_lists.meta.json
+  ok         experiments/02_claims_meta/verification/platform_list_sources.csv
+  ok         experiments/02_claims_meta/verification/pleiotropic_loci_eldjarn2023_ST36.csv
+  ok         experiments/02_claims_meta/verification/pleiotropic_loci_eldjarn2023_ST36.meta.json
+  ok         experiments/02_claims_meta/verification/pqtl_row_attributes.csv
+  ok         experiments/02_claims_meta/verification/published_lists_derived/improve_folkersen2017_S3.csv
+  ok         experiments/02_claims_meta/verification/published_lists_derived/jhs_katz2022_soma13k_reagents.csv
+  ok         experiments/02_claims_meta/verification/published_lists_derived/nsphs_enroth2014_analysed.csv
+  ok         experiments/02_claims_meta/verification/published_lists_derived/published_lists_derived.meta.json
+  ok         experiments/02_claims_meta/verification/published_lists_derived/scallop_koprulu2026_S5_targets.csv
+  ok         experiments/02_claims_meta/verification/published_source_files.csv
+  ok         experiments/02_claims_meta/verification/span_restoration_expected_records.json
+  ok         experiments/02_claims_meta/verification/span_step_permitted_differences.json
+  ok         experiments/02_claims_meta/verification/therapeutic_area_names.csv
+  ok         experiments/02_claims_meta/verification/therapeutic_areas.csv
+  ok         experiments/02_claims_meta/verification/wording_lexicon.json
+  ok         pyproject.toml
+  ok         uv.lock
+
+1 file(s) changed or missing since they were recorded.
+[exit 1]
+
+$ prereg check
+unchanged    /Users/elliottower/.cache/repo-audit-census/checkout/experiments/02_claims_meta/PREREG.md
+  timestamp  Bitcoin block 969761. `prereg timestamp` checks the block.
+
+1 plans: 1 unchanged, 0 changed, 0 not frozen
+[exit 0]
+
+$ repro verify --policy publication
+/Users/elliottower/.cache/repo-audit-census/checkout/repro.yaml
+
+  ok    feasibility-q1 metric   /pubmed/Q1/count = 1309
+  ok    feasibility-q2 metric   /pubmed/Q2/count = 332
+  ok    feasibility-q3-without-genetics-block metric   /pubmed/Q3/count = 6590
+  ok    feasibility-q3-with-genetics-block metric   /Q3_restricted_to_genetic_terms = 814
+  ok    feasibility-union metric   /union_Q1_Q2_Q4_plus_Q3_genetic = 2089
+
+  5 verified
+  policy publication: passed  (0 errors, 0 warnings)
+[exit 0]

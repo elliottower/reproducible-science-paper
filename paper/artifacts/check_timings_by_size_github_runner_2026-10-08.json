@@ -1,0 +1,498 @@
+{
+  "generated_by": "scripts/measure_check_timings_by_project.py",
+  "machine": {
+    "system": "Linux 6.17.0-1022-azure",
+    "architecture": "x86_64",
+    "python": "3.12.15",
+    "load_average_at_start": [
+      1.39,
+      0.49,
+      0.18
+    ],
+    "cpu": "AMD EPYC 9V45 96-Core Processor",
+    "cpus_usable": 2,
+    "memory_gb_visible": 7,
+    "host": "GitHub-hosted runner",
+    "runner_label": "ubuntu-24.04",
+    "runner_image": "ubuntu24 20261004.327.1",
+    "runner_arch": "X64",
+    "toolkit_requirement": "reproducible-science==0.5.2",
+    "commit": "30ef9a04418655ec31007ed66b136e5dd6cb115a",
+    "run_id": "37820878143"
+  },
+  "toolkit": "repro 0.5.2",
+  "pdftotext": "not installed",
+  "runs_per_check": 5,
+  "each_run": "a new process, timed from start to exit",
+  "record_sha256": "0a67789ec9640ceb7af12dc006778a078c9f1e4df7eda914f76d5728d25418ab",
+  "checks": [
+    {
+      "project": "no project",
+      "command": "repro --version",
+      "size": {},
+      "inputs": {},
+      "exit_code": 0,
+      "last_line": "repro 0.5.2",
+      "runs": [
+        0.294,
+        0.192,
+        0.189,
+        0.195,
+        0.191
+      ],
+      "median_seconds": 0.192,
+      "min_seconds": 0.189,
+      "max_seconds": 0.294
+    },
+    {
+      "project": "generated assertions-0000010",
+      "command": "repro verify",
+      "size": {
+        "claims": 10,
+        "assertions": 10,
+        "artifacts": 2,
+        "artifact_bytes": 647
+      },
+      "inputs": {
+        "repro.yaml": "e00f63b0d102069614c6be2bd5f4f7c2f34cd08467b3642199e0510fbfa7f83f"
+      },
+      "exit_code": 0,
+      "last_line": "policy publication: passed  (0 errors, 0 warnings)",
+      "runs": [
+        0.226,
+        0.213,
+        0.207,
+        0.205,
+        0.219
+      ],
+      "median_seconds": 0.213,
+      "min_seconds": 0.205,
+      "max_seconds": 0.226
+    },
+    {
+      "project": "generated assertions-0000010",
+      "command": "sha256sum -c <the manifest's digests>",
+      "size": {
+        "claims": 10,
+        "assertions": 10,
+        "artifacts": 2,
+        "artifact_bytes": 647
+      },
+      "inputs": {
+        "repro.yaml": "e00f63b0d102069614c6be2bd5f4f7c2f34cd08467b3642199e0510fbfa7f83f"
+      },
+      "exit_code": 0,
+      "last_line": "artifacts/output.csv: OK",
+      "runs": [
+        0.003,
+        0.001,
+        0.001,
+        0.001,
+        0.001
+      ],
+      "median_seconds": 0.001,
+      "min_seconds": 0.001,
+      "max_seconds": 0.003
+    },
+    {
+      "project": "generated assertions-0000100",
+      "command": "repro verify",
+      "size": {
+        "claims": 100,
+        "assertions": 100,
+        "artifacts": 2,
+        "artifact_bytes": 6389
+      },
+      "inputs": {
+        "repro.yaml": "456953fd19b44a4bb4e933e1e97505375997c3f7c60151f1e41bbee3ac79f428"
+      },
+      "exit_code": 0,
+      "last_line": "policy publication: passed  (0 errors, 0 warnings)",
+      "runs": [
+        0.222,
+        0.237,
+        0.24,
+        0.238,
+        0.241
+      ],
+      "median_seconds": 0.238,
+      "min_seconds": 0.222,
+      "max_seconds": 0.241
+    },
+    {
+      "project": "generated assertions-0000100",
+      "command": "sha256sum -c <the manifest's digests>",
+      "size": {
+        "claims": 100,
+        "assertions": 100,
+        "artifacts": 2,
+        "artifact_bytes": 6389
+      },
+      "inputs": {
+        "repro.yaml": "456953fd19b44a4bb4e933e1e97505375997c3f7c60151f1e41bbee3ac79f428"
+      },
+      "exit_code": 0,
+      "last_line": "artifacts/output.csv: OK",
+      "runs": [
+        0.002,
+        0.001,
+        0.001,
+        0.001,
+        0.001
+      ],
+      "median_seconds": 0.001,
+      "min_seconds": 0.001,
+      "max_seconds": 0.002
+    },
+    {
+      "project": "generated assertions-0001000",
+      "command": "repro verify",
+      "size": {
+        "claims": 1000,
+        "assertions": 1000,
+        "artifacts": 2,
+        "artifact_bytes": 63807
+      },
+      "inputs": {
+        "repro.yaml": "041b72331289deff4a78186f94fbf84ee5c3046ccf83789ad847ac68694f3043"
+      },
+      "exit_code": 0,
+      "last_line": "policy publication: passed  (0 errors, 0 warnings)",
+      "runs": [
+        0.538,
+        0.553,
+        0.556,
+        0.56,
+        0.558
+      ],
+      "median_seconds": 0.556,
+      "min_seconds": 0.538,
+      "max_seconds": 0.56
+    },
+    {
+      "project": "generated assertions-0001000",
+      "command": "sha256sum -c <the manifest's digests>",
+      "size": {
+        "claims": 1000,
+        "assertions": 1000,
+        "artifacts": 2,
+        "artifact_bytes": 63807
+      },
+      "inputs": {
+        "repro.yaml": "041b72331289deff4a78186f94fbf84ee5c3046ccf83789ad847ac68694f3043"
+      },
+      "exit_code": 0,
+      "last_line": "artifacts/output.csv: OK",
+      "runs": [
+        0.002,
+        0.001,
+        0.001,
+        0.001,
+        0.001
+      ],
+      "median_seconds": 0.001,
+      "min_seconds": 0.001,
+      "max_seconds": 0.002
+    },
+    {
+      "project": "generated assertions-0010000",
+      "command": "repro verify",
+      "size": {
+        "claims": 10000,
+        "assertions": 10000,
+        "artifacts": 2,
+        "artifact_bytes": 638009
+      },
+      "inputs": {
+        "repro.yaml": "8c63da6a0cdd02ded44d46634c17b260f58ab677484af6895289f9e67da5c9f3"
+      },
+      "exit_code": 0,
+      "last_line": "policy publication: passed  (0 errors, 0 warnings)",
+      "runs": [
+        6.733,
+        6.873,
+        6.702,
+        6.697,
+        6.758
+      ],
+      "median_seconds": 6.733,
+      "min_seconds": 6.697,
+      "max_seconds": 6.873
+    },
+    {
+      "project": "generated assertions-0010000",
+      "command": "sha256sum -c <the manifest's digests>",
+      "size": {
+        "claims": 10000,
+        "assertions": 10000,
+        "artifacts": 2,
+        "artifact_bytes": 638009
+      },
+      "inputs": {
+        "repro.yaml": "8c63da6a0cdd02ded44d46634c17b260f58ab677484af6895289f9e67da5c9f3"
+      },
+      "exit_code": 0,
+      "last_line": "artifacts/output.csv: OK",
+      "runs": [
+        0.002,
+        0.002,
+        0.002,
+        0.002,
+        0.002
+      ],
+      "median_seconds": 0.002,
+      "min_seconds": 0.002,
+      "max_seconds": 0.002
+    },
+    {
+      "project": "generated assertions-0100000",
+      "command": "repro verify",
+      "size": {
+        "claims": 100000,
+        "assertions": 100000,
+        "artifacts": 2,
+        "artifact_bytes": 6380011
+      },
+      "inputs": {
+        "repro.yaml": "77f3554ddbca26c671c200a884c405e2655afff33d4f78e46671973e41e061f6"
+      },
+      "exit_code": 0,
+      "last_line": "policy publication: passed  (0 errors, 0 warnings)",
+      "runs": [
+        193.128,
+        199.621,
+        196.148,
+        191.514,
+        189.229
+      ],
+      "median_seconds": 193.128,
+      "min_seconds": 189.229,
+      "max_seconds": 199.621
+    },
+    {
+      "project": "generated assertions-0100000",
+      "command": "sha256sum -c <the manifest's digests>",
+      "size": {
+        "claims": 100000,
+        "assertions": 100000,
+        "artifacts": 2,
+        "artifact_bytes": 6380011
+      },
+      "inputs": {
+        "repro.yaml": "77f3554ddbca26c671c200a884c405e2655afff33d4f78e46671973e41e061f6"
+      },
+      "exit_code": 0,
+      "last_line": "artifacts/output.csv: OK",
+      "runs": [
+        0.005,
+        0.005,
+        0.005,
+        0.005,
+        0.005
+      ],
+      "median_seconds": 0.005,
+      "min_seconds": 0.005,
+      "max_seconds": 0.005
+    },
+    {
+      "project": "generated bytes-000001MB",
+      "command": "repro verify",
+      "size": {
+        "claims": 100,
+        "assertions": 100,
+        "artifacts": 3,
+        "artifact_bytes": 1054965
+      },
+      "inputs": {
+        "repro.yaml": "9ec618bf86ba570e4c168342038e62a34d66f8b579f517e4cf6e4fe1b80fe823"
+      },
+      "exit_code": 0,
+      "last_line": "policy publication: passed  (0 errors, 0 warnings)",
+      "runs": [
+        0.23,
+        0.223,
+        0.219,
+        0.228,
+        0.221
+      ],
+      "median_seconds": 0.223,
+      "min_seconds": 0.219,
+      "max_seconds": 0.23
+    },
+    {
+      "project": "generated bytes-000001MB",
+      "command": "sha256sum -c <the manifest's digests>",
+      "size": {
+        "claims": 100,
+        "assertions": 100,
+        "artifacts": 3,
+        "artifact_bytes": 1054965
+      },
+      "inputs": {
+        "repro.yaml": "9ec618bf86ba570e4c168342038e62a34d66f8b579f517e4cf6e4fe1b80fe823"
+      },
+      "exit_code": 0,
+      "last_line": "artifacts/filler_000.txt: OK",
+      "runs": [
+        0.002,
+        0.002,
+        0.002,
+        0.002,
+        0.002
+      ],
+      "median_seconds": 0.002,
+      "min_seconds": 0.002,
+      "max_seconds": 0.002
+    },
+    {
+      "project": "generated bytes-000016MB",
+      "command": "repro verify",
+      "size": {
+        "claims": 100,
+        "assertions": 100,
+        "artifacts": 3,
+        "artifact_bytes": 16783605
+      },
+      "inputs": {
+        "repro.yaml": "e3445cd5050c6d51b01e69c42a1012dbc951ff332ae2910d15fd561bb265f65a"
+      },
+      "exit_code": 0,
+      "last_line": "policy publication: passed  (0 errors, 0 warnings)",
+      "runs": [
+        0.282,
+        0.239,
+        0.252,
+        0.246,
+        0.229
+      ],
+      "median_seconds": 0.246,
+      "min_seconds": 0.229,
+      "max_seconds": 0.282
+    },
+    {
+      "project": "generated bytes-000016MB",
+      "command": "sha256sum -c <the manifest's digests>",
+      "size": {
+        "claims": 100,
+        "assertions": 100,
+        "artifacts": 3,
+        "artifact_bytes": 16783605
+      },
+      "inputs": {
+        "repro.yaml": "e3445cd5050c6d51b01e69c42a1012dbc951ff332ae2910d15fd561bb265f65a"
+      },
+      "exit_code": 0,
+      "last_line": "artifacts/filler_000.txt: OK",
+      "runs": [
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01
+      ],
+      "median_seconds": 0.01,
+      "min_seconds": 0.01,
+      "max_seconds": 0.01
+    },
+    {
+      "project": "generated bytes-000256MB",
+      "command": "repro verify",
+      "size": {
+        "claims": 100,
+        "assertions": 100,
+        "artifacts": 6,
+        "artifact_bytes": 268441845
+      },
+      "inputs": {
+        "repro.yaml": "e051f071f657c8f47008a306bd0e2750cb7138d97d03d354b669b9e38ebdf590"
+      },
+      "exit_code": 0,
+      "last_line": "policy publication: passed  (0 errors, 0 warnings)",
+      "runs": [
+        1.247,
+        0.371,
+        0.367,
+        0.372,
+        0.383
+      ],
+      "median_seconds": 0.372,
+      "min_seconds": 0.367,
+      "max_seconds": 1.247
+    },
+    {
+      "project": "generated bytes-000256MB",
+      "command": "sha256sum -c <the manifest's digests>",
+      "size": {
+        "claims": 100,
+        "assertions": 100,
+        "artifacts": 6,
+        "artifact_bytes": 268441845
+      },
+      "inputs": {
+        "repro.yaml": "e051f071f657c8f47008a306bd0e2750cb7138d97d03d354b669b9e38ebdf590"
+      },
+      "exit_code": 0,
+      "last_line": "artifacts/filler_003.txt: OK",
+      "runs": [
+        0.143,
+        0.142,
+        0.142,
+        0.142,
+        0.143
+      ],
+      "median_seconds": 0.142,
+      "min_seconds": 0.142,
+      "max_seconds": 0.143
+    },
+    {
+      "project": "generated bytes-004096MB",
+      "command": "repro verify",
+      "size": {
+        "claims": 100,
+        "assertions": 100,
+        "artifacts": 66,
+        "artifact_bytes": 4294973685
+      },
+      "inputs": {
+        "repro.yaml": "3b87c115052d53431e4686915df04a1f3eaacb0cbf256bbc06b391c85500fbee"
+      },
+      "exit_code": 0,
+      "last_line": "policy publication: passed  (0 errors, 0 warnings)",
+      "runs": [
+        9.983,
+        2.446,
+        2.39,
+        2.416,
+        2.39
+      ],
+      "median_seconds": 2.416,
+      "min_seconds": 2.39,
+      "max_seconds": 9.983
+    },
+    {
+      "project": "generated bytes-004096MB",
+      "command": "sha256sum -c <the manifest's digests>",
+      "size": {
+        "claims": 100,
+        "assertions": 100,
+        "artifacts": 66,
+        "artifact_bytes": 4294973685
+      },
+      "inputs": {
+        "repro.yaml": "3b87c115052d53431e4686915df04a1f3eaacb0cbf256bbc06b391c85500fbee"
+      },
+      "exit_code": 0,
+      "last_line": "artifacts/filler_063.txt: OK",
+      "runs": [
+        2.163,
+        2.234,
+        2.188,
+        2.158,
+        2.154
+      ],
+      "median_seconds": 2.163,
+      "min_seconds": 2.154,
+      "max_seconds": 2.234
+    }
+  ]
+}

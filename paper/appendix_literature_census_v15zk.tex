@@ -1,0 +1,85 @@
+% The toolkit under a literature census run by a language model and coding agents: an audit block
+% in the format of the generated audit pages, then how the toolkit is used during the study.
+% Every count is read from paper/artifacts/census_counts.json, written by
+% scripts/derive_census_counts.py from the audit record paper/audit/census_audit.json and from the
+% study's repository at the commit that record pins, and bound in this paper's ledger to the run
+% census-audit-2026-10-08.
+
+\section{Audit: Literature census of 43{,}462 abstracts}
+\label{sec:census}
+
+\paragraph{Description.} A preregistered literature census of proteome-wide Mendelian randomization
+papers, in progress.\footnote{Registration: \url{https://osf.io/zae8c}. The audit is of the study's repository at commit \code{62f181c}.}
+It counts how often a protein--outcome claim is repeated, and how often the repeats rest on
+overlapping data. The frozen plan is registered on OSF through \code{prereg register}, and the
+plan's log records the registration and each amendment.
+The repository carries 1 frozen plan with 194 log lines, 233
+ledger events, 40 runs, 3{,}508 claim records and 23{,}939 quotations.
+
+\paragraph{Example Finding.} \code{results verify --files} reports one sealed test file as recorded
+with 2 different hashes: it was corrected in place and sealed again, against the study's rule that
+a fix is a new file. No command clears the report.
+
+\begin{table}[H]
+\centering
+\small
+\caption{Literature census: what each command found in the repository, and what it could not establish. Exit 0 is a pass, 1 a finding, and 2 nothing to read.}
+\label{tab:census-commands}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.13\textwidth}r>{\raggedright\arraybackslash}p{0.39\textwidth}>{\raggedright\arraybackslash}p{0.34\textwidth}@{}}
+\toprule
+command & exit & what it found & what it could not establish \\
+\midrule
+\code{prereg} & 0 & 1 plan, unchanged against the digest recorded when it was frozen & whether the plan answers the question \\
+\code{results} & 1 & chain intact at 233 events; 373 of 374 recorded files match their digest and 1 carries 2 recorded digests & which run a reported number came from, no number being in a manuscript yet \\
+\code{citations} & 1 & 13{,}989 of 13{,}989 pinned source sentences and 2{,}167 of 2{,}167 pinned sentences behind the dataset codes found in their stored sources; 7{,}783 quotations in the repository's own claims folder unchecked, their sources not being in the repository & whether a found sentence was read correctly \\
+\code{repro} & 0 & 5 of 5 assertions verified & any count of the census, the assertions covering the search counts the plan states \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection*{Application: Toolkit use during the study}
+
+The census is conducted with the toolkit. A census of this size, run by a language model and by
+coding agents in separate sessions, could not be audited or called confirmatory without the records
+of Table~\ref{tab:census}. Each extraction can be checked against its source sentence, and each
+rule is dated against what had been seen.
+
+\begin{table}[H]
+\centering
+\small
+\caption{The record kept at each stage of the census, and the command that keeps it. A review of
+this kind ordinarily reports one count per stage.}
+\label{tab:census}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.15\textwidth}>{\raggedright\arraybackslash}p{0.12\textwidth}>{\raggedright\arraybackslash}p{0.64\textwidth}@{}}
+\toprule
+\textbf{Stage} & \textbf{Command} & \textbf{Record} \\
+\midrule
+plan & \tPlan{} & one plan frozen before screening, and 194 dated log lines under it, each stating what had been seen when it was written \\
+screening and extraction & \tRun{} & 90 seals of scripts and inputs and 40 recorded runs, over 43{,}462 abstracts screened and 14{,}053 claim records extracted \\
+verification & \tCite{} & the source sentence of each of the 14{,}053 claim records, checked against the stored abstract \\
+dataset coding & \tCite{} & 2{,}167 pinned sentences behind the codes for 872 dataset names \\
+access to output & \tRun{} & 26 access records, each with what was shown and its level \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Model extraction.} A language model screens 43{,}462 abstracts and extracts 14{,}053
+claim records from the 2{,}363 papers it admits. Each record carries the sentence it was drawn
+from, so \code{citations verify} decides for every record whether the model quoted the abstract.
+Of the 14{,}053 sentences, 13{,}989 resolve in the stored abstract. Of the 64 that do not, 27
+occur twice in the abstract and 37 leave out one word of it. A found sentence establishes nothing
+about whether the model read it correctly.
+
+\paragraph{Agent coding.} Coding agents assign a dataset to each of 872 dataset names in 434
+papers. An agent's code counts only when \code{citations pin} finds the sentence it rests on in the
+source and that sentence holds an identifier unique to the coded release. Across four passes of
+separate sessions, a script applies that rule to every code, and the coordinating agent asks each
+session for counts and file paths and never for values.
+
+\paragraph{Access to output.} Each access to output is a ledger record with a level. Of 26
+accesses, 4 are at the level \emph{metadata only}, 19 at \emph{structure seen} and 3 at
+\emph{outcomes seen}: a registered negative-control result, the text of three evidence
+sentences printed by accident during a count, and the opening lines of one batch of the second
+check, printed to learn its format. None shows a quantity either hypothesis concerns.
+The plan was frozen before all three, so each confirmatory number is still recorded as confirmatory,
+with the freeze it rests on named beside it.

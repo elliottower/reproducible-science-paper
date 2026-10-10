@@ -1,0 +1,28 @@
+source:
+  citation: kim2026ledger
+  local: reference/kim2026ledger.pdf
+  sha256: 22b7ec84d991c03290280882c99ee2a6caa27685ba994402d6f599cae2486dea
+  url: https://arxiv.org/pdf/2608.18398
+  extract_cmd: pdftotext -layout {} -
+claims:
+  claim-support-paths-for-review:
+    statement: LEDGER builds layered trace graphs over agent sessions so a reviewer can see which
+      actions and artifacts bear on a conclusion.
+    quotes:
+    - exact: 'a tracing and review system
+
+        that builds layered trace graphs over observed agent sessions.'
+      section: Abstract
+    - exact: 'visibility alone still leaves reviewers to reconstruct which actions, artifacts, and
+        validation
+
+        steps matter for a particular conclusion.'
+      section: Abstract
+    - exact: 'we show how the resulting traces expose workflow deci-
+
+        sions, artifact lineage, repair steps, validation coverage, and claim-support paths
+
+        for evidence-centered audit.'
+      section: Abstract
+    notes: The paper describes what the traces expose for human audit. That it returns no verdict
+      of its own is the manuscript's inference from that, not a sentence in the paper.

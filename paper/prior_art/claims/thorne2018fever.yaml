@@ -1,0 +1,22 @@
+source:
+  citation: thorne2018fever
+  local: reference/thorne2018fever.pdf
+  sha256: 5d328bad901f488c4cff1dd073b55e30653b29c9c21c48700b926421cb84c9f7
+  url: https://aclanthology.org/N18-1074.pdf
+  extract_cmd: pdftotext -layout {} -
+  note: Two-column PDF; quotations are single column-line fragments (see module docstring).
+claims:
+  entailment-label-against-human-annotation:
+    statement: FEVER predicts a label for a claim given retrieved text, and scores the prediction
+      against human annotation.
+    quotes:
+    - exact: ally verified against the introductory sections of
+      section: Introduction
+    - exact: Wikipedia pages and classified as S UPPORTED,
+      section: Introduction
+    - exact: classes, systems and annotators need to also return
+      section: Introduction
+    - exact: sary evidence supporting or refuting the claim
+      section: Introduction
+    notes: Supports the manuscript's contrast between match/mismatch and supported/refuted. The labels
+      are semantic relations decided by annotators.

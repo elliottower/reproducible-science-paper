@@ -1,0 +1,83 @@
+{
+  "generated_by": "scripts/measure_check_timings.py",
+  "runs_per_check": 10,
+  "each_run": "a new process, timed from start to exit",
+  "machine": {
+    "system": "Darwin 25.5.0",
+    "architecture": "x86_64",
+    "python": "3.13.12",
+    "load_average_at_start": [
+      6.66,
+      10.38,
+      16.22
+    ],
+    "model": "MacBookPro16,1",
+    "cpu": "Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz",
+    "physical_cores": 6,
+    "memory_gb": 16,
+    "macos": "26.5"
+  },
+  "toolkit": "repro 0.5.2",
+  "repro_verify": {
+    "command": "repro verify --policy strict",
+    "claims": 38,
+    "assertions": 76,
+    "assertions_verified": 76,
+    "artifacts": 25,
+    "runs": [
+      0.657,
+      0.533,
+      0.526,
+      0.532,
+      0.536,
+      0.527,
+      0.533,
+      0.537,
+      0.559,
+      0.575
+    ],
+    "median_seconds": 0.53,
+    "min_seconds": 0.526,
+    "max_seconds": 0.657
+  },
+  "citations_verify": {
+    "command": "CITATIONS_NO_CACHE=1 citations verify --claims paper/prior_art/claims",
+    "sources": 17,
+    "quotations": 63,
+    "quotations_found": 63,
+    "runs": [
+      4.095,
+      3.989,
+      3.95,
+      4.225,
+      4.249,
+      4.876,
+      4.113,
+      3.936,
+      3.922,
+      4.487
+    ],
+    "median_seconds": 4.1,
+    "min_seconds": 3.922,
+    "max_seconds": 4.876
+  },
+  "citations_verify_with_cache": {
+    "command": "citations verify --claims paper/prior_art/claims",
+    "first_run": "reads any source whose text is not yet kept; later runs read none",
+    "runs": [
+      1.478,
+      1.644,
+      1.587,
+      1.472,
+      1.471,
+      1.462,
+      1.41,
+      1.411,
+      1.431,
+      1.401
+    ],
+    "median_seconds": 1.47,
+    "min_seconds": 1.401,
+    "max_seconds": 1.644
+  }
+}

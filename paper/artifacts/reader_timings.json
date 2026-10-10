@@ -1,0 +1,15 @@
+{
+  "all_readers": 71.45,
+  "both_poppler_modes": 13.75,
+  "per_reader": {
+    "lopdf": 2.72,
+    "pdf-extract": 6.25,
+    "pdfium": 4.8,
+    "poppler-flow": 6.86,
+    "poppler-layout": 6.89,
+    "pypdf": 43.93
+  },
+  "readers_counted": 6,
+  "source": "real_corpus_by_reader.json",
+  "unit": "seconds of wall clock to read every document in the corpus once"
+}

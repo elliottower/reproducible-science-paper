@@ -1,0 +1,8 @@
+{
+  "source": "real_corpus_by_reader.json",
+  "corpus_quotations": 2364,
+  "resolved_by_either_poppler_mode": 2360,
+  "resolved_by_at_least_one_reader": 2362,
+  "resolved_by_no_reader": 2,
+  "added_to_the_poppler_union_by_lopdf_alone": 2
+}

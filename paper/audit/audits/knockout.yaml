@@ -1,0 +1,51 @@
+# One audit. scripts/build_audit_appendix.py renders it; every number is read from `record`
+# or counted from `catch_log`, and a placeholder that does not resolve stops the build.
+id: knockout
+order: 2
+title: Knockout epistasis
+citation: tower2026knockout
+description: A study of knockout epistasis in Boolean gene regulatory networks, also covered in Section~\ref{sec:comparative}
+repository: https://github.com/elliottower/knockout-epistasis-dynamics
+record: knockout_audit.json
+catch_log: catch_logs/knockout/catch_log.jsonl
+
+summary:
+  plans: "{/declared/registered_plans} of {/declared/registered_plans} plans unchanged"
+  quotations: "{/declared/quotations} declared, sources absent"
+  ledger: "chain intact, {/declared/ledger_events} events"
+
+carries:
+  - {what: tracked files, pointer: /declared/tracked_files}
+  - {what: registered plans, pointer: /declared/registered_plans}
+  - {what: ledger events, pointer: /declared/ledger_events}
+  - {what: runs, pointer: /declared/runs}
+  - {what: manuscript claims bound to a run, pointer: /declared/manuscript_claims_bound}
+  - {what: claim records, pointer: /declared/claim_records}
+  - {what: quotations, pointer: /declared/quotations}
+
+counts:
+  files_ok: {step: results.verify, lines: '^  ok '}
+  files_resealed: {step: results.verify, lines: '^  RESEALED '}
+  files_recorded: {pointer: /declared/file_digests_recorded}
+
+checks:
+  - command: prereg
+    step: prereg.check
+    found: "{/declared/registered_plans} plans, each unchanged against the digest recorded when it was frozen"
+    could_not: whether a plan was written before the outcomes it governs were seen
+  - command: results
+    step: results.verify
+    found: "chain intact and anchored at {/declared/ledger_events} events; {files_ok} of {files_recorded} recorded files match their digest and {files_resealed} carry more than one recorded digest"
+    could_not: "what share of the manuscript's numbers the {/declared/manuscript_claims_bound} claims cover, the manuscript not being in the repository"
+  - command: citations
+    step: citations.verify
+    found: "{/declared/quotations} quotations declared against {/declared/pinned_sources} sources, each carrying a SHA-256; none checked, the sources not being in the repository"
+    could_not: whether any quotation occurs in its source
+  - command: repro
+    step: repro.verify
+    found: no evidence manifest
+    could_not: any assertion, none having been declared
+
+examples:
+  - catch: knockout-11
+    text: Binding the manuscript's numbers to runs required recomputing them, and the recomputation revealed that a property stated for all 28 networks holds only for 27.

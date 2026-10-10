@@ -1,0 +1,2298 @@
+{
+  "inputs": {
+    "natural_reports": [
+      "2020-025.json",
+      "2022-001.json",
+      "2024-020.json",
+      "2025-018.json"
+    ],
+    "relabel": {
+      "2020-025|barmose_jc_out.csv|JCS": {
+        "C": "Core",
+        "NC": "No Core"
+      }
+    }
+  },
+  "totals": {
+    "disagree": 69,
+    "not_read": 15
+  },
+  "by_checker_and_relation": [
+    {
+      "checker": "disagree",
+      "relation": "check-time file",
+      "count": 30
+    },
+    {
+      "checker": "disagree",
+      "relation": "differs",
+      "count": 3
+    },
+    {
+      "checker": "disagree",
+      "relation": "exponent",
+      "count": 1
+    },
+    {
+      "checker": "disagree",
+      "relation": "last digit",
+      "count": 1
+    },
+    {
+      "checker": "disagree",
+      "relation": "n divisor",
+      "count": 3
+    },
+    {
+      "checker": "disagree",
+      "relation": "truncation",
+      "count": 31
+    },
+    {
+      "checker": "not read",
+      "relation": "agrees",
+      "count": 11
+    },
+    {
+      "checker": "not read",
+      "relation": "differs",
+      "count": 1
+    },
+    {
+      "checker": "not read",
+      "relation": "last digit",
+      "count": 1
+    },
+    {
+      "checker": "not read",
+      "relation": "n divisor",
+      "count": 2
+    }
+  ],
+  "by_certificate_checker_and_relation": [
+    {
+      "certificate": "2020-025",
+      "checker": "disagree",
+      "relation": "check-time file",
+      "count": 30
+    },
+    {
+      "certificate": "2020-025",
+      "checker": "disagree",
+      "relation": "truncation",
+      "count": 27
+    },
+    {
+      "certificate": "2022-001",
+      "checker": "disagree",
+      "relation": "exponent",
+      "count": 1
+    },
+    {
+      "certificate": "2022-001",
+      "checker": "disagree",
+      "relation": "n divisor",
+      "count": 3
+    },
+    {
+      "certificate": "2022-001",
+      "checker": "disagree",
+      "relation": "truncation",
+      "count": 4
+    },
+    {
+      "certificate": "2022-001",
+      "checker": "not read",
+      "relation": "agrees",
+      "count": 5
+    },
+    {
+      "certificate": "2022-001",
+      "checker": "not read",
+      "relation": "differs",
+      "count": 1
+    },
+    {
+      "certificate": "2022-001",
+      "checker": "not read",
+      "relation": "last digit",
+      "count": 1
+    },
+    {
+      "certificate": "2022-001",
+      "checker": "not read",
+      "relation": "n divisor",
+      "count": 2
+    },
+    {
+      "certificate": "2024-020",
+      "checker": "not read",
+      "relation": "agrees",
+      "count": 6
+    },
+    {
+      "certificate": "2025-018",
+      "checker": "disagree",
+      "relation": "differs",
+      "count": 3
+    },
+    {
+      "certificate": "2025-018",
+      "checker": "disagree",
+      "relation": "last digit",
+      "count": 1
+    }
+  ],
+  "check_time_file": {
+    "cells": 30,
+    "equal_truncated": 30,
+    "equal_rounded": 13,
+    "sha256": [
+      "25ba59f33a8c7e85ecd3f00eb0b9133ab00dc20e6bc07fe30070f505bc00f602"
+    ]
+  },
+  "standard_deviations": {
+    "cells": 12,
+    "equal_rounded": 7,
+    "equal_scaled_rounded": 12,
+    "rows": [
+      {
+        "certificate": "2022-001",
+        "row": "E_s11_to_1",
+        "printed": "3.44",
+        "stored": "3.44286602078476",
+        "n": 1070,
+        "equal_rounded": true,
+        "equal_scaled_rounded": true
+      },
+      {
+        "certificate": "2022-001",
+        "row": "SISBEN1PC",
+        "printed": "0.05",
+        "stored": "0.0467395293204783",
+        "n": 1070,
+        "equal_rounded": true,
+        "equal_scaled_rounded": true
+      },
+      {
+        "certificate": "2022-001",
+        "row": "MurderRate",
+        "printed": "30.33",
+        "stored": "30.3484535251829",
+        "n": 1070,
+        "equal_rounded": false,
+        "equal_scaled_rounded": true
+      },
+      {
+        "certificate": "2022-001",
+        "row": "ProxyGDP",
+        "printed": "0.70",
+        "stored": "0.696021646080247",
+        "n": 1070,
+        "equal_rounded": true,
+        "equal_scaled_rounded": true
+      },
+      {
+        "certificate": "2022-001",
+        "row": "Poverty",
+        "printed": "21.80",
+        "stored": "21.8124005522565",
+        "n": 1070,
+        "equal_rounded": false,
+        "equal_scaled_rounded": true
+      },
+      {
+        "certificate": "2022-001",
+        "row": "GC_indrura",
+        "printed": "0.24",
+        "stored": "0.241463954484658",
+        "n": 1070,
+        "equal_rounded": true,
+        "equal_scaled_rounded": true
+      },
+      {
+        "certificate": "2022-001",
+        "row": "Vulnerabil",
+        "printed": "1.93",
+        "stored": "1.92906710684014",
+        "n": 1070,
+        "equal_rounded": true,
+        "equal_scaled_rounded": true
+      },
+      {
+        "certificate": "2022-001",
+        "row": "Threat",
+        "printed": "2.30",
+        "stored": "2.30150118023305",
+        "n": 1070,
+        "equal_rounded": true,
+        "equal_scaled_rounded": true
+      },
+      {
+        "certificate": "2022-001",
+        "row": "Lack_Respo",
+        "printed": "2.25",
+        "stored": "2.25265719273269",
+        "n": 1070,
+        "equal_rounded": true,
+        "equal_scaled_rounded": true
+      },
+      {
+        "certificate": "2022-001",
+        "row": "TransEducP",
+        "printed": "84,154.56",
+        "stored": "84193.91610717",
+        "n": 1070,
+        "equal_rounded": false,
+        "equal_scaled_rounded": true
+      },
+      {
+        "certificate": "2022-001",
+        "row": "TransAlimE",
+        "printed": "3,132.90",
+        "stored": "3134.36208840873",
+        "n": 1070,
+        "equal_rounded": false,
+        "equal_scaled_rounded": true
+      },
+      {
+        "certificate": "2022-001",
+        "row": "HS_Cover_7",
+        "printed": "28.20",
+        "stored": "28.2116089823114",
+        "n": 1070,
+        "equal_rounded": false,
+        "equal_scaled_rounded": true
+      }
+    ]
+  },
+  "rows": [
+    {
+      "certificate": "2020-025",
+      "claim": "t2-n000",
+      "checker": "disagree",
+      "paper": "771.1242",
+      "stored": "771.124266965405",
+      "relation": "truncation",
+      "output": "jc_out.csv",
+      "column": "Joincount",
+      "where": {
+        "order": "First",
+        "JCS": "Modern:Modern"
+      },
+      "agrees_rounded": false,
+      "truncation": true,
+      "check_time_file": null,
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "0.66965405",
+      "relative_difference": "8.684127018708529702478537179873229241152E-8"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t2-n001",
+      "checker": "disagree",
+      "paper": "839.0020",
+      "stored": "839.002068416866",
+      "relation": "truncation",
+      "output": "jc_out.csv",
+      "column": "Expected",
+      "where": {
+        "order": "First",
+        "JCS": "Modern:Modern"
+      },
+      "agrees_rounded": false,
+      "truncation": true,
+      "check_time_file": null,
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "0.68416866",
+      "relative_difference": "8.154553386046755550046364609381145694528E-8"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t2-n002",
+      "checker": "disagree",
+      "paper": "102.1755",
+      "stored": "102.175598537549",
+      "relation": "truncation",
+      "output": "jc_out.csv",
+      "column": "Variance",
+      "where": {
+        "order": "First",
+        "JCS": "Modern:Modern"
+      },
+      "agrees_rounded": false,
+      "truncation": true,
+      "check_time_file": null,
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "0.98537549",
+      "relative_difference": "9.643950751403222886112619952924135433641E-7"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t2-n004",
+      "checker": "disagree",
+      "paper": "0.9999",
+      "stored": "0.999999999990605",
+      "relation": "truncation",
+      "output": "jc_out.csv",
+      "column": "pvalue",
+      "where": {
+        "order": "First",
+        "JCS": "Modern:Modern"
+      },
+      "agrees_rounded": false,
+      "truncation": true,
+      "check_time_file": null,
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "0.99999990605",
+      "relative_difference": "0.0001000099916041604160416041604160416041604"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t2-n006",
+      "checker": "disagree",
+      "paper": "391.8997",
+      "stored": "391.899761336515",
+      "relation": "truncation",
+      "output": "jc_out.csv",
+      "column": "Expected",
+      "where": {
+        "order": "First",
+        "JCS": "Post-medieval:Post-medieval"
+      },
+      "agrees_rounded": false,
+      "truncation": true,
+      "check_time_file": null,
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "0.61336515",
+      "relative_difference": "1.565107475203476807968977776711745377708E-7"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t2-n007",
+      "checker": "disagree",
+      "paper": "59.9811",
+      "stored": "59.9811622359266",
+      "relation": "truncation",
+      "output": "jc_out.csv",
+      "column": "Variance",
+      "where": {
+        "order": "First",
+        "JCS": "Post-medieval:Post-medieval"
+      },
+      "agrees_rounded": false,
+      "truncation": true,
+      "check_time_file": null,
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "0.622359266",
+      "relative_difference": "0.000001037592284903077802841228320254213410558"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t2-n008",
+      "checker": "disagree",
+      "paper": "-5.9778",
+      "stored": "-5.97787565763401",
+      "relation": "truncation",
+      "output": "jc_out.csv",
+      "column": "z.value",
+      "where": {
+        "order": "First",
+        "JCS": "Post-medieval:Post-medieval"
+      },
+      "agrees_rounded": false,
+      "truncation": true,
+      "check_time_file": null,
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "0.7565763401",
+      "relative_difference": "0.00001265643447589414165746595737562313894744"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t2-n009",
+      "checker": "disagree",
+      "paper": "0.9999",
+      "stored": "0.999999998869669",
+      "relation": "truncation",
+      "output": "jc_out.csv",
+      "column": "pvalue",
+      "where": {
+        "order": "First",
+        "JCS": "Post-medieval:Post-medieval"
+      },
+      "agrees_rounded": false,
+      "truncation": true,
+      "check_time_file": null,
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "0.99998869669",
+      "relative_difference": "0.0001000088705560556055605560556055605560556"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t2-n012",
+      "checker": "disagree",
+      "paper": "9.9739",
+      "stored": "9.97397557272961",
+      "relation": "truncation",
+      "output": "jc_out.csv",
+      "column": "Variance",
+      "where": {
+        "order": "First",
+        "JCS": "Medieval:Medieval"
+      },
+      "agrees_rounded": false,
+      "truncation": true,
+      "check_time_file": null,
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "0.7557272961",
+      "relative_difference": "0.000007577049059044105114348449453072519275309"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t2-n014",
+      "checker": "disagree",
+      "paper": "0.3017",
+      "stored": "0.301773201307301",
+      "relation": "truncation",
+      "output": "jc_out.csv",
+      "column": "pvalue",
+      "where": {
+        "order": "First",
+        "JCS": "Medieval:Medieval"
+      },
+      "agrees_rounded": false,
+      "truncation": true,
+      "check_time_file": null,
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "0.73201307301",
+      "relative_difference": "0.0002426294574113357640039774610540271793172"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t2-n017",
+      "checker": "disagree",
+      "paper": "139.3980",
+      "stored": "139.39805238042",
+      "relation": "truncation",
+      "output": "jc_out.csv",
+      "column": "Variance",
+      "where": {
+        "order": "First",
+        "JCS": "Post-medieval:Modern"
+      },
+      "agrees_rounded": false,
+      "truncation": true,
+      "check_time_file": null,
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "0.5238042",
+      "relative_difference": "3.757616321611500882365600654241811216804E-7"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t2-n018",
+      "checker": "disagree",
+      "paper": "-4.7604",
+      "stored": "-4.76045267978206",
+      "relation": "truncation",
+      "output": "jc_out.csv",
+      "column": "z.value",
+      "where": {
+        "order": "First",
+        "JCS": "Post-medieval:Modern"
+      },
+      "agrees_rounded": false,
+      "truncation": true,
+      "check_time_file": null,
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "0.5267978206",
+      "relative_difference": "0.00001106625116796907822872027560709184102176"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t2-n019",
+      "checker": "disagree",
+      "paper": "0.9999",
+      "stored": "0.999999034203897",
+      "relation": "truncation",
+      "output": "jc_out.csv",
+      "column": "pvalue",
+      "where": {
+        "order": "First",
+        "JCS": "Post-medieval:Modern"
+      },
+      "agrees_rounded": false,
+      "truncation": true,
+      "check_time_file": null,
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "0.99034203897",
+      "relative_difference": "0.00009904410830783078307830783078307830783078"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t2-n025",
+      "checker": "disagree",
+      "paper": "365.7601",
+      "stored": "365.760184327747",
+      "relation": "truncation",
+      "output": "jc_out.csv",
+      "column": "Joincount",
+      "where": {
+        "order": "First",
+        "JCS": "Medieval:Post-medieval"
+      },
+      "agrees_rounded": false,
+      "truncation": true,
+      "check_time_file": null,
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "0.84327747",
+      "relative_difference": "2.305548008106953164109480503750955886112E-7"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t2-n026",
+      "checker": "disagree",
+      "paper": "288.9355",
+      "stored": "288.935560859189",
+      "relation": "truncation",
+      "output": "jc_out.csv",
+      "column": "Expected",
+      "where": {
+        "order": "First",
+        "JCS": "Medieval:Post-medieval"
+      },
+      "agrees_rounded": false,
+      "truncation": true,
+      "check_time_file": null,
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "0.60859189",
+      "relative_difference": "2.106324387276745155925803509779864364192E-7"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t2-n031",
+      "checker": "disagree",
+      "paper": "839.0020",
+      "stored": "839.002068416865",
+      "relation": "truncation",
+      "output": "jc_out.csv",
+      "column": "Expected",
+      "where": {
+        "order": "Second",
+        "JCS": "Modern:Modern"
+      },
+      "agrees_rounded": false,
+      "truncation": true,
+      "check_time_file": null,
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "0.68416865",
+      "relative_difference": "8.154553266857528349157689731371319734637E-8"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t2-n032",
+      "checker": "disagree",
+      "paper": "30.9970",
+      "stored": "30.9970597003121",
+      "relation": "truncation",
+      "output": "jc_out.csv",
+      "column": "Variance",
+      "where": {
+        "order": "Second",
+        "JCS": "Modern:Modern"
+      },
+      "agrees_rounded": false,
+      "truncation": true,
+      "check_time_file": null,
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "0.597003121",
+      "relative_difference": "0.000001926002906732909636416427396199632222473"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t2-n034",
+      "checker": "disagree",
+      "paper": "0.4665",
+      "stored": "0.466564662095299",
+      "relation": "truncation",
+      "output": "jc_out.csv",
+      "column": "pvalue",
+      "where": {
+        "order": "Second",
+        "JCS": "Modern:Modern"
+      },
+      "agrees_rounded": false,
+      "truncation": true,
+      "check_time_file": null,
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "0.64662095299",
+      "relative_difference": "0.0001386111367609860664523043944265809217578"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t2-n036",
+      "checker": "disagree",
+      "paper": "391.8997",
+      "stored": "391.899761336515",
+      "relation": "truncation",
+      "output": "jc_out.csv",
+      "column": "Expected",
+      "where": {
+        "order": "Second",
+        "JCS": "Post-medieval:Post-medieval"
+      },
+      "agrees_rounded": false,
+      "truncation": true,
+      "check_time_file": null,
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "0.61336515",
+      "relative_difference": "1.565107475203476807968977776711745377708E-7"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t2-n038",
+      "checker": "disagree",
+      "paper": "6.1506",
+      "stored": "6.15067428438054",
+      "relation": "truncation",
+      "output": "jc_out.csv",
+      "column": "z.value",
+      "where": {
+        "order": "Second",
+        "JCS": "Post-medieval:Post-medieval"
+      },
+      "agrees_rounded": false,
+      "truncation": true,
+      "check_time_file": null,
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "0.7428438054",
+      "relative_difference": "0.00001207758276265730172666081357916300848698"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t2-n043",
+      "checker": "disagree",
+      "paper": "10.5550",
+      "stored": "10.555086541661",
+      "relation": "truncation",
+      "output": "jc_out.csv",
+      "column": "z.value",
+      "where": {
+        "order": "Second",
+        "JCS": "Medieval:Medieval"
+      },
+      "agrees_rounded": false,
+      "truncation": true,
+      "check_time_file": null,
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "0.86541661",
+      "relative_difference": "0.000008199115206063477025106584557081951681667"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t2-n050",
+      "checker": "disagree",
+      "paper": "425.2992",
+      "stored": "425.299296468639",
+      "relation": "truncation",
+      "output": "jc_out.csv",
+      "column": "Joincount",
+      "where": {
+        "order": "Second",
+        "JCS": "Medieval:Modern"
+      },
+      "agrees_rounded": false,
+      "truncation": true,
+      "check_time_file": null,
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "0.96468639",
+      "relative_difference": "2.268253478962575053045009254661189111101E-7"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t2-n052",
+      "checker": "disagree",
+      "paper": "19.6594",
+      "stored": "19.6594957129564",
+      "relation": "truncation",
+      "output": "jc_out.csv",
+      "column": "Variance",
+      "where": {
+        "order": "Second",
+        "JCS": "Medieval:Modern"
+      },
+      "agrees_rounded": false,
+      "truncation": true,
+      "check_time_file": null,
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "0.957129564",
+      "relative_difference": "0.000004868559386349532539141581126585755414713"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t2-n053",
+      "checker": "disagree",
+      "paper": "0.5792",
+      "stored": "0.579252585523923",
+      "relation": "truncation",
+      "output": "jc_out.csv",
+      "column": "z.value",
+      "where": {
+        "order": "Second",
+        "JCS": "Medieval:Modern"
+      },
+      "agrees_rounded": false,
+      "truncation": true,
+      "check_time_file": null,
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "0.52585523923",
+      "relative_difference": "0.00009078992390020718232044198895027624309392"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t2-n056",
+      "checker": "disagree",
+      "paper": "288.9355",
+      "stored": "288.935560859189",
+      "relation": "truncation",
+      "output": "jc_out.csv",
+      "column": "Expected",
+      "where": {
+        "order": "Second",
+        "JCS": "Medieval:Post-medieval"
+      },
+      "agrees_rounded": false,
+      "truncation": true,
+      "check_time_file": null,
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "0.60859189",
+      "relative_difference": "2.106324387276745155925803509779864364192E-7"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t2-n058",
+      "checker": "disagree",
+      "paper": "2.2298",
+      "stored": "2.22985406540355",
+      "relation": "truncation",
+      "output": "jc_out.csv",
+      "column": "z.value",
+      "where": {
+        "order": "Second",
+        "JCS": "Medieval:Post-medieval"
+      },
+      "agrees_rounded": false,
+      "truncation": true,
+      "check_time_file": null,
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "0.5406540355",
+      "relative_difference": "0.00002424675017938828594492779621490716656202"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t2-n059",
+      "checker": "disagree",
+      "paper": "0.0128",
+      "stored": "0.0128785663683074",
+      "relation": "truncation",
+      "output": "jc_out.csv",
+      "column": "pvalue",
+      "where": {
+        "order": "Second",
+        "JCS": "Medieval:Post-medieval"
+      },
+      "agrees_rounded": false,
+      "truncation": true,
+      "check_time_file": null,
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "0.785663683074",
+      "relative_difference": "0.006137997524015625"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t3-n000",
+      "checker": "disagree",
+      "paper": "8.9154",
+      "stored": "9.225",
+      "relation": "check-time file",
+      "output": "barmose_jc_out.csv",
+      "column": "Joincount",
+      "where": {
+        "order": "First",
+        "JCS": "C:C"
+      },
+      "agrees_rounded": false,
+      "truncation": false,
+      "check_time_file": {
+        "sha256": "25ba59f33a8c7e85ecd3f00eb0b9133ab00dc20e6bc07fe30070f505bc00f602",
+        "where": {
+          "order": "First",
+          "JCS": "Core:Core"
+        },
+        "value": "8.91547619047619",
+        "equal_truncated": true,
+        "equal_rounded": false
+      },
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "3096",
+      "relative_difference": "0.03472642842721582879063194023823945083788"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t3-n001",
+      "checker": "disagree",
+      "paper": "6.6320",
+      "stored": "6.28301886792453",
+      "relation": "check-time file",
+      "output": "barmose_jc_out.csv",
+      "column": "Expected",
+      "where": {
+        "order": "First",
+        "JCS": "C:C"
+      },
+      "agrees_rounded": false,
+      "truncation": false,
+      "check_time_file": {
+        "sha256": "25ba59f33a8c7e85ecd3f00eb0b9133ab00dc20e6bc07fe30070f505bc00f602",
+        "where": {
+          "order": "First",
+          "JCS": "Core:Core"
+        },
+        "value": "6.63207547169811",
+        "equal_truncated": true,
+        "equal_rounded": false
+      },
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "3489.8113207547",
+      "relative_difference": "0.05262079796071622436670687575392038600724"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t3-n002",
+      "checker": "disagree",
+      "paper": "0.4851",
+      "stored": "0.471704071135989",
+      "relation": "check-time file",
+      "output": "barmose_jc_out.csv",
+      "column": "Variance",
+      "where": {
+        "order": "First",
+        "JCS": "C:C"
+      },
+      "agrees_rounded": false,
+      "truncation": false,
+      "check_time_file": {
+        "sha256": "25ba59f33a8c7e85ecd3f00eb0b9133ab00dc20e6bc07fe30070f505bc00f602",
+        "where": {
+          "order": "First",
+          "JCS": "Core:Core"
+        },
+        "value": "0.485115282853286",
+        "equal_truncated": true,
+        "equal_rounded": true
+      },
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "133.95928864011",
+      "relative_difference": "0.02761477811587507730364873222016079158936"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t3-n003",
+      "checker": "disagree",
+      "paper": "3.2783",
+      "stored": "4.28356213439922",
+      "relation": "check-time file",
+      "output": "barmose_jc_out.csv",
+      "column": "z.value",
+      "where": {
+        "order": "First",
+        "JCS": "C:C"
+      },
+      "agrees_rounded": false,
+      "truncation": false,
+      "check_time_file": {
+        "sha256": "25ba59f33a8c7e85ecd3f00eb0b9133ab00dc20e6bc07fe30070f505bc00f602",
+        "where": {
+          "order": "First",
+          "JCS": "Core:Core"
+        },
+        "value": "3.27838274380777",
+        "equal_truncated": true,
+        "equal_rounded": false
+      },
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "10052.6213439922",
+      "relative_difference": "0.3066412879843882500076259036695848458042"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t3-n004",
+      "checker": "disagree",
+      "paper": "0.0005",
+      "stored": "9.1962352124027e-06",
+      "relation": "check-time file",
+      "output": "barmose_jc_out.csv",
+      "column": "pvalue",
+      "where": {
+        "order": "First",
+        "JCS": "C:C"
+      },
+      "agrees_rounded": false,
+      "truncation": false,
+      "check_time_file": {
+        "sha256": "25ba59f33a8c7e85ecd3f00eb0b9133ab00dc20e6bc07fe30070f505bc00f602",
+        "where": {
+          "order": "First",
+          "JCS": "Core:Core"
+        },
+        "value": "0.000522018645846215",
+        "equal_truncated": true,
+        "equal_rounded": true
+      },
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "4.908037647875973",
+      "relative_difference": "0.9816075295751946"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t3-n005",
+      "checker": "disagree",
+      "paper": "24.0440",
+      "stored": "25.3452380952381",
+      "relation": "check-time file",
+      "output": "barmose_jc_out.csv",
+      "column": "Joincount",
+      "where": {
+        "order": "First",
+        "JCS": "NC:NC"
+      },
+      "agrees_rounded": false,
+      "truncation": false,
+      "check_time_file": {
+        "sha256": "25ba59f33a8c7e85ecd3f00eb0b9133ab00dc20e6bc07fe30070f505bc00f602",
+        "where": {
+          "order": "First",
+          "JCS": "No Core:No Core"
+        },
+        "value": "24.0440476190476",
+        "equal_truncated": true,
+        "equal_rounded": true
+      },
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "13012.380952381",
+      "relative_difference": "0.05411903573607136915654633172517052071203"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t3-n006",
+      "checker": "disagree",
+      "paper": "22.1320",
+      "stored": "22.7830188679245",
+      "relation": "check-time file",
+      "output": "barmose_jc_out.csv",
+      "column": "Expected",
+      "where": {
+        "order": "First",
+        "JCS": "NC:NC"
+      },
+      "agrees_rounded": false,
+      "truncation": false,
+      "check_time_file": {
+        "sha256": "25ba59f33a8c7e85ecd3f00eb0b9133ab00dc20e6bc07fe30070f505bc00f602",
+        "where": {
+          "order": "First",
+          "JCS": "No Core:No Core"
+        },
+        "value": "22.1320754716981",
+        "equal_truncated": true,
+        "equal_rounded": false
+      },
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "6510.188679245",
+      "relative_difference": "0.02941527507340050605458160130128320983192"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t3-n007",
+      "checker": "disagree",
+      "paper": "0.5678",
+      "stored": "0.55871969114412",
+      "relation": "check-time file",
+      "output": "barmose_jc_out.csv",
+      "column": "Variance",
+      "where": {
+        "order": "First",
+        "JCS": "NC:NC"
+      },
+      "agrees_rounded": false,
+      "truncation": false,
+      "check_time_file": {
+        "sha256": "25ba59f33a8c7e85ecd3f00eb0b9133ab00dc20e6bc07fe30070f505bc00f602",
+        "where": {
+          "order": "First",
+          "JCS": "No Core:No Core"
+        },
+        "value": "0.56786716802344",
+        "equal_truncated": true,
+        "equal_rounded": false
+      },
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "90.8030885588",
+      "relative_difference": "0.01599209027101091933779499823881648467770"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t3-n008",
+      "checker": "disagree",
+      "paper": "2.5372",
+      "stored": "3.42783017141456",
+      "relation": "check-time file",
+      "output": "barmose_jc_out.csv",
+      "column": "z.value",
+      "where": {
+        "order": "First",
+        "JCS": "NC:NC"
+      },
+      "agrees_rounded": false,
+      "truncation": false,
+      "check_time_file": {
+        "sha256": "25ba59f33a8c7e85ecd3f00eb0b9133ab00dc20e6bc07fe30070f505bc00f602",
+        "where": {
+          "order": "First",
+          "JCS": "No Core:No Core"
+        },
+        "value": "2.53722032260089",
+        "equal_truncated": true,
+        "equal_rounded": true
+      },
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "8906.3017141456",
+      "relative_difference": "0.3510287606079772978086079142361658521204"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t3-n009",
+      "checker": "disagree",
+      "paper": "0.0055",
+      "stored": "0.000304212973522917",
+      "relation": "check-time file",
+      "output": "barmose_jc_out.csv",
+      "column": "pvalue",
+      "where": {
+        "order": "First",
+        "JCS": "NC:NC"
+      },
+      "agrees_rounded": false,
+      "truncation": false,
+      "check_time_file": {
+        "sha256": "25ba59f33a8c7e85ecd3f00eb0b9133ab00dc20e6bc07fe30070f505bc00f602",
+        "where": {
+          "order": "First",
+          "JCS": "No Core:No Core"
+        },
+        "value": "0.00558683041890013",
+        "equal_truncated": true,
+        "equal_rounded": false
+      },
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "51.95787026477083",
+      "relative_difference": "0.9446885502685605454545454545454545454545"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t3-n010",
+      "checker": "disagree",
+      "paper": "20.5404",
+      "stored": "18.9297619047619",
+      "relation": "check-time file",
+      "output": "barmose_jc_out.csv",
+      "column": "Joincount",
+      "where": {
+        "order": "First",
+        "JCS": "C:NC"
+      },
+      "agrees_rounded": false,
+      "truncation": false,
+      "check_time_file": {
+        "sha256": "25ba59f33a8c7e85ecd3f00eb0b9133ab00dc20e6bc07fe30070f505bc00f602",
+        "where": {
+          "order": "First",
+          "JCS": "Core:No Core"
+        },
+        "value": "20.5404761904762",
+        "equal_truncated": true,
+        "equal_rounded": false
+      },
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "16106.380952381",
+      "relative_difference": "0.07841318062151175244883254464372650970770"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t3-n011",
+      "checker": "disagree",
+      "paper": "24.7358",
+      "stored": "24.4339622641509",
+      "relation": "check-time file",
+      "output": "barmose_jc_out.csv",
+      "column": "Expected",
+      "where": {
+        "order": "First",
+        "JCS": "C:NC"
+      },
+      "agrees_rounded": false,
+      "truncation": false,
+      "check_time_file": {
+        "sha256": "25ba59f33a8c7e85ecd3f00eb0b9133ab00dc20e6bc07fe30070f505bc00f602",
+        "where": {
+          "order": "First",
+          "JCS": "Core:No Core"
+        },
+        "value": "24.7358490566038",
+        "equal_truncated": true,
+        "equal_rounded": true
+      },
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "3018.377358491",
+      "relative_difference": "0.01220246508498209073488627818788961747750"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t3-n012",
+      "checker": "disagree",
+      "paper": "1.8256",
+      "stored": "1.7839796427163",
+      "relation": "check-time file",
+      "output": "barmose_jc_out.csv",
+      "column": "Variance",
+      "where": {
+        "order": "First",
+        "JCS": "C:NC"
+      },
+      "agrees_rounded": false,
+      "truncation": false,
+      "check_time_file": {
+        "sha256": "25ba59f33a8c7e85ecd3f00eb0b9133ab00dc20e6bc07fe30070f505bc00f602",
+        "where": {
+          "order": "First",
+          "JCS": "Core:No Core"
+        },
+        "value": "1.82567625843512",
+        "equal_truncated": true,
+        "equal_rounded": false
+      },
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "416.203572837",
+      "relative_difference": "0.02279817993191279579316389132340052585451"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t3-n013",
+      "checker": "disagree",
+      "paper": "-3.1049",
+      "stored": "-4.12096842743986",
+      "relation": "check-time file",
+      "output": "barmose_jc_out.csv",
+      "column": "z.value",
+      "where": {
+        "order": "First",
+        "JCS": "C:NC"
+      },
+      "agrees_rounded": false,
+      "truncation": false,
+      "check_time_file": {
+        "sha256": "25ba59f33a8c7e85ecd3f00eb0b9133ab00dc20e6bc07fe30070f505bc00f602",
+        "where": {
+          "order": "First",
+          "JCS": "Core:No Core"
+        },
+        "value": "-3.10497909896435",
+        "equal_truncated": true,
+        "equal_rounded": false
+      },
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "10160.6842743986",
+      "relative_difference": "0.3272467478630100808399626396985410158137"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t3-n014",
+      "checker": "disagree",
+      "paper": "0.9990",
+      "stored": "0.999981135843395",
+      "relation": "check-time file",
+      "output": "barmose_jc_out.csv",
+      "column": "pvalue",
+      "where": {
+        "order": "First",
+        "JCS": "C:NC"
+      },
+      "agrees_rounded": false,
+      "truncation": false,
+      "check_time_file": {
+        "sha256": "25ba59f33a8c7e85ecd3f00eb0b9133ab00dc20e6bc07fe30070f505bc00f602",
+        "where": {
+          "order": "First",
+          "JCS": "Core:No Core"
+        },
+        "value": "0.999048537646006",
+        "equal_truncated": true,
+        "equal_rounded": true
+      },
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "9.81135843395",
+      "relative_difference": "0.0009821179613563563563563563563563563563564"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t3-n015",
+      "checker": "disagree",
+      "paper": "7.7208",
+      "stored": "8.19146894771895",
+      "relation": "check-time file",
+      "output": "barmose_jc_out.csv",
+      "column": "Joincount",
+      "where": {
+        "order": "Second",
+        "JCS": "C:C"
+      },
+      "agrees_rounded": false,
+      "truncation": false,
+      "check_time_file": {
+        "sha256": "25ba59f33a8c7e85ecd3f00eb0b9133ab00dc20e6bc07fe30070f505bc00f602",
+        "where": {
+          "order": "Second",
+          "JCS": "Core:Core"
+        },
+        "value": "7.72085137085137",
+        "equal_truncated": true,
+        "equal_rounded": false
+      },
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "4706.6894771895",
+      "relative_difference": "0.06096116305550590612371774945601492073360"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t3-n016",
+      "checker": "disagree",
+      "paper": "6.6320",
+      "stored": "6.28301886792453",
+      "relation": "check-time file",
+      "output": "barmose_jc_out.csv",
+      "column": "Expected",
+      "where": {
+        "order": "Second",
+        "JCS": "C:C"
+      },
+      "agrees_rounded": false,
+      "truncation": false,
+      "check_time_file": {
+        "sha256": "25ba59f33a8c7e85ecd3f00eb0b9133ab00dc20e6bc07fe30070f505bc00f602",
+        "where": {
+          "order": "Second",
+          "JCS": "Core:Core"
+        },
+        "value": "6.63207547169811",
+        "equal_truncated": true,
+        "equal_rounded": false
+      },
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "3489.8113207547",
+      "relative_difference": "0.05262079796071622436670687575392038600724"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t3-n017",
+      "checker": "disagree",
+      "paper": "0.3352",
+      "stored": "0.324143882258973",
+      "relation": "check-time file",
+      "output": "barmose_jc_out.csv",
+      "column": "Variance",
+      "where": {
+        "order": "Second",
+        "JCS": "C:C"
+      },
+      "agrees_rounded": false,
+      "truncation": false,
+      "check_time_file": {
+        "sha256": "25ba59f33a8c7e85ecd3f00eb0b9133ab00dc20e6bc07fe30070f505bc00f602",
+        "where": {
+          "order": "Second",
+          "JCS": "Core:Core"
+        },
+        "value": "0.335204188502445",
+        "equal_truncated": true,
+        "equal_rounded": true
+      },
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "110.56117741027",
+      "relative_difference": "0.03298364481213305489260143198090692124105"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t3-n018",
+      "checker": "disagree",
+      "paper": "1.8805",
+      "stored": "3.35206081865367",
+      "relation": "check-time file",
+      "output": "barmose_jc_out.csv",
+      "column": "z.value",
+      "where": {
+        "order": "Second",
+        "JCS": "C:C"
+      },
+      "agrees_rounded": false,
+      "truncation": false,
+      "check_time_file": {
+        "sha256": "25ba59f33a8c7e85ecd3f00eb0b9133ab00dc20e6bc07fe30070f505bc00f602",
+        "where": {
+          "order": "Second",
+          "JCS": "Core:Core"
+        },
+        "value": "1.88054521792624",
+        "equal_truncated": true,
+        "equal_rounded": true
+      },
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "14715.6081865367",
+      "relative_difference": "0.7825369947639829832491358681201808029779"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t3-n019",
+      "checker": "disagree",
+      "paper": "0.0300",
+      "stored": "0.000401061977434293",
+      "relation": "check-time file",
+      "output": "barmose_jc_out.csv",
+      "column": "pvalue",
+      "where": {
+        "order": "Second",
+        "JCS": "C:C"
+      },
+      "agrees_rounded": false,
+      "truncation": false,
+      "check_time_file": {
+        "sha256": "25ba59f33a8c7e85ecd3f00eb0b9133ab00dc20e6bc07fe30070f505bc00f602",
+        "where": {
+          "order": "Second",
+          "JCS": "Core:Core"
+        },
+        "value": "0.0300169049038798",
+        "equal_truncated": true,
+        "equal_rounded": true
+      },
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "295.98938022565707",
+      "relative_difference": "0.9866312674188569"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t3-n020",
+      "checker": "disagree",
+      "paper": "22.0019",
+      "stored": "24.1979721667222",
+      "relation": "check-time file",
+      "output": "barmose_jc_out.csv",
+      "column": "Joincount",
+      "where": {
+        "order": "Second",
+        "JCS": "NC:NC"
+      },
+      "agrees_rounded": false,
+      "truncation": false,
+      "check_time_file": {
+        "sha256": "25ba59f33a8c7e85ecd3f00eb0b9133ab00dc20e6bc07fe30070f505bc00f602",
+        "where": {
+          "order": "Second",
+          "JCS": "No Core:No Core"
+        },
+        "value": "22.0019973082473",
+        "equal_truncated": true,
+        "equal_rounded": false
+      },
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "21960.721667222",
+      "relative_difference": "0.09981284192375203959658029533812988878233"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t3-n021",
+      "checker": "disagree",
+      "paper": "22.1320",
+      "stored": "22.7830188679245",
+      "relation": "check-time file",
+      "output": "barmose_jc_out.csv",
+      "column": "Expected",
+      "where": {
+        "order": "Second",
+        "JCS": "NC:NC"
+      },
+      "agrees_rounded": false,
+      "truncation": false,
+      "check_time_file": {
+        "sha256": "25ba59f33a8c7e85ecd3f00eb0b9133ab00dc20e6bc07fe30070f505bc00f602",
+        "where": {
+          "order": "Second",
+          "JCS": "No Core:No Core"
+        },
+        "value": "22.1320754716981",
+        "equal_truncated": true,
+        "equal_rounded": false
+      },
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "6510.188679245",
+      "relative_difference": "0.02941527507340050605458160130128320983192"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t3-n022",
+      "checker": "disagree",
+      "paper": "0.4986",
+      "stored": "0.496061417256215",
+      "relation": "check-time file",
+      "output": "barmose_jc_out.csv",
+      "column": "Variance",
+      "where": {
+        "order": "Second",
+        "JCS": "NC:NC"
+      },
+      "agrees_rounded": false,
+      "truncation": false,
+      "check_time_file": {
+        "sha256": "25ba59f33a8c7e85ecd3f00eb0b9133ab00dc20e6bc07fe30070f505bc00f602",
+        "where": {
+          "order": "Second",
+          "JCS": "No Core:No Core"
+        },
+        "value": "0.498697824627925",
+        "equal_truncated": true,
+        "equal_rounded": false
+      },
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "25.38582743785",
+      "relative_difference": "0.005091421467679502607300441235459286000802"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t3-n023",
+      "checker": "disagree",
+      "paper": "-0.1841",
+      "stored": "2.00897430051251",
+      "relation": "check-time file",
+      "output": "barmose_jc_out.csv",
+      "column": "z.value",
+      "where": {
+        "order": "Second",
+        "JCS": "NC:NC"
+      },
+      "agrees_rounded": false,
+      "truncation": false,
+      "check_time_file": {
+        "sha256": "25ba59f33a8c7e85ecd3f00eb0b9133ab00dc20e6bc07fe30070f505bc00f602",
+        "where": {
+          "order": "Second",
+          "JCS": "No Core:No Core"
+        },
+        "value": "-0.184198317806352",
+        "equal_truncated": true,
+        "equal_rounded": false
+      },
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "21930.7430051251",
+      "relative_difference": "11.91240793325643671917436175991309071157"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t3-n024",
+      "checker": "disagree",
+      "paper": "0.5730",
+      "stored": "0.0222699296356648",
+      "relation": "check-time file",
+      "output": "barmose_jc_out.csv",
+      "column": "pvalue",
+      "where": {
+        "order": "Second",
+        "JCS": "NC:NC"
+      },
+      "agrees_rounded": false,
+      "truncation": false,
+      "check_time_file": {
+        "sha256": "25ba59f33a8c7e85ecd3f00eb0b9133ab00dc20e6bc07fe30070f505bc00f602",
+        "where": {
+          "order": "Second",
+          "JCS": "No Core:No Core"
+        },
+        "value": "0.573071060450576",
+        "equal_truncated": true,
+        "equal_rounded": false
+      },
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "5507.300703643352",
+      "relative_difference": "0.9611345032536390924956369982547993019197"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t3-n025",
+      "checker": "disagree",
+      "paper": "23.7771",
+      "stored": "21.1105588855589",
+      "relation": "check-time file",
+      "output": "barmose_jc_out.csv",
+      "column": "Joincount",
+      "where": {
+        "order": "Second",
+        "JCS": "C:NC"
+      },
+      "agrees_rounded": false,
+      "truncation": false,
+      "check_time_file": {
+        "sha256": "25ba59f33a8c7e85ecd3f00eb0b9133ab00dc20e6bc07fe30070f505bc00f602",
+        "where": {
+          "order": "Second",
+          "JCS": "Core:No Core"
+        },
+        "value": "23.7771513209013",
+        "equal_truncated": true,
+        "equal_rounded": false
+      },
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "26665.411144411",
+      "relative_difference": "0.1121474492028506420042814304519895193274"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t3-n026",
+      "checker": "disagree",
+      "paper": "24.7358",
+      "stored": "24.4339622641509",
+      "relation": "check-time file",
+      "output": "barmose_jc_out.csv",
+      "column": "Expected",
+      "where": {
+        "order": "Second",
+        "JCS": "C:NC"
+      },
+      "agrees_rounded": false,
+      "truncation": false,
+      "check_time_file": {
+        "sha256": "25ba59f33a8c7e85ecd3f00eb0b9133ab00dc20e6bc07fe30070f505bc00f602",
+        "where": {
+          "order": "Second",
+          "JCS": "Core:No Core"
+        },
+        "value": "24.7358490566038",
+        "equal_truncated": true,
+        "equal_rounded": true
+      },
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "3018.377358491",
+      "relative_difference": "0.01220246508498209073488627818788961747750"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t3-n027",
+      "checker": "disagree",
+      "paper": "1.1140",
+      "stored": "1.09340026040297",
+      "relation": "check-time file",
+      "output": "barmose_jc_out.csv",
+      "column": "Variance",
+      "where": {
+        "order": "Second",
+        "JCS": "C:NC"
+      },
+      "agrees_rounded": false,
+      "truncation": false,
+      "check_time_file": {
+        "sha256": "25ba59f33a8c7e85ecd3f00eb0b9133ab00dc20e6bc07fe30070f505bc00f602",
+        "where": {
+          "order": "Second",
+          "JCS": "Core:No Core"
+        },
+        "value": "1.11403525873914",
+        "equal_truncated": true,
+        "equal_rounded": true
+      },
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "205.9973959703",
+      "relative_difference": "0.01849168725047576301615798922800718132855"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t3-n028",
+      "checker": "disagree",
+      "paper": "-0.9083",
+      "stored": "-3.178289627382",
+      "relation": "check-time file",
+      "output": "barmose_jc_out.csv",
+      "column": "z.value",
+      "where": {
+        "order": "Second",
+        "JCS": "C:NC"
+      },
+      "agrees_rounded": false,
+      "truncation": false,
+      "check_time_file": {
+        "sha256": "25ba59f33a8c7e85ecd3f00eb0b9133ab00dc20e6bc07fe30070f505bc00f602",
+        "where": {
+          "order": "Second",
+          "JCS": "Core:No Core"
+        },
+        "value": "-0.908306105559903",
+        "equal_truncated": true,
+        "equal_rounded": true
+      },
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "22699.89627382",
+      "relative_difference": "2.499162861809974677969833755367169437411"
+    },
+    {
+      "certificate": "2020-025",
+      "claim": "t3-n029",
+      "checker": "disagree",
+      "paper": "0.8181",
+      "stored": "0.999259266585922",
+      "relation": "check-time file",
+      "output": "barmose_jc_out.csv",
+      "column": "pvalue",
+      "where": {
+        "order": "Second",
+        "JCS": "C:NC"
+      },
+      "agrees_rounded": false,
+      "truncation": false,
+      "check_time_file": {
+        "sha256": "25ba59f33a8c7e85ecd3f00eb0b9133ab00dc20e6bc07fe30070f505bc00f602",
+        "where": {
+          "order": "Second",
+          "JCS": "Core:No Core"
+        },
+        "value": "0.818141741186192",
+        "equal_truncated": true,
+        "equal_rounded": true
+      },
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "1811.59266585922",
+      "relative_difference": "0.2214390252853220877643319887544309986554"
+    },
+    {
+      "certificate": "2022-001",
+      "claim": "t2-n010",
+      "checker": "disagree",
+      "paper": "23.78",
+      "stored": "23.7862727860325",
+      "relation": "truncation",
+      "output": "codecheck/results/table2.csv",
+      "column": "mean",
+      "where": {
+        "": "MurderRate"
+      },
+      "agrees_rounded": false,
+      "truncation": true,
+      "check_time_file": null,
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "0.62727860325",
+      "relative_difference": "0.0002637841056560134566862910008410428931876"
+    },
+    {
+      "certificate": "2022-001",
+      "claim": "t2-n011",
+      "checker": "disagree",
+      "paper": "30.33",
+      "stored": "30.3484535251829",
+      "relation": "n divisor",
+      "output": "codecheck/results/table2.csv",
+      "column": "std.dev",
+      "where": {
+        "": "MurderRate"
+      },
+      "agrees_rounded": false,
+      "truncation": false,
+      "check_time_file": null,
+      "n_divisor": {
+        "n": 1070,
+        "scaled": "30.3343",
+        "equal_rounded": true
+      },
+      "exponent": null,
+      "units_of_last_digit": "1.84535251829",
+      "relative_difference": "0.0006084248329343883943290471480382459610946"
+    },
+    {
+      "certificate": "2022-001",
+      "claim": "t2-n021",
+      "checker": "disagree",
+      "paper": "21.80",
+      "stored": "21.8124005522565",
+      "relation": "n divisor",
+      "output": "codecheck/results/table2.csv",
+      "column": "std.dev",
+      "where": {
+        "": "Poverty"
+      },
+      "agrees_rounded": false,
+      "truncation": false,
+      "check_time_file": null,
+      "n_divisor": {
+        "n": 1070,
+        "scaled": "21.8022",
+        "equal_rounded": true
+      },
+      "exponent": null,
+      "units_of_last_digit": "1.24005522565",
+      "relative_difference": "0.0005688326723165137614678899082568807339450"
+    },
+    {
+      "certificate": "2022-001",
+      "claim": "t2-n045",
+      "checker": "not read",
+      "paper": "59,734.11",
+      "stored": "59734.1142370624",
+      "relation": "agrees",
+      "output": "codecheck/results/table2.csv",
+      "column": "mean",
+      "where": {
+        "": "TransEducP"
+      },
+      "agrees_rounded": true,
+      "truncation": true,
+      "check_time_file": null,
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "0.42370624",
+      "relative_difference": "7.093204201083769390721649657122203712418E-8"
+    },
+    {
+      "certificate": "2022-001",
+      "claim": "t2-n046",
+      "checker": "not read",
+      "paper": "84,154.56",
+      "stored": "84193.91610717",
+      "relation": "n divisor",
+      "output": "codecheck/results/table2.csv",
+      "column": "std.dev",
+      "where": {
+        "": "TransEducP"
+      },
+      "agrees_rounded": false,
+      "truncation": false,
+      "check_time_file": null,
+      "n_divisor": {
+        "n": 1070,
+        "scaled": "84154.5640",
+        "equal_rounded": true
+      },
+      "exponent": null,
+      "units_of_last_digit": "3935.610717",
+      "relative_difference": "0.0004676645825252963119289079522250487674108"
+    },
+    {
+      "certificate": "2022-001",
+      "claim": "t2-n047",
+      "checker": "not read",
+      "paper": "38,960.24",
+      "stored": "38960.2372544618",
+      "relation": "agrees",
+      "output": "codecheck/results/table2.csv",
+      "column": "median",
+      "where": {
+        "": "TransEducP"
+      },
+      "agrees_rounded": true,
+      "truncation": false,
+      "check_time_file": null,
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "0.27455382",
+      "relative_difference": "7.047025891010938330975373868333459958152E-8"
+    },
+    {
+      "certificate": "2022-001",
+      "claim": "t2-n048",
+      "checker": "not read",
+      "paper": "11,129.02",
+      "stored": "11129.0225011843",
+      "relation": "agrees",
+      "output": "codecheck/results/table2.csv",
+      "column": "min",
+      "where": {
+        "": "TransEducP"
+      },
+      "agrees_rounded": true,
+      "truncation": true,
+      "check_time_file": null,
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "0.25011843",
+      "relative_difference": "2.247443440662340439679324864183908376479E-7"
+    },
+    {
+      "certificate": "2022-001",
+      "claim": "t2-n049",
+      "checker": "not read",
+      "paper": "827,067.40",
+      "stored": "827067.431388958",
+      "relation": "differs",
+      "output": "codecheck/results/table2.csv",
+      "column": "max",
+      "where": {
+        "": "TransEducP"
+      },
+      "agrees_rounded": false,
+      "truncation": false,
+      "check_time_file": null,
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "3.1388958",
+      "relative_difference": "3.795211611532506298761140869534937539552E-8"
+    },
+    {
+      "certificate": "2022-001",
+      "claim": "t2-n050",
+      "checker": "not read",
+      "paper": "5,679.00",
+      "stored": "5679.00176904028",
+      "relation": "agrees",
+      "output": "codecheck/results/table2.csv",
+      "column": "mean",
+      "where": {
+        "": "TransAlimE"
+      },
+      "agrees_rounded": true,
+      "truncation": true,
+      "check_time_file": null,
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "0.176904028",
+      "relative_difference": "3.115055960556435992252157069906673710160E-7"
+    },
+    {
+      "certificate": "2022-001",
+      "claim": "t2-n051",
+      "checker": "not read",
+      "paper": "3,132.90",
+      "stored": "3134.36208840873",
+      "relation": "n divisor",
+      "output": "codecheck/results/table2.csv",
+      "column": "std.dev",
+      "where": {
+        "": "TransAlimE"
+      },
+      "agrees_rounded": false,
+      "truncation": false,
+      "check_time_file": null,
+      "n_divisor": {
+        "n": 1070,
+        "scaled": "3132.8971",
+        "equal_rounded": true
+      },
+      "exponent": null,
+      "units_of_last_digit": "146.208840873",
+      "relative_difference": "0.0004666885022598870056497175141242937853107"
+    },
+    {
+      "certificate": "2022-001",
+      "claim": "t2-n052",
+      "checker": "not read",
+      "paper": "4,984.44",
+      "stored": "4984.43486993302",
+      "relation": "last digit",
+      "output": "codecheck/results/table2.csv",
+      "column": "median",
+      "where": {
+        "": "TransAlimE"
+      },
+      "agrees_rounded": false,
+      "truncation": false,
+      "check_time_file": null,
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "0.513006698",
+      "relative_difference": "0.000001029216317179061238574443668696985017374"
+    },
+    {
+      "certificate": "2022-001",
+      "claim": "t2-n054",
+      "checker": "not read",
+      "paper": "24,090.09",
+      "stored": "24090.0909360776",
+      "relation": "agrees",
+      "output": "codecheck/results/table2.csv",
+      "column": "max",
+      "where": {
+        "": "TransAlimE"
+      },
+      "agrees_rounded": true,
+      "truncation": true,
+      "check_time_file": null,
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "0.09360776",
+      "relative_difference": "3.885737247141874521846950343481489691404E-8"
+    },
+    {
+      "certificate": "2022-001",
+      "claim": "t2-n056",
+      "checker": "disagree",
+      "paper": "28.20",
+      "stored": "28.2116089823114",
+      "relation": "n divisor",
+      "output": "codecheck/results/table2.csv",
+      "column": "std.dev",
+      "where": {
+        "": "HS_Cober_7"
+      },
+      "agrees_rounded": false,
+      "truncation": false,
+      "check_time_file": null,
+      "n_divisor": {
+        "n": 1070,
+        "scaled": "28.1984",
+        "equal_rounded": true
+      },
+      "exponent": null,
+      "units_of_last_digit": "1.16089823114",
+      "relative_difference": "0.0004116660394113475177304964539007092198582"
+    },
+    {
+      "certificate": "2022-001",
+      "claim": "t3-n016",
+      "checker": "disagree",
+      "paper": "-0.053",
+      "stored": "-0.0535980790193068",
+      "relation": "truncation",
+      "output": "codecheck/results/table3.csv",
+      "column": "estimate",
+      "where": {
+        "term": "Lack_Respo"
+      },
+      "agrees_rounded": false,
+      "truncation": true,
+      "check_time_file": null,
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "0.5980790193068",
+      "relative_difference": "0.01128450979824150943396226415094339622642"
+    },
+    {
+      "certificate": "2022-001",
+      "claim": "t3-n020",
+      "checker": "disagree",
+      "paper": "0.005",
+      "stored": "0.00576377646544869",
+      "relation": "truncation",
+      "output": "codecheck/results/table3.csv",
+      "column": "estimate",
+      "where": {
+        "term": "HS_Cober_7"
+      },
+      "agrees_rounded": false,
+      "truncation": true,
+      "check_time_file": null,
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "0.76377646544869",
+      "relative_difference": "0.152755293089738"
+    },
+    {
+      "certificate": "2022-001",
+      "claim": "t3-n024",
+      "checker": "disagree",
+      "paper": "5.273",
+      "stored": "5.27309834788795e-07",
+      "relation": "exponent",
+      "output": "codecheck/results/table3.csv",
+      "column": "estimate",
+      "where": {
+        "term": "TransEducP"
+      },
+      "agrees_rounded": false,
+      "truncation": false,
+      "check_time_file": null,
+      "n_divisor": null,
+      "exponent": -7,
+      "units_of_last_digit": "5272.999472690165211205",
+      "relative_difference": "0.9999998999981348779072634174094443390859"
+    },
+    {
+      "certificate": "2022-001",
+      "claim": "t3-n026",
+      "checker": "disagree",
+      "paper": "0.0002",
+      "stored": "0.000275694111666087",
+      "relation": "truncation",
+      "output": "codecheck/results/table3.csv",
+      "column": "estimate",
+      "where": {
+        "term": "GC_discapi"
+      },
+      "agrees_rounded": false,
+      "truncation": true,
+      "check_time_file": null,
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "0.75694111666087",
+      "relative_difference": "0.378470558330435"
+    },
+    {
+      "certificate": "2024-020",
+      "claim": "t1-n000",
+      "checker": "not read",
+      "paper": "14,466",
+      "stored": "14466",
+      "relation": "agrees",
+      "output": "results/table1_des_stats_tos.csv",
+      "column": "Count",
+      "where": {
+        "Demand type": "community"
+      },
+      "agrees_rounded": true,
+      "truncation": true,
+      "check_time_file": null,
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "0",
+      "relative_difference": "0"
+    },
+    {
+      "certificate": "2024-020",
+      "claim": "t1-n004",
+      "checker": "not read",
+      "paper": "114,800",
+      "stored": "114800",
+      "relation": "agrees",
+      "output": "results/table1_des_stats_tos.csv",
+      "column": "Count",
+      "where": {
+        "Demand type": "crime"
+      },
+      "agrees_rounded": true,
+      "truncation": true,
+      "check_time_file": null,
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "0",
+      "relative_difference": "0"
+    },
+    {
+      "certificate": "2024-020",
+      "claim": "t1-n008",
+      "checker": "not read",
+      "paper": "19,873",
+      "stored": "19873",
+      "relation": "agrees",
+      "output": "results/table1_des_stats_tos.csv",
+      "column": "Count",
+      "where": {
+        "Demand type": "health"
+      },
+      "agrees_rounded": true,
+      "truncation": true,
+      "check_time_file": null,
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "0",
+      "relative_difference": "0"
+    },
+    {
+      "certificate": "2024-020",
+      "claim": "t1-n012",
+      "checker": "not read",
+      "paper": "15,663",
+      "stored": "15663",
+      "relation": "agrees",
+      "output": "results/table1_des_stats_tos.csv",
+      "column": "Count",
+      "where": {
+        "Demand type": "proactive"
+      },
+      "agrees_rounded": true,
+      "truncation": true,
+      "check_time_file": null,
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "0",
+      "relative_difference": "0"
+    },
+    {
+      "certificate": "2024-020",
+      "claim": "t1-n016",
+      "checker": "not read",
+      "paper": "54,702",
+      "stored": "54702",
+      "relation": "agrees",
+      "output": "results/table1_des_stats_tos.csv",
+      "column": "Count",
+      "where": {
+        "Demand type": "quality of life"
+      },
+      "agrees_rounded": true,
+      "truncation": true,
+      "check_time_file": null,
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "0",
+      "relative_difference": "0"
+    },
+    {
+      "certificate": "2024-020",
+      "claim": "t1-n020",
+      "checker": "not read",
+      "paper": "32,147",
+      "stored": "32147",
+      "relation": "agrees",
+      "output": "results/table1_des_stats_tos.csv",
+      "column": "Count",
+      "where": {
+        "Demand type": "traffic"
+      },
+      "agrees_rounded": true,
+      "truncation": true,
+      "check_time_file": null,
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "0",
+      "relative_difference": "0"
+    },
+    {
+      "certificate": "2025-018",
+      "claim": "t2-n012",
+      "checker": "disagree",
+      "paper": "12.659",
+      "stored": "12.658474978",
+      "relation": "last digit",
+      "output": "table_2_computation_performance.csv",
+      "column": "imdp_abstraction_time",
+      "where": {
+        "name": "robot_2d_reachability"
+      },
+      "agrees_rounded": false,
+      "truncation": false,
+      "check_time_file": null,
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "0.525022",
+      "relative_difference": "0.00004147420807330752824077731258393238012481"
+    },
+    {
+      "certificate": "2025-018",
+      "claim": "t2-n029",
+      "checker": "disagree",
+      "paper": "3.1",
+      "stored": "2.897432",
+      "relation": "differs",
+      "output": "table_2_computation_performance.csv",
+      "column": "odimdp_prob_mem",
+      "where": {
+        "name": "bas4d"
+      },
+      "agrees_rounded": false,
+      "truncation": false,
+      "check_time_file": null,
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "2.02568",
+      "relative_difference": "0.06534451612903225806451612903225806451613"
+    },
+    {
+      "certificate": "2025-018",
+      "claim": "t2-n047",
+      "checker": "disagree",
+      "paper": "610.8",
+      "stored": "611.442908",
+      "relation": "differs",
+      "output": "table_2_computation_performance.csv",
+      "column": "odimdp_prob_mem",
+      "where": {
+        "name": "nndm_cartpole"
+      },
+      "agrees_rounded": false,
+      "truncation": false,
+      "check_time_file": null,
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "6.42908",
+      "relative_difference": "0.001052567125081859855926653569089718402096"
+    },
+    {
+      "certificate": "2025-018",
+      "claim": "t2-n057",
+      "checker": "disagree",
+      "paper": "2310.8",
+      "stored": "2329.968132",
+      "relation": "differs",
+      "output": "table_2_computation_performance.csv",
+      "column": "odimdp_prob_mem",
+      "where": {
+        "name": "linear7d"
+      },
+      "agrees_rounded": false,
+      "truncation": false,
+      "check_time_file": null,
+      "n_divisor": null,
+      "exponent": null,
+      "units_of_last_digit": "191.68132",
+      "relative_difference": "0.008295019906525878483642028734637355028562"
+    }
+  ]
+}

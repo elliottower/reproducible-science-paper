@@ -1,0 +1,29 @@
+source:
+  citation: siegel2024corebench
+  local: reference/siegel2024corebench.pdf
+  sha256: 1d1fbe8a3cf472fc468495e6a3bcd6b90224ba1eae3dac8d8174f98d666c3d76
+  url: https://arxiv.org/pdf/2409.11363
+  extract_cmd: pdftotext -layout {} -
+claims:
+  human-verified-values-to-measure-recall-against:
+    statement: CORE-Bench is 270 tasks over 90 papers, built by reproducing each paper's results so
+      the expected answers are known.
+    quotes:
+    - exact: 'We introduce CORE-Bench
+
+        (Computational Reproducibility Agent Benchmark), a benchmark consisting of 270 tasks
+
+        based on 90 scientific papers across three disciplines (computer science, social science,
+        and
+
+        medicine).'
+      section: Abstract
+  best-agent-accuracy:
+    statement: The best agent evaluated in the paper reached 21% accuracy on the hardest level.
+    quotes:
+    - exact: 'The best agent achieved an accuracy
+
+        of 21% on the hardest level of tasks'
+      section: Abstract
+    notes: Bears on the manuscript's box note that the low agent success rate belongs to a different
+      benchmark. The 21% here is the paper's own 2024 baseline.

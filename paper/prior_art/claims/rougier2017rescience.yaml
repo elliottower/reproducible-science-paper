@@ -1,0 +1,14 @@
+source:
+  citation: rougier2017rescience
+  local: reference/rougier2017rescience.xml
+  sha256: 63e857c9e61a5e84de78e6c7d34363aec40e96b786075cf63bdf8e9d70fb4556
+  url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8530091/fullTextXML
+  extract_cmd: none — JATS XML is read directly
+claims:
+  purposive-reproducibility-oriented-journal:
+    statement: ReScience publishes replications of computational research and requires the code to
+      be available, which makes it a purposive population.
+    quotes:
+    - exact: ReScience is a peer-reviewed journal that targets computational research and encourages
+        the explicit replication of already published research, promoting new and open-source implementations
+      section: Abstract

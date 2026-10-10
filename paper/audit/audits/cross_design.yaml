@@ -1,0 +1,71 @@
+id: cross_design
+order: 1
+title: Cross-design evidence discordance
+citation: tower2026crossdesign
+description: A preregistered study of drug-trial outcomes
+repository: https://github.com/elliottower/cross-design-evidence-discordance
+record: cross_design_audit.json
+catch_log: catch_logs/cross_design/catch_log.jsonl
+# Seven catches came from one-off number checks written for a single revision, which no command
+# was written from. They are not toolkit catches.
+excluded_ids: [cross-P9, cross-P10, cross-P11, cross-P12, cross-P13, cross-P14, cross-P15]
+review_counts: catch_logs/cross_design/review_counts.json
+
+summary:
+  plans: "{reg_unchanged} of {reg_total} registrations unchanged, {reg_appended} appended, {reg_changed} changed"
+  quotations: "{cit_found} of {/declared/quotations} found"
+  ledger: not in the repository
+
+carries:
+  - {what: tracked files, pointer: /declared/tracked_files}
+  - {what: registration documents, pointer: /declared/registration_documents}
+  - {what: claim records, pointer: /declared/claim_records}
+  - {what: quotations, pointer: /declared/quotations}
+  - {what: bibliography entries, pointer: /declared/bibliography_entries_cited_by_the_manuscript}
+
+counts:
+  reg_total: {step: prereg.check, value: '^(\d+) commit-pinned:'}
+  reg_unchanged: {step: prereg.check, value: 'commit-pinned: (\d+) unchanged'}
+  reg_appended: {step: prereg.check, value: ', (\d+) appended'}
+  reg_changed: {step: prereg.check, value: ', (\d+) changed'}
+  cit_found: {step: citations.verify, value: '^  found +([\d,]+)'}
+  cit_library: {step: citations.verify, value: '^(\d+) sources? absent at the path'}
+  bib_checked: {step: citations.audit, value: '^  checked +(\d+)'}
+  bib_agree: {step: citations.audit, value: '^  agree +(\d+)'}
+  bib_disagree: {step: citations.audit, value: '^  disagree +(\d+)'}
+
+checks:
+  - command: prereg
+    step: prereg.check
+    found: "{reg_total} registration documents, each frozen by a commit recorded in the document: {reg_unchanged} unchanged, {reg_appended} with text added after the frozen text, and {reg_changed} changed after its freeze"
+    could_not: whether a registration was written before the outcomes it governs were seen
+  - command: results
+    step: results.verify
+    found: no ledger
+    could_not: which run any reported number came from
+  - command: citations
+    step: citations.verify
+    found: "{cit_found} of {/declared/quotations} quotations found in their sources; {cit_library} of the {/declared/pinned_sources} sources were read from the library and matched to the SHA-256 the record pins"
+    could_not: whether a quotation supports the sentence that cites it
+  - command: citations audit
+    step: citations.audit
+    found: "{/declared/bibliography_entries_cited_by_the_manuscript} bibliography entries, {bib_checked} carrying an identifier; {bib_agree} agree with the record the identifier resolves to and {bib_disagree} disagree"
+    could_not: whether the entry with no identifier is correct
+  - command: repro
+    step: repro.verify
+    found: no evidence manifest
+    could_not: any assertion, none having been declared
+
+rounds:
+  field: review_round
+  labels:
+    before_submission: before submission
+    round_1: review round 1
+    round_2: review round 2
+    round_3: review round 3
+    round_4: review round 4
+    after_round_4: after round 4
+
+examples:
+  - catch: cross-23
+    text: "`results verify` found two recorded files edited since they were recorded and one that had moved."

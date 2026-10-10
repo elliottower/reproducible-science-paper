@@ -1,0 +1,42 @@
+{
+  "generated_by": "scripts/derive_bibliography_audit.py",
+  "log": {
+    "path": "paper/audit/knockout_repro_audit.log",
+    "sha256": "de76885a7d6a9c082542ee65fc46f6ad09b25744906e97f3434b09be8588043b"
+  },
+  "record": {
+    "path": "paper/audit/knockout_repro_audit.json",
+    "sha256": "f7a27232e24386d41566ef917fb033209186beba041c6e774a5cd8bff0a11ce5"
+  },
+  "commit": "cb82384606faa2e6e6f778015a17793b47af8215",
+  "entries": 32,
+  "checked": 28,
+  "agree": 22,
+  "differ": 6,
+  "not_found": 4,
+  "differ_in_year": 5,
+  "differ_in_author_list": 2,
+  "differ_in_title": 1,
+  "entries_that_differ": {
+    "basu2018iterative": [
+      "year"
+    ],
+    "bateson1909heredity": [
+      "year",
+      "author_list"
+    ],
+    "bordt2023shapley": [
+      "year"
+    ],
+    "fisher1918correlation": [
+      "year",
+      "title"
+    ],
+    "muschalik2024shapiq": [
+      "author_list"
+    ],
+    "wang2022interpretability": [
+      "year"
+    ]
+  }
+}

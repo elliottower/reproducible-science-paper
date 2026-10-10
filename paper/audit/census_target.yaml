@@ -1,0 +1,41 @@
+# A study repository in progress, pinned: the literature census of Appendix K. The commit is the
+# one at which the study bound its process counts to recorded runs.
+repository: https://github.com/elliottower/proteome-mr-claim-audit.git
+commit: 62f181cb08c1e18ae292f7640491c3f0f20bb343
+tree: f89fa47d73fa07addf4b229c00f36cd42711138c
+
+layout:
+  claims: claims
+  manifest: repro.yaml
+  ledger: .results/ledger.jsonl
+  globs:
+    registered_plans_in_experiments: experiments/*/PREREG.md
+    extraction_claim_files:
+      - experiments/02_claims_meta/outputs/citations/sol_extraction_search_0b97103cd7a4/claims/*.yaml
+      - experiments/02_claims_meta/outputs/citations/sol_extraction_chase1_0b97103cd7a4/claims/*.yaml
+      - experiments/02_claims_meta/outputs/citations/sol_extraction_chase2_0b97103cd7a4/claims/*.yaml
+      - experiments/02_claims_meta/outputs/citations/sol_extraction_chase3_0b97103cd7a4/claims/*.yaml
+    dataset_coding_claim_files: experiments/02_claims_meta/outputs/citations/manual_coding_2026-10-03/claims/*.yaml
+
+# The model's source sentences are checked folder by folder, as the study stores them: the
+# search and three rounds of citation chasing. The dataset coding and the repository's own
+# claims folder follow.
+steps:
+  - name: citations.verify.extraction_search
+    argv: [citations, verify, --claims, experiments/02_claims_meta/outputs/citations/sol_extraction_search_0b97103cd7a4/claims]
+  - name: citations.verify.extraction_chase1
+    argv: [citations, verify, --claims, experiments/02_claims_meta/outputs/citations/sol_extraction_chase1_0b97103cd7a4/claims]
+  - name: citations.verify.extraction_chase2
+    argv: [citations, verify, --claims, experiments/02_claims_meta/outputs/citations/sol_extraction_chase2_0b97103cd7a4/claims]
+  - name: citations.verify.extraction_chase3
+    argv: [citations, verify, --claims, experiments/02_claims_meta/outputs/citations/sol_extraction_chase3_0b97103cd7a4/claims]
+  - name: citations.verify.dataset_coding
+    argv: [citations, verify, --claims, experiments/02_claims_meta/outputs/citations/manual_coding_2026-10-03/claims]
+  - name: citations.verify.repository
+    argv: [citations, verify, --claims, claims/]
+  - name: results.verify
+    argv: [results, verify, --files]
+  - name: prereg.check
+    argv: [prereg, check]
+  - name: repro.verify
+    argv: [repro, verify, --policy, publication]

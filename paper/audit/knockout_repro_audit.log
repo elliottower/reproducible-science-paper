@@ -1,0 +1,113 @@
+# audit of https://github.com/elliottower/knockout-epistasis-dynamics, 2026-10-06T21:44:26+00:00
+# commit cb82384606faa2e6e6f778015a17793b47af8215
+# tree   4b79a139d01e94cf5558f8713cf130c519a03275  matches pin: None  dirty: False
+
+$ prereg check
+unchanged    /Users/elliottower/.cache/reproducible-science/audit/knockout_epistasis_dynamics-25f843e8/checkout/experiments/2026-09-21_graded-perturbation-rerun/PREREG.md
+  timestamp  none. `prereg timestamp` makes one.
+unchanged    /Users/elliottower/.cache/reproducible-science/audit/knockout_epistasis_dynamics-25f843e8/checkout/experiments/2026-09-21_ode-primary-rerun/PREREG.md
+  timestamp  none. `prereg timestamp` makes one.
+unchanged    /Users/elliottower/.cache/reproducible-science/audit/knockout_epistasis_dynamics-25f843e8/checkout/experiments/2026-09-21_ode-sensitivity/PREREG.md
+  timestamp  none. `prereg timestamp` makes one.
+
+3 plans: 3 unchanged, 0 changed, 0 not frozen
+[exit 0]
+
+$ results verify --files
+chain intact: 153 events, anchored
+
+  no outside timestamp. `results timestamp` makes one.
+
+  claim         131
+  init            1
+  run            13
+  seal            8
+
+file hashes:
+  ok         results/direct_topology_fit.json
+  ok         results/empirical/consolidated_comparison.json
+  ok         results/gnk_control.json
+  ok         results/graded_perturbation_scored.json
+  ok         results/grn_v2/albert_segment_polarity_composition_blind.json
+  ok         results/grn_v2/blind_batch2_scorecard.md
+  ok         results/grn_v2/grieco_bladder_analysis.json
+  ok         results/grn_v2/ode_full/ode_sweep_summary.json
+  RESEALED   results/necb_abstract_numbers.json
+    recorded 2 different hashes for this path
+  RESEALED   results/paper_number_reconciliation.json
+    recorded 4 different hashes for this path
+  RESEALED   scripts/reconcile_paper_numbers.py
+    recorded 4 different hashes for this path
+  RESEALED   scripts/verify_necb_abstract_numbers.py
+    recorded 2 different hashes for this path
+
+4 file(s) changed or missing since they were recorded.
+[exit 1]
+
+$ citations verify --claims claims
+claims  /Users/elliottower/.cache/reproducible-science/audit/knockout_epistasis_dynamics-25f843e8/checkout/claims
+
+18 quotes
+
+  not found           0
+  unchecked          18   file not found
+
+nothing was measured. all 18 quotation(s) went unresolved, so this run says nothing about the manuscript either way. The reasons are above; a run that read no source is not a run that found no fault.
+[exit 1]
+
+$ citations audit --bib paper/refs.bib --cache /Users/elliottower/.cache/reproducible-science/audit/knockout_epistasis_dynamics-25f843e8/audit-cache
+bibtex  /Users/elliottower/.cache/reproducible-science/audit/knockout_epistasis_dynamics-25f843e8/checkout/paper/refs.bib
+cache   /Users/elliottower/.cache/reproducible-science/audit/knockout_epistasis_dynamics-25f843e8/audit-cache
+
+  mismatch   basu2018iterative  (vs crossref)
+               year: ours 2018 vs registry 2017
+  mismatch   bateson1909heredity  (vs crossref)
+               year: ours 1909 vs registry 1913/2011
+               author list stops at 1 of 2 with no 'and others' marker, so it reads as complete
+  mismatch   bordt2023shapley  (vs datacite)
+               year: ours 2023 vs registry 2022
+  mismatch   fisher1918correlation  (vs crossref, doi 10.1017/s0080456800012163 found by title search)
+               title: ours 'The Correlation between Relatives on the Supposition of {M}endelian Inheritance' vs registry 'XV.—The Correlation between Relatives on the Supposition of Mendelian Inheritance.'
+               year: ours 1918 vs registry 1919/2012/2013
+  mismatch   muschalik2024shapiq  (vs crossref, doi 10.52202/079017-4141 found by title search)
+               author 2 surname: ours 'fumagalli' vs registry 'baniecki'
+               author 3 surname: ours 'kolpaczki' vs registry 'fumagalli'
+               author 4 surname: ours 'hullermeier' vs registry 'kolpaczki'
+               author list stops at 5 of 6 with no 'and others' marker, so it reads as complete
+  mismatch   wang2022interpretability  (vs datacite, arxiv 2211.00593 found by title search)
+               year: ours 2023 vs registry 2022
+
+32 entries
+
+  checked          28
+  agree            22
+  disagree          6
+  by search         6   of those checked, named no identifier and were found by title: 3 agree, 3 disagree
+  not found         4   no identifier, and a title search matched no record; usual for a book, report or thesis
+
+identifiers found by title search, to add once read
+  conmy2023automated  doi 10.52202/075280-0719  (crossref)
+  fisher1918correlation  doi 10.1017/s0080456800012163  (crossref)
+  muschalik2024shapiq  doi 10.52202/079017-4141  (crossref)
+  neidhart2013adaptation  doi 10.1534/genetics.114.167668  (crossref)
+  wan2010boost  doi 10.1016/j.ajhg.2010.07.021  (crossref)
+  wang2022interpretability  arxiv 2211.00593  (openalex)
+
+what disagrees
+        5  year
+        3  surname
+        2  author list truncated with no marker
+        1  title
+
+6 disagree with the record their own identifier resolves to.
+a wrong author list on a right DOI is invisible to every other check.
+3 of them against an identifier found by title search, which can be another version of the work.
+[exit 0]
+
+$ repro verify
+no repro.yaml here or above.
+
+write one that pins this project's result files, with example claims to edit:
+
+    repro manifest init
+[exit 2]

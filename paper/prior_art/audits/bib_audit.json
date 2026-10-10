@@ -1,0 +1,215 @@
+{
+  "entries": {
+    "albizri2021oracle": {
+      "status": "ok",
+      "checked_against": "crossref",
+      "doi": "10.2308/isys-19-024",
+      "pmid": "",
+      "problems": []
+    },
+    "borg2013traceability": {
+      "status": "ok",
+      "checked_against": "crossref",
+      "doi": "10.1007/s10664-013-9255-y",
+      "pmid": "",
+      "problems": []
+    },
+    "chudasama2026adduce": {
+      "status": "no identifier",
+      "checked_against": null,
+      "doi": "",
+      "pmid": "",
+      "problems": []
+    },
+    "ciccarese2013pav": {
+      "status": "ok",
+      "checked_against": "crossref",
+      "doi": "10.1186/2041-1480-4-37",
+      "pmid": "",
+      "problems": []
+    },
+    "clinifact2025": {
+      "status": "ok",
+      "checked_against": "crossref",
+      "doi": "10.1038/s41597-025-04417-x",
+      "pmid": "",
+      "problems": []
+    },
+    "ding2026verificationgap": {
+      "status": "ok",
+      "checked_against": "datacite",
+      "doi": "10.48550/arXiv.2608.05179",
+      "pmid": "",
+      "problems": []
+    },
+    "fellegi1969linkage": {
+      "status": "ok",
+      "checked_against": "crossref",
+      "doi": "10.1080/01621459.1969.10501049",
+      "pmid": "",
+      "problems": []
+    },
+    "gxl2026paperclip": {
+      "status": "no identifier",
+      "checked_against": null,
+      "doi": "",
+      "pmid": "",
+      "problems": []
+    },
+    "huber2020aiida": {
+      "status": "ok",
+      "checked_against": "crossref",
+      "doi": "10.1038/s41597-020-00638-4",
+      "pmid": "",
+      "problems": []
+    },
+    "iterative2020dvc": {
+      "status": "no identifier",
+      "checked_against": null,
+      "doi": "",
+      "pmid": "",
+      "problems": []
+    },
+    "kim2026ledger": {
+      "status": "ok",
+      "checked_against": "datacite",
+      "doi": "10.48550/arXiv.2608.18398",
+      "pmid": "",
+      "problems": []
+    },
+    "kuhn2016nanopub": {
+      "status": "ok",
+      "checked_against": "crossref",
+      "doi": "10.7717/peerj-cs.78",
+      "pmid": "",
+      "problems": []
+    },
+    "lebo2013provo": {
+      "status": "no identifier",
+      "checked_against": null,
+      "doi": "",
+      "pmid": "",
+      "problems": []
+    },
+    "leisch2002sweave": {
+      "status": "ok",
+      "checked_against": "crossref",
+      "doi": "10.1007/978-3-642-57489-4_89",
+      "pmid": "",
+      "problems": []
+    },
+    "leone2024wrroc": {
+      "status": "ok",
+      "checked_against": "crossref",
+      "doi": "10.1371/journal.pone.0309210",
+      "pmid": "",
+      "problems": []
+    },
+    "love2020tximeta": {
+      "status": "ok",
+      "checked_against": "crossref",
+      "doi": "10.1371/journal.pcbi.1007664",
+      "pmid": "",
+      "problems": []
+    },
+    "meyer1992contract": {
+      "status": "ok",
+      "checked_against": "crossref",
+      "doi": "10.1109/2.161279",
+      "pmid": "",
+      "problems": []
+    },
+    "moreau2011opm": {
+      "status": "ok",
+      "checked_against": "crossref",
+      "doi": "10.1016/j.future.2010.07.005",
+      "pmid": "",
+      "problems": []
+    },
+    "newman2022sigstore": {
+      "status": "ok",
+      "checked_against": "crossref",
+      "doi": "10.1145/3548606.3560596",
+      "pmid": "",
+      "problems": []
+    },
+    "openssf2023slsa": {
+      "status": "no identifier",
+      "checked_against": null,
+      "doi": "",
+      "pmid": "",
+      "problems": []
+    },
+    "piccolo2016tools": {
+      "status": "ok",
+      "checked_against": "crossref",
+      "doi": "10.1186/s13742-016-0135-4",
+      "pmid": "",
+      "problems": []
+    },
+    "pimentel2019notebooks": {
+      "status": "ok",
+      "checked_against": "crossref",
+      "doi": "10.1109/MSR.2019.00077",
+      "pmid": "",
+      "problems": []
+    },
+    "rougier2017rescience": {
+      "status": "ok",
+      "checked_against": "crossref",
+      "doi": "10.7717/peerj-cs.142",
+      "pmid": "",
+      "problems": []
+    },
+    "samuel2026reproscore": {
+      "status": "ok",
+      "checked_against": "datacite",
+      "doi": "10.48550/arXiv.2605.13275",
+      "pmid": "",
+      "problems": []
+    },
+    "siegel2024corebench": {
+      "status": "ok",
+      "checked_against": "datacite",
+      "doi": "10.48550/arXiv.2409.11363",
+      "pmid": "",
+      "problems": []
+    },
+    "soilandreyes2022rocrate": {
+      "status": "ok",
+      "checked_against": "crossref",
+      "doi": "10.3233/ds-210053",
+      "pmid": "",
+      "problems": []
+    },
+    "thomas2026phacking": {
+      "status": "ok",
+      "checked_against": "datacite",
+      "doi": "10.48550/arXiv.2606.27687",
+      "pmid": "",
+      "problems": []
+    },
+    "thorne2018fever": {
+      "status": "ok",
+      "checked_against": "crossref",
+      "doi": "10.18653/v1/n18-1074",
+      "pmid": "",
+      "problems": []
+    },
+    "torresarias2019intoto": {
+      "status": "no identifier",
+      "checked_against": null,
+      "doi": "",
+      "pmid": "",
+      "problems": []
+    },
+    "wadden2020scifact": {
+      "status": "ok",
+      "checked_against": "crossref",
+      "doi": "10.18653/v1/2020.emnlp-main.609",
+      "pmid": "",
+      "problems": []
+    }
+  },
+  "where": "bibtex  ~/Documents/GitHub/.worktrees/pin-the-claims/paper/references.bib\ncache   ~/Documents/GitHub/.worktrees/pin-the-claims/paper/.audit-cache"
+}

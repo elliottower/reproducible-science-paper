@@ -1,0 +1,23 @@
+source:
+  citation: leisch2002sweave
+  local: reference/leisch2002sweave.pdf
+  sha256: 84256663080fb0fc8cb0255a2481541eb46a257fd065e3af884adeb32b588421
+  url: https://research.wu.ac.at/ws/files/18962396/document.pdf
+  extract_cmd: pdftotext -layout {} -
+  note: WU Vienna SFB Report No. 69 (March 2002), the working-paper manifestation of the Compstat
+    2002 chapter the bibliography cites. Same text, different deposit; its own DOI is 10.57938/9f6e8c91-0b5a-4353-9802-f20479f0f5e2.
+claims:
+  document-generated-by-the-analysis:
+    statement: Sweave inserts analysis output into the document as the document is built, so the report
+      can be regenerated when the data or the analysis change.
+    quotes:
+    - exact: 'documents. When run through R or Splus, all data analysis output (tables, graphs, .
+        . . ) is created on the
+
+        fly and inserted into a final LATEX document.'
+      section: Abstract
+    - exact: 'to be learned. The report can be automatically updated if data or analysis change, which
+        allows for truly
+
+        reproducible research.'
+      section: Abstract

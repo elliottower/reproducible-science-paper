@@ -1,0 +1,20 @@
+source:
+  citation: wadden2020scifact
+  local: reference/wadden2020scifact.pdf
+  sha256: e51a1fab569f2dcb00f7806fe95094e25a34c027140709725d3d05b7a0af9ac7
+  url: https://aclanthology.org/2020.emnlp-main.609.pdf
+  extract_cmd: pdftotext -layout {} -
+  note: Two-column PDF; quotations are single column-line fragments.
+claims:
+  entailment-label-against-human-annotation:
+    statement: SciFact selects abstracts containing evidence that supports or refutes a scientific
+      claim and identifies the rationale, against expert annotation.
+    quotes:
+    - exact: new task to select abstracts from the research literature containing evidence
+      section: Abstract
+    - exact: ports or R EFUTES a given scientific claim,
+      section: Abstract
+    - exact: and to identify rationales justifying each de
+      section: Abstract
+    - exact: FACT, a dataset of 1.4K expert-written scien
+      section: Abstract

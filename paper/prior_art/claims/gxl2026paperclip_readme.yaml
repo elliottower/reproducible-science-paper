@@ -1,0 +1,20 @@
+source:
+  citation: gxl2026paperclip
+  local: sources/paperclip_README_20260825.md
+  sha256: c4a6af679f343b34d35ccf81d8ca264d3e6127d6136fc5a49f94d8f6758ee585
+  url: https://raw.githubusercontent.com/GXL-ai/paperclip/main/README.md
+  extract_cmd: none — Markdown is read directly
+  note: Fetched 2026-08-25 from the default branch of the CLI client repository.
+claims:
+  repo-verbs:
+    statement: The CLI client repository documents the Paper Repos verbs, including add and commit,
+      and is licensed Apache-2.0.
+    quotes:
+    - exact: Build versioned, annotated collections of papers with git-like workflows
+      section: Paper Repos
+    - exact: '| `commit` | Snapshot with reasoning message |'
+      section: Commands
+    - exact: Apache-2.0 — see [LICENSE](LICENSE).
+      section: License
+    notes: The README describes `add` as adding papers and says nothing about claims, line ranges,
+      verification or OCR. Those are on the docs site only.

@@ -1,0 +1,19 @@
+source:
+  citation: clinifact2025
+  local: reference/clinifact2025.pdf
+  sha256: b630d73456126899dcbebf98c5b7816c8288d5a52c3ba66cda4ef4c40ad078db
+  url: https://www.nature.com/articles/s41597-025-04417-x.pdf
+  extract_cmd: pdftotext -layout {} -
+claims:
+  entailment-label-against-human-annotation:
+    statement: CliniFact labels clinical research claims against supporting publication text; the
+      test labels were revised by human reviewers.
+    quotes:
+    - exact: The test labels were further manually revised by two groups of reviewers. The inter-annotator
+        agreement
+      section: Methods
+    - exact: the final judgment. The manual revisions and the original labels aligned in 80% of the
+        instances.
+      section: Methods
+    notes: CliniFact derives its labels from reported p-values first; human revision applies to the
+      test split. The manuscript's 'score against human annotation' holds for the test labels.

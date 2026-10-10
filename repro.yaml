@@ -1,0 +1,830 @@
+schema_version: repro/1
+project: machine-checkable claims (this paper, checked against its own artifacts)
+provenance:
+  repository: https://github.com/elliottower/reproducible-science-paper.git
+  commit: e11faf776f379c97dfa789a1e04b11dee02b3f16
+  dirty: false
+  generated_by: scripts/build_manifest.py
+artifacts:
+- id: manuscript
+  path: paper/continuous_verification_v15zo_site_ai4sci.tex
+  media_type: application/x-tex
+  digest:
+    algorithm: sha256
+    value: 64dad610e638f87cfa39101171adc3b4cdefd86a34dfa79f211115f821f97b82
+- id: manuscript-text
+  path: paper/continuous_verification_v15zo_site_ai4sci.txt
+  media_type: text/plain
+  digest:
+    algorithm: sha256
+    value: 57a0058a1c190c7c0642b3dfb17610e6bf5838c080cbb9eeee5b9ff3c4180b2e
+- id: appendix
+  path: paper/generated/audit_appendix.tex
+  media_type: application/x-tex
+  digest:
+    algorithm: sha256
+    value: 1bd5f7eeacdf5c73a9416d7424eacd57883f6d64dfb8feba91f0889842cd0fd8
+- id: appendix-text
+  path: paper/generated/audit_appendix.txt
+  media_type: text/plain
+  digest:
+    algorithm: sha256
+    value: c0c766436482944e032575fcadc50e8e178c389c894e1319df14ca0a305e81fb
+- id: detex
+  path: scripts/detex.py
+  media_type: text/x-python
+  digest:
+    algorithm: sha256
+    value: 718368a17c67a81708c4f5cd75dea98832a868d8bf1f837d6b26913d28ffdbc8
+- id: appendix-generator
+  path: scripts/build_audit_appendix.py
+  media_type: text/x-python
+  digest:
+    algorithm: sha256
+    value: 5d2695aae89fdd2a4ddee30ea67a0d2e6aff0f83175c2964496781abe789d9f9
+- id: counts-deriver
+  path: scripts/derive_audit_counts.py
+  media_type: text/x-python
+  digest:
+    algorithm: sha256
+    value: e2b9071000d661a8046da00b3d0d235ccd3df371d7f28f711a58aa2b5f10ae82
+- id: corpus
+  path: paper/artifacts/real_corpus_by_reader.json
+  media_type: application/json
+  digest:
+    algorithm: sha256
+    value: 39fa07fa3c62e6e50727dab7ddf9946d1c56f1121c57e7fcb2c1732e3151d802
+- id: unions
+  path: paper/artifacts/extractor_unions.json
+  media_type: application/json
+  digest:
+    algorithm: sha256
+    value: faaf11eeb936212db8ac03572a95c7ec40dab2644f82513fbfdb00460624d63c
+- id: conformance
+  path: paper/artifacts/conformance_inventory.json
+  media_type: application/json
+  digest:
+    algorithm: sha256
+    value: b9840b9d847f0cb4642f3c6c4b9ff7266e5d59f956f0e43c33adfa6c7b23639e
+- id: audit-counts
+  path: paper/artifacts/audit_counts.json
+  media_type: application/json
+  digest:
+    algorithm: sha256
+    value: ebf373eea405a56aa944f12a6ea6bd3e9c553a2c5d2d5b1dcdac6580bcecff07
+- id: bibliography-audit
+  path: paper/artifacts/knockout_bibliography_audit.json
+  media_type: application/json
+  digest:
+    algorithm: sha256
+    value: 7166ccd5154faca1077b2d3fb34fce4b8adb2982f4e320966f21c7c04a7805e6
+- id: bibliography-audit-log
+  path: paper/audit/knockout_repro_audit.log
+  media_type: text/plain
+  digest:
+    algorithm: sha256
+    value: de76885a7d6a9c082542ee65fc46f6ad09b25744906e97f3434b09be8588043b
+- id: codecheck-indices
+  path: paper/artifacts/codecheck_indices.json
+  media_type: application/json
+  digest:
+    algorithm: sha256
+    value: bce3f8d037f7db030e9844d15f10c6c01d3be3c5571cbfe6479678a8a3a9bdca
+- id: codecheck-eligibility
+  path: paper/artifacts/codecheck_eligibility_summary.json
+  media_type: application/json
+  digest:
+    algorithm: sha256
+    value: 0aa9e72a15d9348a17bc98bb3f5163203f8a794d6ffb9027fc86032d5f7485dd
+- id: codecheck-counts
+  path: paper/artifacts/codecheck_counts.json
+  media_type: application/json
+  digest:
+    algorithm: sha256
+    value: 4899ff423f02b05a8b8abdaf594e5220f9371c983c06e592f69850c6b86388b6
+- id: codecheck-agreement
+  path: paper/artifacts/codecheck_agreement_summary.json
+  media_type: application/json
+  digest:
+    algorithm: sha256
+    value: 85de6ed1b4c83357f87c499fc5f10f5458cd8b7854f0376d05d1d4db5f6db6db
+- id: corebench-second-run
+  path: paper/artifacts/corebench_rerun_confirm_comparison.json
+  media_type: application/json
+  digest:
+    algorithm: sha256
+    value: 5addb3e5b707f238e5a33898ebfcfd97364697a36d154688735489f2f258d4d1
+- id: audit-file-cross-design
+  path: paper/audit/audits/cross_design.yaml
+  media_type: application/yaml
+  digest:
+    algorithm: sha256
+    value: 6dd26ac90558a4553d6905a8890ca13e8b3f5076d2b0f1f916a8f2800d171fec
+- id: audit-record-cross-design
+  path: paper/audit/cross_design_audit.json
+  media_type: application/json
+  digest:
+    algorithm: sha256
+    value: 448dd25ebb0774dd9248b39434da746801a14f276f424168b60b7b2dc0319970
+- id: catch-log-cross-design
+  path: paper/audit/catch_logs/cross_design/catch_log.jsonl
+  media_type: application/x-ndjson
+  digest:
+    algorithm: sha256
+    value: 5138a96e5641fc9aea0db60bf2240cbe2be092c209ee0dd6d6b8e3c2caad2f9f
+- id: review-counts-cross-design
+  path: paper/audit/catch_logs/cross_design/review_counts.json
+  media_type: application/json
+  digest:
+    algorithm: sha256
+    value: b345ec9015c20946b5025d2d58efeeee9bd30187dcb195755105539d963e78d5
+- id: audit-file-knockout
+  path: paper/audit/audits/knockout.yaml
+  media_type: application/yaml
+  digest:
+    algorithm: sha256
+    value: 6508137220852951fc2e682b3d51de88ae20d629a498801b98d36cde7fc5b515
+- id: audit-record-knockout
+  path: paper/audit/knockout_audit.json
+  media_type: application/json
+  digest:
+    algorithm: sha256
+    value: b5829d1e975b1f6c04038067c4f3aa58387ab9a28ede60bb374465f61a643077
+- id: catch-log-knockout
+  path: paper/audit/catch_logs/knockout/catch_log.jsonl
+  media_type: application/x-ndjson
+  digest:
+    algorithm: sha256
+    value: 53afc2191008a95de1f732b03fb083b05c9df52c87f390f77ac8fac585a9a42e
+claims:
+- id: corpus-quotations
+  registration: not_applicable
+  registration_note: exhaustive deterministic count over pinned inputs
+  where: Appendix A
+  text: The manuscript states 2364 for corpus-quotations.
+  evidence:
+  - kind: quote
+    artifact: manuscript-text
+    text: under audit carry 2,364
+  - kind: metric
+    artifact: corpus
+    name: corpus-quotations
+    reported: '2364'
+    pointer: /corpus/quotations
+- id: unresolved-quotations
+  registration: not_applicable
+  registration_note: exhaustive deterministic count over pinned inputs
+  where: Appendix A
+  text: The manuscript states 113 for unresolved-quotations.
+  evidence:
+  - kind: quote
+    artifact: manuscript-text
+    text: 113 quotations did not resolve
+  - kind: metric
+    artifact: corpus
+    name: unresolved-quotations
+    reported: '113'
+    pointer: /per_reader/poppler-layout/outcomes/not found
+- id: poppler-reading-order
+  registration: not_applicable
+  registration_note: exhaustive deterministic count over pinned inputs
+  where: Table 6
+  text: The manuscript states 2314 for poppler-reading-order.
+  evidence:
+  - kind: quote
+    artifact: manuscript-text
+    text: poppler, reading order | 2,314
+  - kind: metric
+    artifact: corpus
+    name: poppler-reading-order
+    reported: '2314'
+    pointer: /per_reader/poppler-flow/resolved
+- id: poppler-layout
+  registration: not_applicable
+  registration_note: exhaustive deterministic count over pinned inputs
+  where: Table 6
+  text: The manuscript states 2250 for poppler-layout.
+  evidence:
+  - kind: quote
+    artifact: manuscript-text
+    text: poppler, layout | 2,250
+  - kind: metric
+    artifact: corpus
+    name: poppler-layout
+    reported: '2250'
+    pointer: /per_reader/poppler-layout/resolved
+- id: pure-python-reader
+  registration: not_applicable
+  registration_note: exhaustive deterministic count over pinned inputs
+  where: Table 6
+  text: The manuscript states 2229 for pure-python-reader.
+  evidence:
+  - kind: quote
+    artifact: manuscript-text
+    text: pure-Python reader | 2,229
+  - kind: metric
+    artifact: corpus
+    name: pure-python-reader
+    reported: '2229'
+    pointer: /per_reader/pypdf/resolved
+- id: rendering-engine-binding
+  registration: not_applicable
+  registration_note: exhaustive deterministic count over pinned inputs
+  where: Table 6
+  text: The manuscript states 2092 for rendering-engine-binding.
+  evidence:
+  - kind: quote
+    artifact: manuscript-text
+    text: rendering-engine binding | 2,092
+  - kind: metric
+    artifact: corpus
+    name: rendering-engine-binding
+    reported: '2092'
+    pointer: /per_reader/pdfium/resolved
+- id: structural-extractor
+  registration: not_applicable
+  registration_note: exhaustive deterministic count over pinned inputs
+  where: Table 6
+  text: The manuscript states 1973 for structural-extractor.
+  evidence:
+  - kind: quote
+    artifact: manuscript-text
+    text: structural extractor | 1,973
+  - kind: metric
+    artifact: corpus
+    name: structural-extractor
+    reported: '1973'
+    pointer: /per_reader/pdf-extract/resolved
+- id: low-level-parser
+  registration: not_applicable
+  registration_note: exhaustive deterministic count over pinned inputs
+  where: Table 6
+  text: The manuscript states 1716 for low-level-parser.
+  evidence:
+  - kind: quote
+    artifact: manuscript-text
+    text: low-level parser | 1,716
+  - kind: metric
+    artifact: corpus
+    name: low-level-parser
+    reported: '1716'
+    pointer: /per_reader/lopdf/resolved
+- id: poppler-union
+  registration: not_applicable
+  registration_note: exhaustive deterministic count over pinned inputs
+  where: Table 6
+  text: The manuscript states 2360 for poppler-union.
+  evidence:
+  - kind: quote
+    artifact: manuscript-text
+    text: both poppler modes | 2,360
+  - kind: metric
+    artifact: unions
+    name: poppler-union
+    reported: '2360'
+    pointer: /resolved_by_either_poppler_mode
+- id: any-reader-union
+  registration: not_applicable
+  registration_note: exhaustive deterministic count over pinned inputs
+  where: Table 6
+  text: The manuscript states 2362 for any-reader-union.
+  evidence:
+  - kind: quote
+    artifact: manuscript-text
+    text: all six | 2,362
+  - kind: metric
+    artifact: unions
+    name: any-reader-union
+    reported: '2362'
+    pointer: /resolved_by_at_least_one_reader
+- id: repo-tracked-files
+  registration: not_applicable
+  registration_note: exhaustive deterministic count over pinned inputs
+  where: Section 5.2
+  text: The manuscript states 1267 for repo-tracked-files.
+  evidence:
+  - kind: quote
+    artifact: manuscript-text
+    text: The clone carries 1,267 tracked files
+  - kind: metric
+    artifact: audit-record-knockout
+    name: repo-tracked-files
+    reported: '1267'
+    pointer: /declared/tracked_files
+- id: repo-ledger-events
+  registration: not_applicable
+  registration_note: exhaustive deterministic count over pinned inputs
+  where: Section 5.2
+  text: The manuscript states 153 for repo-ledger-events.
+  evidence:
+  - kind: quote
+    artifact: manuscript-text
+    text: a ledger of 153 events
+  - kind: metric
+    artifact: audit-record-knockout
+    name: repo-ledger-events
+    reported: '153'
+    pointer: /declared/ledger_events
+- id: repo-claims-bound
+  registration: not_applicable
+  registration_note: exhaustive deterministic count over pinned inputs
+  where: Section 5.2
+  text: The manuscript states 131 for repo-claims-bound.
+  evidence:
+  - kind: quote
+    artifact: manuscript-text
+    text: binding 131 manuscript claims
+  - kind: metric
+    artifact: audit-record-knockout
+    name: repo-claims-bound
+    reported: '131'
+    pointer: /declared/manuscript_claims_bound
+- id: repo-quotations
+  registration: not_applicable
+  registration_note: exhaustive deterministic count over pinned inputs
+  where: Section 5.2
+  text: The manuscript states 18 for repo-quotations.
+  evidence:
+  - kind: quote
+    artifact: manuscript-text
+    text: holding 18 quotations
+  - kind: metric
+    artifact: audit-record-knockout
+    name: repo-quotations
+    reported: '18'
+    pointer: /declared/quotations
+- id: bibliography-checked
+  registration: not_applicable
+  registration_note: exhaustive deterministic count over pinned inputs
+  where: Section 5.2, Table 9
+  text: The manuscript states 28 for bibliography-checked.
+  evidence:
+  - kind: quote
+    artifact: manuscript-text
+    text: 28 of 32 entries checked
+  - kind: metric
+    artifact: bibliography-audit
+    name: bibliography-checked
+    reported: '28'
+    pointer: /checked
+- id: bibliography-entries
+  registration: not_applicable
+  registration_note: exhaustive deterministic count over pinned inputs
+  where: Section 5.2, Table 9
+  text: The manuscript states 32 for bibliography-entries.
+  evidence:
+  - kind: quote
+    artifact: manuscript-text
+    text: 28 of 32 entries checked
+  - kind: metric
+    artifact: bibliography-audit
+    name: bibliography-entries
+    reported: '32'
+    pointer: /entries
+- id: bibliography-differ
+  registration: not_applicable
+  registration_note: exhaustive deterministic count over pinned inputs
+  where: Section 5.2, Table 9
+  text: The manuscript states 6 for bibliography-differ.
+  evidence:
+  - kind: quote
+    artifact: manuscript-text
+    text: 6 differ from their registry record
+  - kind: metric
+    artifact: bibliography-audit
+    name: bibliography-differ
+    reported: '6'
+    pointer: /differ
+- id: codecheck-certificates
+  registration: not_applicable
+  registration_note: exhaustive deterministic count over pinned inputs
+  where: Section 5.2
+  text: The manuscript states 133 for codecheck-certificates.
+  evidence:
+  - kind: quote
+    artifact: manuscript-text
+    text: Of 133 certified
+  - kind: metric
+    artifact: codecheck-counts
+    name: codecheck-certificates
+    reported: '133'
+    pointer: /certificates_in_register
+- id: codecheck-table-files
+  registration: not_applicable
+  registration_note: exhaustive deterministic count over pinned inputs
+  where: Section 5.2
+  text: The manuscript states 6 for codecheck-table-files.
+  evidence:
+  - kind: quote
+    artifact: manuscript-text
+    text: 6 leave a file holding one of
+  - kind: metric
+    artifact: codecheck-counts
+    name: codecheck-table-files
+    reported: '6'
+    pointer: /certificates_with_a_linked_table_file
+- id: codecheck-bound
+  registration: not_applicable
+  registration_note: exhaustive deterministic count over pinned inputs
+  where: Section 5.2
+  text: The manuscript states 338 for codecheck-bound.
+  evidence:
+  - kind: quote
+    artifact: manuscript-text
+    text: (338 of 713)
+  - kind: metric
+    artifact: codecheck-counts
+    name: codecheck-bound
+    reported: '338'
+    pointer: /numbers_bound
+- id: codecheck-printed
+  registration: not_applicable
+  registration_note: exhaustive deterministic count over pinned inputs
+  where: Section 5.2
+  text: The manuscript states 713 for codecheck-printed.
+  evidence:
+  - kind: quote
+    artifact: manuscript-text
+    text: (338 of 713)
+  - kind: metric
+    artifact: codecheck-counts
+    name: codecheck-printed
+    reported: '713'
+    pointer: /numbers_printed
+- id: codecheck-same
+  registration: not_applicable
+  registration_note: exhaustive deterministic count over pinned inputs
+  where: Section 5.2
+  text: The manuscript states 326 for codecheck-same.
+  evidence:
+  - kind: quote
+    artifact: manuscript-text
+    text: 326 match the certified file
+  - kind: metric
+    artifact: codecheck-agreement
+    name: codecheck-same
+    reported: '326'
+    pointer: /all/same_number
+- id: codecheck-differ
+  registration: not_applicable
+  registration_note: exhaustive deterministic count over pinned inputs
+  where: Section 5.2
+  text: The manuscript states 12 for codecheck-differ.
+  evidence:
+  - kind: quote
+    artifact: manuscript-text
+    text: and 12 differ
+  - kind: metric
+    artifact: codecheck-agreement
+    name: codecheck-differ
+    reported: '12'
+    pointer: /all/differ
+- id: corebench-second-run
+  registration: not_applicable
+  registration_note: exhaustive deterministic count over pinned inputs
+  where: Section 4.3
+  text: The manuscript states 45 for corebench-second-run.
+  evidence:
+  - kind: quote
+    artifact: manuscript-text
+    text: byte-identical record for all 45 capsules
+  - kind: metric
+    artifact: corebench-second-run
+    name: corebench-second-run
+    reported: '45'
+    pointer: /identical
+- id: conformance-fixtures
+  registration: not_applicable
+  registration_note: exhaustive deterministic count over pinned inputs
+  where: Appendix A
+  text: The manuscript states 25 for conformance-fixtures.
+  evidence:
+  - kind: quote
+    artifact: manuscript-text
+    text: The suite holds 25 fixtures
+  - kind: metric
+    artifact: conformance
+    name: conformance-fixtures
+    reported: '25'
+    pointer: /fixtures
+- id: conformance-table-cell
+  registration: not_applicable
+  registration_note: exhaustive deterministic count over pinned inputs
+  where: Appendix A
+  text: The manuscript states 5 for conformance-table-cell.
+  evidence:
+  - kind: quote
+    artifact: manuscript-text
+    text: five addressing a table cell
+  - kind: metric
+    artifact: conformance
+    name: conformance-table-cell
+    reported: '5'
+    pointer: /by_group/table_cell
+- id: conformance-value
+  registration: not_applicable
+  registration_note: exhaustive deterministic count over pinned inputs
+  where: Appendix A
+  text: The manuscript states 4 for conformance-value.
+  evidence:
+  - kind: quote
+    artifact: manuscript-text
+    text: four comparing a value
+  - kind: metric
+    artifact: conformance
+    name: conformance-value
+    reported: '4'
+    pointer: /by_group/value
+- id: cross-design-review-comments
+  registration: not_applicable
+  registration_note: exhaustive deterministic count over pinned inputs
+  where: Section 5.2
+  text: The manuscript states 45 for cross-design-review-comments.
+  evidence:
+  - kind: quote
+    artifact: manuscript-text
+    text: four rounds of journal review raised 45 comments
+  - kind: metric
+    artifact: review-counts-cross-design
+    name: cross-design-review-comments
+    reported: '45'
+    pointer: /points_total
+- id: cross-design-findings
+  registration: not_applicable
+  registration_note: exhaustive deterministic count over pinned inputs
+  where: Section 5.2
+  text: The manuscript states 31 for cross-design-findings.
+  evidence:
+  - kind: quote
+    artifact: manuscript-text
+    text: the toolkit reported 31 findings
+  - kind: metric
+    artifact: audit-counts
+    name: cross-design-findings
+    reported: '31'
+    pointer: /audits/cross_design/findings
+- id: findings-total
+  registration: not_applicable
+  registration_note: exhaustive deterministic count over pinned inputs
+  where: Appendix E, Table 14
+  text: The manuscript states 49 for findings-total.
+  evidence:
+  - kind: quote
+    artifact: appendix-text
+    text: total | | 8 | 16 | 18 | 7 | 49
+  - kind: metric
+    artifact: audit-counts
+    name: findings-total
+    reported: '49'
+    pointer: /total/findings
+- id: findings-total-claim
+  registration: not_applicable
+  registration_note: exhaustive deterministic count over pinned inputs
+  where: Appendix E, Table 14
+  text: The manuscript states 8 for findings-total-claim.
+  evidence:
+  - kind: quote
+    artifact: appendix-text
+    text: total | | 8 | 16 | 18 | 7 | 49
+  - kind: metric
+    artifact: audit-counts
+    name: findings-total-claim
+    reported: '8'
+    pointer: /total/by_severity/claim
+- id: findings-total-source
+  registration: not_applicable
+  registration_note: exhaustive deterministic count over pinned inputs
+  where: Appendix E, Table 14
+  text: The manuscript states 16 for findings-total-source.
+  evidence:
+  - kind: quote
+    artifact: appendix-text
+    text: total | | 8 | 16 | 18 | 7 | 49
+  - kind: metric
+    artifact: audit-counts
+    name: findings-total-source
+    reported: '16'
+    pointer: /total/by_severity/integrity
+- id: findings-total-record
+  registration: not_applicable
+  registration_note: exhaustive deterministic count over pinned inputs
+  where: Appendix E, Table 14
+  text: The manuscript states 18 for findings-total-record.
+  evidence:
+  - kind: quote
+    artifact: appendix-text
+    text: total | | 8 | 16 | 18 | 7 | 49
+  - kind: metric
+    artifact: audit-counts
+    name: findings-total-record
+    reported: '18'
+    pointer: /total/by_severity/record
+- id: findings-total-cosmetic
+  registration: not_applicable
+  registration_note: exhaustive deterministic count over pinned inputs
+  where: Appendix E, Table 14
+  text: The manuscript states 7 for findings-total-cosmetic.
+  evidence:
+  - kind: quote
+    artifact: appendix-text
+    text: total | | 8 | 16 | 18 | 7 | 49
+  - kind: metric
+    artifact: audit-counts
+    name: findings-total-cosmetic
+    reported: '7'
+    pointer: /total/by_severity/cosmetic
+- id: findings-row-cross-design
+  registration: not_applicable
+  registration_note: exhaustive deterministic count over pinned inputs
+  where: Appendix E, Table 14
+  text: The manuscript states 31 for findings-row-cross-design.
+  evidence:
+  - kind: quote
+    artifact: appendix-text
+    text: Cross-design evidence discordance | | 5 | 14 | 8 | 4 | 31
+  - kind: metric
+    artifact: audit-counts
+    name: findings-row-cross-design
+    reported: '31'
+    pointer: /audits/cross_design/findings
+- id: findings-row-knockout
+  registration: not_applicable
+  registration_note: exhaustive deterministic count over pinned inputs
+  where: Appendix E, Table 14
+  text: The manuscript states 18 for findings-row-knockout.
+  evidence:
+  - kind: quote
+    artifact: appendix-text
+    text: Knockout epistasis | | 3 | 2 | 10 | 3 | 18
+  - kind: metric
+    artifact: audit-counts
+    name: findings-row-knockout
+    reported: '18'
+    pointer: /audits/knockout/findings
+- id: all-findings-cross-design
+  registration: not_applicable
+  registration_note: exhaustive deterministic count over pinned inputs
+  where: Appendix F
+  text: The manuscript states 31 for all-findings-cross-design.
+  evidence:
+  - kind: quote
+    artifact: appendix-text
+    text: 'All Findings. 31: 5 claim, 14 source, 8 record, 4 cosmetic.'
+  - kind: metric
+    artifact: audit-counts
+    name: all-findings-cross-design
+    reported: '31'
+    pointer: /audits/cross_design/findings
+- id: all-findings-knockout
+  registration: not_applicable
+  registration_note: exhaustive deterministic count over pinned inputs
+  where: Appendix G
+  text: The manuscript states 18 for all-findings-knockout.
+  evidence:
+  - kind: quote
+    artifact: appendix-text
+    text: 'All Findings. 18: 3 claim, 2 source, 10 record, 3 cosmetic.'
+  - kind: metric
+    artifact: audit-counts
+    name: all-findings-knockout
+    reported: '18'
+    pointer: /audits/knockout/findings
+regenerations:
+- id: manuscript-text
+  command:
+  - python3
+  - scripts/detex.py
+  - paper/continuous_verification_v15zo_site_ai4sci.tex
+  - paper/continuous_verification_v15zo_site_ai4sci.txt
+  inputs:
+  - artifact: manuscript
+    digest:
+      algorithm: sha256
+      value: 64dad610e638f87cfa39101171adc3b4cdefd86a34dfa79f211115f821f97b82
+  - artifact: detex
+    digest:
+      algorithm: sha256
+      value: 718368a17c67a81708c4f5cd75dea98832a868d8bf1f837d6b26913d28ffdbc8
+  output:
+    artifact: manuscript-text
+    digest:
+      algorithm: sha256
+      value: 57a0058a1c190c7c0642b3dfb17610e6bf5838c080cbb9eeee5b9ff3c4180b2e
+- id: appendix-text
+  command:
+  - python3
+  - scripts/detex.py
+  - paper/generated/audit_appendix.tex
+  - paper/generated/audit_appendix.txt
+  inputs:
+  - artifact: appendix
+    digest:
+      algorithm: sha256
+      value: 1bd5f7eeacdf5c73a9416d7424eacd57883f6d64dfb8feba91f0889842cd0fd8
+  - artifact: detex
+    digest:
+      algorithm: sha256
+      value: 718368a17c67a81708c4f5cd75dea98832a868d8bf1f837d6b26913d28ffdbc8
+  output:
+    artifact: appendix-text
+    digest:
+      algorithm: sha256
+      value: c0c766436482944e032575fcadc50e8e178c389c894e1319df14ca0a305e81fb
+- id: audit-counts
+  command:
+  - uv
+  - run
+  - --no-project
+  - --with
+  - pyyaml==6.0.2
+  - --with
+  - pydantic==2.9.2
+  - python
+  - scripts/derive_audit_counts.py
+  inputs:
+  - artifact: counts-deriver
+    digest:
+      algorithm: sha256
+      value: e2b9071000d661a8046da00b3d0d235ccd3df371d7f28f711a58aa2b5f10ae82
+  - artifact: appendix-generator
+    digest:
+      algorithm: sha256
+      value: 5d2695aae89fdd2a4ddee30ea67a0d2e6aff0f83175c2964496781abe789d9f9
+  - artifact: audit-file-cross-design
+    digest:
+      algorithm: sha256
+      value: 6dd26ac90558a4553d6905a8890ca13e8b3f5076d2b0f1f916a8f2800d171fec
+  - artifact: audit-record-cross-design
+    digest:
+      algorithm: sha256
+      value: 448dd25ebb0774dd9248b39434da746801a14f276f424168b60b7b2dc0319970
+  - artifact: catch-log-cross-design
+    digest:
+      algorithm: sha256
+      value: 5138a96e5641fc9aea0db60bf2240cbe2be092c209ee0dd6d6b8e3c2caad2f9f
+  - artifact: audit-file-knockout
+    digest:
+      algorithm: sha256
+      value: 6508137220852951fc2e682b3d51de88ae20d629a498801b98d36cde7fc5b515
+  - artifact: audit-record-knockout
+    digest:
+      algorithm: sha256
+      value: b5829d1e975b1f6c04038067c4f3aa58387ab9a28ede60bb374465f61a643077
+  - artifact: catch-log-knockout
+    digest:
+      algorithm: sha256
+      value: 53afc2191008a95de1f732b03fb083b05c9df52c87f390f77ac8fac585a9a42e
+  output:
+    artifact: audit-counts
+    digest:
+      algorithm: sha256
+      value: ebf373eea405a56aa944f12a6ea6bd3e9c553a2c5d2d5b1dcdac6580bcecff07
+- id: appendix
+  command:
+  - uv
+  - run
+  - --no-project
+  - --with
+  - pyyaml==6.0.2
+  - --with
+  - pydantic==2.9.2
+  - python
+  - scripts/build_audit_appendix.py
+  inputs:
+  - artifact: appendix-generator
+    digest:
+      algorithm: sha256
+      value: 5d2695aae89fdd2a4ddee30ea67a0d2e6aff0f83175c2964496781abe789d9f9
+  - artifact: audit-file-cross-design
+    digest:
+      algorithm: sha256
+      value: 6dd26ac90558a4553d6905a8890ca13e8b3f5076d2b0f1f916a8f2800d171fec
+  - artifact: audit-record-cross-design
+    digest:
+      algorithm: sha256
+      value: 448dd25ebb0774dd9248b39434da746801a14f276f424168b60b7b2dc0319970
+  - artifact: catch-log-cross-design
+    digest:
+      algorithm: sha256
+      value: 5138a96e5641fc9aea0db60bf2240cbe2be092c209ee0dd6d6b8e3c2caad2f9f
+  - artifact: review-counts-cross-design
+    digest:
+      algorithm: sha256
+      value: b345ec9015c20946b5025d2d58efeeee9bd30187dcb195755105539d963e78d5
+  - artifact: audit-file-knockout
+    digest:
+      algorithm: sha256
+      value: 6508137220852951fc2e682b3d51de88ae20d629a498801b98d36cde7fc5b515
+  - artifact: audit-record-knockout
+    digest:
+      algorithm: sha256
+      value: b5829d1e975b1f6c04038067c4f3aa58387ab9a28ede60bb374465f61a643077
+  - artifact: catch-log-knockout
+    digest:
+      algorithm: sha256
+      value: 53afc2191008a95de1f732b03fb083b05c9df52c87f390f77ac8fac585a9a42e
+  output:
+    artifact: appendix
+    digest:
+      algorithm: sha256
+      value: 1bd5f7eeacdf5c73a9416d7424eacd57883f6d64dfb8feba91f0889842cd0fd8

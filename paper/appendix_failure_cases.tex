@@ -1,0 +1,111 @@
+% Appendix for the Reproducible Science paper: retractions, errors and misconduct in published results.
+% Draft v1r. Every count is in ../failure_cases/results/case_counts.json or
+% ../failure_cases/results/rw_tag_counts.json; the case table is generated from
+% ../failure_cases/data/cases_draft.json, whose quotations are pinned in ../failure_cases/claims/.
+
+\section{Retractions, errors and misconduct in published results}
+\label{sec:failure-cases}
+
+The toolkit checks that a manuscript agrees with its artifacts, which covers some of the
+reasons published results are retracted and not others. To determine which reasons the toolkit
+covers, we examine 34 cases of retraction, correction, or misconduct finding, and classify each
+by the cause stated in its primary record.
+
+\paragraph{Detected failure modes.} Table~\ref{tab:fc-modes} gives the toolkit's coverage of
+each failure mode, counting each case once under its principal cause. The toolkit's checks
+cover a stated problem in 14 of the 34 cases: the principal cause in 8 (6 detected and 2
+reported as unchecked), and missing data reported
+alongside the principal cause in 6 others. The toolkit detects three failure modes directly: (1)~a printed value that
+disagrees with the authors' own records fails the check of that number against its results
+file, (2)~a report that departs from its registered plan differs from the frozen and
+timestamped plan, and (3)~a reference that does not exist cannot be pinned to a source.
+
+\vspace{0.5em}
+\begin{table}[h]
+\centering
+\small
+\caption{Failure modes among the 34 cases and the toolkit's coverage of each. Each case is
+counted once, under its principal cause. $^{\dagger}$Added after the records were read.}
+\label{tab:fc-modes}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.33\textwidth}r>{\raggedright\arraybackslash}p{0.52\textwidth}@{}}
+\toprule
+\textbf{Failure mode} & \textbf{Cases} & \textbf{Coverage by the toolkit} \\
+\midrule
+printed value disagrees with the authors' own records & 3 & \textbf{detected}: the printed number fails the check against its results file \\
+report departs from the registered plan & 1 & \textbf{detected}: the report differs from the frozen, timestamped plan \\
+references that do not exist & 2 & \textbf{detected}: a reference that does not exist cannot be pinned to a source \\
+\midrule
+data could not be produced for audit & 2 & \textbf{reported as unchecked}: the sealed digest records that the file existed \\
+error inside the analysis & 9 & \textbf{not detected}: the sealed script and inputs allow the analysis to be rerun \\
+data fabricated or falsified & 8 & \textbf{not detected} if fabricated before sealing; a later change to a sealed file is detected \\
+\midrule
+image manipulation or duplication & 4 & \textbf{not addressed} \\
+study conducted differently from its description$^{\dagger}$ & 4 & \textbf{not addressed} \\
+none of the above & 1 & \textbf{not addressed} \\
+\midrule
+Total & 34 & \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Undetected failure modes.} Data that cannot be produced for an audit are reported as
+unchecked rather than verified. An error inside the analysis passes every check, because the
+manuscript agrees with the output of the faulty analysis, but the sealed script and inputs
+allow a reader to rerun the analysis and locate the error. The toolkit does not address data
+fabricated before sealing, manipulated images, or a study conducted differently from its
+published description.
+
+\paragraph{Case selection.} The primary record of a case is its retraction notice, a finding of
+the United States Office of Research Integrity, or a published reanalysis. The cases comprise
+nine of the ten most-cited retracted papers listed by Retraction Watch
+\citep{retractionwatch2026leaderboard}, publications named in Office of Research
+Integrity findings, retractions drawn from the Retraction Watch dataset
+\citep{crossref2026retractionwatchdata} by reason tag, and well-known examples such as
+the Duke chemotherapy predictors and the Surgisphere studies. We select the cases as examples
+of each failure mode. We define ten failure modes before reading any record and add an
+eleventh for four records that fit none of the ten.
+
+\paragraph{Retraction Watch dataset.} To place the cases in context, we analyze the reasons
+recorded in the Retraction Watch dataset, which covers 67,530 retractions. We exclude the
+24,166 retractions attributed to paper mills or compromised peer review, because these concern
+the publication process, and group the reason tags of the remaining 43,364
+(Table~\ref{tab:fc-dataset}). Among these, 4,273 retractions (9.8\%) cite an error in the
+analysis, data, methods, results or text, and 1,909 (4.4\%) cite original data or images that
+were not provided. Retractions that cite unavailable data or images follow publication by a
+median of 4.91 years, compared with 1.31 years for retractions that cite an error.
+
+\vspace{0.5em}
+\begin{table}[h]
+\centering
+\small
+\caption{Retractions in the Retraction Watch dataset by group of reason tags, among the 43,364
+not tagged for paper mills or compromised peer review. A retraction can fall in several groups.
+Years run from the paper's date to the retraction's date.}
+\label{tab:fc-dataset}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.44\textwidth}rrr@{}}
+\toprule
+\textbf{Reason for retraction} & \textbf{Retractions} & \textbf{Share} & \textbf{Median years to retraction} \\
+\midrule
+image duplication, manipulation, fabrication or concerns & 7,171 & 16.5\% & 4.39 \\
+error stated in analysis, data, methods, results or text & 4,273 & 9.8\% & 1.31 \\
+original data or images not provided & 1,909 & 4.4\% & 4.91 \\
+falsification or fabrication of data & 1,659 & 3.8\% & 4.27 \\
+results not reproducible & 861 & 2.0\% & 2.01 \\
+limited or no information in the notice & 11,957 & 27.6\% & 0.11 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Cases.} Table~\ref{tab:fc-cases} gives the cause quoted from the primary record of
+each case.
+
+\input{generated/failure_cases_table}
+
+\paragraph{Limitations.} The 34 cases are illustrations, at least one per failure mode.
+Table~\ref{tab:fc-dataset} reports how often each reason for retraction occurs among 43,364
+retractions in the Retraction Watch dataset. The reason tags reflect the dataset curators' reading of each notice, and
+27.6\% of the retractions analyzed are tagged as having a notice with limited or no information.
+In the full dataset, 1,725 of the 2,464 retractions tagged for unavailable data or images also
+have an image-related tag, so most concern missing original images. The analysis shows which
+failure modes the toolkit's records would expose; it does not show that any of these
+cases would have been corrected sooner.

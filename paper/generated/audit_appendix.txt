@@ -1,0 +1,64 @@
+Reproducible Science Audits
+This appendix audits 3 preregistered studies conducted with the Reproducible Science
+toolkit: two under journal review and one in progress. Each audit gives a
+description of the study, an example finding, what each command found in its repository,
+and the findings made while it was written. Table gives the result from
+a clone for the two under review, and Table their findings.
+What the toolkit established from a clone of each project, at the pinned commit.
+project | appendix | registered plans | quotations | ledger
+Cross-design evidence discordance | | 4 of 6 registrations unchanged, 1 appended, 1 changed | 175 of 175 found | not in the repository
+Knockout epistasis | | 3 of 3 plans unchanged | 18 declared, sources absent | chain intact, 153 events
+Findings are coded from each project's records: commits, ledger events, plan logs, claim files and
+session transcripts. A finding counts
+when a command, a script that performed the same check before the command existed, a hook, or an act
+the toolkit requires (sealing an input, binding a number, pinning a
+quotation) exposed it and a record says so. The coding rules were fixed before the records were read.
+Defects found by a person or raised in review are not counted as findings.
+Findings, by project and severity. A claim finding would change a
+reported number or conclusion. A source finding is a value or reference attributed to a work
+that does not contain it. A record finding is a break in provenance that leaves every reported number
+correct.
+project | appendix | claim | source | record | cosmetic | total
+Cross-design evidence discordance | | 5 | 14 | 8 | 4 | 31
+Knockout epistasis | | 3 | 2 | 10 | 3 | 18
+total | | 8 | 16 | 18 | 7 | 49
+Audit: Cross-design evidence discordance
+Description. A preregistered study of drug-trial outcomes. https://github.com/elliottower/cross-design-evidence-discordance, commit c6a7a06.
+The clone carries 365 tracked files, 6 registration documents, 94 claim records, 175 quotations and 75 bibliography entries.
+All Findings. 31: 5 claim, 14 source, 8 record, 4 cosmetic.
+Example Finding. results verify found two recorded files edited since they were recorded and one that had moved.
+Reviews. Of the 31 findings: 0 before submission, 11 review round 1, 2 review round 2, 0 review round 3, 17 review round 4, 1 after round 4.
+Cross-design evidence discordance: what each command found in a clone at the pinned commit, and what it could not establish. Exit 0 is a pass, 1 a finding, and 2 nothing to read.
+command | exit | what it found | what it could not establish
+prereg | 1 | 6 registration documents, each frozen by a commit recorded in the document: 4 unchanged, 1 with text added after the frozen text, and 1 changed after its freeze | whether a registration was written before the outcomes it governs were seen
+results | 2 | no ledger | which run any reported number came from
+citations | 0 | 175 of 175 quotations found in their sources; 67 of the 94 sources were read from the library and matched to the SHA-256 the record pins | whether a quotation supports the sentence that cites it
+citations audit | 0 | 75 bibliography entries, 74 carrying an identifier; 64 agree with the record the identifier resolves to and 10 disagree | whether the entry with no identifier is correct
+repro | 2 | no evidence manifest | any assertion, none having been declared
+Reviewer comments (4 reviewers, 6 reports) and toolkit findings for the cross-design study, by kind.
+Reviewer comments | Count
+design and argument | 20
+reporting and presentation | 12
+statistical method | 10
+references | 1
+code and data availability | 0
+other | 2
+Total | 45
+Toolkit findings | Count
+value or citation absent from the cited source | 9
+value differing from its source | 6
+wrong reference metadata | 11
+number bound to no run | 2
+other record findings | 3
+Total | 31
+Audit: Knockout epistasis
+Description. A study of knockout epistasis in Boolean gene regulatory networks, also covered in Section. https://github.com/elliottower/knockout-epistasis-dynamics, commit cb82384.
+The clone carries 1,267 tracked files, 3 registered plans, 153 ledger events, 13 runs, 131 manuscript claims bound to a run, 7 claim records and 18 quotations.
+All Findings. 18: 3 claim, 2 source, 10 record, 3 cosmetic.
+Example Finding. Binding the manuscript's numbers to runs required recomputing them, and the recomputation revealed that a property stated for all 28 networks holds only for 27.
+Knockout epistasis: what each command found in a clone at the pinned commit, and what it could not establish. Exit 0 is a pass, 1 a finding, and 2 nothing to read.
+command | exit | what it found | what it could not establish
+prereg | 0 | 3 plans, each unchanged against the digest recorded when it was frozen | whether a plan was written before the outcomes it governs were seen
+results | 1 | chain intact and anchored at 153 events; 8 of 12 recorded files match their digest and 4 carry more than one recorded digest | what share of the manuscript's numbers the 131 claims cover, the manuscript not being in the repository
+citations | 1 | 18 quotations declared against 7 sources, each carrying a SHA-256; none checked, the sources not being in the repository | whether any quotation occurs in its source
+repro | 2 | no evidence manifest | any assertion, none having been declared

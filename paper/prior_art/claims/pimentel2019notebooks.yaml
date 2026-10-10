@@ -1,0 +1,32 @@
+source:
+  citation: pimentel2019notebooks
+  local: reference/pimentel2019notebooks.pdf
+  sha256: 6df8ff3e890a49d220de5a78d8705bc13212e4fa481ea94181a736618c676f67
+  url: https://www.ic.uff.br/~leomurta/papers/pimentel2019a.pdf
+  extract_cmd: pdftotext -layout {} -
+  note: Two-column PDF; quotations are single column-line fragments.
+claims:
+  execution-and-reproduction-rates:
+    statement: Of 863,878 notebooks with a declared Python version and an unambiguous execution order,
+      24.11% executed without errors and 4.03% produced the same results.
+    quotes:
+    - exact: we discuss in Section IV, out of 863,878 attempted executions
+      section: Introduction
+    - exact: of valid notebooks (i.e., notebooks with defined Python version
+      section: Introduction
+    - exact: and execution order), only 24.11% executed without errors and
+      section: Introduction
+    - exact: only 4.03% produced the same results.
+      section: Introduction
+  corpus-size:
+    statement: The GitHub query returned 1,450,071 notebooks; 1,423,676 survived the exclusion of
+      invalid and empty files, and 1,159,166 remained after duplicates were removed.
+    quotes:
+    - exact: query returned 265,143 repositories with 1,450,071 notebooks.
+      section: Section III
+    - exact: in 1,423,676 notebooks from 264,023 repositories. From this
+      section: Section III
+    - exact: 1,159,166 notebooks for the analyses.
+      section: Section III
+    notes: The 24.11% and 4.03% rates are over 863,878 executions, not over the collected corpus.
+      The manuscript attached them to '1.4 million notebooks'.
