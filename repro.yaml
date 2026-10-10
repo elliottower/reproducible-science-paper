@@ -2,8 +2,8 @@ schema_version: repro/1
 project: machine-checkable claims (this paper, checked against its own artifacts)
 provenance:
   repository: https://github.com/elliottower/reproducible-science-paper.git
-  commit: e11faf776f379c97dfa789a1e04b11dee02b3f16
-  dirty: false
+  commit: 3e98335ca9a8672ba35957a214274dc83d831a4a
+  dirty: true
   generated_by: scripts/build_manifest.py
 artifacts:
 - id: manuscript
@@ -53,7 +53,7 @@ artifacts:
   media_type: application/json
   digest:
     algorithm: sha256
-    value: 39fa07fa3c62e6e50727dab7ddf9946d1c56f1121c57e7fcb2c1732e3151d802
+    value: 4bdb0228a3e3c0cda3cc06d46f1d61be7b6bf635109c4e6bc5e181f5f496cc11
 - id: unions
   path: paper/artifacts/extractor_unions.json
   media_type: application/json
@@ -77,7 +77,7 @@ artifacts:
   media_type: application/json
   digest:
     algorithm: sha256
-    value: 7166ccd5154faca1077b2d3fb34fce4b8adb2982f4e320966f21c7c04a7805e6
+    value: 23972e95c6022bc815e72d5fef7022152a0c25bfc47986bed5f47247a0f0a5c7
 - id: bibliography-audit-log
   path: paper/audit/knockout_repro_audit.log
   media_type: text/plain
@@ -125,7 +125,7 @@ artifacts:
   media_type: application/json
   digest:
     algorithm: sha256
-    value: 448dd25ebb0774dd9248b39434da746801a14f276f424168b60b7b2dc0319970
+    value: 1d3628ae4786977633395741c546549c049a8060a8cee9c37409962c638d7edc
 - id: catch-log-cross-design
   path: paper/audit/catch_logs/cross_design/catch_log.jsonl
   media_type: application/x-ndjson
@@ -149,7 +149,7 @@ artifacts:
   media_type: application/json
   digest:
     algorithm: sha256
-    value: b5829d1e975b1f6c04038067c4f3aa58387ab9a28ede60bb374465f61a643077
+    value: 667f4c06b033ea5e003290557cb219a77a8d79eeca32457347c20bd71d83b7cc
 - id: catch-log-knockout
   path: paper/audit/catch_logs/knockout/catch_log.jsonl
   media_type: application/x-ndjson
@@ -757,7 +757,7 @@ regenerations:
   - artifact: audit-record-cross-design
     digest:
       algorithm: sha256
-      value: 448dd25ebb0774dd9248b39434da746801a14f276f424168b60b7b2dc0319970
+      value: 1d3628ae4786977633395741c546549c049a8060a8cee9c37409962c638d7edc
   - artifact: catch-log-cross-design
     digest:
       algorithm: sha256
@@ -769,7 +769,7 @@ regenerations:
   - artifact: audit-record-knockout
     digest:
       algorithm: sha256
-      value: b5829d1e975b1f6c04038067c4f3aa58387ab9a28ede60bb374465f61a643077
+      value: 667f4c06b033ea5e003290557cb219a77a8d79eeca32457347c20bd71d83b7cc
   - artifact: catch-log-knockout
     digest:
       algorithm: sha256
@@ -802,7 +802,7 @@ regenerations:
   - artifact: audit-record-cross-design
     digest:
       algorithm: sha256
-      value: 448dd25ebb0774dd9248b39434da746801a14f276f424168b60b7b2dc0319970
+      value: 1d3628ae4786977633395741c546549c049a8060a8cee9c37409962c638d7edc
   - artifact: catch-log-cross-design
     digest:
       algorithm: sha256
@@ -818,7 +818,7 @@ regenerations:
   - artifact: audit-record-knockout
     digest:
       algorithm: sha256
-      value: b5829d1e975b1f6c04038067c4f3aa58387ab9a28ede60bb374465f61a643077
+      value: 667f4c06b033ea5e003290557cb219a77a8d79eeca32457347c20bd71d83b7cc
   - artifact: catch-log-knockout
     digest:
       algorithm: sha256

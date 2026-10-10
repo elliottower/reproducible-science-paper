@@ -6,7 +6,7 @@
   },
   "record": {
     "path": "paper/audit/knockout_repro_audit.json",
-    "sha256": "f7a27232e24386d41566ef917fb033209186beba041c6e774a5cd8bff0a11ce5"
+    "sha256": "8062831e64142edd024ecf59f4181a29dc8cf530f6ad72eb4ca99e126c944408"
   },
   "commit": "cb82384606faa2e6e6f778015a17793b47af8215",
   "entries": 32,
