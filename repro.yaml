@@ -2,34 +2,34 @@ schema_version: repro/1
 project: machine-checkable claims (this paper, checked against its own artifacts)
 provenance:
   repository: https://github.com/elliottower/reproducible-science-paper.git
-  commit: 3e98335ca9a8672ba35957a214274dc83d831a4a
+  commit: f9f9f9f99ff54630009fa26faa9791f285cf5313
   dirty: true
   generated_by: scripts/build_manifest.py
 artifacts:
 - id: manuscript
-  path: paper/continuous_verification_v15zo_site_ai4sci.tex
+  path: paper/continuous_verification_v15zu_site_ai4sci.tex
   media_type: application/x-tex
   digest:
     algorithm: sha256
-    value: 64dad610e638f87cfa39101171adc3b4cdefd86a34dfa79f211115f821f97b82
+    value: c20a989e621426a64e557cac3854115ff8c589ff39de925a90d920710cccaa27
 - id: manuscript-text
-  path: paper/continuous_verification_v15zo_site_ai4sci.txt
+  path: paper/continuous_verification_v15zu_site_ai4sci.txt
   media_type: text/plain
   digest:
     algorithm: sha256
-    value: 57a0058a1c190c7c0642b3dfb17610e6bf5838c080cbb9eeee5b9ff3c4180b2e
+    value: 842f79d5f49ad9b4c0f140b352ab1b606b099f287842dd5beee7cfe3992d4cac
 - id: appendix
   path: paper/generated/audit_appendix.tex
   media_type: application/x-tex
   digest:
     algorithm: sha256
-    value: 1bd5f7eeacdf5c73a9416d7424eacd57883f6d64dfb8feba91f0889842cd0fd8
+    value: 818de453966057847eb5eb8da58a797c2d24dbf7cdcc9d1c3b1fd540e772fc11
 - id: appendix-text
   path: paper/generated/audit_appendix.txt
   media_type: text/plain
   digest:
     algorithm: sha256
-    value: c0c766436482944e032575fcadc50e8e178c389c894e1319df14ca0a305e81fb
+    value: b997dd8faa71c7cc867562e3bee644ffd60b9c73b3bb7e8214028d2a205050fd
 - id: detex
   path: scripts/detex.py
   media_type: text/x-python
@@ -41,7 +41,7 @@ artifacts:
   media_type: text/x-python
   digest:
     algorithm: sha256
-    value: 5d2695aae89fdd2a4ddee30ea67a0d2e6aff0f83175c2964496781abe789d9f9
+    value: 0ebc2a19c7ce97f430202066887ae5e0889b732152813e05b61ee4742e5e8d1b
 - id: counts-deriver
   path: scripts/derive_audit_counts.py
   media_type: text/x-python
@@ -557,7 +557,7 @@ claims:
   evidence:
   - kind: quote
     artifact: manuscript-text
-    text: the toolkit reported 31 findings
+    text: Reproducible Science reported 31 findings
   - kind: metric
     artifact: audit-counts
     name: cross-design-findings
@@ -694,13 +694,13 @@ regenerations:
   command:
   - python3
   - scripts/detex.py
-  - paper/continuous_verification_v15zo_site_ai4sci.tex
-  - paper/continuous_verification_v15zo_site_ai4sci.txt
+  - paper/continuous_verification_v15zu_site_ai4sci.tex
+  - paper/continuous_verification_v15zu_site_ai4sci.txt
   inputs:
   - artifact: manuscript
     digest:
       algorithm: sha256
-      value: 64dad610e638f87cfa39101171adc3b4cdefd86a34dfa79f211115f821f97b82
+      value: c20a989e621426a64e557cac3854115ff8c589ff39de925a90d920710cccaa27
   - artifact: detex
     digest:
       algorithm: sha256
@@ -709,7 +709,7 @@ regenerations:
     artifact: manuscript-text
     digest:
       algorithm: sha256
-      value: 57a0058a1c190c7c0642b3dfb17610e6bf5838c080cbb9eeee5b9ff3c4180b2e
+      value: 842f79d5f49ad9b4c0f140b352ab1b606b099f287842dd5beee7cfe3992d4cac
 - id: appendix-text
   command:
   - python3
@@ -720,7 +720,7 @@ regenerations:
   - artifact: appendix
     digest:
       algorithm: sha256
-      value: 1bd5f7eeacdf5c73a9416d7424eacd57883f6d64dfb8feba91f0889842cd0fd8
+      value: 818de453966057847eb5eb8da58a797c2d24dbf7cdcc9d1c3b1fd540e772fc11
   - artifact: detex
     digest:
       algorithm: sha256
@@ -729,7 +729,7 @@ regenerations:
     artifact: appendix-text
     digest:
       algorithm: sha256
-      value: c0c766436482944e032575fcadc50e8e178c389c894e1319df14ca0a305e81fb
+      value: b997dd8faa71c7cc867562e3bee644ffd60b9c73b3bb7e8214028d2a205050fd
 - id: audit-counts
   command:
   - uv
@@ -749,7 +749,7 @@ regenerations:
   - artifact: appendix-generator
     digest:
       algorithm: sha256
-      value: 5d2695aae89fdd2a4ddee30ea67a0d2e6aff0f83175c2964496781abe789d9f9
+      value: 0ebc2a19c7ce97f430202066887ae5e0889b732152813e05b61ee4742e5e8d1b
   - artifact: audit-file-cross-design
     digest:
       algorithm: sha256
@@ -794,7 +794,7 @@ regenerations:
   - artifact: appendix-generator
     digest:
       algorithm: sha256
-      value: 5d2695aae89fdd2a4ddee30ea67a0d2e6aff0f83175c2964496781abe789d9f9
+      value: 0ebc2a19c7ce97f430202066887ae5e0889b732152813e05b61ee4742e5e8d1b
   - artifact: audit-file-cross-design
     digest:
       algorithm: sha256
@@ -827,4 +827,4 @@ regenerations:
     artifact: appendix
     digest:
       algorithm: sha256
-      value: 1bd5f7eeacdf5c73a9416d7424eacd57883f6d64dfb8feba91f0889842cd0fd8
+      value: 818de453966057847eb5eb8da58a797c2d24dbf7cdcc9d1c3b1fd540e772fc11

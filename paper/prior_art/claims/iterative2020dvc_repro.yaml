@@ -1,0 +1,46 @@
+source:
+  citation: iterative2020dvc
+  local: reference/iterative2020dvc_command-reference_repro_20261011.txt
+  sha256: c68793e0d5905b8b20ef97f88a52e4c71c7be7911de0e2414d15451dad008957
+  url: https://doc.dvc.org/command-reference/repro
+  extract_cmd: none — the page was rendered to text before pinning
+  note: Fetched 2026-10-11. The page as served is kept beside this file as iterative2020dvc_command-reference_repro_20261011.html
+    (sha256 a87c234b2052c14a0e29c40907f41e79aabb60687a090b263113936584a3d31b); the .txt pinned here
+    is that file rendered to text by scripts/render_html_source.py, which breaks the line at every
+    element boundary, so a quotation that crosses inline markup carries a line break there. The bibliography
+    entry is the 2020 software and its URL is the site root; the page pinned here documents DVC as
+    it stood on the fetch date.
+claims:
+  dependents-of-a-failed-stage-skipped-or-run:
+    statement: After a stage fails, `dvc repro` can skip the stages that depend on it (--keep-going)
+      or run them (--ignore-errors).
+    quotes:
+    - exact: 'Continue executing, skipping stages having dependencies
+
+        on the failed stage.'
+      section: Options
+    - exact: Ignore all errors when executing the stages. Unlike
+      section: Options
+    - exact: 'stages having dependencies on the failed stage will be
+
+        executed.'
+      section: Options
+    notes: Nothing on the page says a dependent stage run under --ignore-errors is labeled as having
+      run after a failure.
+  dry-run:
+    statement: '`dvc repro --dry` prints the commands that would run and runs none.'
+    quotes:
+    - exact: 'only print the commands that would be executed without actually
+
+        executing the commands.'
+      section: Options
+  run-judged-as-a-whole:
+    statement: 'The command''s exit status is one value for the whole pipeline: zero when every stage
+      is up to date or ran, one otherwise.'
+    quotes:
+    - exact: 'Exit with 0 if all
+
+        stages are up to date or if all stages are successfully executed, otherwise
+
+        exit with 1.'
+      section: Options

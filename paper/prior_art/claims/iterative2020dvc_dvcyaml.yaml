@@ -1,0 +1,26 @@
+source:
+  citation: iterative2020dvc
+  local: reference/iterative2020dvc_user-guide_project-structure_dvcyaml-files_20261011.txt
+  sha256: 1ca5ffcaea5819b9246c91df80e62667967ad9cc054c3fcd5ba0873df1bc476a
+  url: https://doc.dvc.org/user-guide/project-structure/dvcyaml-files
+  extract_cmd: none — the page was rendered to text before pinning
+  note: Fetched 2026-10-11. The page as served is kept beside this file as iterative2020dvc_user-guide_project-structure_dvcyaml-files_20261011.html
+    (sha256 1bc2d2d537bb72138a375b4fc3a5c6e1d728407286d0ea0ea62ea463dfcb9e12); the .txt pinned here
+    is that file rendered to text by scripts/render_html_source.py, which breaks the line at every
+    element boundary, so a quotation that crosses inline markup carries a line break there. The bibliography
+    entry is the 2020 software and its URL is the site root; the page pinned here documents DVC as
+    it stood on the fetch date. The rendering doubles every word that carries a glossary tooltip,
+    so the quotations stop short of 'outputs' and 'dependencies'.
+claims:
+  lock-file-holds-the-current-state:
+    statement: DVC keeps the state of a pipeline in a dvc.lock file, one per dvc.yaml, with a content
+      hash for each dependency and output.
+    quotes:
+    - exact: To record the state of your pipeline(s) and help track its
+      section: dvc.lock file
+    - exact: "DVC will maintain a \ndvc.lock\n file for each \ndvc.yaml"
+      section: dvc.lock file
+    - exact: ', including a content hash field ('
+      section: dvc.lock file
+    notes: The page describes a record of the pipeline's state. That the file holds no history of
+      invocations is the manuscript's reading of that description.

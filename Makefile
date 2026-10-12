@@ -1,6 +1,6 @@
 # The manuscript `make paper` builds and `make manifest` pins. This is the one place the draft is
 # named: the manifest generator takes it as an argument.
-PAPER ?= continuous_verification_v15zo_site_ai4sci
+PAPER ?= continuous_verification_v15zu_site_ai4sci
 
 # Every standalone supplement. Each is built by `make supplement`, and `make paper` builds them
 # alongside the manuscript, so a supplement cannot go stale while the paper is rebuilt.

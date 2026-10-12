@@ -1,0 +1,19 @@
+source:
+  citation: pineau2020improving
+  local: reference/pineau2020improving.pdf
+  sha256: 0ea62d8ae3eede31d18faedf4246d59f9c07346df59b4ca99407ef4323d2307f
+  url: https://arxiv.org/pdf/2003.12206v4
+  extract_cmd: pdftotext -layout {} -
+  note: The checklist itself is reproduced in the report as an image (Appendix, Figure 9) and yields
+    no text; its text is pinned in pineau2020improving_checklist.yaml.
+claims:
+  authors-fill-in-the-checklist:
+    statement: Authors of NeurIPS 2019 submissions were obliged to fill in the checklist, answering
+      each question yes, no or not applicable.
+    quotes:
+    - exact: NeurIPS 2019 review process, and authors were obliged to fill it both at the initial
+        paper
+      section: Section 5
+    - exact: the CMT platform; each question included a multiple choice “Yes, No, not applicable”,
+        and
+      section: Section 5

@@ -1,0 +1,29 @@
+source:
+  citation: pimentel2019notebooks
+  local: reference/pimentel2019notebooks.pdf
+  sha256: 6df8ff3e890a49d220de5a78d8705bc13212e4fa481ea94181a736618c676f67
+  url: https://www.ic.uff.br/~leomurta/papers/pimentel2019a.pdf
+  extract_cmd: pdftotext -layout {} -
+  note: Two-column PDF; quotations are single column-line fragments.
+claims:
+  four-outcomes-of-a-rerun:
+    statement: The study separates notebooks that were never executed, because their dependencies
+      failed to install or their files were corrupted, from notebooks that failed during execution,
+      finished with different results, and finished with the same results.
+    quotes:
+    - exact: conda environments. However, the dependencies of 75,059
+      section: Section IV-G
+    - exact: notebooks failed to install. To install the dependencies, we
+      section: Section IV-G
+    - exact: because they had corrupted files.
+      section: Section IV-G
+    - exact: a time limit of 5 minutes, while 570,476 notebooks failed
+      section: Section IV-G
+    - exact: Only 208,323 notebooks finished their executions success-
+      section: Section IV-G
+    - exact: following the cell execution order, 173,487 of them produced
+      section: Section IV-G
+    - exact: only 4.03% produced the same results.
+      section: Introduction
+    notes: The paper reports these as counts in its text and does not name them as a set of outcome
+      categories.

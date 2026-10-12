@@ -1,0 +1,21 @@
+source:
+  citation: samuel2026reproscore
+  local: reference/samuel2026reproscore.pdf
+  sha256: ca80b531552f9008721a1cbeac9bbf7b7808e8ce13c461cc7559b1b72479428a
+  url: https://arxiv.org/pdf/2605.13275v1
+  extract_cmd: pdftotext -layout {} -
+  note: arXiv version 1, as stamped on the first page. The address the file was fetched from on 2026-08-23
+    was not recorded; the URL is the arXiv address of the stamped version.
+claims:
+  outcome-score-undefined-without-execution:
+    statement: The Reproducibility Outcome Score is computed from execution probes, and is undefined
+      when no component is available.
+    quotes:
+    - exact: execution, optional) computes ROS (cf. Section 3.2) from up to six execution probes.
+      section: Figure 1 caption
+    - exact: 'When
+
+        no components are available, ROS is undefined (⊥) and the system falls back to
+
+        RCS = RRS.'
+      section: Section 3.2

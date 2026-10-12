@@ -1,0 +1,18 @@
+source:
+  citation: leone2024wrroc
+  local: reference/leone2024wrroc.pdf
+  sha256: 8088311462bfdacffa4969cb10cb3d3b3c63aea0a8a22835688fa42e69b796c8
+  url: https://doi.org/10.1371/journal.pone.0309210
+  extract_cmd: pdftotext -layout {} -
+  note: The publisher PDF. The address it was fetched from on 2026-08-23 was not recorded; the URL
+    is the bibliography's. The first author is Leo, whatever the key says.
+claims:
+  packages-a-workflow-run:
+    statement: Workflow Run RO-Crate is a set of profiles that represent and package the provenance
+      of a workflow run.
+    quotes:
+    - exact: 'a collection of RO-Crate profiles to represent and package both the prospective and
+        the ret-
+
+        rospective provenance of a computational workflow run'
+      section: Section 1

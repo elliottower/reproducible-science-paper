@@ -1,0 +1,19 @@
+source:
+  citation: pineau2020improving
+  local: reference/pineau2020improving_checklist_v1.2.pdf
+  sha256: cd3b42127e0552190e55c88c9b32a8c7807051cb7e6f2f61191c7f1827558c86
+  url: https://www.cs.mcgill.ca/~jpineau/ReproducibilityChecklist-v1.2.pdf
+  extract_cmd: pdftotext -layout {} -
+  note: Version 1.2 of the checklist, the version the report says was used at NeurIPS 2019, from the
+    first author's university page. Pinned under the report's key because the report reproduces it
+    only as an image.
+claims:
+  checklist-asks-what-the-paper-includes:
+    statement: Each group of checklist items asks the author to check whether the paper includes something.
+    quotes:
+    - exact: 'For all models and algorithms presented, check if you include:'
+      section: Checklist
+    - exact: 'For any theoretical claim, check if you include:'
+      section: Checklist
+    - exact: A description of the computing infrastructure used.
+      section: Checklist

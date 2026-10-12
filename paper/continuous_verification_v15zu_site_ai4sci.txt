@@ -35,12 +35,12 @@ changes, the run that produced the old one is still on disk, the source still re
 edit carries an author and a commit. Later the run has been overwritten, the source was fetched
 once without its address recorded, and which document a citation referred to is no longer
 recoverable from the citation. In 14 of 34 documented cases of retraction, correction, or
-misconduct, the toolkit's checks would flag a stated problem, including both Surgisphere
+misconduct, the checks of Reproducible Science would flag a stated problem, including both Surgisphere
 COVID-19 studies (Appendix).
 Three boundaries of a research project, the failure each admits when nothing checks it,
-and the comparison the toolkit performs. All three are decided the same way, by a digest of a file
+and the comparison Reproducible Science performs. All three are decided the same way, by a digest of a file
 and a comparison at a location the author declares in it, so one checking engine serves them.
-Boundary | What goes wrong when it is unchecked | What the toolkit compares
+Boundary | What goes wrong when it is unchecked | What is compared
 plan to run | a hypothesis or an analysis is rewritten after the outcome is visible | a run record against a plan pinned by digest
 run to manuscript | a printed value drifts from the output it was read from | a declared address in a sealed result file
 source to manuscript | a quotation or an identifier does not occur in the artifact cited for it | a passage against a content-addressed source
@@ -49,9 +49,9 @@ the question, whether a conclusion follows. A narrow part is. A number printed i
 either matches the results file it came from or does not, and a quoted sentence either occurs in
 the cited source or does not. That part can be settled without a human and without a model, at a
 cost small enough to run on every commit rather than once before submission.
-The toolkit's four commands., and each write declarations while the work
-is done, and reads them and checks each against the artifact it names.
-Nothing failed because nothing ran. In the toolkit's own code, a missing extractor, the program that pulls text out of a
+The commands of Reproducible Science., and write declarations as the work is done;
+checks each against its artifact, and repro reproduce against rerun outputs.
+Nothing failed because nothing ran. In our own code, a missing extractor, the program that pulls text out of a
 PDF, returned the empty string, the check recorded an unreadable document, and the run summary read
 nothing failed. A check that read no text and a check that read the text and found it
 correct produced the same line. A separate incident is worse: a script collected the digests cited
@@ -79,9 +79,9 @@ designed to run while a project changes. (2) Evidence assertions: typed assertio
 manuscript values and quotations to declared locations in content-addressed artifacts, with four
 implemented variants over a shared engine and report. (3) Staged outcomes: a deterministic
 model separating execution, extraction and comparison, with a project's pass-or-fail policy applied
-to the resulting facts afterwards. We instantiate all three in a deployed toolkit (Figure) and
-evaluate them through conformance tests, fault injection, a content-addressed quotation audit,
-defects met in ordinary use, and an audit of a project developed using this toolkit.
+to the resulting facts afterwards. We instantiate all three in Reproducible Science (Figure) and
+evaluate them through conformance tests, fault injection, a quotation audit,
+defects met in ordinary use, and an audit of a project developed with it.
 Model and Contract
 Section 's two incidents fail differently — one check never ran, the other ran
 and read no text — and both reported what a passing check reports. The three boundaries of
@@ -123,31 +123,28 @@ Facts, then policy. Verification returns facts. Whether they constitute a pass d
 on what the project is for: an unchecked citation is acceptable in a draft and disqualifying in a
 submission, and both readings are correct about the same run. The engine therefore reports the
 three stages and computes no verdict, and a profile maps outcomes to severities
-(Table, Appendix). Re-grading under
-a stricter profile re-reads the stored report and executes nothing, so a submission is judged on
-the facts the draft was checked with rather than on a second run that may not reproduce them.
+(Table, Appendix).
 Implementation and Workflow
-The toolkit runs on ordinary files. It does not require an experiment to be conducted in a
+Reproducible Science runs on ordinary files. It does not require an experiment to be conducted in a
 particular language, notebook system, analysis framework or agent runtime, and it does not require
 a manuscript to be authored inside its toolchain. The fifteen papers in the quotation audit of Section were
 written without this contract in mind, and none was modified to be auditable. A value is read
-from JSON, delimited text, a workbook, Parquet, Stata, SPSS, R data, HDF5 or NetCDF, and a
-quotation from a PDF, plain text, a workbook, a Word document or JATS XML.
-A new or existing project adopts the toolkit with one command, repro init. A project declares as it goes. A plan is frozen before the run it governs, against a commit and a
-content hash. Inputs are sealed before an analysis and outputs recorded after it. The script is
-committed, its inputs are sealed and its outputs are recorded, so every result can be regenerated:
-repro reproduce runs the declared command again and checks the manuscript's assertions
+from nine formats, such as JSON and Parquet, and a quotation from five, such as PDF.
+A new or existing project adopts Reproducible Science with one command, repro init. A project declares as it goes. A plan is frozen before the run it governs, against a commit and a
+content hash. The script is committed, its inputs are sealed before an analysis and its outputs recorded after
+it, so every result can be regenerated: repro reproduce runs the declared command again and checks the manuscript's assertions
 against the file it writes. Misconduct that alters a reported result now requires more than an edit to the
 manuscript: the committed script must produce the altered value from the sealed inputs, and a
 re-run by a reader reveals any inconsistency. For each sentence that prints a number, the manifest records the address the number came from,
-written when the sentence is. Verification then reads the declarations and reports on each.
-The toolkit's four commands and the boundary each decides. The first three write declarations
-and the fourth reads them, applying a policy to the result.
+written when the sentence is. Verification reads the declarations and reports on each.
+The commands and what each establishes. The first three write declarations and
+reads them, applying a policy to the result.
 Command | What it establishes
-| that the plan which ran is the plan that was frozen, against a commit and a content hash
+| that the plan is unchanged since it was frozen, against a commit and a content hash
 | that a reported number came from a recorded run over sealed inputs
 | that a quoted passage occurs in the source cited for it
-| that every declared assertion holds against its pinned artifact, and which do not
+| that every claim matches the file it came from, and which do not
+repro reproduce | that every claim matches the new output when its command is rerun
 A worked example. Appendix states that the conformance suite holds 25
 fixtures, and this paper's manifest binds that sentence with two assertions: a quote
 assertion checking that the manuscript still prints it, and the metric assertion below,
@@ -165,7 +162,7 @@ marked MISS, the run exits 1, and the report reads manuscript prints 19,
 conformance_inventory.json holds 25. The Claude Code plugin prompts for such
 declarations while the artifacts are produced: after each edit it names any number or quotation in
 a manuscript that nothing yet backs, and before an analysis runs it says when the governing plan is
-unfrozen, never blocking the work it observes. A companion Claude Code mod shows the state of a project's
+unfrozen. A companion Claude Code mod shows the state of a project's
 records in the session, one row per command, with a warning when a frozen plan was edited or a run
 was recorded with nothing sealed (Appendix, Figure).
 Preregistration is optional and per claim. A claim is marked confirmatory, exploratory, or not
@@ -210,8 +207,7 @@ without running it: a recall of 61%. Table gives it by the strength of the value
 number of constraining digits. Recall falls as values carry more digits and then rises again,
 because the tiers differ in what they are made of rather than in difficulty: a two-digit
 integer is found in almost any artifact and a long decimal is found only where it was written.
-A second run on a separate machine produces a byte-identical record for all 45 capsules, with the
-same 146 values located.
+A second run on a separate machine produces a byte-identical record for all 45 capsules.
 Recall over 45 CORE-Bench capsules, against the values each capsule states it
 produces. Eight capsules hold a record no reader here opened, so their misses are
 unchecked rather than absent: a two-state report would count all of them against
@@ -225,12 +221,12 @@ strong | 61 | 37 | 61%
 all | 240 | 146 | 61%
 Findings from Deployment
 Defect classes surfaced in ordinary use
-Running the toolkit over our own corpus during ordinary research surfaced six defect classes.
+Running the four commands over our own corpus during ordinary research surfaced six defect classes.
 Table lists them. Each is reported as a class that occurs and is mechanically
 detectable; no frequency is claimed, and none of these counts enters any rate in
 Section. Two of the six are defects in a check rather than in a manuscript, which
 is the case the three-stage model exists for.
-Six defect classes surfaced by running the toolkit over one author's corpus. Status
+Six defect classes surfaced by running the four commands over one author's corpus. Status
 records whether a change has been made that prevents the class, not whether the instance was
 repaired.
 Class | What is observably wrong | Status
@@ -250,14 +246,14 @@ split, so the repository reported a fully verified claim set that a reader could
 part. Quotation verification had passed over every one of those sources, because a quotation
 resolves against the text as it stands.
 What a reader can re-check from a clone
-One command, repro audit, runs the toolkit over a clone of the public repository for a
+One command, repro audit, runs all four commands over a clone of the public repository for a
 project developed with it, at a pinned commit. https://github.com/elliottower/knockout-epistasis-dynamics,
 commit cb82384. The project keeps registered plans, a results ledger and pinned quotations,
 and declares no evidence manifest. The clone carries 1,267 tracked files, three registered
 plans, a ledger of 153 events binding 131 manuscript claims to 13 runs, and seven claim records
 holding 18 quotations. Table gives what each command established from the clone
 alone and what it could not.
-The toolkit's four commands over a clone of the project's public repository. Two establish their result
+The four commands over a clone of the project's public repository. Two establish their result
 from the clone alone, because the plans and the ledger are committed with it. The quotation check
 reads no source and reports that, where a two-state report would have to print a pass or a
 failure.
@@ -266,31 +262,28 @@ Command | What it found | What it could not establish
 | the chain is intact and anchored at 153 events; 8 of 12 recorded files match their digest, and 4 carry more than one recorded digest | what share of the manuscript's numbers the 131 claims cover: the manuscript is not in the repository
 | quotations: 18 against 7 sources, none checked; bibliography: 28 of 32 entries checked, 6 differ from their registry record | whether any quotation occurs in its source
 | no evidence manifest; exit 2, nothing addressed | any assertion, none having been declared
-The plans and the ledger verify from a clone because both are committed with the repository. The
-quotations do not: a publisher's PDF is not the author's to redistribute, so the repository
-carries each source's digest and not the source, and all 18 quotations come back
+The quotations do not verify from a clone: a publisher's PDF is not the author's to redistribute, so the repository
+carries only each source's digest, and all 18 quotations come back
 unchecked.
 In a preregistered study of drug-trial outcomes, four rounds of journal review raised 45 comments
-and the toolkit reported 31 findings, with no overlap (Appendix). Reviewers
-assess the argument; the toolkit checks each value against its source.
+and Reproducible Science reported 31 findings, with no overlap (Appendix). Reviewers
+assess the argument; Reproducible Science checks each value against its source.
 A certificate of reproduction does not make a paper's numbers checkable. Of 133 certified
 reproductions in the CODECHECK register, 6 leave a file holding one of
 the paper's tables, and under half the numbers in those tables have a cell to check against
 (338 of 713). Of the 338, 326 match the certified file and 12 differ
 (Appendix).
-The toolkit also runs under a literature census conducted by a language model and coding agents.
+Reproducible Science also runs under a literature census conducted by a language model and coding agents.
 The model screens 43,462 abstracts and extracts 14,053 claim records, each carrying the
-sentence it was drawn from. The toolkit checks every sentence against the stored abstract:
+sentence it was drawn from. citations verify checks every sentence against the stored abstract:
 13,989 match exactly, 27 match in two places, and 37 leave out one word
 (Appendix).
 An edit to a registered plan
 A preregistration carries a recorded digest, and an edit to it is detected by recomputing that
 digest rather than by asking the author what changed. In ordinary use prereg check caught
 a subagent that had edited a frozen plan partway through an analysis, and the edit was reverted.
-The hook that watches for it fires on every
-edit and never refuses one, because a check that can halt the work it observes gets switched off.
-Once frozen, a plan is a sealed record: any edit breaks the digest, and with it the proof of what
-was registered before the run. Changes go in a separate amendment, sealed the same way.
+The Claude Code plugin and mod refuse edits to a frozen plan, so the plan keeps matching the
+cryptographic hash recorded at its freeze. Changes go in a separate amendment, sealed the same way.
 Related Work
 Claim-to-location binding. Paperclip binds individual claims to individual locations
 in sources: an agent adds a claim naming a document identifier and a line range, and a commit
@@ -310,7 +303,7 @@ of five statuses, and two of them, unknown and not-applicable, are excluded from
 score rather than counted as passes. The unit differs, and so does where an outcome comes from.
 adduce grades a repository and a rule author selects among five flat statuses, where one assertion
 here binds one printed value to one declared address, no score is computed, and the outcome follows
-from which of the three stages stopped. The two compose: adduce runs the toolkit's verification as one of its rules.
+from which of the three stages stopped. The two compose: adduce runs as one of its rules.
 Artifact-level verification. Code Ocean verifies a capsule before publication and
 states that the check establishes mechanical reproducibility, a user pressing run and obtaining
 results, and separately that it does not check whether a capsule's results match the article it
@@ -320,6 +313,14 @@ the unit of citation and the unit of verification are the same object, so the ou
 property of the whole. Here the unit of verification is finer than the unit of citation, and a
 report states which of a manuscript's values an artifact still supports rather than whether the
 artifact runs.
+Re-execution. Workflow systems rerun the steps whose inputs changed
+, and a codechecker regenerates some or
+all of a paper's results.
+ScientistOne ties each numeric sentence of a paper it writes to a line of its experiment log, and
+a language model reads the score its audit checks.
+repro reproduce compares each printed number with the value at its declared address in the
+rerun output, and reports a rerun that did not happen apart from a rerun that disagreed
+(Appendix).
 Entailment, markup and write-time binding. FEVER, SciFact and CliniFact predict a
 label given retrieved text and score it against human annotation
 , and ClaimReview binds claim text to the
@@ -336,13 +337,13 @@ state is reached probabilistically from estimated agreement patterns; ours is re
 extractor was absent or a pointer did not resolve.
 Verification in other fields. Metrology defines verification as evidence that specified
 requirements are met, and keeps verification apart from validation, which asks whether those
-requirements suit an intended use; the toolkit performs verification. The
+requirements suit an intended use; Reproducible Science performs verification. The
 philosophy of measurement separates an instrument's reading from the result inferred from the
 reading, and an extractor is an instrument in this sense: in
 Section, six extractors read the same bytes and returned six results. In formal
 verification, many early automated theorem provers performed proofs without recording them, so a
 result could not be checked afterwards; here every verdict is
-stored with the pinned artifacts it was computed against.
+stored with its pinned artifacts.
 Limitations
 The extractor is trusted. Content addressing establishes that an artifact's bytes did
 not change and nothing about whether the extractor read them correctly. A layout parser that
@@ -371,7 +372,7 @@ Terms
 Table defines the terms used in this paper.
 Terms as this paper uses them.
 Term | Meaning
-toolkit | the package (containing four commands:,, and) and the optional Claude Code plugin and mod
+Reproducible Science | the reproducible-science package (containing four commands:,, and) and the optional Claude Code plugin and mod
 engine | the code in that resolves pins, evaluates each assertion and reports the three stages
 artifact | a file a claim rests on, pinned by its SHA-256 digest
 claim | a sentence in the manuscript that states a number or a quotation
@@ -381,7 +382,7 @@ claim record | a file pinning the quotations taken from one source, read by
 plan | the preregistration document
 freeze | the record of a plan's digest, commit and time, after which the plan does not change
 ledger | the append-only record of sealed inputs, runs and the claims bound to them, kept by
-declaration | a frozen plan, a sealed input, a recorded run, a pinned quotation or an assertion: what a project writes for the toolkit to read
+declaration | a frozen plan, a sealed input, a recorded run, a pinned quotation or an assertion: what a project writes for the commands to read
 Conformance suite and fault injection
 Conformance.
 The suite holds 25 fixtures: five addressing a table cell, four

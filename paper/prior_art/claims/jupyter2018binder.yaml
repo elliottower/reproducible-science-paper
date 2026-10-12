@@ -1,0 +1,18 @@
+source:
+  citation: jupyter2018binder
+  local: reference/jupyter2018binder.pdf
+  sha256: 040170c91b69c5a3b641e80f39deb6300b8ff99d201789aff09d21e7aed43c12
+  url: https://proceedings.scipy.org/articles/Majora-4af1f417-011.pdf
+  extract_cmd: pdftotext -layout {} -
+  note: Two-column PDF; quotations are single column-line fragments.
+claims:
+  repo2docker-builds-an-environment:
+    statement: repo2docker reads configuration files in a repository and constructs a Dockerfile that
+      builds the environment they specify.
+    quotes:
+    - exact: looks for one or more “configuration” files that are used
+      section: Deterministic environment building - Repo2Docker
+    - exact: constructs a Dockerfile that builds the environment
+      section: Deterministic environment building - Repo2Docker
+    - exact: specified by the configuration files, and that is meant to
+      section: Deterministic environment building - Repo2Docker

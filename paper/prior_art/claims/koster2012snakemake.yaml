@@ -1,0 +1,34 @@
+source:
+  citation: koster2012snakemake
+  local: reference/koster2012snakemake.pdf
+  sha256: d4523825901ba0a46f97849994de1702f9973fc97fe8f8785e53734e67378576
+  url: https://academic.oup.com/bioinformatics/article-pdf/28/19/2520/819790/bts480.pdf
+  extract_cmd: pdftotext -layout {} -
+  note: 'Two-column PDF; quotations are single column-line fragments. Saved from a browser: the address
+    answers a script with a challenge page.'
+claims:
+  rules-from-input-files-to-output-files:
+    statement: A Snakemake workflow consists of rules that state how to create output files from input
+      files.
+    quotes:
+    - exact: rules that denote how to create output files from input files. The
+      section: Section 2
+    - exact: and output files and (iii) either a shell command or Python code
+      section: Section 2
+  outputs-of-an-incomplete-rule-deleted:
+    statement: Snakemake deletes the output files of a rule whose execution did not complete.
+    quotes:
+    - exact: newer. Together with the automatic deletion of output files
+      section: Section 3
+    - exact: from incomplete rule executions (e.g. due to a failing shell com
+      section: Section 3
+  rule-executed-when-output-absent-or-stale:
+    statement: By default a rule is executed when its output files are absent or older than its input
+      files.
+    quotes:
+    - exact: By default, Snakemake only executes rules if the output files
+      section: Section 3
+    - exact: are not present or the modification time of the input files is
+      section: Section 3
+    notes: The nearest text to the manuscript's 'judge the run as a whole'. The paper states when
+      a rule runs and states no judgment of a run or of its results.

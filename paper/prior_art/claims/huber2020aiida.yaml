@@ -1,0 +1,15 @@
+source:
+  citation: huber2020aiida
+  local: reference/huber2020aiida.pdf
+  sha256: bff7d128a5b1a16f580f53f899bc72fbb382caa512161f1bce9ea110177c714d
+  url: https://doi.org/10.1038/s41597-020-00638-4
+  extract_cmd: pdftotext -layout {} -
+  note: The publisher PDF. The address it was fetched from on 2026-08-23 was not recorded; the URL
+    is the bibliography's.
+claims:
+  each-process-recorded-in-a-provenance-graph:
+    statement: AiiDA records every calculation or workflow its engine runs in a provenance graph.
+    quotes:
+    - exact: Any calculation or workflow that is run by the engine will be automatically recorded
+        in the provenance graph
+      section: Architecture Overview

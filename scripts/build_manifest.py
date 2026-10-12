@@ -133,7 +133,7 @@ CLAIMS = [
         ("cross-design-review-comments", "Section 5.2",
          "four rounds of journal review raised 45 comments",
          "45", "review-counts-cross-design", "/points_total"),
-        ("cross-design-findings", "Section 5.2", "the toolkit reported 31 findings",
+        ("cross-design-findings", "Section 5.2", "Reproducible Science reported 31 findings",
          "31", "audit-counts", "/audits/cross_design/findings"),
     ),
     *bound(

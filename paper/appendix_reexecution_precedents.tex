@@ -1,0 +1,133 @@
+% Precedents for repro reproduce: each design choice beside the closest earlier system.
+\section{Precedents for Re-execution}
+\label{sec:reexecution-precedents}
+
+The \code{repro} manifest, \code{repro.yaml}, lists each command to rerun, the input files the
+command reads, and the numbers the manuscript prints from its output. \code{repro reproduce}
+reruns each listed command in a directory that holds only that command's declared inputs, and
+then compares every number the manuscript prints from the output with the value at its declared
+address. Table~\ref{tab:reexecution-precedents} sets each
+of its design choices beside the closest earlier system and states the difference. Most choices
+have a direct precedent. Three do not, in the sources read: an outcome for a rerun whose number
+could not be read, a label on a step that ran after an upstream failure, and a comparison of a
+printed value with a declared address in an output file that stays with the project.
+
+\vspace{0.5\baselineskip}
+\begin{table}[H]
+\caption{Design choices of \code{repro reproduce}, the closest precedent for each, and the
+difference. Rerunning is common and is specified in many ways; a mechanical comparison against
+the numbers a manuscript prints, with outcomes that keep a rerun that did not happen apart from
+a rerun that disagreed, is where the command departs from the systems before it.}
+\label{tab:reexecution-precedents}
+\footnotesize
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.15\linewidth}L>{\raggedright\arraybackslash}p{0.27\linewidth}@{}}
+\toprule
+Design choice & Closest precedent & Difference \\
+\midrule
+Commands to rerun are declared in a manifest &
+DVC lists stages that wrap shell commands \citep{iterative2020dvc}; Snakemake states rules from
+input files to output files \citep{koster2012snakemake}; ReproZip traces one execution
+\citep{chirigati2016reprozip}; many ClawBio skills write a replay script when they run
+\citep{corpas2026clawbio}. &
+A regeneration is declared beside the claims that read its output. \\
+\addlinespace
+Each command runs with only its declared inputs &
+ReproZip unpacks into a directory, a chroot, a virtual machine or a container
+\citep{chirigati2016reprozip}; Code Ocean, Whole Tale and Binder package an environment
+\citep{codeocean2026verification,brinckman2019wholetale,jupyter2018binder}. &
+A directory of declared inputs and no container: an input that was not declared is absent. \\
+\addlinespace
+Success is that the printed numbers still hold &
+A codechecker judges, and identical results are not required \citep{nust2021codecheck}; ACM
+badges ask for agreement within a tolerance \citep{acm2020badging}; CORE-Bench accepts answers
+inside an interval from three reruns \citep{siegel2024corebench}; SEER-Repro accepts a relative
+error of at most 5\%, or a difference of at most half a unit in the last decimal the paper
+reports \citep{liu2026seerrepro}; DVC compares a dependency's contents with their previous
+version to decide whether a stage is rerun \citep{iterative2020dvc}; ClawBio gives checksums of
+selected output files for a reader to check \citep{corpas2026clawbio}. &
+Each number the manuscript prints is compared mechanically, and the bytes need not match. \\
+\addlinespace
+Outcomes are kept apart &
+A study of notebooks counts separately those whose dependencies failed to install, those that
+failed in execution, those that finished with different results and those that finished with
+the same \citep{pimentel2019notebooks}; ReproScore leaves its outcome score
+undefined without execution evidence \citep{samuel2026reproscore}; SEER-Repro labels a perturbed
+analysis inconclusive, unavailable or not tested, and counts a reproduced value that is missing
+or unparseable as not reproduced \citep{liu2026seerrepro}; CODECHECK has no process for
+a failed check \citep{nust2021codecheck}. &
+Five outcomes are recorded for every regeneration, and one that was not rerun never reads as
+reproduced. \\
+\addlinespace
+A rerun whose number cannot be read is \code{unchecked} &
+Paperclip fails a paper whose extracted value is invalid \citep{gxl2026paperclip}; ScientistOne
+sorts its extraction misreads by hand \citep{meng2026scientistone}. &
+The case has its own recorded outcome. \\
+\addlinespace
+A step after a failure still runs, and is labeled &
+DVC can skip or run the dependents of a failed stage \citep{iterative2020dvc}; Snakemake deletes
+the outputs of an incomplete rule \citep{koster2012snakemake}. &
+The dependent step runs over the pinned copy, and its record says so. \\
+\addlinespace
+Every invocation is appended to a log &
+Workflow Run RO-Crate packages a run \citep{leone2024wrroc}; AiiDA records each process in a
+provenance graph \citep{huber2020aiida}; in-toto writes a signed link for each step
+\citep{torresarias2019intoto}; DVC keeps the current state in a lock file
+\citep{iterative2020dvc}. &
+One append-only file beside the project holds what each invocation observed. \\
+\addlinespace
+Checking never executes &
+SLSA verification compares a digest and expectations, and rebuilding is optional
+\citep{openssf2023slsa}; an in-toto verifier checks signed records of steps
+\citep{torresarias2019intoto}; DVC has a dry run \citep{iterative2020dvc}. &
+\code{repro verify} and \code{repro reproduce} are separate commands with separate guarantees. \\
+\addlinespace
+A printed value is compared with a declared address in an output file &
+ScientistOne tags each numeric sentence with a log line and compares within 5\%
+\citep{meng2026scientistone}; when the document is built, Sweave inserts the output of its code chunks and showyourwork
+regenerates each figure from its script \citep{leisch2002sweave,luger2021mapping}; a CODECHECK manifest ties an output file to a
+figure by a comment \citep{nust2021codecheck}. &
+The address is declared, resolved and compared, an ambiguous address is an outcome, and the
+record stays with the project. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\paragraph{Chain-of-Evidence.} ScientistOne \citep{meng2026scientistone} is an autonomous
+research system whose writer tags each sentence that holds a number with a line of its
+experiment log, and whose audit reruns submitted code and compares the result with the reported
+score. \code{repro reproduce} differs from it in five ways. (1)~\emph{Who can use it.} The
+tags exist only for papers that ScientistOne itself writes, and its audit needs a benchmark's
+own evaluator; the \code{repro} manifest is written for any project, by a person or an agent, and
+lists the author's own commands. (2)~\emph{What the reader receives.} ScientistOne removes the tags from
+the final manuscript; the manifest, the pinned inputs and the log of reruns stay in the
+repository, so a reader repeats the check from a clone. (3)~\emph{How a check is decided.} Its
+audit has a language model read the reported score out of the paper, and two of its four checks
+are majority votes of a language model; every claim in the manifest is machine-checkable, in
+that the number the manuscript prints is compared, as a decimal at the precision printed, with
+the value at its declared address in the rerun output, and no language model takes part. (4)~\emph{What is fixed beforehand.} A regeneration
+runs only on inputs whose bytes match their pins, and a changed input is reported as
+\code{not re-run}; the ScientistOne paper describes no digest of an input or an output. (5)~\emph{What a result can be.}
+Its numeric check passes or fails, and its authors sort the misread values by hand;
+\code{unchecked}, \code{failed} and \code{not re-run} are outcomes of their own, so a check that
+could not be made is never counted with those that passed. ScientistTwo applies the same audit
+to its own output and reports every score verified on 49 target problems
+\citep{nam2026scientisttwo}. Its coding agent audits the repository against the manuscript, the
+rerun in the one audit report the paper reproduces covers the proposed method and not the
+baseline, and the paper states no tolerance for a score to count as verified.
+
+\paragraph{Reproduction by an agent.} SEER-Repro has a coding agent re-derive 2{,}190 atomic claims
+of 20 published cancer-registry papers from the registry data, and reproduces 77.4\% of them
+\citep{liu2026seerrepro}. A language model extracts each reproduced value from the agent's
+report, and deterministic code then applies the tolerance. The two designs start from opposite
+ends. In SEER-Repro a model extracts the claims from a published paper, the reference is the
+published number, and the analysis is rewritten by the agent; in the \code{repro} manifest the
+author declares each claim and its address, the reference is the project's own output, and the
+command that is rerun is the author's.
+
+\paragraph{Checklists and badges.} The machine learning reproducibility checklist asks an author
+to state what a paper includes \citep{pineau2020improving}, and an ACM badge records that
+the main results were obtained in a later study by a team other than the authors
+\citep{acm2020badging}. Neither specifies what is rerun or
+compares a printed number with an output. The \code{repro} manifest states what is rerun, as a
+list of commands and the input files each reads, and the log of \code{repro reproduce} records
+for every printed number whether the rerun output still holds it.

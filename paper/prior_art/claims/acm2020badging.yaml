@@ -1,0 +1,41 @@
+source:
+  citation: acm2020badging
+  local: reference/acm2020badging_20261011.txt
+  sha256: 199485daec3f609321894997056d21b836e9b4c6fd132509b2c201c425fe28ea
+  url: https://www.acm.org/publications/policies/artifact-review-and-badging-current
+  extract_cmd: none — the page was rendered to text before pinning
+  note: Version 1.1 of the policy, August 24, 2020. Saved from a browser, because the address answers
+    a script with a block page; the file's modification time is 2026-10-11. The page as saved is kept
+    beside this file as acm2020badging_20261011.html (sha256 7cb56da3d9dba28a61935892a3d5a46e91ecf49d60ba57a794ce694462a844c8);
+    the .txt pinned here is that file rendered to text by scripts/render_html_source.py.
+claims:
+  agreement-within-a-tolerance:
+    statement: For the Results Validated badges, exact reproduction is not required; results must
+      agree within a tolerance acceptable for the kind of experiment.
+    quotes:
+    - exact: exact replication or reproduction of results is not required, or even expected. Instead,
+        the results must be in agreement to within a tolerance deemed acceptable for experiments of
+        the given type.
+      section: Results Validated
+  results-obtained-by-someone-other-than-the-authors:
+    statement: A Results Validated badge records that the main results were obtained by a person or
+      team other than the authors, in a subsequent study reported in a peer-reviewed publication.
+    quotes:
+    - exact: This badge is applied to papers in which the main results of the paper have been successfully
+        obtained by a person or team other than the author.
+      section: Results Validated
+    - exact: The main results of the paper have been obtained in a subsequent study by a person or
+        team other than the authors, using, in part, artifacts provided by the author.
+      section: Results Reproduced
+    - exact: For Results Validated, a peer-reviewed publication which reports the replication or reproduction
+        must be submitted as evidence
+      section: Review Procedures
+    notes: The manuscript says reviewers obtained the main results. The policy says a person or team
+      other than the authors, in a subsequent study. Reviewers evaluate artifacts for the separate
+      Artifacts Evaluated badges.
+  review-procedure-left-open:
+    statement: The policy does not specify the review process behind a badge.
+    quotes:
+    - exact: The descriptions of badges provided above do not specify the details of the review process
+        itself.
+      section: Review Procedures

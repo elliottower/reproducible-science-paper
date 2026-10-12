@@ -1,6 +1,6 @@
 source:
   citation: gxl2026paperclip
-  local: sources/paperclip_README_20260825.md
+  local: reference/paperclip_README_20260825.md
   sha256: c4a6af679f343b34d35ccf81d8ca264d3e6127d6136fc5a49f94d8f6758ee585
   url: https://raw.githubusercontent.com/GXL-ai/paperclip/main/README.md
   extract_cmd: none — Markdown is read directly

@@ -1,17 +1,17 @@
 Reproducible Science Audits
-This appendix audits 3 preregistered studies conducted with the Reproducible Science
-toolkit: two under journal review and one in progress. Each audit gives a
+This appendix audits 3 preregistered studies conducted with Reproducible Science:
+two under journal review and one in progress. Each audit gives a
 description of the study, an example finding, what each command found in its repository,
 and the findings made while it was written. Table gives the result from
 a clone for the two under review, and Table their findings.
-What the toolkit established from a clone of each project, at the pinned commit.
+What Reproducible Science established from a clone of each project, at the pinned commit.
 project | appendix | registered plans | quotations | ledger
 Cross-design evidence discordance | | 4 of 6 registrations unchanged, 1 appended, 1 changed | 175 of 175 found | not in the repository
 Knockout epistasis | | 3 of 3 plans unchanged | 18 declared, sources absent | chain intact, 153 events
 Findings are coded from each project's records: commits, ledger events, plan logs, claim files and
 session transcripts. A finding counts
 when a command, a script that performed the same check before the command existed, a hook, or an act
-the toolkit requires (sealing an input, binding a number, pinning a
+Reproducible Science requires (sealing an input, binding a number, pinning a
 quotation) exposed it and a record says so. The coding rules were fixed before the records were read.
 Defects found by a person or raised in review are not counted as findings.
 Findings, by project and severity. A claim finding would change a
@@ -35,7 +35,7 @@ results | 2 | no ledger | which run any reported number came from
 citations | 0 | 175 of 175 quotations found in their sources; 67 of the 94 sources were read from the library and matched to the SHA-256 the record pins | whether a quotation supports the sentence that cites it
 citations audit | 0 | 75 bibliography entries, 74 carrying an identifier; 64 agree with the record the identifier resolves to and 10 disagree | whether the entry with no identifier is correct
 repro | 2 | no evidence manifest | any assertion, none having been declared
-Reviewer comments (4 reviewers, 6 reports) and toolkit findings for the cross-design study, by kind.
+Reviewer comments (4 reviewers, 6 reports) and findings for the cross-design study, by kind.
 Reviewer comments | Count
 design and argument | 20
 reporting and presentation | 12
@@ -44,7 +44,7 @@ references | 1
 code and data availability | 0
 other | 2
 Total | 45
-Toolkit findings | Count
+Findings | Count
 value or citation absent from the cited source | 9
 value differing from its source | 6
 wrong reference metadata | 11

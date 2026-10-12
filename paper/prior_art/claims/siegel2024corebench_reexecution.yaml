@@ -1,0 +1,21 @@
+source:
+  citation: siegel2024corebench
+  local: reference/siegel2024corebench.pdf
+  sha256: 1d1fbe8a3cf472fc468495e6a3bcd6b90224ba1eae3dac8d8174f98d666c3d76
+  url: https://arxiv.org/pdf/2409.11363
+  extract_cmd: pdftotext -layout {} -
+claims:
+  answers-inside-an-interval-from-three-reruns:
+    statement: A CORE-Bench task is solved when every reported answer falls within a 95% prediction
+      interval computed from three manual reproductions of the capsule.
+    quotes:
+    - exact: 'For evaluation, we manually reproduced
+
+        each capsule in the benchmark three times. We determine if an agent correctly solves a task
+        if the agent’s
+
+        reported results for all questions fall within a 95% prediction interval for every task question
+        of the results
+
+        from the three manual runs'
+      section: Figure 4 caption

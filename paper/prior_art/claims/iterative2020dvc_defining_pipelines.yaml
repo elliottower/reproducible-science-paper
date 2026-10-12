@@ -1,0 +1,28 @@
+source:
+  citation: iterative2020dvc
+  local: reference/iterative2020dvc_user-guide_pipelines_defining-pipelines_20261011.txt
+  sha256: e41a850a321f12200ce70af96398acdaf1136b45bdbc54d9aba6b16971e840a4
+  url: https://doc.dvc.org/user-guide/pipelines/defining-pipelines
+  extract_cmd: none — the page was rendered to text before pinning
+  note: Fetched 2026-10-11. The page as served is kept beside this file as iterative2020dvc_user-guide_pipelines_defining-pipelines_20261011.html
+    (sha256 486d0e6a850a0f95e2fa12403e6e20a852a05679fb69bf22a633a925d62b0437); the .txt pinned here
+    is that file rendered to text by scripts/render_html_source.py, which breaks the line at every
+    element boundary, so a quotation that crosses inline markup carries a line break there. The bibliography
+    entry is the 2020 software and its URL is the site root; the page pinned here documents DVC as
+    it stood on the fetch date.
+claims:
+  stage-wraps-a-shell-command:
+    statement: A DVC pipeline lists stages, each of which wraps a shell command.
+    quotes:
+    - exact: "Each stage wraps around an executable shell \ncommand\n and specifies any"
+      section: Stages
+  change-detected-by-content-hash:
+    statement: DVC decides whether a stage must run again by comparing a hash of each dependency's
+      contents with the previous one.
+    quotes:
+    - exact: "calculates a hash\n of file/dir contents to compare vs. previous versions."
+      section: Simple dependencies
+    - exact: DVC "invalidates" the stage — it knows that it needs to run again
+      section: Simple dependencies
+    notes: The hash comparison is between a dependency and its earlier version. The page describes
+      no comparison of a rerun's output with an expected value.

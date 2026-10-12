@@ -1,0 +1,33 @@
+source:
+  citation: torresarias2019intoto
+  local: reference/torresarias2019intoto.pdf
+  sha256: 55024dfc786504863c2d3d1932b5010394e09d9d65489e26afb3b050ef493662
+  url: https://www.usenix.org/system/files/sec19-torres-arias.pdf
+  extract_cmd: pdftotext -layout {} -
+  note: Two-column PDF; quotations are single column-line fragments. The PDF linked from the bibliography's
+    URL, which is the presentation page.
+claims:
+  signed-link-for-each-step:
+    statement: Whoever performs a step writes a cryptographically signed statement, link metadata,
+      which records that the step took place.
+    quotes:
+    - exact: parties will record their actions and create a cryptographically
+      section: Section 1
+    - exact: signed statement — called link metadata — for the step they
+      section: Section 1
+    - exact: Link metadata serves as a record that the steps prescribed in
+      section: Section 4.2
+    - exact: the layout actually took place. Its fields show evidence that is
+      section: Section 4.2
+  verifier-checks-signed-records:
+    statement: Verification checks that each step has enough signed link metadata and that artifacts
+      flowed between steps as recorded; its cost is dominated by signature verification.
+    quotes:
+    - exact: checking that all the steps defined have enough
+      section: Section 3
+    - exact: pieces of link metadata; that such links were signed
+      section: Section 3
+    - exact: dominated by the signature verification, and is thus bounded
+      section: Section 7.1
+    notes: The paper does not say that verification never executes. A layout can list inspections,
+      which are commands the verifier runs on the client, and one deployment has independent rebuilders.

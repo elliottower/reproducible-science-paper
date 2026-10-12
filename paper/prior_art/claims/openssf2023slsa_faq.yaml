@@ -1,0 +1,22 @@
+source:
+  citation: openssf2023slsa
+  local: reference/openssf2023slsa_v1.0_faq_20261011.txt
+  sha256: 3ed775df6676eb57065418c0da3bf37a1ab890af7ac11b9c8012fa1014327708
+  url: https://slsa.dev/spec/v1.0/faq
+  extract_cmd: none — the page was rendered to text before pinning
+  note: Fetched 2026-10-11. The page as served is kept beside this file as openssf2023slsa_v1.0_faq_20261011.html
+    (sha256 678133772a0e667475be1fb4093103024abbe315f8c40c8e59ef89f816dd3c46); the .txt pinned here
+    is that file rendered to text by scripts/render_html_source.py, which breaks the line at every
+    element boundary, so a quotation that crosses inline markup carries a line break there. Version
+    1.0 of the specification, the version of the bibliography entry's year; the page carries a banner
+    marking it retired in favor of a later version. The bibliography URL is the site root, which holds
+    no specification text.
+claims:
+  rebuilding-is-optional:
+    statement: SLSA does not require verified reproducible builds; they are one option for meeting
+      its requirements.
+    quotes:
+    - exact: 'Therefore, SLSA does not require verified reproducible builds directly. Instead,
+
+        verified reproducible builds are one option for implementing the requirements.'
+      section: 'Q: What about reproducible builds?'

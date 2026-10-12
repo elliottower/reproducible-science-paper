@@ -1,0 +1,39 @@
+source:
+  citation: chirigati2016reprozip
+  local: reference/chirigati2016reprozip.pdf
+  sha256: d6df93084fa6099c828e16794683b152c3b5b849870cdaf092cdc5419a86fa25
+  url: https://dl.acm.org/doi/pdf/10.1145/2882903.2899401
+  extract_cmd: pdftotext -layout {} -
+  note: 'Two-column PDF; quotations are single column-line fragments. Saved from a browser: the address
+    answers a script with a challenge page. E is the paper''s symbol for the experiment and c for
+    its command.'
+claims:
+  traces-one-execution:
+    statement: ReproZip packs an experiment by tracing the system calls of one execution of its command.
+    quotes:
+    - exact: mand c is prepended with reprozip trace, which runs E
+      section: Section 2.1
+    - exact: while tracing all the system calls; since this is done through
+      section: Section 2.1
+  four-unpackers:
+    statement: ReproZip unpacks into a directory, a chroot, a virtual machine or a container.
+    quotes:
+    - exact: 'S 0 ≈ S. ReproZip supports two additional unpackers: di-
+
+        rectory and chroot. The former unpacks E in a single di-
+
+        rectory: E can be reproduced directly from that directory.'
+      section: Section 2.2.1
+    - exact: a virtual machine and a Docker container are initialized with
+      section: Section 2.2.1
+    - exact: E for the vagrant and docker unpackers, respectively.
+      section: Section 2.2.1
+  directory-unpacker-is-not-isolated:
+    statement: The directory unpacker does not isolate the run from the host system.
+    quotes:
+    - exact: 'that the created directory is not isolated from S 0 . In par-
+
+        ticular, should E use hardcoded absolute paths, they will
+
+        hit the host system instead.'
+      section: Section 2.2.1

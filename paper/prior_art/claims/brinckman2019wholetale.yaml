@@ -1,0 +1,20 @@
+source:
+  citation: brinckman2019wholetale
+  local: reference/brinckman2019wholetale.pdf
+  sha256: f2b50fc916fe40ce543cc8c275f185e83c0fbecb60a74a390e7a6799e16c1824
+  url: https://arxiv.org/pdf/1805.00400
+  extract_cmd: pdftotext -layout {} -
+  note: The arXiv preprint (1805.00400v1), stamped as to appear in Future Generation Computer Systems;
+    the bibliography cites the journal version, which was not obtained. Section and page numbers are
+    the preprint's.
+claims:
+  tale-packages-an-environment:
+    statement: A tale bundles a frontend and data into a research environment built on a Docker image.
+    quotes:
+    - exact: 'A tale bundles a frontend and relevant data into a research
+
+        environment. The environment itself is based on a Docker image—a lightweight, stand-alone,
+        executable
+
+        package that includes everything needed to run a research environment for a tale.'
+      section: Section 5.2

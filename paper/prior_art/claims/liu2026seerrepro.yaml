@@ -1,0 +1,91 @@
+source:
+  citation: liu2026seerrepro
+  local: reference/liu2026seerrepro.pdf
+  sha256: 3eeb85e6c40f9f4ac9258dca3419a0a5ef47edb5b92f60b4a511f19dae26554a
+  url: https://drive.google.com/uc?export=download&id=1RXe-z076bd3jKqP0LkzAto8cMvce0soZ
+  extract_cmd: pdftotext -layout {} -
+  note: Preprint, 47 pages, shared by its authors at a public Google Drive link; the URL is the download
+    address of that file. Not on arXiv on the fetch date.
+claims:
+  corpus-and-reproduction-rate:
+    statement: SEER-Repro is 20 published papers on the SEER cancer registry; across 2,190 atomic
+      claims the pipeline reproduced 77.4%.
+    quotes:
+    - exact: ology, and End Results (SEER) database, a widely used U.S. cancer registry
+      section: Abstract
+    - exact: Repro, a benchmark of 20 published SEER-based papers together with the data
+      section: Abstract
+    - exact: '2,190 atomic claims, our pipeline reproduced 77.4%, while 3.5% were close and 19.2%
+        were not
+
+        reproduced.'
+      section: Section 1
+  agent-writes-and-runs-the-analysis:
+    statement: A coding agent reproduces each finding from the data by writing analysis code and executing
+      it.
+    quotes:
+    - exact: 'The agent
+
+        identifies the relevant data, writes analysis code, and executes it to produce evidence'
+      section: Section 3.1
+  claims-extracted-from-the-published-paper:
+    statement: The claims are extracted from the published paper by a prompted model, and each carries
+      the published value as its reference answer.
+    quotes:
+    - exact: 'Extract findings and atomic claims: First, we extract the empirical findings'
+      section: Section 3.1
+    - exact: 'of a published study that analyzed the SEER cancer registry. Your job is to extract
+        a bank
+
+        of ATOMIC VERIFIABLE CLAIMS'
+      section: 'Appendix H, Prompt 2: Finding extraction'
+    - exact: Each target includes its identifier, claim text, reference answer,
+      section: Appendix F.1
+  tolerance:
+    statement: A numerical claim is reproduced when the relative error is at most 5%, or when the
+      absolute difference is within the precision of the decimal places the target reports.
+    quotes:
+    - exact: 'reproduced if the relative error is at most 5%, while errors greater than 5% and at
+        most 10% are
+
+        counted as close.'
+      section: Section 3.1
+    - exact: Reported precision. If a target specifies d reported decimal places, an absolute difference
+      section: Appendix F.2
+    - exact: This allows an unrounded computation to agree with a rounded published result.
+      section: Appendix F.2
+    notes: The reported-precision bound is half a unit in the last reported decimal place. The formula
+      does not survive text extraction, so the quotation stops before it. A third verdict, close,
+      covers errors between 5% and 10%.
+  model-extracts-the-value-code-applies-the-tolerance:
+    statement: A language model extracts the reproduced result from the agent's report, and deterministic
+      code applies the numerical grading.
+    quotes:
+    - exact: 'An LLM ex-
+
+        tracts the result reported for each atomic claim and assesses its method and answer provenance'
+      section: Appendix F
+    - exact: deterministic code then applies the numerical grading policy.
+      section: Appendix F
+    - exact: 'One judge call receives the reproduction report for an original find-
+
+        ing together with its atomic targets.'
+      section: Appendix F.1
+  outcomes-of-a-perturbed-analysis:
+    statement: A perturbed analysis can be labeled Inconclusive, Unavailable or NotTested, apart from
+      the three labels for a completed comparison.
+    quotes:
+    - exact: 'Inconclusive
+
+        means the evidence cannot support a verdict, Unavailable indicates missing required inputs
+        or
+
+        baseline evidence, and NotTested records comparisons excluded before execution.'
+      section: Section 3.2
+  missing-or-unparseable-value-is-not-reproduced:
+    statement: A required reproduced value that is missing or cannot be parsed is graded not reproduced.
+    quotes:
+    - exact: 'Missing or unparseable required values produce an
+
+        unclear numerical result, which the final policy converts to not reproduced.'
+      section: Appendix F.2

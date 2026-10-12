@@ -1,6 +1,6 @@
 source:
   citation: chudasama2026adduce
-  local: sources/adduce_scoring_20260829.txt
+  local: reference/adduce_scoring_20260829.txt
   sha256: b86fe632b51c050624ce580f4fef1d76efab558a2f5e5bbddfa1a69a23ca0b25
   url: https://raw.githubusercontent.com/QHarshil/adduce/main/src/adduce/scoring.py
   extract_cmd: none - the module is read as the text it is

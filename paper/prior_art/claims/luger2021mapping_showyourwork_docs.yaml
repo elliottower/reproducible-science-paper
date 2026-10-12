@@ -1,0 +1,30 @@
+source:
+  citation: luger2021mapping
+  local: reference/showyourwork_docs_latex_20261011.txt
+  sha256: 2fa2e637665c0290aa0b9a7a4195d63cb5768cd021d58adce459f4f051e4d576
+  url: https://show-your.work/en/latest/latex/
+  extract_cmd: none — the page was rendered to text before pinning
+  note: Fetched 2026-10-11. The page as served is kept beside this file as showyourwork_docs_latex_20261011.html
+    (sha256 f8a2ffd477d1f3bbecf75901387c71c8d002e3a6333d89b070964abe605a2f79); the .txt pinned here
+    is that file rendered to text by scripts/render_html_source.py, which breaks the line at every
+    element boundary, so a quotation that crosses inline markup carries a line break there. The 'latest'
+    documentation of showyourwork, pinned under the key of the paper its Attribution page asks to
+    be cited, because the cited paper does not describe the command quoted here.
+claims:
+  computed-value-inserted-at-build-time:
+    statement: The \variable command includes the content of a generated file in the manuscript and
+      makes that file a dependency of the build, which generates it when it is missing.
+    quotes:
+    - exact: 'command, which allows you to include
+
+        the content of an arbitrary file in your manuscript.'
+      section: The \variable command
+    - exact: 'is that the latter explicitly marks the file as a dependency of
+
+        the manuscript in the workflow graph, which automatically generates the file if
+
+        it is missing and re-builds the article whenever the script or rule that generates
+
+        that file is modified.'
+      section: The \variable command
+    notes: The whole file's content is inserted; nothing is compared.

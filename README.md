@@ -1,7 +1,7 @@
 # Reproducible Science: Machine-Checkable Claims from Preregistration to Publication
 
 The manuscript, its evidence manifest, its results ledger and the artifacts they pin, for the
-paper accepted at the AI for Science workshop (NeurIPS 2026). The toolkit it describes is at
+paper accepted at the AI for Science workshop (NeurIPS 2026). The software it describes is at
 [elliottower/reproducible-science](https://github.com/elliottower/reproducible-science).
 
 ## Check the paper against its own artifacts
@@ -26,7 +26,7 @@ make final       # build, and refuse while any unresolved tag remains
 
 | path | what it is |
 |---|---|
-| `paper/continuous_verification_v15zo_site_ai4sci.tex` | the manuscript |
+| `paper/continuous_verification_v15zu_site_ai4sci.tex` | the manuscript |
 | `paper/appendix_*.tex`, `paper/generated/` | appendices the manuscript inputs; `generated/` is written by `make manifest` |
 | `repro.yaml` | the evidence manifest: claims, assertions, artifact digests |
 | `.results/` | the results ledger: sealed inputs, recorded runs, and each manuscript sentence bound to a run |

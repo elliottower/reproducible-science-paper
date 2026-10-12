@@ -1,0 +1,31 @@
+source:
+  citation: corpas2026clawbio
+  local: reference/clawbio_reproducibility_5ca937c.md
+  sha256: ee2004ffded9244a1642e09e36beb22ec51f0b2b815a5219b06281ab8979c424
+  url: https://raw.githubusercontent.com/ClawBio/ClawBio/5ca937c18aa78bea939c88105ebdb4cf657b4235/docs/reproducibility.md
+  extract_cmd: none — Markdown is read directly
+  note: docs/reproducibility.md at commit 5ca937c18aa78bea939c88105ebdb4cf657b4235, written out with
+    `git show` from a local clone of https://github.com/ClawBio/ClawBio. The URL is the raw address
+    of that blob; the bytes were not fetched from it.
+claims:
+  replay-script-written-by-the-skill:
+    statement: Many ClawBio skills write a replay script, commands.sh, into a reproducibility/ directory
+      beside their output.
+    quotes:
+    - exact: 'Many skills write these files under `<output_dir>/reproducibility/`:'
+      section: What The Bundle Contains
+    - exact: '- `commands.sh`: a replay script for the same skill run'
+      section: What The Bundle Contains
+    notes: 'The guide says many skills, not every skill: ''Do not assume every skill emits the exact
+      same extras.'''
+  outputs-checked-by-sha256:
+    statement: A replay is checked by verifying SHA-256 digests the skill recorded for selected output
+      files.
+    quotes:
+    - exact: '- `checksums.sha256`: SHA-256 digests for selected output files'
+      section: What The Bundle Contains
+    - exact: sha256sum -c reproducibility/checksums.sha256
+      section: Verify Outputs
+    - exact: '`checksums.sha256` only verifies the files that the skill originally recorded for that
+        run.'
+      section: Verify Outputs

@@ -1,0 +1,25 @@
+source:
+  citation: openssf2023slsa
+  local: reference/openssf2023slsa_v1.0_verifying-artifacts_20261011.txt
+  sha256: 8e75052579fc399c7802b89cdcbbd14478b6d58becc8f05c7937999d8a204219
+  url: https://slsa.dev/spec/v1.0/verifying-artifacts
+  extract_cmd: none — the page was rendered to text before pinning
+  note: Fetched 2026-10-11. The page as served is kept beside this file as openssf2023slsa_v1.0_verifying-artifacts_20261011.html
+    (sha256 01052856dda6d2ad681cfa371e3cefae2495c5f05453281e6710ad862e9b2d85); the .txt pinned here
+    is that file rendered to text by scripts/render_html_source.py, which breaks the line at every
+    element boundary, so a quotation that crosses inline markup carries a line break there. Version
+    1.0 of the specification, the version of the bibliography entry's year; the page carries a banner
+    marking it retired in favor of a later version. The bibliography URL is the site root, which holds
+    no specification text.
+claims:
+  verification-compares-a-digest-and-expectations:
+    statement: Verifying an artifact means checking that the provenance statement's subject matches
+      the artifact's digest and that the provenance matches expected values.
+    quotes:
+    - exact: "Verify\n that statement’s \nsubject\n matches the digest of\nthe artifact in question."
+      section: 'Step 1: Check SLSA Build level'
+    - exact: "Ensuring that the values for \nbuildType\n and \nexternalParameters\n in the\nprovenance\
+        \ match the expected values."
+      section: How to verify
+    - exact: You SHOULD compare the provenance against expected values for at least the
+      section: 'Step 2: Check expectations'

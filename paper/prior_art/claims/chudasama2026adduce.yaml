@@ -1,6 +1,6 @@
 source:
   citation: chudasama2026adduce
-  local: sources/adduce_README_20260825.md
+  local: reference/adduce_README_20260825.md
   sha256: 84a533e9f77e14c1573ddb3ef1ab29aac0ecc200f01da9e90d5eba7ecf032c64
   url: https://raw.githubusercontent.com/QHarshil/adduce/main/README.md
   extract_cmd: none — Markdown is read directly

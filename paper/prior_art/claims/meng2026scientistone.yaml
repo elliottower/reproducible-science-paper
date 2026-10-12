@@ -1,0 +1,79 @@
+source:
+  citation: meng2026scientistone
+  local: reference/meng2026scientistone.pdf
+  sha256: 9d4fa9d1e9e6b1cdccfeff02fecbd28b5b961594952a1ac96e00ad135bed0a51
+  url: https://arxiv.org/pdf/2605.26340v1
+  extract_cmd: pdftotext -layout {} -
+claims:
+  autonomous-research-system:
+    statement: ScientistOne is an end-to-end autonomous research system.
+    quotes:
+    - exact: source. Second, ScientistOne, an end-to-end autonomous research system that maintains
+        evidence
+      section: Abstract
+  numeric-sentence-tagged-with-a-log-line:
+    statement: The writer tags each sentence that contains a number with a line of the experiment
+      log, and a verifier compares the two numbers within a 5% relative tolerance.
+    quotes:
+    - exact: 'During paper generation, the writer annotates each sentence containing a number with
+        a
+
+        {source: "experimental_log.md:N"} tag linking it to a specific log line.'
+      section: Section 6.2
+    - exact: 'extracts the number from the sentence and the referenced log line, then checks
+
+        whether they match within a 5% relative tolerance.'
+      section: Section 6.2
+  tags-exist-only-for-its-own-papers:
+    statement: The check that uses the tags applies to ScientistOne alone, because no other system
+      evaluated produces the records.
+    quotes:
+    - exact: 'This check is unique to
+
+        ScientistOne—no other system in the evaluation produces the required provenance records.'
+      section: Section 6.2
+  tags-removed-from-the-final-manuscript:
+    statement: The inline evidence tags are stripped from the final LaTeX.
+    quotes:
+    - exact: stripping all inline evidence annotations from the final
+      section: Appendix B.4
+  audit-reruns-and-compares-with-the-reported-score:
+    statement: Score Verification reruns the submitted solution on the benchmark's golden evaluator
+      and compares the result with the score reported in the paper, which language models extract
+      from the paper.
+    quotes:
+    - exact: 'Score Verification (I1). The paper’s reported score is extracted by LLMs from both TEX
+        and PDF
+
+        files, then compared against scores obtained by re-running the submitted solution on the golden
+
+        evaluator. A paper passes if the two match within an adaptive tolerance that accounts for
+        evaluator
+
+        noise.'
+      section: Section 5
+    - exact: Score Verification uses LLM-based extraction to identify the paper’s reported score from
+      section: Appendix D.1
+  two-of-four-checks-are-majority-votes:
+    statement: Of the four integrity checks, Specification Violation and Method-Code Alignment are
+      judged by a language model under majority vote.
+    quotes:
+    - exact: 'Specification Violation and Method-Code
+
+        Alignment are LLM-judged, with majority vote across multiple independent runs to reduce judgment
+
+        noise.'
+      section: Appendix D.1
+    - exact: Integrity Audit, a post-hoc audit whose four integrity checks—score verification, specification
+        violation,
+      section: Abstract
+  misread-values-sorted-by-hand:
+    statement: A numeric claim passes or fails; the failures are mostly misreads of the extraction
+      heuristic, which the authors sort by manual inspection.
+    quotes:
+    - exact: 'pass (98.1%). The 12 failures are predominantly false positives of the extraction heuristic:
+        hardware'
+      section: Section 6.2
+    - exact: in methodology sections. Manual inspection finds at most 2–4 genuine mismatches among
+        the 12,
+      section: Section 6.2

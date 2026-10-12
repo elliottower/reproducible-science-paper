@@ -6,8 +6,7 @@ The sources the paper's related-work section is checked against.
 |---|---|
 | `claims/` | one file per source: the pinned artifact, its sha256, and the passages quoted from it |
 | `audits/` | the verdict on each of the manuscript's attributed statements, and the reports behind it |
-| `sources/` | web pages the claims are pinned to, as served, with the date in the filename — **not committed** |
-| `reference/` | the publisher copies — **not committed** |
+| `reference/` | every source the claims are pinned to: publisher PDFs, and web pages as served with the date in the filename — **not committed** |
 | `audits/bib_audit.json` | the last `citations audit`: every entry, and what its identifier resolved to |
 | `prior_art_dois.json` | DOI, title, and authors for each entry, resolved from Crossref |
 | `prior_art_arxiv.json` | arXiv identifiers, resolved from the arXiv API |

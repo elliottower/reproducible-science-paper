@@ -1,0 +1,17 @@
+source:
+  citation: gxl2026paperclip
+  local: reference/paperclip_docs_20260825.txt
+  sha256: 48d93928feb492920cb03ee0a30ef57a98ac4ab4cb13beac4d3d3874ae11f3c6
+  url: https://paperclip.gxl.ai/docs
+  extract_cmd: none — the page was rendered to text before pinning
+  note: Fetched 2026-08-25; the same artifact as gxl2026paperclip_docs.yaml, whose note says how it
+    was rendered. A second file so that the first is unchanged.
+claims:
+  invalid-extracted-value-fails-the-paper:
+    statement: In `map` with an output schema, a paper whose extracted value is still invalid after
+      one correction attempt fails.
+    quotes:
+    - exact: Invalid output gets one correction attempt. If the corrected output is still invalid,
+        that paper fails.
+      section: paperclip map
+    notes: The value is read out of a paper by a model, not out of the output of a rerun.

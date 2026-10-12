@@ -1,0 +1,51 @@
+source:
+  citation: nam2026scientisttwo
+  local: reference/nam2026scientisttwo.pdf
+  sha256: 98fb7802ec28beea159895a3de219307e019867b16296dfe4a79e68daaef9a17
+  url: https://arxiv.org/pdf/2609.19644v1
+  extract_cmd: pdftotext -layout {} -
+claims:
+  same-audit-applied-to-its-own-output:
+    statement: ScientistTwo evaluates its generated papers with the CoE Integrity Audit of Meng et
+      al., whose score verification compares reported scores with those from re-executing the repository.
+    quotes:
+    - exact: Table 7 | Integrity Audit results. Evaluation of paper and code integrity following Meng
+        et al. (2026).
+      section: Table 7 caption
+    - exact: '(1) Score verification, which evaluates
+
+        codebase reproducibility by comparing reported scores against those obtained from re-executing
+        the
+
+        repository;'
+      section: Section 4.2
+  every-score-verified-on-49-problems:
+    statement: On the 49 problems of the ablation study, Table 7 reports score verification of 49
+      out of 49 for the full system.
+    quotes:
+    - exact: Here, we evaluate on the 49 target problems sourced from ICML 2026 Spotlight papers.
+      section: Section 4.2
+    - exact: Score Verif. (↑) indicates that every claimed results are reproducible.
+      section: Table 7 caption
+    - exact: 49/49        0/49        0/1814              49/49
+      section: Table 7
+    notes: The table row is quoted without its check marks. The three ablated rows also show every
+      score verified (50/50, 49/49, 49/49).
+  coding-agent-audits-repository-against-manuscript:
+    statement: For method-code alignment, the system's own Coding Agent audits the repository against
+      the manuscript.
+    quotes:
+    - exact: 'Finally, for method-code alignment, the Coding Agent audits the repository against the
+
+        manuscript to produce an audit report,'
+      section: Section 4.2
+  rerun-covers-the-proposed-method-only:
+    statement: In the reproducibility audit report the paper reproduces, the agent reran the proposed
+      method and not the baseline.
+    quotes:
+    - exact: Per the requirements, I only audited the Ours method (not the baseline). Numbers match
+        exactly — far within any
+      section: Appendix C
+    notes: One audit report, reproduced as an example for one task. The paper does not state as a
+      rule that reruns exclude the baseline. 'reasonable tolerance', which ends the quoted sentence,
+      is the only use of the word tolerance in the paper.

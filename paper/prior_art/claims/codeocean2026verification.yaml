@@ -1,0 +1,33 @@
+source:
+  citation: codeocean2026verification
+  local: reference/codeocean2026verification_20261011.txt
+  sha256: 2aec161b9bbd8fd872a5002debf6809d490499a8dbbe88cfa3d0ff0bffe84657
+  url: https://docs.codeocean.com/osl-guide/publishing-on-code-ocean/the-verification-process/code-oceans-verification-process-for-computational-reproducibility-and-quality
+  extract_cmd: none — the page was rendered to text before pinning
+  note: Fetched 2026-10-11. The page as served is kept beside this file as codeocean2026verification_20261011.html
+    (sha256 a0f8934009f65ebde5de5f1da263ea135b93890ddf49826545089e8c729dd5b1); the .txt pinned here
+    is that file rendered to text by scripts/render_html_source.py, which breaks the line at every
+    element boundary, so a quotation that crosses inline markup carries a line break there. The bibliography
+    entry says the page was read on 2026-08-27; no copy from that date was kept, and this is the page
+    as served on the fetch date.
+claims:
+  capsule-packages-an-environment:
+    statement: 'A Code Ocean capsule carries a built environment: installs run once when the environment
+      is built, and the libraries are part of the capsule''s Docker image.'
+    quotes:
+    - exact: ', will be executed just once, when the environment is built, and then have their results
+        cached into the environment.'
+      section: Checklist item 4
+    - exact: the installed libraries are also part of the Docker image available for download via
+      section: Checklist item 4
+  mechanical-reproducibility-not-agreement-with-the-article:
+    statement: Code Ocean verifies that pressing run yields results that repeat, and does not check
+      results against the article.
+    quotes:
+    - exact: All capsules published on Code Ocean are verified for computational reproducibility and
+        quality.
+      section: Opening paragraph
+    - exact: 'We do not. We are not performing peer review. Our verification process ensures that
+        results are reproducible in the mechanical sense of: a user presses the ''run'' button and
+        gets results'
+      section: Closing question

@@ -1,0 +1,46 @@
+source:
+  citation: nust2021codecheck
+  local: reference/nust2021codecheck.xml
+  sha256: 35fad6f093486efc98d3056e98438a4ce0e676b99a00a8b1939cb5db4763f0e0
+  url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8311796/fullTextXML
+  extract_cmd: none — JATS XML is read directly
+  note: Europe PMC full text of version 2 of the article. The markup is read as it stands, so each
+    quotation stops where an element begins; 'identical' is italicized in the sentence the second
+    quotation comes from, which is why that quotation starts after it.
+claims:
+  a-codechecker-runs-and-judges:
+    statement: A codechecker runs the code on the author's instructions and checks whether results
+      of the paper can be reproduced.
+    quotes:
+    - exact: The codechecker runs the code, based on instructions provided by the author. They check
+        if some or all of the results from the paper can be reproduced.
+      section: What is a CODECHECK? Step 3
+  identical-results-not-required:
+    statement: A CODECHECK passes when the code runs and generates the output files the author claims;
+      identical results are not required, and the judgment is a person's.
+    quotes:
+    - exact: for a CODECHECK to pass but simply that the code runs and generates output files that
+        the author claims
+      section: Limitations
+    - exact: the flexibility of the human judgement is still needed, rather than bitwise reproducibility
+      section: Limitations
+  no-process-for-a-failed-check:
+    statement: CODECHECK has no process for denoting a reproduction that fails.
+    quotes:
+    - exact: We do not yet have a process for denoting if a reproduction fails, as our case-studies
+        were all successful.
+      section: Limitations
+  manifest-ties-an-output-file-to-a-figure-by-a-comment:
+    statement: The certificate lists each output file of the manifest with a comment stating which
+      figure or table of the paper it should be compared with.
+    quotes:
+    - exact: the description stating to which figure/table each file should be compared in the original
+        paper (Comment)
+      section: Implementation
+  run-judged-as-a-whole:
+    statement: A badge reduces a CODECHECK to a binary value.
+    quotes:
+    - exact: a badge simplifies the CODECHECK into a binary value
+      section: What is a CODECHECK? Step 5
+    notes: Offered for the manuscript's 'judge the run as a whole'. The certificate itself states
+      which outputs could be reproduced, so the binary value is the badge's, not the certificate's.

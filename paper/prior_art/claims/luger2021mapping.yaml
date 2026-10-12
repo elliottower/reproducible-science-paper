@@ -1,0 +1,19 @@
+source:
+  citation: luger2021mapping
+  local: reference/luger2021mapping.pdf
+  sha256: c3cfc05b9f613ed4bfcddd3aa18018ff421ed83b95e3b4f9094a8f102d6f8f97
+  url: https://arxiv.org/pdf/2110.06271v1
+  extract_cmd: pdftotext -layout {} -
+  note: The paper the showyourwork documentation asks to be cited. The workflow's name is typeset
+    as a logo and is absent from the extracted text.
+claims:
+  figure-scripts-linked-from-the-article:
+    statement: The paper was prepared with a workflow that exposes the data, source code and dependencies
+      behind its figures, each of which links to the script that generated it.
+    quotes:
+    - exact: workflow, which exposes the data, source code, and package dependencies
+      section: Abstract
+    - exact: icons next to each figure link to the exact version of the
+      section: Section 1
+    notes: The paper describes scripts that generate figures. It does not describe inserting a computed
+      value into the text; that is in the documentation, pinned in luger2021mapping_showyourwork_docs.yaml.

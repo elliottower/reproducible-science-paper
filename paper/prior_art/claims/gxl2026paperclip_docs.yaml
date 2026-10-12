@@ -1,6 +1,6 @@
 source:
   citation: gxl2026paperclip
-  local: sources/paperclip_docs_20260825.txt
+  local: reference/paperclip_docs_20260825.txt
   sha256: 48d93928feb492920cb03ee0a30ef57a98ac4ab4cb13beac4d3d3874ae11f3c6
   url: https://paperclip.gxl.ai/docs
   extract_cmd: none — the page was rendered to text before pinning
