@@ -1,10 +1,10 @@
 # The manuscript `make paper` builds and `make manifest` pins. This is the one place the draft is
 # named: the manifest generator takes it as an argument.
-PAPER ?= continuous_verification_v15zu_site_ai4sci
+PAPER ?= continuous_verification_v15zzn_ai4sci
 
 # Every standalone supplement. Each is built by `make supplement`, and `make paper` builds them
 # alongside the manuscript, so a supplement cannot go stale while the paper is rebuilt.
-SUPPLEMENTS := supplement_defects
+SUPPLEMENTS := supplement_defects_v15zzb
 
 # Versions are pinned so a rebuild resolves the packages the last one did.
 PY := uv run --no-project --with pyyaml==6.0.2 --with pydantic==2.9.2
@@ -13,12 +13,22 @@ PY := uv run --no-project --with pyyaml==6.0.2 --with pydantic==2.9.2
 
 # The generated appendix, the counts derived from the catch logs, then the manifest that pins
 # both. In that order: the manifest records the digest of each file as it finds it.
+# The count of numbers the manifest accounts for is read from the manifest, which pins it, so the
+# manifest is built, the count derived, and the manifest built again to pin the new count.
 manifest:
 	@$(PY) python scripts/build_audit_appendix.py
 	@$(PY) python scripts/derive_audit_counts.py
 	@$(PY) python scripts/derive_bibliography_audit.py
 	@$(PY) python scripts/derive_codecheck_counts.py
-	@$(PY) --with reproducible-science==0.5.2 python scripts/build_manifest.py --paper $(PAPER)
+	@$(PY) python scripts/derive_catch_log_counts.py
+	@$(PY) python scripts/derive_command_counts.py
+	@$(PY) python scripts/derive_extractor_spread.py
+	@$(PY) python scripts/derive_codecheck_paper_numerals.py
+	@$(PY) python scripts/derive_layout_failures.py
+	@$(PY) --with reproducible-science==0.6.0 python scripts/derive_body_claims.py --paper $(PAPER)
+	@$(PY) --with reproducible-science==0.6.0 python scripts/build_manifest.py --paper $(PAPER)
+	@$(PY) python scripts/derive_number_coverage.py
+	@$(PY) --with reproducible-science==0.6.0 python scripts/build_manifest.py --paper $(PAPER)
 
 # Every declared claim against the artifact it names, from the manifest at the repository root.
 # Add `--regenerate` to run the commands the manifest records for its generated files.

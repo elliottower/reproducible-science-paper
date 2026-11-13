@@ -1,0 +1,21 @@
+source:
+  citation: yin2026observability
+  local: reference/yin2026observability_arxiv_2608.18312.pdf
+  sha256: 218e6d33a47c9030a7cc4f6563b299ae0a797d4982fcbf833f0665282adeaceb
+  url: https://arxiv.org/pdf/2608.18312
+  extract_cmd: pdftotext -layout {} -
+claims:
+  claims-as-records-with-evidence-bindings:
+    statement: Yin et al. propose a trace profile for autonomous scientific agents in which a claim
+      is an ordinary record whose evidence bindings hold which field was read, which value was extracted
+      and what comparison was made.
+    quotes:
+    - exact: 'We propose a compact observability profile organized around individuals,
+
+        operators, fitness records, lineage, archives, runs, streams, and steering commands.'
+      section: Abstract
+    - exact: scientific claims are ordinary individuals with explicit evidence bindings and verification
+        records
+      section: Abstract
+    - exact: which field was read, which value was extracted, what comparison was made
+      section: Claims as individuals

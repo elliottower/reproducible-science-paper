@@ -1,0 +1,22 @@
+source:
+  citation: shen2026reagent
+  local: reference/shen2026reagent_arxiv_2609.22111.pdf
+  sha256: 4678af64ff6bcf796f6fcedda53db0d4436501639e99fe4c12743a4acc7d02e9
+  url: https://arxiv.org/pdf/2609.22111
+  extract_cmd: pdftotext -layout {} -
+claims:
+  agent-audit-of-agent-written-papers:
+    statement: ReAgent has language-model agents write a claim contract per claim and audit agent-written
+      documents against their repositories; on 96 repositories its audit agrees with manual annotation
+      for 70.83%, and 28 hold at least one static inconsistency.
+    quotes:
+    - exact: Each claim contract records the claim type
+      section: Static Claim Verification
+    - exact: Overall, ReAgent achieves 70.83% audit accuracy
+      section: RQ1
+    - exact: Among the 96 repositories, 28 contain at least one static
+      section: RQ2
+    - exact: Evaluation Protocol We manually audit all repositories to
+      section: Evaluation Protocol
+    - exact: establish ground truth.
+      section: Evaluation Protocol

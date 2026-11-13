@@ -1,0 +1,23 @@
+source:
+  citation: schemaorg2026claimreview
+  local: reference/schemaorg2026claimreview_20261014.txt
+  sha256: b5377f88d152d20b04829fe9610edbc1db9004dbc6bdbac395916b874a072810
+  url: https://schema.org/ClaimReview
+  extract_cmd: none — the page was rendered to text before pinning
+  note: Fetched 2026-10-14. The page as served is kept beside this file as schemaorg2026claimreview_20261014.html
+    (sha256 eb278bd7eaa627ed90f8dc67fa31993f2285c3f00fb41817a1ed6ab3445a09ed); the .txt pinned here
+    is that file rendered to text by scripts/render_html_source.py, which breaks the line at every
+    element boundary, so a quotation that crosses inline markup carries a line break there. The bibliography
+    entry cites release 30.0; the usage band is the one the page printed on the fetch date.
+claims:
+  definition-and-usage:
+    statement: ClaimReview is a fact-checking review of claims made or reported in a creative work,
+      and Schema.org reports it on 1K to 10K domains.
+    quotes:
+    - exact: A fact-checking review of claims made (or reported) in some creative work (referenced
+        via itemReviewed).
+      section: ClaimReview
+    - exact: 1K - 10K Domains
+      section: ClaimReview
+    - exact: Based on monthly aggregations from Google's web index.
+      section: ClaimReview

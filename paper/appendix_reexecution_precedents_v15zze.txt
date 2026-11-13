@@ -1,0 +1,148 @@
+Precedents for Re-execution
+The repro manifest, repro.yaml, lists each command to rerun, the input files the
+command reads, and the numbers the manuscript prints from its output. repro reproduce
+reruns each listed command in a directory that holds only that command's declared inputs, and
+then compares every number the manuscript prints from the output with the value at its declared
+address. Table sets each
+of its design choices beside the closest earlier system and states the difference. Most choices
+have a direct precedent. Three do not, in the sources read: an outcome for a rerun whose number
+could not be read, a label on a step that ran after an upstream failure, and a comparison of a
+printed value with a declared address in an output file that stays with the project.
+Design choices of repro reproduce, the closest precedent for each, and the
+difference. Rerunning is common and is specified in many ways; a mechanical comparison against
+the numbers a manuscript prints, with outcomes that keep a rerun that did not happen apart from
+a rerun that disagreed, is where the command departs from the systems before it.
+@> p0.15 L> p0.27 @
+Design choice | Closest precedent | Difference
+Commands to rerun are declared in a manifest |
+DVC lists stages that wrap shell commands; Snakemake states rules from
+input files to output files; ReproZip traces one execution
+; many ClawBio skills write a replay script when they run
+. |
+A regeneration is declared beside the claims that read its output.
+Each command runs with only its declared inputs |
+ReproZip unpacks into a directory, a chroot, a virtual machine or a container
+; Code Ocean, Whole Tale and Binder package an environment
+. |
+A directory of declared inputs and no container: an input that was not declared is absent.
+Success is that the printed numbers still hold |
+A codechecker judges, and identical results are not required; ACM
+badges ask for agreement within a tolerance; CORE-Bench accepts answers
+inside an interval from three reruns; SEER-Repro accepts a relative
+error of at most 5%, or a difference of at most half a unit in the last decimal the paper
+reports; DVC compares a dependency's contents with their previous
+version to decide whether a stage is rerun; ClawBio gives checksums of
+selected output files for a reader to check. |
+Each number the manuscript prints is compared mechanically, and the bytes need not match.
+Outcomes are kept apart |
+A study of notebooks counts separately those whose dependencies failed to install, those that
+failed in execution, those that finished with different results and those that finished with
+the same; ReproScore leaves its outcome score
+undefined without execution evidence; SEER-Repro labels a perturbed
+analysis inconclusive, unavailable or not tested, and counts a reproduced value that is missing
+or unparseable as not reproduced; CODECHECK has no process for
+a failed check. |
+Five outcomes are recorded for every regeneration, and one that was not rerun never reads as
+reproduced.
+A rerun whose number cannot be read is unchecked |
+Paperclip fails a paper whose extracted value is invalid; ScientistOne
+sorts its extraction misreads by hand. |
+The case has its own recorded outcome.
+A step after a failure still runs, and is labeled |
+DVC can skip or run the dependents of a failed stage; Snakemake deletes
+the outputs of an incomplete rule. |
+The dependent step runs over the pinned copy, and its record says so.
+Every invocation is appended to a log |
+Workflow Run RO-Crate packages a run; AiiDA records each process in a
+provenance graph; in-toto writes a signed link for each step
+; DVC keeps the current state in a lock file
+. |
+One append-only file beside the project holds what each invocation observed.
+Checking never executes |
+SLSA verification compares a digest and expectations, and rebuilding is optional
+; an in-toto verifier checks signed records of steps
+; DVC has a dry run. |
+repro verify and repro reproduce are separate commands with separate guarantees.
+A printed value is compared with a declared address in an output file |
+ScientistOne tags each numeric sentence with a log line and compares within 5%
+; when the document is built, Sweave inserts the output of its code chunks and showyourwork
+regenerates each figure from its script; a CODECHECK manifest ties an output file to a
+figure by a comment. |
+The address is declared, resolved and compared, an ambiguous address is an outcome, and the
+record stays with the project.
+Chain-of-Evidence. ScientistOne is an autonomous
+research system whose writer tags each sentence that holds a number with a line of its
+experiment log, and whose audit reruns submitted code and compares the result with the reported
+score. repro reproduce differs from it in five ways. (1) Who can use it. The
+tags exist only for papers that ScientistOne itself writes, and its audit needs a benchmark's
+own evaluator; the repro manifest is written for any project, by a person or an agent, and
+lists the author's own commands. (2) What the reader receives. ScientistOne removes the tags from
+the final manuscript; the manifest, the pinned inputs and the log of reruns stay in the
+repository, so a reader repeats the check from a clone. (3) How a check is decided. Its
+audit has a language model read the reported score out of the paper, and two of its four checks
+are majority votes of a language model; every claim in the manifest is machine-checkable, in
+that the number the manuscript prints is compared, as a decimal at the precision printed, with
+the value at its declared address in the rerun output, and no language model takes part. (4) What is fixed beforehand. A regeneration
+runs only on inputs whose bytes match their pins, and a changed input is reported as
+not re-run; the ScientistOne paper describes no digest of an input or an output. (5) What a result can be.
+Its numeric check passes or fails, and its authors sort the misread values by hand;
+unchecked, failed and not re-run are outcomes of their own, so a check that
+could not be made is never counted with those that passed. ScientistTwo applies the same audit
+to its own output and reports every score verified on 49 target problems
+. Its coding agent audits the repository against the manuscript, the
+rerun in the one audit report the paper reproduces covers the proposed method and not the
+baseline, and the paper states no tolerance for a score to count as verified.
+Claims bound to files. SciTeX Clew links a manuscript claim to the session that
+produced its source file and traces backward from the claim through outputs, scripts and inputs
+to the raw data, verifying every hash. PaperDelta traces a manuscript's
+statements to declared experiment evidence in exact decimal arithmetic and never runs the
+experiment scripts. Both check a claim without a rerun. repro
+reproduce reruns the declared command, and the comparison of a printed value with its declared
+address is the last of three stages, so a rerun that did not happen and a value that could not be
+read are outcomes of their own.
+Claims as records. Blueprints represent a project's claims, evidence, assumptions and
+definitions as typed graph components, and every structural rule over the graph is a warning
+. propose a trace profile for autonomous
+scientific agents in which a claim is an ordinary record whose evidence bindings hold which field
+was read, which value was extracted and what comparison was made. repro verify makes that
+comparison against the file on disk, and a failed comparison stops the build under the strict
+policy.
+Reproduction by an agent. SEER-Repro has a coding agent re-derive 2,190 atomic claims
+of 20 published cancer-registry papers from the registry data, and reproduces 77.4% of them
+. A language model extracts each reproduced value from the agent's
+report, and deterministic code then applies the tolerance. The two designs start from opposite
+ends. In SEER-Repro a model extracts the claims from a published paper, the reference is the
+published number, and the analysis is rewritten by the agent; in the repro manifest the
+author declares each claim and its address, the reference is the project's own output, and the
+command that is rerun is the author's.
+Audit by an agent. ReAgent audits research documents written by autonomous agents
+against their repositories. Language-model agents write a claim contract
+for each claim, which records the claim type, the datasets, the metrics, the settings and the
+reported results, then inspect the code and rerun the experiments. On 96 agent-written
+repositories its audit decisions agree with manual annotation for 70.83%, and 28 of the 96 hold
+at least one static inconsistency. ReAgent asks whether the code implements the method the
+document describes, which repro does not check, and repro decides the comparison
+of a printed value with a file without a language model.
+Formal verification in mathematics. Lean has a relatively small trusted kernel
+. A proof left unfinished holds the placeholder sorry, and
+#print axioms lists the axioms a theorem uses. A Lean blueprint
+relates the statements of a paper to their formal counterparts: a statement is marked when it is
+fully formalized, and the statements it uses form a dependency graph
+. As in Lean, the check in repro is a small deterministic
+program whose outcome the author does not set, and what the record does not establish is listed
+beside what it does. An empirical claim has no proof, so the check is a
+comparison of a printed value with a file, and repro why lists the files no command is
+recorded for and the choices nothing checks.
+Checklists and badges. The machine learning reproducibility checklist asks an author
+to state what a paper includes, and an ACM badge records that
+the main results were obtained in a later study by a team other than the authors
+. Neither specifies what is rerun or
+compares a printed number with an output. The repro manifest states what is rerun, as a
+list of commands and the input files each reads, and the log of repro reproduce records
+for every printed number whether the rerun output still holds it.
+Verification in other fields. The philosophy of measurement separates an instrument's reading from the result inferred from the
+reading, and an extractor is an instrument in this sense: in
+Section, six extractors read the same bytes and returned six results. In formal
+verification, many early automated theorem provers performed proofs without recording them, so a
+result could not be checked afterwards; here every verdict is
+stored with its pinned artifacts.

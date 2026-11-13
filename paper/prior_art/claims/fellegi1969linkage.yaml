@@ -21,7 +21,9 @@ claims:
     statement: The optimal linkage rule minimizes the probability of failing to make a positive disposition
       at fixed levels of the two error rates. A possible link is resolved by hand.
     quotes:
-    - exact: ently, it minimizes the probability of failing to make a positive disposition.
+    - exact: 'or, put differ-
+
+        ently, it minimizes the probability of failing to make a positive disposition.'
       section: Section 2
     - exact: This seems a reasonable approach since in applications the decision Az will require expensive
         manual linkage operations
@@ -30,7 +32,11 @@ claims:
     statement: Exhaustive pairwise comparison is infeasible, so comparisons are restricted to a subspace
       by blocking the files.
     quotes:
-    - exact: sons (1010)would outstrip the economic capacity of even the largest and fastest
+    - exact: 'the number of compari-
+
+        sons (1010)would outstrip the economic capacity of even the largest and fastest
+
+        computers.'
       section: Section 3
     - exact: Thus the number of comparisons we will examine explicitly will be restricted
       section: Section 3

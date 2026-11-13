@@ -15,6 +15,14 @@ claims:
       section: Section 2.1
     - exact: while tracing all the system calls; since this is done through
       section: Section 2.1
+  self-contained-package:
+    statement: ReproZip creates a self-contained package for an experiment by tracking and identifying
+      all its required dependencies.
+    quotes:
+    - exact: ity in mind. The tool creates a self-contained package for an
+      section: Abstract
+    - exact: experiment by automatically tracking and identifying all its
+      section: Abstract
   four-unpackers:
     statement: ReproZip unpacks into a directory, a chroot, a virtual machine or a container.
     quotes:
@@ -24,9 +32,9 @@ claims:
 
         rectory: E can be reproduced directly from that directory.'
       section: Section 2.2.1
-    - exact: a virtual machine and a Docker container are initialized with
-      section: Section 2.2.1
-    - exact: E for the vagrant and docker unpackers, respectively.
+    - exact: 'a virtual machine and a Docker container are initialized with
+
+        E for the vagrant and docker unpackers, respectively.'
       section: Section 2.2.1
   directory-unpacker-is-not-isolated:
     statement: The directory unpacker does not isolate the run from the host system.

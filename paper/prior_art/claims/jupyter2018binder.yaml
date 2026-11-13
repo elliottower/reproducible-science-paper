@@ -16,3 +16,15 @@ claims:
       section: Deterministic environment building - Repo2Docker
     - exact: specified by the configuration files, and that is meant to
       section: Deterministic environment building - Repo2Docker
+  interactive-environments-from-repositories:
+    statement: Binder is a web service that creates sharable, interactive, reproducible environments
+      in the cloud from existing repositories, capturing a repository and its environment in a container.
+    quotes:
+    - exact: Abstract—Binder is an open source web service that lets users create sharable,
+      section: Abstract
+    - exact: interactive, reproducible environments in the cloud.
+      section: Abstract
+    - exact: analytics community, aiming to create interactive versions of repositories that
+      section: Abstract
+    - exact: creating containers to capture a code repository and its
+      section: An overview of Binder

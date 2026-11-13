@@ -1,0 +1,93 @@
+{
+  "source": {
+    "path": "paper/artifacts/codecheck_agreement_summary.json",
+    "sha256": "85de6ed1b4c83357f87c499fc5f10f5458cd8b7854f0376d05d1d4db5f6db6db"
+  },
+  "definition": "|paper - stored| / |stored|, from the numerals the source stores",
+  "differences": [
+    {
+      "certificate": "2022-001",
+      "claim": "t2-n011",
+      "paper": "30.33",
+      "stored": "30.3484535251829",
+      "relative_to_file": "0.0006080548772472842753509454714806036256922"
+    },
+    {
+      "certificate": "2022-001",
+      "claim": "t2-n021",
+      "paper": "21.80",
+      "stored": "21.8124005522565",
+      "relative_to_file": "0.0005685092856603148522736760184721827907345"
+    },
+    {
+      "certificate": "2022-001",
+      "claim": "t2-n046",
+      "paper": "84,154.56",
+      "stored": "84193.91610717",
+      "relative_to_file": "0.0004674459745987324654462424776408570147899"
+    },
+    {
+      "certificate": "2022-001",
+      "claim": "t2-n049",
+      "paper": "827,067.40",
+      "stored": "827067.431388958",
+      "relative_to_file": "3.795211467496200002132127289111801615462E-8"
+    },
+    {
+      "certificate": "2022-001",
+      "claim": "t2-n051",
+      "paper": "3,132.90",
+      "stored": "3134.36208840873",
+      "relative_to_file": "0.0004664708056982277369821745294997569548696"
+    },
+    {
+      "certificate": "2022-001",
+      "claim": "t2-n052",
+      "paper": "4,984.44",
+      "stored": "4984.43486993302",
+      "relative_to_file": "0.000001029217376466379021996473206378424155307"
+    },
+    {
+      "certificate": "2022-001",
+      "claim": "t2-n056",
+      "paper": "28.20",
+      "stored": "28.2116089823114",
+      "relative_to_file": "0.0004114966402192373880618437063433967408249"
+    },
+    {
+      "certificate": "2022-001",
+      "claim": "t3-n024",
+      "paper": "5.273",
+      "stored": "5.27309834788795e-07",
+      "relative_to_file": "9999812.491269341882128068694593679916176"
+    },
+    {
+      "certificate": "2025-018",
+      "claim": "t2-n012",
+      "paper": "12.659",
+      "stored": "12.658474978",
+      "relative_to_file": "0.00004147592825458599251496660026814171579903"
+    },
+    {
+      "certificate": "2025-018",
+      "claim": "t2-n029",
+      "paper": "3.1",
+      "stored": "2.897432",
+      "relative_to_file": "0.06991294359971174474500178088735128210084"
+    },
+    {
+      "certificate": "2025-018",
+      "claim": "t2-n047",
+      "paper": "610.8",
+      "stored": "611.442908",
+      "relative_to_file": "0.001051460392439452417362897927340094359227"
+    },
+    {
+      "certificate": "2025-018",
+      "claim": "t2-n057",
+      "paper": "2310.8",
+      "stored": "2329.968132",
+      "relative_to_file": "0.008226778614154882355275063478851048937866"
+    }
+  ]
+}

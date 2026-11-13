@@ -1,0 +1,30 @@
+schema_version: repro/1
+project: 'the worked example of Section 3: one claim of this paper''s manifest'
+artifacts:
+- id: manuscript-text
+  path: ../../paper/continuous_verification_v15zzn_ai4sci.txt
+  media_type: text/plain
+  digest:
+    algorithm: sha256
+    value: e9784f77f24547c355c31da3ab2a9390101332979bf82991923be43eed8c2bf5
+- id: conformance
+  path: ../../paper/artifacts/conformance_inventory.json
+  media_type: application/json
+  digest:
+    algorithm: sha256
+    value: b9840b9d847f0cb4642f3c6c4b9ff7266e5d59f956f0e43c33adfa6c7b23639e
+claims:
+- id: conformance-fixtures
+  registration: not_applicable
+  registration_note: exhaustive deterministic count over pinned inputs
+  where: Appendix A
+  text: The manuscript states 25 for conformance-fixtures.
+  evidence:
+  - kind: quote
+    artifact: manuscript-text
+    text: The suite holds 25 fixtures
+  - kind: metric
+    artifact: conformance
+    name: conformance-fixtures
+    reported: '25'
+    pointer: /fixtures

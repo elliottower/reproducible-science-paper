@@ -1,0 +1,21 @@
+source:
+  citation: watanabe2026clew
+  local: reference/scitex_clew_claim_verify_44b9426.txt
+  sha256: e09a8fb005ab757599e66bb98f527bab705fefd91cb054dbe4a614aef3c41094
+  url: https://raw.githubusercontent.com/scitex-ai/scitex-clew/44b9426732b00e0b84b7b27f31684a5d9c3500f5/src/scitex_clew/_claim/_verify.py
+  extract_cmd: none - the module is read as the text it is
+  note: The claim-verification module of scitex-clew 0.21.0 at commit 44b9426, byte-for-byte, stored
+    with a .txt suffix. verify_claim hashes the claim's source file and compares that hash with the
+    one recorded at registration, then walks the provenance chain; no line of it reads the claim's
+    value.
+claims:
+  source-hash-checked:
+    statement: Clew verifies a claim by hashing its whole source file and comparing the hash with
+      the one recorded at registration, then checking the provenance chain.
+    quotes:
+    - exact: Verify a specific claim by checking its source against the verification chain.
+      section: verify_claim
+    - exact: '# Check source file exists and hash matches'
+      section: verify_claim
+    - exact: current_hash = hash_file(source_path, hash_cache=hash_cache)
+      section: verify_claim

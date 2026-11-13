@@ -12,7 +12,7 @@ claims:
     quotes:
     - exact: new task to select abstracts from the research literature containing evidence
       section: Abstract
-    - exact: ports or R EFUTES a given scientific claim,
+    - exact: PORTS or R EFUTES a given scientific claim
       section: Abstract
     - exact: and to identify rationales justifying each de
       section: Abstract

@@ -1,0 +1,17 @@
+source:
+  citation: goldacre2019compare
+  local: reference/compare_trials.txt
+  sha256: 240d80676b1ffe7e169cc136726498dc8ea099ba8fcc2d69c0ebc848a831f356
+  extract_cmd: none - the text is read as it is
+  note: 'The source text the reproducible-science-codecheck repository pins for failure case 25 (failure_cases/claims/compare_trials.yaml,
+    the same sha256): the COMPare study, Goldacre et al., Trials, 2019. Pinned here for the counts the
+    failure-cases table prints beside that case.'
+claims:
+  sixty-seven-trials:
+    quotes:
+    - exact: We assessed 67 trials in total, a mean of 13.4 trials per journal (range 3–24).
+      section: Results
+  five-journals:
+    quotes:
+    - exact: We prospectively selected five leading academic journals
+      section: Methods

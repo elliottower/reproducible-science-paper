@@ -20,7 +20,9 @@ claims:
       section: dvc.lock file
     - exact: "DVC will maintain a \ndvc.lock\n file for each \ndvc.yaml"
       section: dvc.lock file
-    - exact: ', including a content hash field ('
+    - exact: Regular dependency entries and all forms of output entries (including metrics and plots
+        files) are also listed (per stage) in dvc.lock , including a content hash field ( md5 , etag
+        , or checksum ).
       section: dvc.lock file
     notes: The page describes a record of the pipeline's state. That the file holds no history of
       invocations is the manuscript's reading of that description.

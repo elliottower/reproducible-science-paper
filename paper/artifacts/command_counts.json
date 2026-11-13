@@ -1,0 +1,40 @@
+{
+  "generated_by": "scripts/derive_command_counts.py",
+  "records": [
+    {
+      "path": "paper/audit/cross_design_audit.json",
+      "sha256": "1d3628ae4786977633395741c546549c049a8060a8cee9c37409962c638d7edc"
+    },
+    {
+      "path": "paper/audit/knockout_audit.json",
+      "sha256": "667f4c06b033ea5e003290557cb219a77a8d79eeca32457347c20bd71d83b7cc"
+    }
+  ],
+  "audits": {
+    "cross_design": {
+      "reg_total": 6,
+      "reg_unchanged": 4,
+      "reg_appended": 1,
+      "reg_changed": 1,
+      "cit_found": 175,
+      "cit_library": 67,
+      "bib_checked": 74,
+      "bib_agree": 64,
+      "bib_disagree": 10
+    },
+    "knockout": {
+      "files_ok": 8,
+      "files_resealed": 4,
+      "files_recorded": 12
+    }
+  },
+  "census": {
+    "record": {
+      "path": "paper/audit/census_audit.json",
+      "sha256": "9e4f34d49aeb011691ab7c0d82809b7c590b7aa2718b42ecc36c35cc31010c27"
+    },
+    "hashes_by_resealed_file": {
+      "experiments/02_claims_meta/tests/test_classify_failed_spans.py": 2
+    }
+  }
+}

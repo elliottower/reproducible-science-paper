@@ -1,0 +1,58 @@
+Audit: Literature census of 43,462 abstracts
+Description. A preregistered literature census of proteome-wide Mendelian randomization
+papers, in progress. Registration: https://osf.io/zae8c. Repository: https://github.com/elliottower/proteome-mr-claim-audit, audited at commit d833d00 (62f181c before the history rewrite described below).
+It counts how often a protein–outcome claim is repeated, and how often the repeats rest on
+overlapping data. The frozen plan is registered on the Open Science Framework (OSF) through
+prereg register, and the plan's log records the registration and each amendment.
+The repository carries 1 frozen plan with 194 log lines, 233
+ledger events, 40 runs, 3,508 claim records and 23,939 quotations.
+Example Finding. results verify --files reports one sealed test file as recorded
+with 2 different hashes: it was corrected in place and sealed again, against the study's rule that
+a fix is a new file. No command clears the report.
+Literature census: what each command found in the repository, and what it could not establish. Exit 0 is a pass, 1 a finding, and 2 nothing to read.
+command | exit | what it found | what it could not establish
+prereg | 0 | 1 plan, unchanged against the digest recorded when it was frozen | whether the plan answers the question
+results | 1 | chain intact at 233 events; 373 of 374 recorded files match their digest and 1 carries 2 recorded digests | which run a reported number came from, no number being in a manuscript yet
+citations | 1 | 13,989 of 13,989 pinned source sentences and 2,167 of 2,167 pinned sentences behind the dataset codes found in their stored sources; 7,783 quotations in the repository's own claims folder unchecked, their sources not being in the repository | whether a found sentence was read correctly
+repro | 0 | 5 of 5 assertions verified | any count of the census, the assertions covering the search counts the plan states
+Application: Use during the study
+The census is conducted with the toolkit. A census of this size, run by a language model and by
+coding agents in separate sessions, could not be audited or called confirmatory without the records
+of Table. Each extraction can be checked against its source sentence, and each
+rule is dated against what had been seen.
+The record kept at each stage of the census, and the command that keeps it. A review of
+this kind ordinarily reports one count per stage.
+Stage | Command | Record
+plan | | one plan frozen before screening, and 194 dated log lines under it, each stating what had been seen when it was written
+screening and extraction | | 90 seals of scripts and inputs and 40 recorded runs, over 43,462 abstracts screened and 14,053 extracted records
+verification | | the source sentence of each of the 14,053 extracted records, checked against the stored abstract
+dataset coding | | 2,167 pinned sentences behind the codes for 872 dataset names
+access to output | | 26 access records, each with what was shown and its level
+Model extraction. A language model screens 43,462 abstracts and extracts 14,053
+records from the 2,363 papers it admits. Each record carries the sentence it was drawn
+from, so citations verify decides for every record whether the model quoted the abstract.
+Of the 14,053 sentences, 13,989 resolve in the stored abstract. Of the 64 that do not, 27
+occur twice in the abstract and 37 leave out one word of it. A found sentence establishes nothing
+about whether the model read it correctly.
+Agent coding. Coding agents assign a dataset to each of 872 dataset names in 434
+papers. An agent's code counts only when citations pin finds the sentence it rests on in the
+source and that sentence holds an identifier unique to the coded release. Across four passes of
+separate sessions, a script applies that rule to every code, and the coordinating agent asks each
+session for counts and file paths and never for values.
+Access to output. Each access to output is a ledger record with a level. Of 26
+accesses, 4 are at the level metadata only, 19 at structure seen and 3 at
+outcomes seen: a registered negative-control result, the text of three evidence
+sentences printed by accident during a count, and the opening lines of one batch of the second
+check, printed to learn its format. None shows a quantity either hypothesis concerns.
+The plan was frozen before all three, so each confirmatory number is still recorded as confirmatory,
+with the freeze it rests on named beside it.
+Third-party text. The study first committed the abstracts and full texts it read,
+beside its own records. That text belongs to other publishers, so it was removed, which required
+rewriting the repository's history and changed every commit identifier, including the commit at
+which the plan was frozen. The public repository now lists each removed file with its path, its
+size and its SHA-256, and a script fetches it again. The ledger holds the same SHA-256, so a
+fetched abstract is checked against the bytes the model was given. The registration rests on three
+records that do not depend on the git history: the SHA-256 of the plan's text, written into the
+plan at the freeze; the copy registered on OSF; and the OpenTimestamps proof of that SHA-256
+(Appendix). A registration pinned by a commit
+alone would not survive the same removal.

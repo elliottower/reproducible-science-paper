@@ -1,0 +1,16 @@
+{
+  "certificate": "2025-018",
+  "printed": 140,
+  "linked_tables": 3,
+  "outputs_not_linked": 0,
+  "over_cap_not_counted": {
+    "2": 12,
+    "3": 20,
+    "4": 0
+  },
+  "bound_both_sides": 137,
+  "bound_output_side": 137,
+  "unbindable_by_reason": {
+    "paper side unanchored": 3
+  }
+}

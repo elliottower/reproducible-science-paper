@@ -1,0 +1,20 @@
+source:
+  citation: ciccarese2013pav
+  local: reference/ciccarese2013pav.pdf
+  sha256: 82b76f48dafbdd82fe5c0123ff1645a0872a85a2ce33e752bcdd6138dedbf77f
+  url: https://jbiomedsem.biomedcentral.com/track/pdf/10.1186/2041-1480-4-37
+  extract_cmd: pdftotext -layout {} -
+  note: Publisher PDF, open access under CC BY 2.0.
+claims:
+  lightweight-ontology-extending-prov-o:
+    statement: PAV is a lightweight ontology for the provenance, authoring and versioning of web resources;
+      it distinguishes contributors, authors, curators and creators, and extends PROV-O.
+    quotes:
+    - exact: lightweight ontology for capturing “just enough” descriptions essential for tracking
+        the provenance, authoring and
+      section: Abstract
+    - exact: distinguishes between contributors, authors and curators of content and creators of representations
+        in addition to the
+      section: Abstract
+    - exact: mappings that show how PAV extends the W3C PROV-O ontology to support broader interoperability.
+      section: Abstract

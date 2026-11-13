@@ -1,0 +1,41 @@
+source:
+  citation: cuevasvicenttin2016provone
+  local: reference/cuevasvicenttin2016provone_20261014.txt
+  sha256: e651a169b9db5de759754dcd032b18820e67c86b26362357051e085b3f7c4fa7
+  url: https://raw.githubusercontent.com/DataONEorg/sem-prov-ontologies/master/provenance/ProvONE/v1/provone.html
+  extract_cmd: none — the page was rendered to text before pinning
+  note: Fetched 2026-10-14. The page as served is kept beside this file as cuevasvicenttin2016provone_20261014.html
+    (sha256 0cc4d31861e993b2f1b71fb7c898c5d8d076fd4e44752e05b701a3992ee61a85); the .txt pinned here
+    is that file rendered to text by scripts/render_html_source.py, which breaks the line at every
+    element boundary, so a quotation that crosses inline markup carries a line break there. The URL
+    is the bibliography's, on the repository's master branch, so the bytes it serves can change; the
+    sha256 here is what was served on the fetch date.
+claims:
+  prospective-and-retrospective-provenance:
+    statement: ProvONE covers prospective provenance, the workflow specification that produces a data
+      artifact, and retrospective provenance, the steps that were executed.
+    quotes:
+    - exact: captures the procedure or "recipe" required to produce a data artifact.
+      section: 1.2 Aspects covered by ProvONE
+    - exact: scientific workflows this corresponds to the workflow specification, which details the
+      section: 1.2 Aspects covered by ProvONE
+    - exact: comprises the steps that were executed in the generation of a data artifact,
+      section: 1.2 Aspects covered by ProvONE
+  controller-orders-program-execution:
+    statement: A Controller states that one Program's execution is controlled by another, so in a
+      synchronous dataflow model a Program starts only once a preceding Program terminates.
+    quotes:
+    - exact: class can be used to specify that the execution of a given
+      section: 2 Workflow Representation
+    - exact: is controlled by
+      section: 2 Workflow Representation
+    - exact: synchronous dataflow model, a given
+      section: 2 Workflow Representation
+    - exact: may only start once the execution of a
+      section: 2 Workflow Representation
+  execution-with-program-as-plan:
+    statement: An Execution is associated with the Program or Workflow it ran, which stands as the
+      PROV plan.
+    quotes:
+    - exact: (Agent) is responsible for the Execution (Activity) with a specified Program or Workflow
+      section: 3.2.11 prov:qualifiedAssociation object property

@@ -14,7 +14,7 @@ claims:
       section: Introduction
     - exact: of valid notebooks (i.e., notebooks with defined Python version
       section: Introduction
-    - exact: and execution order), only 24.11% executed without errors and
+    - exact: and execution order), only 24.11% executed without errors
       section: Introduction
     - exact: only 4.03% produced the same results.
       section: Introduction
@@ -26,7 +26,9 @@ claims:
       section: Section III
     - exact: in 1,423,676 notebooks from 264,023 repositories. From this
       section: Section III
-    - exact: 1,159,166 notebooks for the analyses.
+    - exact: 'had distinct retrospective data as duplicates. This resulted in
+
+        1,159,166 notebooks for the analyses.'
       section: Section III
     notes: The 24.11% and 4.03% rates are over 863,878 executions, not over the collected corpus.
       The manuscript attached them to '1.4 million notebooks'.

@@ -119,6 +119,7 @@ def derive() -> Counts:
 
 def main() -> None:
     counts = derive()
+    OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(counts.model_dump(), indent=2) + "\n")
     print(f"  wrote {OUT.relative_to(ROOT)}")
     print(f"  {counts.checked} of {counts.entries} checked: {counts.agree} agree, {counts.differ} differ "

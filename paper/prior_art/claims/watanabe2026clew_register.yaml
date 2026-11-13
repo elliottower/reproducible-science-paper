@@ -1,0 +1,18 @@
+source:
+  citation: watanabe2026clew
+  local: reference/scitex_clew_claim_register_44b9426.txt
+  sha256: a65ad570495f6cb434e98a1a7639da3846a9ebb0f72f2b1ce8d9dfb01e4e4ea5
+  url: https://raw.githubusercontent.com/scitex-ai/scitex-clew/44b9426732b00e0b84b7b27f31684a5d9c3500f5/src/scitex_clew/_claim/_register.py
+  extract_cmd: none - the module is read as the text it is
+  note: The claim-registration module of scitex-clew 0.21.0 at commit 44b9426, byte-for-byte, stored
+    with a .txt suffix. A claim records the manuscript file and line, the asserted value, the source
+    file and that file's hash; it records no location inside the source.
+claims:
+  value-stored-with-whole-file-hash:
+    statement: A Clew claim stores the asserted value and a hash of its whole source file, with no
+      location inside that file.
+    quotes:
+    - exact: The asserted value (e.g., "p = 0.003").
+      section: add_claim
+    - exact: source_hash = hash_file(source_path)
+      section: add_claim

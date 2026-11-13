@@ -1,0 +1,108 @@
+% Integrations of Reproducible Science 0.7.0, from the integrations inventory checked against main
+% (backup/reproducible-science/integrations_inventory_2026-10-14/INVENTORY.md). Table 1 holds the
+% systems read from in full; Table 2 lists every other connection by where it runs. The "never does"
+% column holds only refusals the inventory backs with a named test or a source line.
+\section{Integrations}
+\label{sec:integrations}
+
+Table~\ref{tab:integrations-read} lists the systems Reproducible Science 0.7.0 reads from, with
+what each reader reads and writes and what it never does; each refusal there is enforced in code
+and checked by a test or a source line. Table~\ref{tab:integrations} lists every other connection by
+where it runs, with its command and the release that first carried it. None of the readers is endorsed
+by or affiliated with the system it reads.
+
+{\footnotesize
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.13\textwidth}>{\raggedright\arraybackslash}p{0.17\textwidth}>{\raggedright\arraybackslash}p{0.27\textwidth}>{\raggedright\arraybackslash}p{0.26\textwidth}>{\raggedright\arraybackslash}p{0.05\textwidth}@{}}
+\caption{Systems Reproducible Science 0.7.0 reads from. \emph{Since} is the first release carrying the reader. A dash in the fourth column means no refusal backed by a test or a source line is recorded for that reader.}
+\label{tab:integrations-read} \\
+\toprule
+\textbf{Integration} & \textbf{Command} & \textbf{What it reads and writes} & \textbf{What it never does} & \textbf{Since} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Integration} & \textbf{Command} & \textbf{What it reads and writes} & \textbf{What it never does} & \textbf{Since} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+CODECHECK \citep{nust2021codecheck} & \code{claims from-codecheck} & \code{codecheck.yml}, or a certificate ID against a pinned register; a draft manifest and open items & never writes a certificate field; binds no claim by itself; never overwrites & 0.7.0 \\
+CORE-Bench \citep{siegel2024corebench} & \code{claims from-corebench} & a capsule's results and its task file; a draft and open items with ranked candidates & never writes a candidate into the draft & 0.7.0 \\
+ClawBio \citep{corpas2026clawbio} & \code{claims from-clawbio} & an output folder's checksums, report and tables; a draft and open items & --- & 0.7.0 \\
+PaperDelta \citep{paperdelta2026} & \code{claims from-paperdelta} & \code{report.json} and its configuration; check records & refuses a configuration the report's digest does not match; imports no PaperDelta code & 0.7.0 \\
+adduce \citep{chudasama2026adduce} & rule \code{R-REPRO-001} & \code{repro.yaml}; a sidecar report and one finding with an item per checked assertion & never guesses among several manifests; never writes outside its sidecar & 0.2.0 \\
+Outside records & \code{results annotate -{}-kind}, e.g.\ \code{wandb:artifact}, \code{doi:dataset}, \code{zenodo:record} & the subject files; a ledger event linking them to the outside record & an annotation is never a seal & 0.5.3 \\
+\end{longtable}
+}
+
+{\footnotesize
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.24\textwidth}>{\raggedright\arraybackslash}p{0.48\textwidth}>{\raggedright\arraybackslash}p{0.18\textwidth}@{}}
+\caption{Every other integration of Reproducible Science 0.7.0, grouped by where it runs, with its command and the first release that carried it. A skill is a set of instructions to the agent and enforces nothing.}
+\label{tab:integrations} \\
+\toprule
+\textbf{Integration} & \textbf{Command} & \textbf{Since} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Integration} & \textbf{Command} & \textbf{Since} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\multicolumn{3}{@{}l}{\textbf{Claude Code}} \\ \nopagebreak
+Plugins (marketplace, bundle) & \code{marketplace.json}, \path{reproducible-science} & 0.1.0 \\
+Hook: frozen file & PreToolUse on Edit, Write & 0.5.3 \\
+Hook: unfrozen plan & PreToolUse on Bash & 0.4.1 \\
+Hooks: frozen plan changed, quotations, numbers & PostToolUse & 0.3.0 \\
+Mod: frozen-plan guard & \code{tool.call} on Edit, Write & 0.5.0 \\
+Mod: status & \code{/repro-status}, \code{/repro-verify}, \code{/repro-hide}, \code{/repro-show} & 0.5.0 \\
+Mod: notes and project & \code{tool.call}; MCP tool \code{set\_project} & 0.5.0 \\
+Skills & \code{SKILL.md}: prereg, citations, results, repro, osf-registration, prereg-style & 0.2.0 \\
+Open-items skill & \code{SKILL.md}: open-items & 0.7.0 \\
+\midrule
+\multicolumn{3}{@{}l}{\textbf{Codex}} \\ \nopagebreak
+Plugin & An experimental plugin for Codex, with the Claude Code plugin's five hooks and \code{/prereg-check}. & 0.7.0 \\
+\midrule
+\multicolumn{3}{@{}l}{\textbf{Any MCP client}} \\ \nopagebreak
+% repro mcp: mark_reviewed records a review approved in chat, with who and when, and lapses when the
+% item changes; propose_binding and add_artifact record as inferred.
+MCP server & \code{repro mcp}: runs the checks, pins quotations and proposes bindings, each proposal inferred until a person accepts it; it cannot freeze a plan, seal an input or run a declared command. & 0.7.0 \\
+\midrule
+\multicolumn{3}{@{}l}{\textbf{Git and CI}} \\ \nopagebreak
+Pre-commit & \code{repro-verify}, \path{repro-verify-strict} & 0.2.0 \\
+CI workflows and checks & \code{repro ci init}; \code{repro ci prereg}, \code{results}, \code{claims}, \code{citations}, \code{reruns} & 0.5.6 \\
+Re-run witness & \code{repro reproduce} & 0.5.6 \\
+Pull-request bot & GitHub Actions: a comment per stale or broken claim with four numbered options; replies parsed without AI; options 3 and 4 written as \code{set\_aside}; never edits the manuscript & 0.7.0 \\
+Badges & \code{repro badges}, \code{repro ci endpoints}, \code{repro badges init} & 0.6.0 \\
+\midrule
+\multicolumn{3}{@{}l}{\textbf{Outputs}} \\ \nopagebreak
+JSON record & \code{repro export record} & 0.5.6 \\
+SARIF & \code{repro verify -{}-format sarif}; \code{repro export sarif} & 0.2.0 \\
+RO-Crate \citep{soilandreyes2022rocrate} & \code{repro export ro-crate} & 0.5.6 \\
+\midrule
+\multicolumn{3}{@{}l}{\textbf{Registries and timestamps}} \\ \nopagebreak
+OSF token and draft & \code{prereg setup}; \code{prereg freeze -{}-osf} & 0.2.0 \\
+OSF registration & \code{prereg register}, \code{status}, \code{link} & 0.5.0 \\
+OpenTimestamps \citep{todd2016opentimestamps}, plans & \code{prereg freeze}, \code{prereg timestamp} & 0.5.0 \\
+OpenTimestamps, ledger & \code{results timestamp} & 0.5.0 \\
+\midrule
+\multicolumn{3}{@{}l}{\textbf{Bibliographic services and sources}} \\ \nopagebreak
+Identifier lookup, registry audit & \code{citations resolve}; \code{citations audit} & 0.2.0 \\
+Source download & \code{citations fetch} & 0.5.0 \\
+Bibliography entry & \code{citations add} & 0.4.0 \\
+Web page & \code{citations pin -{}-url} & 0.5.6 \\
+Paperclip \citep{gxl2026paperclip} & \code{citations resolve -{}-via paperclip}, \code{import-paperclip} & 0.3.0 \\
+\midrule
+\multicolumn{3}{@{}l}{\textbf{Manuscript formats}} \\ \nopagebreak
+Word (\code{.docx}) source & \code{citations verify} & 0.5.0 \\
+Word (\code{.docx}) manuscript & \code{repro verify} & 0.7.0 \\
+% LaTeX and the text formats: the release that first accepted each is not established from history; Since left blank.
+LaTeX (\code{.tex}) & read as text; this paper's quotations are checked against the text \code{scripts/detex.py} renders & \\
+Markdown, text, reStructuredText (\code{.md}, \code{.txt}, \code{.rst}) & read as text by \code{citations verify} and \code{repro verify} & \\
+\midrule
+\multicolumn{3}{@{}l}{\textbf{Other repositories and open items}} \\ \nopagebreak
+Open items & \code{claims open-items} & 0.7.0 \\
+Draft scaffold & \code{repro init}: given result files and a manuscript, writes \code{repro.draft.yaml} and \code{open-items.json} and binds nothing; the draft fails strict & 0.7.0 \\
+Another repository & \code{repro audit} & 0.5.0 \\
+Copied artifacts & \code{claims origins} & 0.6.0 \\
+\end{longtable}
+}

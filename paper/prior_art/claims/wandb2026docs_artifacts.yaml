@@ -1,0 +1,17 @@
+source:
+  citation: wandb2026docs
+  local: reference/wandb2026docs_artifacts_20261014.txt
+  sha256: d02545c98bdae3089e2d7bdb6d7c26972e9c2353f4f051d47c6baddbced13810
+  url: https://docs.coreweave.com/products/wandb/artifacts
+  extract_cmd: none — the page was rendered to text before pinning
+  note: Fetched 2026-10-14. The page as served is kept beside this file as wandb2026docs_artifacts_20261014.html
+    (sha256 0e93e7f60f86f9f458a9eba33b13ad12e8648d528d83f8b0090eec3f099370f3); the .txt pinned here
+    is that file rendered to text by scripts/render_html_source.py, which breaks the line at every
+    element boundary, so a quotation that crosses inline markup carries a line break there. Requested
+    as https://docs.wandb.ai/guides/artifacts/, which redirected to the address above.
+claims:
+  artifacts-version-run-inputs-and-outputs:
+    statement: W&B Artifacts track and version data as the inputs and outputs of runs.
+    quotes:
+    - exact: Use W&B Artifacts to track and version data as the inputs and outputs of your
+      section: Overview

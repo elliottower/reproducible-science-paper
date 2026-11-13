@@ -1,0 +1,15 @@
+{
+  "certificate": "2020-025",
+  "printed": 90,
+  "linked_tables": 2,
+  "outputs_not_linked": 0,
+  "over_cap_not_counted": {
+    "2": 30,
+    "3": 0
+  },
+  "bound_both_sides": 86,
+  "bound_output_side": 86,
+  "unbindable_by_reason": {
+    "inequality": 4
+  }
+}

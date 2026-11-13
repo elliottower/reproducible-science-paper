@@ -11,9 +11,17 @@ claims:
     statement: SEER-Repro is 20 published papers on the SEER cancer registry; across 2,190 atomic
       claims the pipeline reproduced 77.4%.
     quotes:
-    - exact: ology, and End Results (SEER) database, a widely used U.S. cancer registry
+    - exact: 'using a medical case study grounded in the Surveillance, Epidemi-
+
+        ology, and End Results (SEER) database, a widely used U.S. cancer registry
+
+        underlying tens of thousands of published studies.'
       section: Abstract
-    - exact: Repro, a benchmark of 20 published SEER-based papers together with the data
+    - exact: 'First, we introduce SEER-
+
+        Repro, a benchmark of 20 published SEER-based papers together with the data
+
+        and resources required to reproduce their findings.'
       section: Abstract
     - exact: '2,190 atomic claims, our pipeline reproduced 77.4%, while 3.5% were close and 19.2%
         were not
@@ -39,7 +47,12 @@ claims:
 
         of ATOMIC VERIFIABLE CLAIMS'
       section: 'Appendix H, Prompt 2: Finding extraction'
-    - exact: Each target includes its identifier, claim text, reference answer,
+    - exact: 'Each target includes its identifier, claim text, reference answer,
+
+        numerical or semantic evaluation mode, verification target, source quotation, and required
+        analytical
+
+        assumptions.'
       section: Appendix F.1
   tolerance:
     statement: A numerical claim is reproduced when the relative error is at most 5%, or when the

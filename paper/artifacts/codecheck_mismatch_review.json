@@ -286,7 +286,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "0.66965405",
-      "relative_difference": "8.684127018708529702478537179873229241152E-8"
+      "relative_difference_from_file": "8.684126264567974422367295406541519960478E-8"
     },
     {
       "certificate": "2020-025",
@@ -307,7 +307,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "0.68416866",
-      "relative_difference": "8.154553386046755550046364609381145694528E-8"
+      "relative_difference_from_file": "8.154552721079400516298268080517777911302E-8"
     },
     {
       "certificate": "2020-025",
@@ -328,7 +328,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "0.98537549",
-      "relative_difference": "9.643950751403222886112619952924135433641E-7"
+      "relative_difference_from_file": "9.643941450833582760590825420245276041081E-7"
     },
     {
       "certificate": "2020-025",
@@ -349,7 +349,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "0.99999990605",
-      "relative_difference": "0.0001000099916041604160416041604160416041604"
+      "relative_difference_from_file": "0.00009999999060593949991174280160167082362105"
     },
     {
       "certificate": "2020-025",
@@ -370,7 +370,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "0.61336515",
-      "relative_difference": "1.565107475203476807968977776711745377708E-7"
+      "relative_difference_from_file": "1.565107230247374252451521279280076715084E-7"
     },
     {
       "certificate": "2020-025",
@@ -391,7 +391,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "0.622359266",
-      "relative_difference": "0.000001037592284903077802841228320254213410558"
+      "relative_difference_from_file": "0.000001037591208306445180811412596587878455737"
     },
     {
       "certificate": "2020-025",
@@ -412,7 +412,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "0.7565763401",
-      "relative_difference": "0.00001265643447589414165746595737562313894744"
+      "relative_difference_from_file": "0.00001265627429258784857588020220749235182669"
     },
     {
       "certificate": "2020-025",
@@ -433,7 +433,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "0.99998869669",
-      "relative_difference": "0.0001000088705560556055605560556055605560556"
+      "relative_difference_from_file": "0.00009999886978203182247959381193518175303851"
     },
     {
       "certificate": "2020-025",
@@ -454,7 +454,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "0.7557272961",
-      "relative_difference": "0.000007577049059044105114348449453072519275309"
+      "relative_difference_from_file": "0.000007576991647806669715778182548437374519653"
     },
     {
       "certificate": "2020-025",
@@ -475,7 +475,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "0.73201307301",
-      "relative_difference": "0.0002426294574113357640039774610540271793172"
+      "relative_difference_from_file": "0.0002425706026376338541700145168944288361239"
     },
     {
       "certificate": "2020-025",
@@ -496,7 +496,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "0.5238042",
-      "relative_difference": "3.757616321611500882365600654241811216804E-7"
+      "relative_difference_from_file": "3.757614909643989401467629919919427754014E-7"
     },
     {
       "certificate": "2020-025",
@@ -517,7 +517,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "0.5267978206",
-      "relative_difference": "0.00001106625116796907822872027560709184102176"
+      "relative_difference_from_file": "0.00001106612870740934496391061545882957490780"
     },
     {
       "certificate": "2020-025",
@@ -538,7 +538,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "0.99034203897",
-      "relative_difference": "0.00009904410830783078307830783078307830783078"
+      "relative_difference_from_file": "0.00009903429954394056287247288586079913752361"
     },
     {
       "certificate": "2020-025",
@@ -559,7 +559,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "0.84327747",
-      "relative_difference": "2.305548008106953164109480503750955886112E-7"
+      "relative_difference_from_file": "2.305547476551913948081729582840699179036E-7"
     },
     {
       "certificate": "2020-025",
@@ -580,7 +580,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "0.60859189",
-      "relative_difference": "2.106324387276745155925803509779864364192E-7"
+      "relative_difference_from_file": "2.106323943616596161469361405786469630542E-7"
     },
     {
       "certificate": "2020-025",
@@ -601,7 +601,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "0.68416865",
-      "relative_difference": "8.154553266857528349157689731371319734637E-8"
+      "relative_difference_from_file": "8.154552601890192754105398459589795756192E-8"
     },
     {
       "certificate": "2020-025",
@@ -622,7 +622,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "0.597003121",
-      "relative_difference": "0.000001926002906732909636416427396199632222473"
+      "relative_difference_from_file": "0.000001925999197252857362162559670692542013163"
     },
     {
       "certificate": "2020-025",
@@ -643,7 +643,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "0.64662095299",
-      "relative_difference": "0.0001386111367609860664523043944265809217578"
+      "relative_difference_from_file": "0.0001385919263765251214165969827653165128469"
     },
     {
       "certificate": "2020-025",
@@ -664,7 +664,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "0.61336515",
-      "relative_difference": "1.565107475203476807968977776711745377708E-7"
+      "relative_difference_from_file": "1.565107230247374252451521279280076715084E-7"
     },
     {
       "certificate": "2020-025",
@@ -685,7 +685,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "0.7428438054",
-      "relative_difference": "0.00001207758276265730172666081357916300848698"
+      "relative_difference_from_file": "0.00001207743689641362452016956118905656477535"
     },
     {
       "certificate": "2020-025",
@@ -706,7 +706,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "0.86541661",
-      "relative_difference": "0.000008199115206063477025106584557081951681667"
+      "relative_difference_from_file": "0.000008199047981124499743168586652497211791709"
     },
     {
       "certificate": "2020-025",
@@ -727,7 +727,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "0.96468639",
-      "relative_difference": "2.268253478962575053045009254661189111101E-7"
+      "relative_difference_from_file": "2.268252964465307271484274607402315173975E-7"
     },
     {
       "certificate": "2020-025",
@@ -748,7 +748,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "0.957129564",
-      "relative_difference": "0.000004868559386349532539141581126585755414713"
+      "relative_difference_from_file": "0.000004868535683594432397829873941311578061831"
     },
     {
       "certificate": "2020-025",
@@ -769,7 +769,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "0.52585523923",
-      "relative_difference": "0.00009078992390020718232044198895027624309392"
+      "relative_difference_from_file": "0.00009078168183822155736477800440160903830908"
     },
     {
       "certificate": "2020-025",
@@ -790,7 +790,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "0.60859189",
-      "relative_difference": "2.106324387276745155925803509779864364192E-7"
+      "relative_difference_from_file": "2.106323943616596161469361405786469630542E-7"
     },
     {
       "certificate": "2020-025",
@@ -811,7 +811,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "0.5406540355",
-      "relative_difference": "0.00002424675017938828594492779621490716656202"
+      "relative_difference_from_file": "0.00002424616228874846175566900081351277789639"
     },
     {
       "certificate": "2020-025",
@@ -832,7 +832,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "0.785663683074",
-      "relative_difference": "0.006137997524015625"
+      "relative_difference_from_file": "0.006100552348803541158873949551693000050222"
     },
     {
       "certificate": "2020-025",
@@ -862,7 +862,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "3096",
-      "relative_difference": "0.03472642842721582879063194023823945083788"
+      "relative_difference_from_file": "0.03356097560975609756097560975609756097561"
     },
     {
       "certificate": "2020-025",
@@ -892,7 +892,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "3489.8113207547",
-      "relative_difference": "0.05262079796071622436670687575392038600724"
+      "relative_difference_from_file": "0.05554354354354325826150474799131158097469"
     },
     {
       "certificate": "2020-025",
@@ -922,7 +922,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "133.95928864011",
-      "relative_difference": "0.02761477811587507730364873222016079158936"
+      "relative_difference_from_file": "0.02839901048924601492908871603910358152190"
     },
     {
       "certificate": "2020-025",
@@ -952,7 +952,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "10052.6213439922",
-      "relative_difference": "0.3066412879843882500076259036695848458042"
+      "relative_difference_from_file": "0.2346790131340561160111847504173531906421"
     },
     {
       "certificate": "2020-025",
@@ -982,7 +982,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "4.908037647875973",
-      "relative_difference": "0.9816075295751946"
+      "relative_difference_from_file": "53.37007519399506750234458730336418397091"
     },
     {
       "certificate": "2020-025",
@@ -1012,7 +1012,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "13012.380952381",
-      "relative_difference": "0.05411903573607136915654633172517052071203"
+      "relative_difference_from_file": "0.05134053546265870336485947155308532365252"
     },
     {
       "certificate": "2020-025",
@@ -1042,7 +1042,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "6510.188679245",
-      "relative_difference": "0.02941527507340050605458160130128320983192"
+      "relative_difference_from_file": "0.02857474120082695061044455589269226970338"
     },
     {
       "certificate": "2020-025",
@@ -1072,7 +1072,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "90.8030885588",
-      "relative_difference": "0.01599209027101091933779499823881648467770"
+      "relative_difference_from_file": "0.01625199362006692311024340654811773986374"
     },
     {
       "certificate": "2020-025",
@@ -1102,7 +1102,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "8906.3017141456",
-      "relative_difference": "0.3510287606079772978086079142361658521204"
+      "relative_difference_from_file": "0.2598233071293098347013975550092060350196"
     },
     {
       "certificate": "2020-025",
@@ -1132,7 +1132,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "51.95787026477083",
-      "relative_difference": "0.9446885502685605454545454545454545454545"
+      "relative_difference_from_file": "17.07943933589562540053631194889165152277"
     },
     {
       "certificate": "2020-025",
@@ -1162,7 +1162,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "16106.380952381",
-      "relative_difference": "0.07841318062151175244883254464372650970770"
+      "relative_difference_from_file": "0.08508496320986128799068315448368982848454"
     },
     {
       "certificate": "2020-025",
@@ -1192,7 +1192,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "3018.377358491",
-      "relative_difference": "0.01220246508498209073488627818788961747750"
+      "relative_difference_from_file": "0.01235320463320643120646382731644152499367"
     },
     {
       "certificate": "2020-025",
@@ -1222,7 +1222,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "416.203572837",
-      "relative_difference": "0.02279817993191279579316389132340052585451"
+      "relative_difference_from_file": "0.02333006290381685641567202690615352163706"
     },
     {
       "certificate": "2020-025",
@@ -1252,7 +1252,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "10160.6842743986",
-      "relative_difference": "0.3272467478630100808399626396985410158137"
+      "relative_difference_from_file": "0.2465605949985619379471000606078141562381"
     },
     {
       "certificate": "2020-025",
@@ -1282,7 +1282,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "9.81135843395",
-      "relative_difference": "0.0009821179613563563563563563563563563563564"
+      "relative_difference_from_file": "0.0009811543520443506419324149453553550259346"
     },
     {
       "certificate": "2020-025",
@@ -1312,7 +1312,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "4706.6894771895",
-      "relative_difference": "0.06096116305550590612371774945601492073360"
+      "relative_difference_from_file": "0.05745843031609312911727807161778561649358"
     },
     {
       "certificate": "2020-025",
@@ -1342,7 +1342,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "3489.8113207547",
-      "relative_difference": "0.05262079796071622436670687575392038600724"
+      "relative_difference_from_file": "0.05554354354354325826150474799131158097469"
     },
     {
       "certificate": "2020-025",
@@ -1372,7 +1372,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "110.56117741027",
-      "relative_difference": "0.03298364481213305489260143198090692124105"
+      "relative_difference_from_file": "0.03410867317308729764131739271245943447138"
     },
     {
       "certificate": "2020-025",
@@ -1402,7 +1402,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "14715.6081865367",
-      "relative_difference": "0.7825369947639829832491358681201808029779"
+      "relative_difference_from_file": "0.4390018255231751217916792934925899056951"
     },
     {
       "certificate": "2020-025",
@@ -1432,7 +1432,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "295.98938022565707",
-      "relative_difference": "0.9866312674188569"
+      "relative_difference_from_file": "73.80140648564716164337073825478996222849"
     },
     {
       "certificate": "2020-025",
@@ -1462,7 +1462,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "21960.721667222",
-      "relative_difference": "0.09981284192375203959658029533812988878233"
+      "relative_difference_from_file": "0.09075438849137558680798461710269881585450"
     },
     {
       "certificate": "2020-025",
@@ -1492,7 +1492,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "6510.188679245",
-      "relative_difference": "0.02941527507340050605458160130128320983192"
+      "relative_difference_from_file": "0.02857474120082695061044455589269226970338"
     },
     {
       "certificate": "2020-025",
@@ -1522,7 +1522,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "25.38582743785",
-      "relative_difference": "0.005091421467679502607300441235459286000802"
+      "relative_difference_from_file": "0.005117476698402096665620956372057306491009"
     },
     {
       "certificate": "2020-025",
@@ -1552,7 +1552,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "21930.7430051251",
-      "relative_difference": "11.91240793325643671917436175991309071157"
+      "relative_difference_from_file": "1.091638802921985710376908805441030513991"
     },
     {
       "certificate": "2020-025",
@@ -1582,7 +1582,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "5507.300703643352",
-      "relative_difference": "0.9611345032536390924956369982547993019197"
+      "relative_difference_from_file": "24.72976248125872688247760592300267892528"
     },
     {
       "certificate": "2020-025",
@@ -1612,7 +1612,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "26665.411144411",
-      "relative_difference": "0.1121474492028506420042814304519895193274"
+      "relative_difference_from_file": "0.1263131463689102413118995956951794986060"
     },
     {
       "certificate": "2020-025",
@@ -1642,7 +1642,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "3018.377358491",
-      "relative_difference": "0.01220246508498209073488627818788961747750"
+      "relative_difference_from_file": "0.01235320463320643120646382731644152499367"
     },
     {
       "certificate": "2020-025",
@@ -1672,7 +1672,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "205.9973959703",
-      "relative_difference": "0.01849168725047576301615798922800718132855"
+      "relative_difference_from_file": "0.01884007196910490601000021348554482141035"
     },
     {
       "certificate": "2020-025",
@@ -1702,7 +1702,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "22699.89627382",
-      "relative_difference": "2.499162861809974677969833755367169437411"
+      "relative_difference_from_file": "0.7142173601251755803034570103777642357814"
     },
     {
       "certificate": "2020-025",
@@ -1732,7 +1732,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "1811.59266585922",
-      "relative_difference": "0.2214390252853220877643319887544309986554"
+      "relative_difference_from_file": "0.1812935567811868723003199305915187236582"
     },
     {
       "certificate": "2022-001",
@@ -1752,7 +1752,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "0.62727860325",
-      "relative_difference": "0.0002637841056560134566862910008410428931876"
+      "relative_difference_from_file": "0.0002637145419514163170913606695443928546830"
     },
     {
       "certificate": "2022-001",
@@ -1776,7 +1776,7 @@
       },
       "exponent": null,
       "units_of_last_digit": "1.84535251829",
-      "relative_difference": "0.0006084248329343883943290471480382459610946"
+      "relative_difference_from_file": "0.0006080548772472842753509454714806036256922"
     },
     {
       "certificate": "2022-001",
@@ -1800,7 +1800,7 @@
       },
       "exponent": null,
       "units_of_last_digit": "1.24005522565",
-      "relative_difference": "0.0005688326723165137614678899082568807339450"
+      "relative_difference_from_file": "0.0005685092856603148522736760184721827907345"
     },
     {
       "certificate": "2022-001",
@@ -1820,7 +1820,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "0.42370624",
-      "relative_difference": "7.093204201083769390721649657122203712418E-8"
+      "relative_difference_from_file": "7.093203697948346696420237456180351148558E-8"
     },
     {
       "certificate": "2022-001",
@@ -1844,7 +1844,7 @@
       },
       "exponent": null,
       "units_of_last_digit": "3935.610717",
-      "relative_difference": "0.0004676645825252963119289079522250487674108"
+      "relative_difference_from_file": "0.0004674459745987324654462424776408570147899"
     },
     {
       "certificate": "2022-001",
@@ -1864,7 +1864,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "0.27455382",
-      "relative_difference": "7.047025891010938330975373868333459958152E-8"
+      "relative_difference_from_file": "7.047026387616712412697942504367688883466E-8"
     },
     {
       "certificate": "2022-001",
@@ -1884,7 +1884,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "0.25011843",
-      "relative_difference": "2.247443440662340439679324864183908376479E-7"
+      "relative_difference_from_file": "2.247442935562252060449480166367682394296E-7"
     },
     {
       "certificate": "2022-001",
@@ -1904,7 +1904,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "3.1388958",
-      "relative_difference": "3.795211611532506298761140869534937539552E-8"
+      "relative_difference_from_file": "3.795211467496200002132127289111801615462E-8"
     },
     {
       "certificate": "2022-001",
@@ -1924,7 +1924,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "0.176904028",
-      "relative_difference": "3.115055960556435992252157069906673710160E-7"
+      "relative_difference_from_file": "3.115054990199374524088965677194825410262E-7"
     },
     {
       "certificate": "2022-001",
@@ -1948,7 +1948,7 @@
       },
       "exponent": null,
       "units_of_last_digit": "146.208840873",
-      "relative_difference": "0.0004666885022598870056497175141242937853107"
+      "relative_difference_from_file": "0.0004664708056982277369821745294997569548696"
     },
     {
       "certificate": "2022-001",
@@ -1968,7 +1968,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "0.513006698",
-      "relative_difference": "0.000001029216317179061238574443668696985017374"
+      "relative_difference_from_file": "0.000001029217376466379021996473206378424155307"
     },
     {
       "certificate": "2022-001",
@@ -1988,7 +1988,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "0.09360776",
-      "relative_difference": "3.885737247141874521846950343481489691404E-8"
+      "relative_difference_from_file": "3.885737096152340850646367122123255479907E-8"
     },
     {
       "certificate": "2022-001",
@@ -2012,7 +2012,7 @@
       },
       "exponent": null,
       "units_of_last_digit": "1.16089823114",
-      "relative_difference": "0.0004116660394113475177304964539007092198582"
+      "relative_difference_from_file": "0.0004114966402192373880618437063433967408249"
     },
     {
       "certificate": "2022-001",
@@ -2032,7 +2032,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "0.5980790193068",
-      "relative_difference": "0.01128450979824150943396226415094339622642"
+      "relative_difference_from_file": "0.01115859057357938749099603889887243302483"
     },
     {
       "certificate": "2022-001",
@@ -2052,7 +2052,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "0.76377646544869",
-      "relative_difference": "0.152755293089738"
+      "relative_difference_from_file": "0.1325132003343978837218766105553385966730"
     },
     {
       "certificate": "2022-001",
@@ -2072,7 +2072,7 @@
       "n_divisor": null,
       "exponent": -7,
       "units_of_last_digit": "5272.999472690165211205",
-      "relative_difference": "0.9999998999981348779072634174094443390859"
+      "relative_difference_from_file": "9999812.491269341882128068694593679916176"
     },
     {
       "certificate": "2022-001",
@@ -2092,7 +2092,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "0.75694111666087",
-      "relative_difference": "0.378470558330435"
+      "relative_difference_from_file": "0.2745583183066513649037556420831641036821"
     },
     {
       "certificate": "2024-020",
@@ -2112,7 +2112,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "0",
-      "relative_difference": "0"
+      "relative_difference_from_file": "0"
     },
     {
       "certificate": "2024-020",
@@ -2132,7 +2132,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "0",
-      "relative_difference": "0"
+      "relative_difference_from_file": "0"
     },
     {
       "certificate": "2024-020",
@@ -2152,7 +2152,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "0",
-      "relative_difference": "0"
+      "relative_difference_from_file": "0"
     },
     {
       "certificate": "2024-020",
@@ -2172,7 +2172,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "0",
-      "relative_difference": "0"
+      "relative_difference_from_file": "0"
     },
     {
       "certificate": "2024-020",
@@ -2192,7 +2192,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "0",
-      "relative_difference": "0"
+      "relative_difference_from_file": "0"
     },
     {
       "certificate": "2024-020",
@@ -2212,7 +2212,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "0",
-      "relative_difference": "0"
+      "relative_difference_from_file": "0"
     },
     {
       "certificate": "2025-018",
@@ -2232,7 +2232,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "0.525022",
-      "relative_difference": "0.00004147420807330752824077731258393238012481"
+      "relative_difference_from_file": "0.00004147592825458599251496660026814171579903"
     },
     {
       "certificate": "2025-018",
@@ -2252,7 +2252,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "2.02568",
-      "relative_difference": "0.06534451612903225806451612903225806451613"
+      "relative_difference_from_file": "0.06991294359971174474500178088735128210084"
     },
     {
       "certificate": "2025-018",
@@ -2272,7 +2272,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "6.42908",
-      "relative_difference": "0.001052567125081859855926653569089718402096"
+      "relative_difference_from_file": "0.001051460392439452417362897927340094359227"
     },
     {
       "certificate": "2025-018",
@@ -2292,7 +2292,7 @@
       "n_divisor": null,
       "exponent": null,
       "units_of_last_digit": "191.68132",
-      "relative_difference": "0.008295019906525878483642028734637355028562"
+      "relative_difference_from_file": "0.008226778614154882355275063478851048937866"
     }
   ]
 }

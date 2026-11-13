@@ -1,0 +1,65 @@
+Integrations
+Table lists the systems Reproducible Science 0.7.0 reads from, with
+what each reader reads and writes and what it never does; each refusal there is enforced in code
+and checked by a test or a source line. Table lists every other connection by
+where it runs, with its command and the release that first carried it. None of the readers is endorsed
+by or affiliated with the system it reads.
+@> p0.13 > p0.17 > p0.27 > p0.26 > p0.05 @
+Systems Reproducible Science 0.7.0 reads from. Since is the first release carrying the reader. A dash in the fourth column means no refusal backed by a test or a source line is recorded for that reader.
+Integration | Command | What it reads and writes | What it never does | Since
+Integration | Command | What it reads and writes | What it never does | Since
+CODECHECK | claims from-codecheck | codecheck.yml, or a certificate ID against a pinned register; a draft manifest and open items | never writes a certificate field; binds no claim by itself; never overwrites | 0.7.0
+CORE-Bench | claims from-corebench | a capsule's results and its task file; a draft and open items with ranked candidates | never writes a candidate into the draft | 0.7.0
+ClawBio | claims from-clawbio | an output folder's checksums, report and tables; a draft and open items | — | 0.7.0
+PaperDelta | claims from-paperdelta | report.json and its configuration; check records | refuses a configuration the report's digest does not match; imports no PaperDelta code | 0.7.0
+adduce | rule R-REPRO-001 | repro.yaml; a sidecar report and one finding with an item per checked assertion | never guesses among several manifests; never writes outside its sidecar | 0.2.0
+Outside records | results annotate --kind, e.g. wandb:artifact, doi:dataset, zenodo:record | the subject files; a ledger event linking them to the outside record | an annotation is never a seal | 0.5.3
+@> p0.24 > p0.48 > p0.18 @
+Every other integration of Reproducible Science 0.7.0, grouped by where it runs, with its command and the first release that carried it. A skill is a set of instructions to the agent and enforces nothing.
+Integration | Command | Since
+Integration | Command | Since
+3 @l Claude Code
+Plugins (marketplace, bundle) | marketplace.json, reproducible-science | 0.1.0
+Hook: frozen file | PreToolUse on Edit, Write | 0.5.3
+Hook: unfrozen plan | PreToolUse on Bash | 0.4.1
+Hooks: frozen plan changed, quotations, numbers | PostToolUse | 0.3.0
+Mod: frozen-plan guard | tool.call on Edit, Write | 0.5.0
+Mod: status | /repro-status, /repro-verify, /repro-hide, /repro-show | 0.5.0
+Mod: notes and project | tool.call; MCP tool set_project | 0.5.0
+Skills | SKILL.md: prereg, citations, results, repro, osf-registration, prereg-style | 0.2.0
+Open-items skill | SKILL.md: open-items | 0.7.0
+3 @l Codex
+Plugin | An experimental plugin for Codex, with the Claude Code plugin's five hooks and /prereg-check. | 0.7.0
+3 @l Any MCP client
+MCP server | repro mcp: runs the checks, pins quotations and proposes bindings, each proposal inferred until a person accepts it; it cannot freeze a plan, seal an input or run a declared command. | 0.7.0
+3 @l Git and CI
+Pre-commit | repro-verify, repro-verify-strict | 0.2.0
+CI workflows and checks | repro ci init; repro ci prereg, results, claims, citations, reruns | 0.5.6
+Re-run witness | repro reproduce | 0.5.6
+Pull-request bot | GitHub Actions: a comment per stale or broken claim with four numbered options; replies parsed without AI; options 3 and 4 written as set_aside; never edits the manuscript | 0.7.0
+Badges | repro badges, repro ci endpoints, repro badges init | 0.6.0
+3 @l Outputs
+JSON record | repro export record | 0.5.6
+SARIF | repro verify --format sarif; repro export sarif | 0.2.0
+RO-Crate | repro export ro-crate | 0.5.6
+3 @l Registries and timestamps
+OSF token and draft | prereg setup; prereg freeze --osf | 0.2.0
+OSF registration | prereg register, status, link | 0.5.0
+OpenTimestamps, plans | prereg freeze, prereg timestamp | 0.5.0
+OpenTimestamps, ledger | results timestamp | 0.5.0
+3 @l Bibliographic services and sources
+Identifier lookup, registry audit | citations resolve; citations audit | 0.2.0
+Source download | citations fetch | 0.5.0
+Bibliography entry | citations add | 0.4.0
+Web page | citations pin --url | 0.5.6
+Paperclip | citations resolve --via paperclip, import-paperclip | 0.3.0
+3 @l Manuscript formats
+Word (.docx) source | citations verify | 0.5.0
+Word (.docx) manuscript | repro verify | 0.7.0
+LaTeX (.tex) | read as text; this paper's quotations are checked against the text scripts/detex.py renders |
+Markdown, text, reStructuredText (.md,.txt,.rst) | read as text by citations verify and repro verify |
+3 @l Other repositories and open items
+Open items | claims open-items | 0.7.0
+Draft scaffold | repro init: given result files and a manuscript, writes repro.draft.yaml and open-items.json and binds nothing; the draft fails strict | 0.7.0
+Another repository | repro audit | 0.5.0
+Copied artifacts | claims origins | 0.6.0

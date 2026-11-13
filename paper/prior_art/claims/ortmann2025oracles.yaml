@@ -1,0 +1,22 @@
+source:
+  citation: ortmann2025oracles
+  local: reference/ortmann2025oracles.pdf
+  sha256: cd032bc29a15d6a1fd5ca451afcca314457ceec82cc81ed9ea9938c827c58295
+  url: https://www.repository.cam.ac.uk/bitstreams/f9bb6374-ce07-4796-a227-ad31038dede5/download
+  note: Published open-access version (CC BY 4.0), Cambridge repository, fetched 2026-10-21.
+claims:
+  reliability-not-trust:
+    interpretation:
+      says: Reliance on an opaque system requires reliability, not trust.
+      whose: ortmann2025oracles
+    quotes:
+    - exact: I argue that for epistemic reliance on an opaque system, trust is not necessary, but reliability
+        is.
+  proof-checkers:
+    interpretation:
+      says: With a proof checker downstream, the reliability of outputs does not depend on how often the
+        language model errs.
+      whose: ortmann2025oracles
+    quotes:
+    - exact: Yet, given the use of proof checkers, the doxastic reliability of the final outputs is preserved,
+        irrespective of whether the LLM frequently and unreliably hallucinates.

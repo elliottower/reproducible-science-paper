@@ -1,0 +1,40 @@
+source:
+  citation: google2026factcheck
+  local: reference/google2026factcheck_20261014.txt
+  sha256: f665d805f260e27b524200447b2d8f8894ae04650676400615ff2ed623cbd6b5
+  url: https://developers.google.com/search/docs/appearance/structured-data/factcheck
+  extract_cmd: none — the page was rendered to text before pinning
+  note: Fetched 2026-10-14. The page as served is kept beside this file as google2026factcheck_20261014.html
+    (sha256 9f07e5380e4fcc2d406802d70c11dd73ca4c9235653bd10fa49b983579585cb4); the .txt pinned here
+    is that file rendered to text by scripts/render_html_source.py, which breaks the line at every
+    element boundary, so a quotation that crosses inline markup carries a line break there. The bibliography
+    entry says the page was read on 2026-08-27; this is the page as served on the fetch date.
+claims:
+  required-claimreview-properties:
+    statement: 'Google requires three ClaimReview properties: claimReviewed, a short summary of the
+      claim; reviewRating, the assessment; and url, the page hosting the fact check.'
+    quotes:
+    - exact: A short summary of the claim being evaluated.
+      section: Required properties
+    - exact: The assessment of the claim. This object supports both a numeric and a textual assessment.
+      section: Required properties
+    - exact: Link to the page hosting the full article of the fact check.
+      section: Required properties
+  rating-schemes-are-each-publishers:
+    statement: Fact-checking projects use rating schemes that differ, each documented by its publisher,
+      and search results show only the textual rating.
+    quotes:
+    - exact: Different fact-checking projects have a variety of rating schemes which can have subtle
+        differences,
+      section: 'Required properties: reviewRating'
+    - exact: particularly for intermediate values. It is important to document such rating schemes
+        to clarify
+      section: 'Required properties: reviewRating'
+    - exact: The textual value is currently the only value shown in search results.
+      section: 'Required properties: reviewRating'
+  no-mismatch-with-page-content:
+    statement: Google's guidelines require that the structured data not mismatch the page content.
+    quotes:
+    - exact: There must not be any mismatch between the structured data and page content (for example,
+        if the
+      section: Guidelines

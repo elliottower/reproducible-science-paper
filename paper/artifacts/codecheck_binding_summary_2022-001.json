@@ -1,0 +1,16 @@
+{
+  "certificate": "2022-001",
+  "printed": 92,
+  "linked_tables": 2,
+  "outputs_not_linked": 0,
+  "over_cap_not_counted": {
+    "2": 15,
+    "3": 0
+  },
+  "bound_both_sides": 64,
+  "bound_output_side": 90,
+  "unbindable_by_reason": {
+    "paper side unanchored": 26,
+    "no output row corresponds to this paper row": 2
+  }
+}

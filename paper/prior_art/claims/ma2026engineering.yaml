@@ -1,0 +1,19 @@
+source:
+  citation: ma2026engineering
+  local: reference/ma2026engineering_arxiv_2605.10425.pdf
+  sha256: c4494106ca4f2f2c4941672f274ae225534edcbd426adf516f943abdd409226e
+  url: https://arxiv.org/pdf/2605.10425
+  extract_cmd: pdftotext -layout {} -
+claims:
+  claims-as-typed-graph-components:
+    statement: Blueprints represent a project's claims, evidence, assumptions and definitions as typed
+      graph components, and every structural rule over the graph is a warning.
+    quotes:
+    - exact: decomposed research artifacts that represent claims, evidence, assumptions, and definitions
+        as typed
+      section: Abstract
+    - exact: 'All rules are warnings, not blocks: the artifact does not refuse to save or share a
+        blueprint that has unresolved warnings,
+
+        because lint can flag patterns but cannot adjudicate content.'
+      section: Structural lint

@@ -1,0 +1,25 @@
+source:
+  citation: mlflow2026tracking
+  local: reference/mlflow2026tracking_20261014.txt
+  sha256: 4acdb5d7805969e97901754077f6f8cebae09ab4bcc4b75c6dd59e2ec31d6531
+  url: https://mlflow.org/docs/latest/ml/tracking/
+  extract_cmd: none — the page was rendered to text before pinning
+  note: Fetched 2026-10-14. The page as served is kept beside this file as mlflow2026tracking_20261014.html
+    (sha256 7305f9abb81360a25303f4852b536a153cca74f2da2ff88f12953e3e234f3d6e); the .txt pinned here
+    is that file rendered to text by scripts/render_html_source.py, which breaks the line at every
+    element boundary, so a quotation that crosses inline markup carries a line break there. The URL
+    is the latest documentation, so the bytes it serves can change; the sha256 here is what was served
+    on the fetch date.
+claims:
+  runs-record-metadata-and-artifacts:
+    statement: MLflow Tracking logs parameters, code versions, metrics and output files, and is organized
+      around runs, each recording metadata and artifacts.
+    quotes:
+    - exact: The MLflow Tracking is an API and UI for logging parameters, code versions, metrics,
+        and output files
+      section: MLflow Tracking
+    - exact: execution. Each run records metadata
+      section: 'Concepts: Runs'
+    - exact: (various information about your run such as metrics, parameters, start and end times)
+        and artifacts
+      section: 'Concepts: Runs'

@@ -1,0 +1,32 @@
+source:
+  citation: kuhn2016nanopub
+  local: reference/kuhn2016nanopub.pdf
+  sha256: 5d7ab4073ecddcd983b11a179b2ea9321f9584b577959008839c602cf71b5243
+  url: https://biblio.ugent.be/publication/8521008/file/8521009.pdf
+  extract_cmd: pdftotext -layout {} -
+  note: Publisher PDF, CC BY 4.0, deposited at Ghent University Academic Bibliography.
+claims:
+  decentralized-server-network:
+    statement: Nanopublications are stored and archived in a decentralized server network.
+    quotes:
+    - exact: server network to decentrally store and archive data in the form of nanopublications,
+      section: Abstract
+  trusty-uris-hash-the-content:
+    statement: A trusty URI carries a hash computed on the RDF content it names, which makes a nanopublication
+      and its reference tree verifiable and immutable.
+    quotes:
+    - exact: trusty URIs to make nanopublications and their entire reference trees verifiable and
+      section: Background
+    - exact: immutable by the use of cryptographic hash values
+      section: Background
+    - exact: code. It contains a hash value that is calculated on the RDF content it represents, such
+      section: Background
+  immutable-so-servers-only-add:
+    statement: Because nanopublications with trusty URIs are immutable and verifiable, servers only
+      add entries and never update them.
+    quotes:
+    - exact: possibly most important benefit is that nanopublications with trusty URIs are immutable
+      section: Approach
+    - exact: and verifiable. This means that servers only have to deal with adding new entries but
+        not
+      section: Approach

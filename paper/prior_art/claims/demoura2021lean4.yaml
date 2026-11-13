@@ -1,0 +1,16 @@
+source:
+  citation: demoura2021lean4
+  local: reference/lean4_cade2021.pdf
+  sha256: 2b907e98552f5ff4fe77be717f9423311a4d6bf4ac866b143d99f34e83f39c4d
+  url: https://lean-lang.org/papers/lean4.pdf
+  extract_cmd: pdftotext -layout {} -
+claims:
+  small-trusted-kernel:
+    statement: Lean has a relatively small trusted kernel.
+    quotes:
+    - exact: 'Lean has a
+
+        relatively small trusted kernel, and the rich API allows users to export their de-
+
+        velopments to other systems and implement their own reference checkers.'
+      section: Conclusion

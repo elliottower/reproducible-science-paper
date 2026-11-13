@@ -14,7 +14,10 @@ claims:
       section: Paper Repos
     - exact: '| `commit` | Snapshot with reasoning message |'
       section: Commands
-    - exact: Apache-2.0 — see [LICENSE](LICENSE).
+    - exact: '## License
+
+
+        Apache-2.0 — see [LICENSE](LICENSE).'
       section: License
     notes: The README describes `add` as adding papers and says nothing about claims, line ranges,
       verification or OCR. Those are on the docs site only.

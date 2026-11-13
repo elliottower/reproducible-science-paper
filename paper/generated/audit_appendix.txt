@@ -1,17 +1,17 @@
 Reproducible Science Audits
-This appendix audits 3 preregistered studies conducted with Reproducible Science:
-two under journal review and one in progress. Each audit gives a
+This appendix audits 3 preregistered studies conducted with the toolkit (Appendices, and):
+one accepted by a journal, one under journal review and one in progress. Each audit gives a
 description of the study, an example finding, what each command found in its repository,
 and the findings made while it was written. Table gives the result from
-a clone for the two under review, and Table their findings.
-What Reproducible Science established from a clone of each project, at the pinned commit.
+a clone for the two submitted to journals, and Table their findings.
+What the toolkit established from a clone of each project, at the pinned commit.
 project | appendix | registered plans | quotations | ledger
 Cross-design evidence discordance | | 4 of 6 registrations unchanged, 1 appended, 1 changed | 175 of 175 found | not in the repository
 Knockout epistasis | | 3 of 3 plans unchanged | 18 declared, sources absent | chain intact, 153 events
 Findings are coded from each project's records: commits, ledger events, plan logs, claim files and
 session transcripts. A finding counts
 when a command, a script that performed the same check before the command existed, a hook, or an act
-Reproducible Science requires (sealing an input, binding a number, pinning a
+the toolkit requires (sealing an input, binding a number, pinning a
 quotation) exposed it and a record says so. The coding rules were fixed before the records were read.
 Defects found by a person or raised in review are not counted as findings.
 Findings, by project and severity. A claim finding would change a

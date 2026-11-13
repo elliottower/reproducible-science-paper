@@ -14,6 +14,8 @@ claims:
     - exact: NeurIPS 2019 review process, and authors were obliged to fill it both at the initial
         paper
       section: Section 5
-    - exact: the CMT platform; each question included a multiple choice “Yes, No, not applicable”,
+    - exact: 'the CMT platform; each question included a multiple choice “Yes, No, not applicable”,
         and
+
+        an (optional) open comment field.'
       section: Section 5

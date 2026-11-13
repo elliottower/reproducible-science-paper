@@ -1,0 +1,29 @@
+source:
+  citation: wagenknecht2014opaque
+  local: reference/wagenknecht2014opaque.pdf
+  sha256: 629ba7ec4b66dec358a85dea80bb46325c3a834b7e746bff458f9d388cd32e75
+  url: https://www.cambridge.org/core/journals/episteme/article/opaque-and-translucent-epistemic-dependence-in-collaborative-scientific-practice/009401AA2A8B9BA944E8A9CFFDC58028
+  note: Publisher PDF, downloaded by hand from Cambridge Core 2026-10-21.
+claims:
+  translucent:
+    interpretation:
+      says: Dependence is translucent when the scientist has that expertise.
+      whose: wagenknecht2014opaque
+    quotes:
+    - exact: If the scientist does possess the necessary expertise, I argue, her dependence is translucent.
+      page: 475
+  transparent-only-to-witness:
+    interpretation:
+      says: Only whoever produced or witnessed a piece of evidence can see it entirely.
+      whose: wagenknecht2014opaque
+    quotes:
+    - exact: In experimental science, evidential contributions can be entirely transparent only to those
+        who have created or eye-witnessed them.
+      page: 486
+  opaque-and-translucent:
+    interpretation:
+      says: Opaque dependence lacks the dependent scientist's expertise; translucent dependence has it.
+      whose: wagenknecht2014opaque
+    quotes:
+    - exact: translucent dependence (which is cushioned by the dependent person’s expertise) and opaque
+        dependence (which is not)

@@ -1,0 +1,17 @@
+source:
+  citation: love2020tximeta
+  local: reference/love2020tximeta.pdf
+  sha256: 8a4b567d93d5b0a830ce186a4dab54cd1b68e20bd5e792fe8e75e3acdef0bec3
+  url: https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1007664&type=printable
+  extract_cmd: pdftotext -layout {} -
+claims:
+  reference-identified-by-checksum:
+    statement: tximeta identifies the reference transcriptome of a quantification by a hashed checksum
+      stored in the quantification output, and attaches annotation metadata on import.
+    quotes:
+    - exact: tximeta that performs numerous annotation and metadata gathering tasks automatically
+        on
+      section: Abstract
+    - exact: scriptome is identified via a hashed checksum stored in the quantification output, and
+        key
+      section: Abstract

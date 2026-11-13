@@ -1,0 +1,86 @@
+{
+  "inputs": [
+    "data/eligibility.jsonl",
+    "data/eligibility_summary.json",
+    "data/fetch_outputs.jsonl",
+    "data/check_time_proxy/fetch_outputs.jsonl",
+    "results/indices.json",
+    "results/agreement_summary.json"
+  ],
+  "funnel": {
+    "in_the_register": 133,
+    "names_a_value_output": 13,
+    "output_in_repository": 9,
+    "names_a_table_the_paper_has": 6
+  },
+  "describe_files_without_naming_a_table": 3,
+  "name_a_file_the_repository_does_not_hold": 4,
+  "certificates_binding_a_number": 4,
+  "certificates_with_a_difference": 2,
+  "linked_outputs": 37,
+  "linked_outputs_present_at_check_time": 16,
+  "certificates": {
+    "names_a_value_output": [
+      "2020-008",
+      "2020-011",
+      "2020-025",
+      "2021-001",
+      "2022-001",
+      "2024-020",
+      "2025-002",
+      "2025-018",
+      "2025-020",
+      "2025-028",
+      "2026-006",
+      "2026-009",
+      "2026-019"
+    ],
+    "output_in_repository": [
+      "2020-008",
+      "2020-011",
+      "2020-025",
+      "2021-001",
+      "2022-001",
+      "2024-020",
+      "2025-018",
+      "2025-020",
+      "2026-019"
+    ],
+    "names_a_table_the_paper_has": [
+      "2020-008",
+      "2020-011",
+      "2020-025",
+      "2022-001",
+      "2024-020",
+      "2025-018"
+    ],
+    "describe_files_without_naming_a_table": [
+      "2021-001",
+      "2025-020",
+      "2026-019"
+    ],
+    "name_a_file_the_repository_does_not_hold": [
+      "2025-002",
+      "2025-028",
+      "2026-006",
+      "2026-009"
+    ],
+    "binding_a_number": [
+      "2020-025",
+      "2022-001",
+      "2024-020",
+      "2025-018"
+    ],
+    "with_a_difference": [
+      "2022-001",
+      "2025-018"
+    ]
+  },
+  "linked_outputs_present_at_check_time_by_certificate": {
+    "2020-025": 2,
+    "2021-001": 2,
+    "2024-020": 2,
+    "2025-020": 2,
+    "2026-019": 8
+  }
+}

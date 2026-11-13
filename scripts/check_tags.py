@@ -33,7 +33,7 @@ KINDS = ("TODO", "FILLIN", "REVIEW")
 # built with it.
 SHIPPING = (
     "generated/audit_appendix.tex",
-    "supplement_defects.tex",
+    "supplement_defects_v15zzb.tex",
 )
 # The macro name, then a brace-balanced first argument. No variable-length context on both
 # sides: that pattern backtracks exponentially and has hung this machine for hours.

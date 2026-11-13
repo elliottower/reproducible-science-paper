@@ -1,0 +1,31 @@
+source:
+  citation: cheney2013provconstraints
+  local: reference/cheney2013provconstraints_20261014.txt
+  sha256: 6f703fa41edbb14d234e68aa71426a30d73a9349dfb9c809d284a41252351eab
+  url: https://www.w3.org/TR/2013/REC-prov-constraints-20130430/
+  extract_cmd: none — the page was rendered to text before pinning
+  note: Fetched 2026-10-14. The page as served is kept beside this file as cheney2013provconstraints_20261014.html
+    (sha256 0e65d02339347af6f6e5744cb69a99cf56430e8fd9dd904ac476541634361287); the .txt pinned here
+    is that file rendered to text by scripts/render_html_source.py, which breaks the line at every
+    element boundary, so a quotation that crosses inline markup carries a line break there. The W3C
+    Recommendation of 30 April 2013.
+claims:
+  ordering-constraints-over-precedence:
+    statement: PROV's event ordering constraints require that a PROV instance be consistent with a
+      sensible ordering of events, stated through the precedence relations precedes and strictlyPrecedes.
+    quotes:
+    - exact: are consistent with a sensible ordering of events
+      section: 1. Introduction
+    - exact: Ordering constraints employ atomic precedence relations that can
+      section: 2.4 Summary of inferences and constraints
+  times-are-irrelevant-to-ordering:
+    statement: For checking ordering constraints, the times attached to events are irrelevant, and
+      time ordering is not taken to imply event ordering, nor the reverse; ordering is relative, without
+      physical clocks.
+    quotes:
+    - exact: with events are irrelevant; thus, there is no inference that time ordering
+      section: 5.2 Event Ordering Constraints
+    - exact: implies event ordering, or vice versa.
+      section: 5.2 Event Ordering Constraints
+    - exact: without using physical clocks.
+      section: 5.2 Event Ordering Constraints

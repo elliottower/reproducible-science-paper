@@ -64,8 +64,12 @@ claims:
 
         noise.'
       section: Appendix D.1
-    - exact: Integrity Audit, a post-hoc audit whose four integrity checks—score verification, specification
+    - exact: 'Third, CoE
+
+        Integrity Audit, a post-hoc audit whose four integrity checks—score verification, specification
         violation,
+
+        reference verification, and method–code alignment—apply uniformly to all systems.'
       section: Abstract
   misread-values-sorted-by-hand:
     statement: A numeric claim passes or fails; the failures are mostly misreads of the extraction
@@ -74,6 +78,8 @@ claims:
     - exact: 'pass (98.1%). The 12 failures are predominantly false positives of the extraction heuristic:
         hardware'
       section: Section 6.2
-    - exact: in methodology sections. Manual inspection finds at most 2–4 genuine mismatches among
+    - exact: 'in methodology sections. Manual inspection finds at most 2–4 genuine mismatches among
         the 12,
+
+        yielding a corrected numerical CPR of ∼99%.'
       section: Section 6.2

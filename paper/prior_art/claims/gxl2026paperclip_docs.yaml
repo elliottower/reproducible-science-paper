@@ -13,7 +13,11 @@ claims:
   version:
     statement: The documented Paperclip version on the fetch date is 0.7.38.
     quotes:
-    - exact: '# Current version: 0.7.38'
+    - exact: '# Current version: 0.7.38
+
+        # Checking for updates...
+
+        # ✓ Already up to date (v0.7.38)'
       section: update
   claim-bound-to-document-and-line-range:
     statement: An agent adds a claim to a repo naming a document identifier and a line range.
@@ -35,7 +39,7 @@ claims:
     quotes:
     - exact: unsupported claims are flagged so you can correct or drop them.
       section: paperclip repo commit
-    - exact: = claim supported by source
+    - exact: '# ✓ = claim supported by source ✗ = claim not supported'
       section: paperclip repo status
     notes: The manuscript said commit drops unsupported claims. The two docs sentences disagree with
       each other and the status output settles it.
@@ -47,7 +51,8 @@ claims:
   log-for-audit:
     statement: Repo actions are recorded and reviewable through a log.
     quotes:
-    - exact: Every action is recorded, so the corpus is auditable with
+    - exact: Every action is recorded, so the corpus is auditable with repo log and repo history ,
+        and reproducible by anyone with access.
       section: Paper Repos - Overview
   pdfs-read-with-ocr:
     statement: arXiv PDFs in the corpus are parsed with OCR, and each corpus source carries a last-updated

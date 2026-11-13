@@ -1,0 +1,104 @@
+{
+  "source": {
+    "path": "paper/artifacts/codecheck_agreement_summary_2026-10-14.json",
+    "sha256": "7f0c691b32df820027c64fb6db20dff087275e55da8075b44d62a8abd67f9da8"
+  },
+  "differences": [
+    {
+      "certificate": "2022-001",
+      "claim": "t2-n011",
+      "paper_as_printed": "30.33",
+      "paper": "30.33",
+      "stored": "30.3484535251829",
+      "absolute_difference": "0.0184535251829"
+    },
+    {
+      "certificate": "2022-001",
+      "claim": "t2-n021",
+      "paper_as_printed": "21.80",
+      "paper": "21.80",
+      "stored": "21.8124005522565",
+      "absolute_difference": "0.0124005522565"
+    },
+    {
+      "certificate": "2022-001",
+      "claim": "t2-n046",
+      "paper_as_printed": "84,154.56",
+      "paper": "84154.56",
+      "stored": "84193.91610717",
+      "absolute_difference": "39.35610717"
+    },
+    {
+      "certificate": "2022-001",
+      "claim": "t2-n049",
+      "paper_as_printed": "827,067.40",
+      "paper": "827067.40",
+      "stored": "827067.431388958",
+      "absolute_difference": "0.031388958"
+    },
+    {
+      "certificate": "2022-001",
+      "claim": "t2-n051",
+      "paper_as_printed": "3,132.90",
+      "paper": "3132.90",
+      "stored": "3134.36208840873",
+      "absolute_difference": "1.46208840873"
+    },
+    {
+      "certificate": "2022-001",
+      "claim": "t2-n052",
+      "paper_as_printed": "4,984.44",
+      "paper": "4984.44",
+      "stored": "4984.43486993302",
+      "absolute_difference": "0.00513006698"
+    },
+    {
+      "certificate": "2022-001",
+      "claim": "t2-n056",
+      "paper_as_printed": "28.20",
+      "paper": "28.20",
+      "stored": "28.2116089823114",
+      "absolute_difference": "0.0116089823114"
+    },
+    {
+      "certificate": "2022-001",
+      "claim": "t3-n024",
+      "paper_as_printed": "5.273",
+      "paper": "5.273",
+      "stored": "5.27309834788795e-07",
+      "absolute_difference": "5.272999472690165211205"
+    },
+    {
+      "certificate": "2025-018",
+      "claim": "t2-n012",
+      "paper_as_printed": "12.659",
+      "paper": "12.659",
+      "stored": "12.658474978",
+      "absolute_difference": "0.000525022"
+    },
+    {
+      "certificate": "2025-018",
+      "claim": "t2-n029",
+      "paper_as_printed": "3.1",
+      "paper": "3.1",
+      "stored": "2.897432",
+      "absolute_difference": "0.202568"
+    },
+    {
+      "certificate": "2025-018",
+      "claim": "t2-n047",
+      "paper_as_printed": "610.8",
+      "paper": "610.8",
+      "stored": "611.442908",
+      "absolute_difference": "0.642908"
+    },
+    {
+      "certificate": "2025-018",
+      "claim": "t2-n057",
+      "paper_as_printed": "2310.8",
+      "paper": "2310.8",
+      "stored": "2329.968132",
+      "absolute_difference": "19.168132"
+    }
+  ]
+}

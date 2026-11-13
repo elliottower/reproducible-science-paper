@@ -1,0 +1,66 @@
+{
+  "command": "repro numbers --format json --text=manuscript-text --text=appendix-text --text=failure-cases-text --text=failure-cases-table-text --text=certified-reproductions-text --text=reexecution-precedents-text --text=related-work-text --text=integrations-text --text=literature-census-text repro.yaml",
+  "texts": 9,
+  "numbers": 1020,
+  "bound": 533,
+  "set_aside_by_rule": 239,
+  "set_aside_with_a_reason": 248,
+  "unbound": 0,
+  "set_aside": 487,
+  "per_text": {
+    "manuscript-text": {
+      "bound": 207,
+      "set_aside_by_rule": 64,
+      "set_aside_with_a_reason": 82,
+      "unbound": 0
+    },
+    "appendix-text": {
+      "bound": 100,
+      "set_aside_by_rule": 10,
+      "set_aside_with_a_reason": 15,
+      "unbound": 0
+    },
+    "failure-cases-text": {
+      "bound": 55,
+      "set_aside_by_rule": 4,
+      "set_aside_with_a_reason": 4,
+      "unbound": 0
+    },
+    "failure-cases-table-text": {
+      "bound": 1,
+      "set_aside_by_rule": 55,
+      "set_aside_with_a_reason": 47,
+      "unbound": 0
+    },
+    "certified-reproductions-text": {
+      "bound": 119,
+      "set_aside_by_rule": 13,
+      "set_aside_with_a_reason": 44,
+      "unbound": 0
+    },
+    "reexecution-precedents-text": {
+      "bound": 2,
+      "set_aside_by_rule": 12,
+      "set_aside_with_a_reason": 18,
+      "unbound": 0
+    },
+    "related-work-text": {
+      "bound": 0,
+      "set_aside_by_rule": 14,
+      "set_aside_with_a_reason": 19,
+      "unbound": 0
+    },
+    "integrations-text": {
+      "bound": 0,
+      "set_aside_by_rule": 53,
+      "set_aside_with_a_reason": 13,
+      "unbound": 0
+    },
+    "literature-census-text": {
+      "bound": 49,
+      "set_aside_by_rule": 14,
+      "set_aside_with_a_reason": 6,
+      "unbound": 0
+    }
+  }
+}

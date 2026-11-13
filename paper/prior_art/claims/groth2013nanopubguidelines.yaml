@@ -1,0 +1,25 @@
+source:
+  citation: groth2013nanopubguidelines
+  local: reference/groth2013nanopubguidelines_20261014.txt
+  sha256: afed53fc25387004ce691b2a995c943b52f9a3ee7400ac72ead679a04244da46
+  url: https://nanopub.net/guidelines/working_draft/
+  extract_cmd: none — the page was rendered to text before pinning
+  note: Fetched 2026-10-14. The page as served is kept beside this file as groth2013nanopubguidelines_20261014.html
+    (sha256 f3ee522113a4372604d61ff2cae25ee307cedbcc5ab1094a3e86c5ebff56dbbb); the .txt pinned here
+    is that file rendered to text by scripts/render_html_source.py, which breaks the line at every
+    element boundary, so a quotation that crosses inline markup carries a line break there.
+claims:
+  three-parts-each-an-rdf-graph:
+    statement: A nanopublication consists of an assertion, its provenance and publication info, each
+      an RDF graph, linked to the nanopublication through a head graph.
+    quotes:
+    - exact: A nanopublication consists of an assertion,
+      section: Introduction
+    - exact: the provenance of the assertion (simply called "provenance"), and the provenance of the
+        whole nanopublication
+      section: Introduction
+    - exact: Each of the three parts of a nanopublication (i.e. the assertion, provenance, and publication
+        info) is
+      section: Basic Elements
+    - exact: via triples in an additional
+      section: Basic Elements

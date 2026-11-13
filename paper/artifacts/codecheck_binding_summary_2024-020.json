@@ -1,0 +1,15 @@
+{
+  "certificate": "2024-020",
+  "printed": 58,
+  "linked_tables": 2,
+  "outputs_not_linked": 0,
+  "over_cap_not_counted": {
+    "1": 0,
+    "2": 0
+  },
+  "bound_both_sides": 51,
+  "bound_output_side": 51,
+  "unbindable_by_reason": {
+    "no output column corresponds to this paper column": 7
+  }
+}

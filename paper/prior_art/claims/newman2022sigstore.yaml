@@ -1,0 +1,57 @@
+source:
+  citation: newman2022sigstore
+  local: reference/newman2022sigstore_nsfpar_20261014.txt
+  sha256: de514ccf7b7e912e545f2c115e0a188c14a3fdc22857e87fb6aa6d3b98be21f0
+  url: https://par.nsf.gov/biblio/10470793
+  extract_cmd: none — the page was rendered to text before pinning
+  note: Fetched 2026-10-14. The page as served is kept beside this file as newman2022sigstore_nsfpar_20261014.html
+    (sha256 caed4f07b871b839c19600cae8b3a92a4620e7ed208fbce330f34e5b264441c2); the .txt pinned here
+    is that file rendered to text by scripts/render_html_source.py, which breaks the line at every
+    element boundary, so a quotation that crosses inline markup carries a line break there. The NSF
+    Public Access Repository record for the paper, which carries its abstract. The full text is open
+    access at the ACM Digital Library, which did not serve it to a script, so only the abstract is
+    pinned. The record prints the abstract twice, in the page and in its BibTeX export, so each quotation
+    occurs twice.
+claims:
+  identity-ephemeral-keys-transparency-logs:
+    statement: Sigstore ties signatures to existing developer identities through OIDC, signs with
+      ephemeral keys, and records signatures in artifact and identity logs.
+    quotes:
+    - exact: it uses a protocol similar to ACME to authenticate developers through OIDC, tying signatures
+        to existing and widely-used identities.
+      prefix: 'u.s. government agencies and corporate targets such as google and microsoft. software
+        signing, a promising mitigation for many of these attacks, has seen limited adoption in open-source
+        and enterprise ecosystems. in this paper, we propose sigstore, a system to provide widespread
+        software signing capabilities. to do so, we designed the system to provide baseline artifact
+        signing capabilities that minimize the adoption barrier for developers. to this end, sigstore
+        leverages three distinct mechanisms: first, '
+      suffix: ' second, it enables developers to use ephemeral keys to sign their artifacts, reducing
+        the inconvenience and risk of key management. finally, sigstore enables user authentication
+        by means of artifact and identity logs, bringing transparency to software signatures. sigstore
+        is quickly becoming a critical piece of internet infrastructure with more than 2.2m signatures
+        over critical software such as kubernetes and distroless. more » « less award id(s): 2229703
+        par id: 10470793 author(s) / creator(s): newman, zachary'
+      section: Abstract
+    - exact: it enables developers to use ephemeral keys to sign their artifacts
+      prefix: 'attacks, has seen limited adoption in open-source and enterprise ecosystems. in this
+        paper, we propose sigstore, a system to provide widespread software signing capabilities.
+        to do so, we designed the system to provide baseline artifact signing capabilities that minimize
+        the adoption barrier for developers. to this end, sigstore leverages three distinct mechanisms:
+        first, it uses a protocol similar to acme to authenticate developers through oidc, tying signatures
+        to existing and widely-used identities. second, '
+      suffix: ', reducing the inconvenience and risk of key management. finally, sigstore enables
+        user authentication by means of artifact and identity logs, bringing transparency to software
+        signatures. sigstore is quickly becoming a critical piece of internet infrastructure with
+        more than 2.2m signatures over critical software such as kubernetes and distroless. more »
+        « less award id(s): 2229703 par id: 10470793 author(s) / creator(s): newman, zachary ; meyers,
+        john speed ; torres-arias, santiago publisher / repository:'
+      section: Abstract
+    - exact: Sigstore enables user authentication by means of artifact and identity logs, bringing
+        transparency to software signatures.
+      prefix: 'similar to acme to authenticate developers through oidc, tying signatures to existing
+        and widely-used identities. second, it enables developers to use ephemeral keys to sign their
+        artifacts, reducing the inconvenience and risk of key management. finally, '
+      suffix: ' sigstore is quickly becoming a critical piece of internet infrastructure with more
+        than 2.2m signatures over critical software such as kubernetes and distroless. more » « less
+        award id(s): 2229703 par id: 10470793 author(s) / creator(s): newman, zachary ;'
+      section: Abstract

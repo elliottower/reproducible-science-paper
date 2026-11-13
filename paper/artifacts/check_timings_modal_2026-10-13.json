@@ -1,0 +1,97 @@
+{
+  "generated_by": "scripts/measure_check_timings.py",
+  "complete": true,
+  "runs_per_check": 10,
+  "each_run": "a new process, timed from start to exit",
+  "machine": {
+    "system": "Linux 4.19.0-gvisor",
+    "architecture": "x86_64",
+    "python": "3.12.10",
+    "load_average_at_start": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "cpu": "unknown",
+    "cpus_usable": 18,
+    "memory_gb_visible": 676,
+    "host": "Modal container",
+    "cpu_requested": "2.0",
+    "memory_mb_requested": "4096"
+  },
+  "toolkit": "repro 0.5.6",
+  "packages": {
+    "reproducible-science": "0.5.6",
+    "citations": "0.5.6",
+    "provenance-core": "0.5.6",
+    "results-cli": "0.5.6",
+    "prereg": "0.5.6"
+  },
+  "pdftotext": "pdftotext version 22.12.0",
+  "repro_verify": {
+    "command": "repro verify --policy strict",
+    "manifest_sha256": "a0e07d8e243ccac24330e24b13ae7ee7328ed11f823c41ca34ecf19572b83b49",
+    "claims": 478,
+    "assertions": 956,
+    "assertions_verified": 955,
+    "mismatches_accepted": [
+      "verify-timed-artifacts: manuscript prints 29, check_timings.json holds 25 at /repro_verify/artifacts"
+    ],
+    "artifacts": 61,
+    "runs": [
+      0.53,
+      0.517,
+      0.519,
+      0.55,
+      0.524,
+      0.514,
+      0.517,
+      0.53,
+      0.537,
+      0.518
+    ],
+    "median_seconds": 0.52,
+    "min_seconds": 0.514,
+    "max_seconds": 0.55
+  },
+  "citations_verify": {
+    "command": "CITATIONS_NO_CACHE=1 citations verify --claims paper/prior_art/claims",
+    "sources": 53,
+    "quotations": 199,
+    "quotations_found": 199,
+    "runs": [
+      7.19,
+      7.104,
+      7.351,
+      7.25,
+      7.241,
+      7.265,
+      7.369,
+      7.428,
+      7.213,
+      7.31
+    ],
+    "median_seconds": 7.26,
+    "min_seconds": 7.104,
+    "max_seconds": 7.428
+  },
+  "citations_verify_with_cache": {
+    "command": "citations verify --claims paper/prior_art/claims",
+    "first_run": "reads any source whose text is not yet kept; later runs read none",
+    "runs": [
+      3.245,
+      0.968,
+      0.955,
+      1.019,
+      0.983,
+      0.957,
+      0.977,
+      1.009,
+      0.968,
+      0.994
+    ],
+    "median_seconds": 0.98,
+    "min_seconds": 0.955,
+    "max_seconds": 3.245
+  }
+}

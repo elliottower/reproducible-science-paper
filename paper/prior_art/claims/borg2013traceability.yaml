@@ -17,10 +17,32 @@ claims:
   scaling-is-unanswered:
     statement: Whether IR-based trace recovery scales to larger document spaces is unanswered.
     quotes:
-    - exact: 'of-the-art IR-based trace recovery scales to larger document spaces or not remains
+    - exact: 'IR-based trace recovery scales to larger document spaces or not remains
 
         unanswered.'
       section: Section 6.3
     notes: 'The manuscript characterized this as ''the precision-recall tradeoff at scale as a standing
       limitation''. The source reports two separate things: evaluations stop at precision and recall,
       and scaling is untested.'
+  recovered-links-include-incorrect-links:
+    statement: Candidate trace links recovered by IR include incorrect links, which engineers are
+      advised to stop considering when their fraction gets too high.
+    quotes:
+    - exact: 'stop considering candidate trace links when
+
+        the fraction of incorrect links get too high'
+      section: 2.2 IR-based Support in a Trace Recovery Process
+    - exact: 'it is fundamental that the tool presents
+
+        few false positives among the top candidate trace links'
+      section: 3.4 Precision and Recall Evaluation Styles for Technology-Oriented Trace Recovery
+  candidate-links-ranked-by-similarity-and-reviewed:
+    statement: IR-based trace recovery ranks candidate trace links by the similarity between artifacts,
+      and an engineer examines each candidate and confirms it or not.
+    quotes:
+    - exact: similarities between artifacts to rank candidate trace links accordingly. In the final
+      section: 2.2 IR-based Support in a Trace Recovery Process
+    - exact: step, these candidate trace links are provided to an engineer for examination.
+      section: 2.2 IR-based Support in a Trace Recovery Process
+    - exact: candidate trace link, and determines whether the link should be confirmed or not.
+      section: 2.2 IR-based Support in a Trace Recovery Process

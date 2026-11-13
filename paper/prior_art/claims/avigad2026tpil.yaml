@@ -1,0 +1,17 @@
+source:
+  citation: avigad2026tpil
+  local: reference/tpil4_PropositionsAndProofs_4e28129.lean.txt
+  sha256: f2350c68de41223fd96bee56a152f1dcc4d6a1f0ee7f07d04991b814429a4ca5
+  url: https://raw.githubusercontent.com/leanprover/theorem_proving_in_lean4/4e28129fdd58037f8f5857548d5e99fe4fb0cc57/book/TPiL/PropositionsAndProofs.lean
+  extract_cmd: none — the chapter's source is read directly
+  note: Theorem Proving in Lean 4 at commit 4e28129, the chapter Propositions and Proofs.
+claims:
+  sorry-stands-for-an-unfinished-proof:
+    statement: A proof left unfinished holds the placeholder sorry.
+    quotes:
+    - exact: identifier magically produces a proof of anything
+      section: Propositions and Proofs
+    - exact: 'Then go back and replace each {lean}`sorry` with an actual proof,
+
+        until no more remain.'
+      section: Propositions and Proofs

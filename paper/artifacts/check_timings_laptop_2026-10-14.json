@@ -1,0 +1,95 @@
+{
+  "generated_by": "scripts/measure_check_timings.py",
+  "complete": true,
+  "runs_per_check": 10,
+  "each_run": "a new process, timed from start to exit",
+  "machine": {
+    "system": "Darwin 25.5.0",
+    "architecture": "x86_64",
+    "python": "3.13.12",
+    "load_average_at_start": [
+      3.37,
+      3.81,
+      5.15
+    ],
+    "model": "MacBookPro16,1",
+    "cpu": "Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz",
+    "physical_cores": 6,
+    "memory_gb": 16,
+    "macos": "26.5"
+  },
+  "toolkit": "repro 0.6.0",
+  "packages": {
+    "reproducible-science": "0.6.0",
+    "claims-cli": "0.6.0",
+    "citations": "0.6.0",
+    "provenance-core": "0.6.0",
+    "results-cli": "0.6.0",
+    "prereg": "0.6.0"
+  },
+  "pdftotext": "pdftotext version 26.04.0",
+  "repro_verify": {
+    "command": "repro verify --policy strict",
+    "manifest_sha256": "cea8f45f6852f906d64ca9ee093a1b665457dbc44af684be3b016389952705c5",
+    "claims": 531,
+    "assertions": 1062,
+    "assertions_verified": 1062,
+    "mismatches_accepted": [],
+    "artifacts": 79,
+    "runs": [
+      1.828,
+      1.603,
+      1.358,
+      1.261,
+      1.23,
+      1.231,
+      1.261,
+      1.265,
+      1.301,
+      2.578
+    ],
+    "median_seconds": 1.28,
+    "min_seconds": 1.23,
+    "max_seconds": 2.578
+  },
+  "citations_verify": {
+    "command": "CITATIONS_NO_CACHE=1 citations verify --claims paper/prior_art/claims",
+    "sources": 55,
+    "quotations": 203,
+    "quotations_found": 203,
+    "runs": [
+      14.287,
+      13.123,
+      13.643,
+      11.693,
+      11.04,
+      10.912,
+      10.96,
+      11.145,
+      11.241,
+      11.113
+    ],
+    "median_seconds": 11.19,
+    "min_seconds": 10.912,
+    "max_seconds": 14.287
+  },
+  "citations_verify_with_cache": {
+    "command": "citations verify --claims paper/prior_art/claims",
+    "first_run": "reads any source whose text is not yet kept; later runs read none",
+    "runs": [
+      1.943,
+      1.947,
+      1.893,
+      1.876,
+      1.916,
+      1.993,
+      1.897,
+      1.896,
+      1.892,
+      1.897
+    ],
+    "median_seconds": 1.9,
+    "min_seconds": 1.876,
+    "max_seconds": 1.993
+  }
+}

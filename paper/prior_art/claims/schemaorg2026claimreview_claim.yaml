@@ -1,0 +1,22 @@
+source:
+  citation: schemaorg2026claimreview
+  local: reference/schemaorg2026claim_20261014.txt
+  sha256: a0f4e88a0a0b00b8634cdf3af4703814b9a83d971f0ef43c679881b401fa8a7d
+  url: https://schema.org/Claim
+  extract_cmd: none — the page was rendered to text before pinning
+  note: Fetched 2026-10-14. The page as served is kept beside this file as schemaorg2026claim_20261014.html
+    (sha256 2c72d0924e588a5b82e3d473cca0932cd8326477d1739f89dccef4f34c0470fd); the .txt pinned here
+    is that file rendered to text by scripts/render_html_source.py, which breaks the line at every
+    element boundary, so a quotation that crosses inline markup carries a line break there. The Claim
+    type, which the same bibliography entry names.
+claims:
+  appearance-ranges-over-creativework:
+    statement: A Claim records where it occurred through appearance and firstAppearance, both of which
+      take a CreativeWork.
+    quotes:
+    - exact: Indicates an occurrence of a
+      section: 'Claim: appearance'
+    - exact: Indicates the first known occurrence of a
+      section: 'Claim: firstAppearance'
+    notes: The property table prints each property, then its expected type, then its description;
+      for appearance and firstAppearance the expected type is CreativeWork.

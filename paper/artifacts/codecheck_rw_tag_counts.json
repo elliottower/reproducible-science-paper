@@ -1,0 +1,587 @@
+{
+ "inputs": {
+  "repository": "https://gitlab.com/crossref/retraction-watch-data",
+  "commit": "fe345427b516f7d507d67db5e1119d738cc25455",
+  "file": "retraction_watch.csv",
+  "sha256": "063df713d0790831706df36316b69fc96037435ec9bec37c8581125bfc0db4e5",
+  "rows": 72963,
+  "retrieved": "2026-10-07"
+ },
+ "retractions": 67530,
+ "retractions_outside_publication_process": 43364,
+ "groups": {
+  "error stated (analysis, data, methods, results or text)": {
+   "reason_tags": [
+    "Error in Analyses",
+    "Error in Data",
+    "Error in Methods",
+    "Error in Results and/or Conclusions",
+    "Error in Text"
+   ],
+   "count": 4382,
+   "share": 0.0648896786613357,
+   "count_outside_publication_process": 4273,
+   "share_outside_publication_process": 0.09853795775297482
+  },
+  "error in analyses": {
+   "reason_tags": [
+    "Error in Analyses"
+   ],
+   "count": 1399,
+   "share": 0.02071671849548349,
+   "count_outside_publication_process": 1374,
+   "share_outside_publication_process": 0.031685268886634074
+  },
+  "error in data": {
+   "reason_tags": [
+    "Error in Data"
+   ],
+   "count": 1933,
+   "share": 0.028624315119206278,
+   "count_outside_publication_process": 1882,
+   "share_outside_publication_process": 0.04340005534544784
+  },
+  "original data or images not provided": {
+   "reason_tags": [
+    "Original Data and/or Images not Provided and/or not Available"
+   ],
+   "count": 2464,
+   "share": 0.036487487042795794,
+   "count_outside_publication_process": 1909,
+   "share_outside_publication_process": 0.04402269163361314
+  },
+  "falsification or fabrication of data": {
+   "reason_tags": [
+    "Falsification/Fabrication of Data",
+    "Manipulation of Results"
+   ],
+   "count": 1729,
+   "share": 0.02560343551014364,
+   "count_outside_publication_process": 1659,
+   "share_outside_publication_process": 0.03825754081726778
+  },
+  "image (duplication, manipulation, fabrication or concerns)": {
+   "reason_tags": [
+    "Duplication of/in Image",
+    "Manipulation of Images",
+    "Falsification/Fabrication of Image",
+    "Concerns/Issues about Image",
+    "Unreliable Image",
+    "Plagiarism of Image",
+    "Error in Image"
+   ],
+   "count": 8828,
+   "share": 0.1307270842588479,
+   "count_outside_publication_process": 7171,
+   "share_outside_publication_process": 0.16536758601605017
+  },
+  "results not reproducible": {
+   "reason_tags": [
+    "Results Not Reproducible"
+   ],
+   "count": 941,
+   "share": 0.013934547608470309,
+   "count_outside_publication_process": 861,
+   "share_outside_publication_process": 0.019855179411493406
+  },
+  "concerns about referencing": {
+   "reason_tags": [
+    "Concerns/Issues about Referencing/Attributions"
+   ],
+   "count": 15099,
+   "share": 0.22358951577076855,
+   "count_outside_publication_process": 2263,
+   "share_outside_publication_process": 0.05218614518955816
+  },
+  "computer-aided or computer-generated content": {
+   "reason_tags": [
+    "Computer-Aided Content or Computer-Generated Content"
+   ],
+   "count": 9341,
+   "share": 0.1383237079816378,
+   "count_outside_publication_process": 683,
+   "share_outside_publication_process": 0.015750392030255512
+  },
+  "publication process (paper mill, peer review, rogue editor)": {
+   "reason_tags": [
+    "Paper Mill",
+    "Compromised Peer Review",
+    "Concerns/Issues about Peer Review",
+    "Rogue Editor"
+   ],
+   "count": 24166,
+   "share": 0.35785576780690065,
+   "count_outside_publication_process": 0,
+   "share_outside_publication_process": 0.0
+  },
+  "plagiarism or duplicate publication": {
+   "reason_tags": [
+    "Plagiarism of/in Article",
+    "Plagiarism of Text",
+    "Plagiarism of Data",
+    "Euphemisms for Plagiarism",
+    "Duplication of/in Article",
+    "Euphemisms for Duplication",
+    "Duplication of Text"
+   ],
+   "count": 11096,
+   "share": 0.16431215755960313,
+   "count_outside_publication_process": 10573,
+   "share_outside_publication_process": 0.2438197583248778
+  },
+  "limited or no information in the notice": {
+   "reason_tags": [
+    "Notice - Limited or No Information"
+   ],
+   "count": 11986,
+   "share": 0.1774914852658078,
+   "count_outside_publication_process": 11957,
+   "share_outside_publication_process": 0.27573563324416567
+  }
+ },
+ "overlaps": {
+  "original data or images not provided, and image (duplication, manipulation, fabrication or concerns)": 1725,
+  "original data or images not provided, and falsification or fabrication of data": 65,
+  "original data or images not provided, and error stated (analysis, data, methods, results or text)": 113,
+  "original data or images not provided, and publication process (paper mill, peer review, rogue editor)": 555,
+  "original data or images not provided, and none of image, fabrication or publication process": 577
+ },
+ "by_year": {
+  "error stated (analysis, data, methods, results or text)": {
+   "2010": {
+    "count": 118,
+    "retractions": 5012
+   },
+   "2011": {
+    "count": 68,
+    "retractions": 4937
+   },
+   "2012": {
+    "count": 155,
+    "retractions": 1161
+   },
+   "2013": {
+    "count": 148,
+    "retractions": 1449
+   },
+   "2014": {
+    "count": 209,
+    "retractions": 1115
+   },
+   "2015": {
+    "count": 175,
+    "retractions": 1545
+   },
+   "2016": {
+    "count": 208,
+    "retractions": 1683
+   },
+   "2017": {
+    "count": 195,
+    "retractions": 1712
+   },
+   "2018": {
+    "count": 355,
+    "retractions": 2534
+   },
+   "2019": {
+    "count": 368,
+    "retractions": 2907
+   },
+   "2020": {
+    "count": 407,
+    "retractions": 3080
+   },
+   "2021": {
+    "count": 429,
+    "retractions": 3908
+   },
+   "2022": {
+    "count": 287,
+    "retractions": 5591
+   },
+   "2023": {
+    "count": 270,
+    "retractions": 13245
+   },
+   "2024": {
+    "count": 261,
+    "retractions": 6497
+   },
+   "2025": {
+    "count": 210,
+    "retractions": 5959
+   },
+   "2026": {
+    "count": 112,
+    "retractions": 1944
+   }
+  },
+  "original data or images not provided": {
+   "2010": {
+    "count": 0,
+    "retractions": 5012
+   },
+   "2011": {
+    "count": 1,
+    "retractions": 4937
+   },
+   "2012": {
+    "count": 1,
+    "retractions": 1161
+   },
+   "2013": {
+    "count": 1,
+    "retractions": 1449
+   },
+   "2014": {
+    "count": 5,
+    "retractions": 1115
+   },
+   "2015": {
+    "count": 9,
+    "retractions": 1545
+   },
+   "2016": {
+    "count": 4,
+    "retractions": 1683
+   },
+   "2017": {
+    "count": 12,
+    "retractions": 1712
+   },
+   "2018": {
+    "count": 57,
+    "retractions": 2534
+   },
+   "2019": {
+    "count": 54,
+    "retractions": 2907
+   },
+   "2020": {
+    "count": 198,
+    "retractions": 3080
+   },
+   "2021": {
+    "count": 275,
+    "retractions": 3908
+   },
+   "2022": {
+    "count": 441,
+    "retractions": 5591
+   },
+   "2023": {
+    "count": 523,
+    "retractions": 13245
+   },
+   "2024": {
+    "count": 415,
+    "retractions": 6497
+   },
+   "2025": {
+    "count": 302,
+    "retractions": 5959
+   },
+   "2026": {
+    "count": 158,
+    "retractions": 1944
+   }
+  },
+  "falsification or fabrication of data": {
+   "2010": {
+    "count": 92,
+    "retractions": 5012
+   },
+   "2011": {
+    "count": 30,
+    "retractions": 4937
+   },
+   "2012": {
+    "count": 141,
+    "retractions": 1161
+   },
+   "2013": {
+    "count": 166,
+    "retractions": 1449
+   },
+   "2014": {
+    "count": 63,
+    "retractions": 1115
+   },
+   "2015": {
+    "count": 110,
+    "retractions": 1545
+   },
+   "2016": {
+    "count": 76,
+    "retractions": 1683
+   },
+   "2017": {
+    "count": 61,
+    "retractions": 1712
+   },
+   "2018": {
+    "count": 98,
+    "retractions": 2534
+   },
+   "2019": {
+    "count": 62,
+    "retractions": 2907
+   },
+   "2020": {
+    "count": 77,
+    "retractions": 3080
+   },
+   "2021": {
+    "count": 80,
+    "retractions": 3908
+   },
+   "2022": {
+    "count": 153,
+    "retractions": 5591
+   },
+   "2023": {
+    "count": 96,
+    "retractions": 13245
+   },
+   "2024": {
+    "count": 58,
+    "retractions": 6497
+   },
+   "2025": {
+    "count": 26,
+    "retractions": 5959
+   },
+   "2026": {
+    "count": 12,
+    "retractions": 1944
+   }
+  },
+  "concerns about referencing": {
+   "2010": {
+    "count": 29,
+    "retractions": 5012
+   },
+   "2011": {
+    "count": 44,
+    "retractions": 4937
+   },
+   "2012": {
+    "count": 36,
+    "retractions": 1161
+   },
+   "2013": {
+    "count": 30,
+    "retractions": 1449
+   },
+   "2014": {
+    "count": 93,
+    "retractions": 1115
+   },
+   "2015": {
+    "count": 47,
+    "retractions": 1545
+   },
+   "2016": {
+    "count": 44,
+    "retractions": 1683
+   },
+   "2017": {
+    "count": 35,
+    "retractions": 1712
+   },
+   "2018": {
+    "count": 47,
+    "retractions": 2534
+   },
+   "2019": {
+    "count": 29,
+    "retractions": 2907
+   },
+   "2020": {
+    "count": 104,
+    "retractions": 3080
+   },
+   "2021": {
+    "count": 239,
+    "retractions": 3908
+   },
+   "2022": {
+    "count": 711,
+    "retractions": 5591
+   },
+   "2023": {
+    "count": 7649,
+    "retractions": 13245
+   },
+   "2024": {
+    "count": 2479,
+    "retractions": 6497
+   },
+   "2025": {
+    "count": 2873,
+    "retractions": 5959
+   },
+   "2026": {
+    "count": 516,
+    "retractions": 1944
+   }
+  },
+  "computer-aided or computer-generated content": {
+   "2010": {
+    "count": 3,
+    "retractions": 5012
+   },
+   "2011": {
+    "count": 4,
+    "retractions": 4937
+   },
+   "2012": {
+    "count": 6,
+    "retractions": 1161
+   },
+   "2013": {
+    "count": 3,
+    "retractions": 1449
+   },
+   "2014": {
+    "count": 2,
+    "retractions": 1115
+   },
+   "2015": {
+    "count": 9,
+    "retractions": 1545
+   },
+   "2016": {
+    "count": 0,
+    "retractions": 1683
+   },
+   "2017": {
+    "count": 0,
+    "retractions": 1712
+   },
+   "2018": {
+    "count": 0,
+    "retractions": 2534
+   },
+   "2019": {
+    "count": 1,
+    "retractions": 2907
+   },
+   "2020": {
+    "count": 39,
+    "retractions": 3080
+   },
+   "2021": {
+    "count": 481,
+    "retractions": 3908
+   },
+   "2022": {
+    "count": 383,
+    "retractions": 5591
+   },
+   "2023": {
+    "count": 5516,
+    "retractions": 13245
+   },
+   "2024": {
+    "count": 1453,
+    "retractions": 6497
+   },
+   "2025": {
+    "count": 1275,
+    "retractions": 5959
+   },
+   "2026": {
+    "count": 166,
+    "retractions": 1944
+   }
+  }
+ },
+ "years_from_publication_to_retraction": {
+  "all retractions outside publication process": {
+   "with_both_dates": 43363,
+   "first_quartile": 0.16,
+   "median": 1.03,
+   "third_quartile": 3.72,
+   "share_over_five_years": 0.17757074003182435
+  },
+  "error stated (analysis, data, methods, results or text)": {
+   "with_both_dates": 4272,
+   "first_quartile": 0.5,
+   "median": 1.31,
+   "third_quartile": 2.95,
+   "share_over_five_years": 0.1104868913857678
+  },
+  "error in analyses": {
+   "with_both_dates": 1374,
+   "first_quartile": 0.5,
+   "median": 1.25,
+   "third_quartile": 2.84,
+   "share_over_five_years": 0.11062590975254731
+  },
+  "error in data": {
+   "with_both_dates": 1882,
+   "first_quartile": 0.58,
+   "median": 1.56,
+   "third_quartile": 3.37,
+   "share_over_five_years": 0.1275239107332625
+  },
+  "original data or images not provided": {
+   "with_both_dates": 1909,
+   "first_quartile": 2.51,
+   "median": 4.91,
+   "third_quartile": 8.96,
+   "share_over_five_years": 0.49449973808276587
+  },
+  "falsification or fabrication of data": {
+   "with_both_dates": 1659,
+   "first_quartile": 2.18,
+   "median": 4.27,
+   "third_quartile": 8.78,
+   "share_over_five_years": 0.4333936106088005
+  },
+  "image (duplication, manipulation, fabrication or concerns)": {
+   "with_both_dates": 7171,
+   "first_quartile": 2.04,
+   "median": 4.39,
+   "third_quartile": 7.82,
+   "share_over_five_years": 0.4488913680100404
+  },
+  "results not reproducible": {
+   "with_both_dates": 861,
+   "first_quartile": 0.88,
+   "median": 2.01,
+   "third_quartile": 3.71,
+   "share_over_five_years": 0.156794425087108
+  },
+  "concerns about referencing": {
+   "with_both_dates": 2263,
+   "first_quartile": 0.54,
+   "median": 1.28,
+   "third_quartile": 1.86,
+   "share_over_five_years": 0.062306672558550595
+  },
+  "computer-aided or computer-generated content": {
+   "with_both_dates": 683,
+   "first_quartile": 0.48,
+   "median": 1.84,
+   "third_quartile": 3.92,
+   "share_over_five_years": 0.19765739385065886
+  },
+  "plagiarism or duplicate publication": {
+   "with_both_dates": 10573,
+   "first_quartile": 0.74,
+   "median": 2.25,
+   "third_quartile": 4.69,
+   "share_over_five_years": 0.22226425801570038
+  },
+  "limited or no information in the notice": {
+   "with_both_dates": 11957,
+   "first_quartile": 0.08,
+   "median": 0.11,
+   "third_quartile": 0.17,
+   "share_over_five_years": 0.024337208329848623
+  }
+ }
+}

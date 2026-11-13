@@ -1,0 +1,18 @@
+{
+  "sources": [
+    {
+      "path": "paper/artifacts/real_corpus_by_reader.json",
+      "sha256": "4bdb0228a3e3c0cda3cc06d46f1d61be7b6bf635109c4e6bc5e181f5f496cc11"
+    },
+    {
+      "path": "paper/artifacts/toolkit_verify_performance_summary.json",
+      "sha256": "2fa17cf3aa8a662aac3017a6895617dd4b336d723318b5e503975f477c72a34a"
+    }
+  ],
+  "layout_mode_not_found": 113,
+  "resolved_by_reading_order": 110,
+  "resolved_only_by_another_reader": 2,
+  "resolved_by_no_reader": 1,
+  "quotations_audited": 2512,
+  "false_accusation_rate": "0.044984076433121016"
+}

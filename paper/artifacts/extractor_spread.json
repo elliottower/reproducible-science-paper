@@ -1,0 +1,17 @@
+{
+  "source": {
+    "path": "paper/artifacts/real_corpus_by_reader.json",
+    "sha256": "4bdb0228a3e3c0cda3cc06d46f1d61be7b6bf635109c4e6bc5e181f5f496cc11"
+  },
+  "resolved_by_reader": {
+    "poppler-layout": 2250,
+    "poppler-flow": 2314,
+    "pypdf": 2229,
+    "pdfium": 2092,
+    "lopdf": 1716,
+    "pdf-extract": 1973
+  },
+  "best_reader": "poppler-flow",
+  "worst_reader": "lopdf",
+  "best_minus_worst": 598
+}

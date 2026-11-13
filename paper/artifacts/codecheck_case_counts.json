@@ -1,0 +1,32 @@
+{
+ "rows": 34,
+ "by_mode": {
+  "none of the above": 1,
+  "printed value disagrees with the authors' own records": 3,
+  "report departs from the registered plan": 1,
+  "error inside the analysis": 9,
+  "data could not be produced for audit": 2,
+  "references that do not exist": 2,
+  "data fabricated or falsified": 8,
+  "image manipulation or duplication": 4,
+  "study conducted differently from its description": 4
+ },
+ "cases_under_a_detected_mode": 6,
+ "cases_under_the_mode_reported_as_unchecked": 2,
+ "cases_with_missing_data_beside_another_principal_cause": 7,
+ "of_those_not_under_a_detected_mode": 6,
+ "cases_with_a_stated_problem_the_checks_cover": 14,
+ "missing_data_beside_the_principal_cause_by_mode": {
+  "printed value disagrees with the authors' own records": 1,
+  "report departs from the registered plan": 0,
+  "references that do not exist": 0,
+  "data could not be produced for audit": 0,
+  "error inside the analysis": 1,
+  "data fabricated or falsified": 0,
+  "image manipulation or duplication": 3,
+  "study conducted differently from its description": 2,
+  "none of the above": 0
+ },
+ "rows_stating_records_could_not_be_produced": 9,
+ "rows_from_the_most_cited_list": 9
+}

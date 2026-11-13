@@ -1,0 +1,23 @@
+source:
+  citation: paperdelta2026
+  local: reference/paperdelta_README_d73f574.md
+  sha256: 916a620b7882938b1809f611b6e14fb0c1f6c2464b0fcc4dbe8c7861c9099c98
+  url: https://raw.githubusercontent.com/amos689/paperdelta/d73f574f56d022b71fe07dbd3b89a72a504adcdb/README.md
+  extract_cmd: none — Markdown is read directly
+  note: The README of PaperDelta 2.0.0 at commit d73f574, copied from a clone made 2026-10-13.
+claims:
+  statements-traced-to-evidence:
+    statement: PaperDelta traces a manuscript's statements to declared experiment evidence, using
+      exact decimal arithmetic, and never runs the experiment scripts.
+    quotes:
+    - exact: 'PaperDelta traces those statements
+
+        to declared experiment evidence and brings the affected locations together for review,
+
+        even when no manuscript file changed.'
+      section: Introduction
+    - exact: Local Python CLI · LaTeX / Markdown / Quarto + optional Word/PDF · exact decimal arithmetic
+        · offline HTML · optional MCP.
+      section: Introduction
+    - exact: The checker never runs experiment or plotting scripts.
+      section: Patches

@@ -1,0 +1,23 @@
+source:
+  citation: wandb2026docs
+  local: reference/wandb2026docs_runs_20261014.txt
+  sha256: ccbac258a939bf1c368087d64202675301dd538a3dadbb0a2e9c18b216e1f64c
+  url: https://docs.coreweave.com/products/wandb/runs
+  extract_cmd: none — the page was rendered to text before pinning
+  note: Fetched 2026-10-14. The page as served is kept beside this file as wandb2026docs_runs_20261014.html
+    (sha256 bf4dfc87c115fc47ced77ec53ad451a7b510c671ad334dc6c96b30d765a42652); the .txt pinned here
+    is that file rendered to text by scripts/render_html_source.py, which breaks the line at every
+    element boundary, so a quotation that crosses inline markup carries a line break there. Requested
+    as https://docs.wandb.ai/guides/runs/, which redirected to the address above.
+claims:
+  a-run-records-a-computation:
+    statement: A W&B run is a record of a single computation, to which metrics, artifacts and other
+      information are logged.
+    quotes:
+    - exact: is a single unit of computation logged by Weights & Biases.
+      section: Runs
+    - exact: each run is a record of a specific computation, such as training a model and logging
+        the results, hyperparameter sweeps, and so forth.
+      section: Runs
+    - exact: object that you can use to log metrics, artifacts, and other information to the run.
+      section: Runs

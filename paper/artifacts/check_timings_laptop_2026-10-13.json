@@ -1,0 +1,96 @@
+{
+  "generated_by": "scripts/measure_check_timings.py",
+  "complete": true,
+  "runs_per_check": 10,
+  "each_run": "a new process, timed from start to exit",
+  "machine": {
+    "system": "Darwin 25.5.0",
+    "architecture": "x86_64",
+    "python": "3.13.12",
+    "load_average_at_start": [
+      4.77,
+      4.51,
+      6.01
+    ],
+    "model": "MacBookPro16,1",
+    "cpu": "Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz",
+    "physical_cores": 6,
+    "memory_gb": 16,
+    "macos": "26.5"
+  },
+  "toolkit": "repro 0.5.6",
+  "packages": {
+    "reproducible-science": "0.5.6",
+    "citations": "0.5.6",
+    "provenance-core": "0.5.6",
+    "results-cli": "0.5.6",
+    "prereg": "0.5.6"
+  },
+  "pdftotext": "pdftotext version 26.04.0",
+  "repro_verify": {
+    "command": "repro verify --policy strict",
+    "manifest_sha256": "a0e07d8e243ccac24330e24b13ae7ee7328ed11f823c41ca34ecf19572b83b49",
+    "claims": 478,
+    "assertions": 956,
+    "assertions_verified": 955,
+    "mismatches_accepted": [
+      "verify-timed-artifacts: manuscript prints 29, check_timings.json holds 25 at /repro_verify/artifacts"
+    ],
+    "artifacts": 61,
+    "runs": [
+      1.165,
+      1.215,
+      1.135,
+      1.143,
+      1.151,
+      1.175,
+      1.118,
+      1.125,
+      1.224,
+      1.181
+    ],
+    "median_seconds": 1.16,
+    "min_seconds": 1.118,
+    "max_seconds": 1.224
+  },
+  "citations_verify": {
+    "command": "CITATIONS_NO_CACHE=1 citations verify --claims paper/prior_art/claims",
+    "sources": 53,
+    "quotations": 199,
+    "quotations_found": 199,
+    "runs": [
+      16.041,
+      19.349,
+      21.512,
+      16.583,
+      17.972,
+      17.13,
+      14.716,
+      26.447,
+      35.53,
+      15.833
+    ],
+    "median_seconds": 17.55,
+    "min_seconds": 14.716,
+    "max_seconds": 35.53
+  },
+  "citations_verify_with_cache": {
+    "command": "citations verify --claims paper/prior_art/claims",
+    "first_run": "reads any source whose text is not yet kept; later runs read none",
+    "runs": [
+      2.303,
+      2.428,
+      2.321,
+      2.356,
+      2.425,
+      2.17,
+      2.159,
+      2.194,
+      2.248,
+      3.451
+    ],
+    "median_seconds": 2.31,
+    "min_seconds": 2.159,
+    "max_seconds": 3.451
+  }
+}

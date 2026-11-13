@@ -13,7 +13,13 @@ claims:
     quotes:
     - exact: workflow, which exposes the data, source code, and package dependencies
       section: Abstract
-    - exact: icons next to each figure link to the exact version of the
+    - exact: 'All of the figures in this paper are
+
+        also open source; clickable'
+      section: Section 1
+    - exact: 'icons next to each figure link to the exact version of the
+
+        Python script used to generate them.'
       section: Section 1
     notes: The paper describes scripts that generate figures. It does not describe inserting a computed
       value into the text; that is in the documentation, pinned in luger2021mapping_showyourwork_docs.yaml.

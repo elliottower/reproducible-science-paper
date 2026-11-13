@@ -1,0 +1,32 @@
+source:
+  citation: hardwig1985dependence
+  local: reference/hardwig1985dependence.pdf
+  sha256: d395715b683289a572fd0375176ab7a95418927aeefe31b8041bfaec2386d9f7
+  url: https://letr.org.uk/references/storage/HTB884MF/Hardwig%20-%201985%20-%20Epistemic%20Dependence.pdf
+  note: JSTOR scan of the published article, fetched 2026-10-21. The scan's text layer drops many word
+    spaces.
+claims:
+  number-not-known:
+    interpretation:
+      says: Many authors of a large collaborative paper do not know how a given number in it was arrived
+        at.
+      whose: hardwig1985dependence
+    quotes:
+    - exact: many of the authors of an article like this will not even know how a given number in the
+        article was arrived at
+      page: 347
+  ninety-nine-authors:
+    interpretation:
+      says: The paper discussed has 99 authors.
+      whose: hardwig1985dependence
+    quotes:
+    - exact: the article's 99 authors represent different specializations
+      page: 347
+  dependence-unavoidable:
+    interpretation:
+      says: A rational believer cannot avoid depending on experts.
+      whose: hardwig1985dependence
+    quotes:
+    - exact: I can never avoid some epistemic dependence on experts, owing to the fact that I believe
+        more than I can become fully informed about
+      page: 340

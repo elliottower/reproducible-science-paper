@@ -21,5 +21,7 @@ claims:
     - exact: "Ensuring that the values for \nbuildType\n and \nexternalParameters\n in the\nprovenance\
         \ match the expected values."
       section: How to verify
-    - exact: You SHOULD compare the provenance against expected values for at least the
+    - exact: 'You SHOULD compare the provenance against expected values for at least the
+
+        following fields:'
       section: 'Step 2: Check expectations'

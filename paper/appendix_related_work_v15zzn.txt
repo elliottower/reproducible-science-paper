@@ -1,0 +1,195 @@
+Related Work in Detail
+Table places Reproducible Science beside earlier work by the layer each system
+addresses. Section treats claim-to-location binding, repository auditing,
+artifact-level verification, re-execution and entailment, and the paragraphs below take the rows it
+leaves out.
+Prior art by layer. The last column states what Reproducible Science does at that layer; a row
+marked below is expanded in this appendix, and a section reference names where the body or
+another appendix treats it. The claim-to-location row binds the unit Reproducible Science binds, a printed
+claim to a location inside a cited artifact. The other rows describe a whole artifact, a run, an
+event history or a semantic relation.
+@> p0.21 > p0.31 L@
+Layer | Prior art | Relation to Reproducible Science
+entity, activity and agent provenance | PROV-O, OPM, PAV | defines no provenance ontology; exports an RO-Crate (below)
+workflow structure | ProvONE | ordering as a constraint in the plan; below
+event ordering | PROV constraints | consistency of a record with some ordering of its events; below
+assertion-level publication | nanopublications | an assertion published as its own object; below
+signed attestation | in-toto, SLSA, Sigstore | no report is signed, and a frozen plan is dated by OpenTimestamps (Appendix); below
+packaging at rest | RO-Crate, Workflow Run RO-Crate | export target: repro export ro-crate; below
+input tracking | DVC, AiiDA, tximeta | inputs pinned by digest, plus the address of each printed value; below
+experiment tracking | Weights & Biases, MLflow | a manuscript sentence bound to a file address, not a metric to a run; below
+execution capture | ReproZip, Binder | which stored value backs which printed sentence; below
+artifact-level verification | Code Ocean, Whole Tale | one outcome per assertion, not one per capsule or tale; Section
+claim-to-evidence entailment | FEVER, SciFact, CliniFact | outcomes name a byte or decimal comparison, not a semantic label; Section
+claim-to-work markup | ClaimReview | a claim addressed inside an artifact, not a whole work; below
+claim-to-location binding | Paperclip, SciTeX Clew | the same unit, compared deterministically against pinned bytes; Section
+re-execution | DVC, Snakemake, CODECHECK, ScientistOne, ReScience C | Appendix
+record linkage | Fellegi–Sunter | a third outcome for a decision not made; below
+trace link recovery | information-retrieval traceability | links declared when the sentence is written; below
+write-time binding | Sweave, showyourwork | every printed value checked, generated or cited; below
+repository auditing | adduce | adduce runs as one of its rules; Section
+agent trace graphs | LEDGER | checks declared values; reconstructs no trace; below
+epistemic dependence |,,,, | one link made recomputable; below
+Provenance vocabularies. PROV-O expresses the PROV Data Model in OWL2 as classes,
+properties and restrictions for representing and interchanging provenance information, and three
+classes form its basis: an entity, an activity that occurs over a period of time and acts upon
+entities, and an agent bearing responsibility for an activity. PAV extends
+PROV-O for the provenance, authoring and versioning of web resources, and distinguishes the
+contributors, authors and curators of content from the creators of its representations
+. Both vocabularies describe what happened to an artifact and who was
+responsible for it. In Reproducible Science, a manifest entry records where in an artifact a printed value
+sits, and the report records what a comparison at that address found.
+Ordering in provenance standards. ProvONE separates prospective provenance, the
+workflow specification that produces a data artifact, from retrospective provenance, the steps
+that were executed. On the specification side a
+Controller states that one Program 's execution is controlled by another, so that in a
+synchronous dataflow model a program starts only once a preceding program terminates; on the trace
+side an Execution is associated with the Program it ran, which stands as its PROV plan
+. DataONE adopted the model to collect, store, index and browse
+the provenance of the data packages held on its member nodes. OPM decorates
+a causality graph with time and does not derive causality from it, because time precedence does
+not imply causality: causal dependencies are asserted with edges, observed times serve to validate
+them, and all clocks are assumed to be synchronized. PROV's ordering
+constraints require a record to be consistent with a sensible ordering of its events, stated
+through precedence relations, and for that check the times attached to events are irrelevant
+. Table sets the three standards beside the
+check Reproducible Science makes.
+How three provenance standards represent ordering, beside the check Reproducible Science makes.
+Each standard orders events within a single record. A confirmatory claim needs precedence
+between two records, a registration and a run, with no causal edge asserted between them.
+Standard | How ordering appears | What it lets a reader conclude
+OPM | observed times on a causality graph | that observed times agree with causal edges asserted separately
+PROV constraints | precedence relations between events | that a record is consistent with some ordering of its events
+ProvONE | control links in the workflow specification | which step must follow which in the plan
+Reproducible Science | a run record read beside a pinned plan | that, as recorded, every run producing a confirmatory claim's evidence started after the plan's registration
+The check Reproducible Science makes rests on precedence alone. It does not assert that a registration caused a
+run, and it reports a confirmatory claim ordered, violated, or unchecked with
+a reason, such as a missing run record or a plan changed since it was pinned. A plan rewritten
+after the results breaks its pin, and the claim's ordering reverts to unchecked, unless the
+freeze record is rewritten with it. The registration time is self-recorded, but an outside timestamp bounds when the plan existed
+(Section, Appendix).
+Signed attestation. In in-toto, whoever performs a step writes signed link metadata
+recording that the step took place, and verification checks that each step defined has enough
+signed links. Verifying an
+artifact under SLSA means checking that a provenance statement's subject matches the artifact's
+digest and that the provenance matches expected values. Sigstore ties
+signatures to existing developer identities through OIDC, signs with ephemeral keys, and records
+signatures in artifact and identity logs. Reproducible Science signs no report.
+A freeze sends the plan's digest, and nothing else, to the OpenTimestamps calendar servers
+(Appendix), so the proof names no signer, which a plan frozen during
+double-blind review requires.
+Packaging and content-addressed inputs. RO-Crate packages research artifacts with their
+metadata as Schema.org annotations in JSON-LD, in a structured archive of the items that
+contributed to a research outcome, and Workflow Run RO-Crate is a
+set of profiles that represent and package the provenance of a workflow run
+. tximeta identifies the reference transcriptome of a
+quantification by a hashed checksum stored in the quantification output, and attaches annotation
+metadata when the file is imported. AiiDA records every calculation or
+workflow its engine runs in a provenance graph. Reproducible Science also pins its inputs
+by digest, and adds the address of each value a manuscript prints from an output. repro export ro-crate writes our check records as an
+RO-Crate: each claim as a Schema.org Claim, each checked assertion as a CheckAction,
+and the latest rerun of a declared command as a CreateAction, in which case the crate also
+declares Process Run Crate. The fields for the address, the printed and stored values, and the
+outcome are our own additions, defined in a profile we publish; RO-Crate has no terms for them.
+Experiment tracking. A Weights & Biases run is a record of a single computation, to
+which metrics, artifacts and other information are logged, and its artifacts track and version
+data as the inputs and outputs of runs. MLflow Tracking logs parameters, code
+versions, metrics and output files, and each run records its metadata and artifacts
+. Both organize results by run. Reproducible Science ties a sentence of the
+paper to a pinned file, which can also point to a Weights & Biases run, an MLflow run, or another
+external record.
+Execution capture. ReproZip traces one execution of an experiment and creates a
+self-contained package of all its required dependencies, which unpacks into a directory, a chroot,
+a virtual machine or a container. Binder creates sharable,
+interactive environments in the cloud from existing repositories, capturing a repository and its
+environment in a container. Capturing the environment shows that the
+code can run again, but not which stored number supports which printed sentence. Reproducible Science records
+that link as an assertion.
+Replication by reimplementation. ReScience C is a peer-reviewed journal for computational
+research that encourages the explicit replication of published research through new, open-source
+implementations. A replication there writes the analysis again.
+repro reproduce reruns the authors' own declared commands and compares each printed number
+with the value at its declared address in the output (Appendix).
+ClaimReview. Schema.org defines ClaimReview as a fact-checking review of claims made or
+reported in a creative work, and reports it in use on 1K to 10K domains
+. Google's fact-check structured data requires three of its
+properties: claimReviewed, a short summary of the claim; reviewRating, the
+assessment; and url, the page hosting the fact check. The claim
+therefore travels as text. A Claim records where it occurred through appearance and
+firstAppearance, and both take a CreativeWork, so the
+finest address the vocabulary offers is a whole work. Fact-checking projects use rating schemes that
+differ, each documented by its publisher, and search results show only the textual rating
+. Whether a review separates a claim found false from a claim a reviewer
+could not settle is therefore decided by each publisher, in its own words. Agreement between the
+markup and the page rests with the publisher: the guidelines state that ``there must not be any
+mismatch between the structured data and page content'', and the
+guidelines give no way to check it. repro export ro-crate writes each claim as a Schema.org
+Claim and records beside it the address inside the artifact and the outcome of the
+comparison made there.
+Nanopublications. A nanopublication consists of an assertion, the provenance of the
+assertion, and publication information about the nanopublication itself, each an RDF graph, linked
+to the nanopublication through a head graph. Nanopublications are stored in a decentralized server network
+and identified by trusty URIs, each carrying a hash computed on the RDF content it names, which
+makes a nanopublication and its whole reference tree verifiable and immutable, and servers only add
+entries and never update them. A trusty URI plays the role a pin plays in
+Reproducible Science (Section). The units differ: a nanopublication publishes an
+assertion as a new citable object carrying its own provenance, and our evidence assertion
+adds nothing to the artifact it names, recording a location inside an artifact the manuscript
+already cites.
+The evidence assertion as a contract. states a routine's
+obligations as a precondition that any call must satisfy, a postcondition the routine ensures in
+return, and a class invariant that constrains all routines of a class. Our evidence
+assertion carries all three. The precondition is that the manifest loads, so that every assertion's locator
+has the form its kind requires; a manifest that does not load reports nothing. The postcondition is
+that every assertion evaluated is reported with its three stages and exactly one of the five
+flattened labels of Table. The invariant holds across the four kinds of
+Table: a locator resolves to exactly one scalar or to none, two or more matches
+are reported as ambiguous rather than resolved to the first, and no backend searches a file for the
+printed number.
+Record linkage and traceability. decide each record pair as
+a link, a non-link or a possible link, and a possible link requires expensive manual linkage.
+Comparing every pair of records would outstrip the capacity of even the largest and fastest
+computers, so they restrict the comparisons examined to a subspace of the pairs by blocking
+. Information-retrieval traceability recovers links between software
+artifacts in a similar way: candidate links are ranked by the similarity between artifacts, and an
+engineer examines each and confirms it or not. Recovering a link
+after the fact produces some incorrect links. In Reproducible Science, an evidence
+assertion is written with the sentence it binds, so no candidate set is ranked and no pair is searched for, and
+what remains is whether the value at the declared address matches.
+Write-time binding. Sweave and showyourwork write each value into the document from the
+code that computes it, so the two match after every build. That
+holds only while the code still runs, and it often does not: trace
+irreproducible findings to how software is packaged, installed and executed, and to how analysis
+steps are documented. Reproducible Science checks each printed value against the stored result file, so the check
+works whether or not the code still runs.
+Spreadsheets as a results format. Results are often published as Excel files: a
+screen of open-access genomics papers in PubMed Central from 2014 to 2020 found 32,841 with
+supplementary Excel files, and gene name errors appeared in 30.9% of the 11,117 that held gene
+lists, from gene names converted to dates, to floating-point numbers and to five-digit internal
+dates. The table assertion of Reproducible Science reads such files directly,
+finding a cell by sheet, column and a selector that matches one row (Table).
+Agent trace graphs. LEDGER is a tracing and review system that builds layered trace
+graphs over observed agent sessions. Its authors observe that visibility
+alone leaves reviewers to reconstruct which actions, artifacts and validation steps matter for a
+conclusion, and its traces expose workflow decisions, artifact lineage, repair steps, validation
+coverage and claim-support paths for evidence-centered audit.
+checks each declared value without a reviewer, but does not guarantee the right value was
+declared.
+Epistemic dependence. holds that a rational believer can
+never avoid some dependence on experts, and observes of a paper with 99 authors that many of them
+``will not even know how a given number in the article was arrived at.''
+separates two forms of that dependence within a research team: it is opaque when the dependent
+scientist lacks the expertise to carry out and assess a colleague's work, and translucent when she
+has it. Neither form is transparent, because in experimental science evidential contributions ``can
+be entirely transparent only to those who have created or eye-witnessed them''
+. For research that uses AI,
+argues that no one can take informed responsibility for how an essentially opaque system reaches
+its output, so that its opacity ``breaks the networks of trust assumed in social epistemology.''
+replies that relying on such a system requires reliability rather than
+trust, and cites language models paired with proof checkers, where the reliability of the final
+output does not depend on how often the model errs. argue that
+scientists who trust AI tools to overcome their own cognitive limits become susceptible to
+illusions of understanding, and call for exposure to science and technology studies, social
+epistemology and philosophy of science. Reproducible Science checks reporting the way Ortmann's
+proof checker checks a proof: any reader can recompute the link between a printed value or quotation
+and its pinned artifact, while the extractor adds a dependence of its own (Appendix).

@@ -3,17 +3,23 @@ source:
   local: reference/meyer1992contract.pdf
   sha256: bc1bab86f8753e5eafb40b7558e961b2c4bc9938c061e8dd8c141b839873ac07
   url: http://se.ethz.ch/~meyer/publications/computer/contract.pdf
-  extract_cmd: pdftotext -layout {} -
+  extract_cmd: pdftotext {} -
   note: Scanned three-column magazine page; OCR is imperfect and `pdftotext -layout` interleaves the
-    columns, so quotations are single column-line fragments.
+    columns, so the page is read in reading order, which keeps each column's sentences whole.
 claims:
   precondition-postcondition-invariant:
     statement: Design by Contract states a routine's obligations as a precondition on the caller,
       a postcondition on the supplier, and a class invariant over all routines of a class.
     quotes:
-    - exact: ments that any call must satisfy if it is to
+    - exact: 'The precondition expresses requirements that any call must satisfy if it is to
+
+        be correct; the postcondition expresses
+
+        properties that are ensured in return by
+
+        the execution of the call.'
       section: The contract
-    - exact: properties that are ensured in return by
-      section: The contract
-    - exact: class invariants, constrain all the rou
+    - exact: 'Others, the
+
+        class invariants, constrain all the routines of a given class and will be discussed later.'
       section: The contract

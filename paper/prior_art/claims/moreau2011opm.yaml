@@ -1,0 +1,31 @@
+source:
+  citation: moreau2011opm
+  local: reference/moreau2011opm.pdf
+  sha256: 442ad4ea13de00ce4d3d6a606b37673c88b4ac1b67b77025c31b13526c24d0ab
+  url: https://kclpure.kcl.ac.uk/ws/files/8803757/Moreau_Open_2010.pdf
+  extract_cmd: pdftotext -layout {} -
+  note: Pre-print deposited at King's Research Portal, which labels it 'Early version, also known
+    as pre-print'. Two-column PDF; quotations are single column-line fragments.
+claims:
+  time-is-not-used-to-derive-causality:
+    statement: In OPM, time decorates a causality graph and is not used to derive causality; causal
+      dependencies are made explicit with edges, because time precedence does not imply causality.
+    quotes:
+    - exact: to be decorated with time information. In this model, time
+      section: 5. Temporal Constraints and Observation Time
+    - exact: 'is not intended to be used for deriving causality: if causal'
+      section: 5. Temporal Constraints and Observation Time
+    - exact: dependencies exist, they need to be made explicit with the
+      section: 5. Temporal Constraints and Observation Time
+    - exact: 'since time precedence does not imply causality: if a process'
+      section: 5. Temporal Constraints and Observation Time
+  time-validates-causality-claims:
+    statement: OPM uses observed time to validate causality claims, and assumes that all clocks are
+      properly synchronized.
+    quotes:
+    - exact: the time of its cause. Hence, time is useful in validating
+      section: 5. Temporal Constraints and Observation Time
+    - exact: pected to be acquired by an observer’s observing a clock
+      section: 5. Temporal Constraints and Observation Time
+    - exact: OPM assumes that all clocks are properly synchronized.
+      section: 5. Temporal Constraints and Observation Time, footnote 2

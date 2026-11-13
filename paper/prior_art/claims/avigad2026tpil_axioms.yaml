@@ -1,0 +1,17 @@
+source:
+  citation: avigad2026tpil
+  local: reference/tpil4_AxiomsComputation_4e28129.lean.txt
+  sha256: ac773694b9ef8642861550c00125da00708f5a072268324d1264ff84d995b360
+  url: https://raw.githubusercontent.com/leanprover/theorem_proving_in_lean4/4e28129fdd58037f8f5857548d5e99fe4fb0cc57/book/TPiL/AxiomsComputation.lean
+  extract_cmd: none — the chapter's source is read directly
+  note: Theorem Proving in Lean 4 at commit 4e28129, the chapter Axioms and Computation.
+claims:
+  print-axioms-lists-what-a-theorem-uses:
+    statement: '#print axioms lists the axioms a theorem uses.'
+    quotes:
+    - exact: 'If a theorem or
+
+        definition makes use of {leanRef}`Quot.sound`, it will show up in the
+
+        {kw}`#print axioms` command.'
+      section: Axioms and Computation

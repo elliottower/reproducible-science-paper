@@ -1,0 +1,22 @@
+source:
+  citation: koskinen2023noepistemology
+  local: reference/koskinen2023noepistemology.pdf
+  sha256: 78143fac35588f8da0ef95aaa400b326531c2e83212a1243cfb3991f0fca57d9
+  url: https://philsci-archive.pitt.edu/22780/1/Koskinen%20Preprint%20We%20Have%20no%20Satisfactory%20Social%20Epistemology%20of%20AI-Based%20Science.pdf
+  note: Final submitted version (November 2023), PhilSci-Archive, fetched 2026-10-21.
+claims:
+  breaks-networks:
+    interpretation:
+      says: Essential opacity of AI breaks the networks of trust social epistemology assumes.
+      whose: koskinen2023noepistemology
+    quotes:
+    - exact: The essential epistemic opacity of AI applications used in science today breaks the networks
+        of trust assumed in social epistemology.
+  no-one-responsible:
+    interpretation:
+      says: No one can take informed responsibility for how an essentially opaque AI system reaches its
+        outputs.
+      whose: koskinen2023noepistemology
+    quotes:
+    - exact: There is no one who can take full, informed responsibility of value-laden choices that can
+        happen when image classifiers based on machine learning techniques are used in research

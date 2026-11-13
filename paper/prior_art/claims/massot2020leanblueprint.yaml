@@ -1,0 +1,16 @@
+source:
+  citation: massot2020leanblueprint
+  local: reference/leanblueprint_README_56e066d.md
+  sha256: bcda8d018bf403111622198da52519f5f7cff5a4b026315bf88317fad300bc88
+  url: https://raw.githubusercontent.com/PatrickMassot/leanblueprint/56e066d30fb7b608a63f4241fee80982d7eae3ef/README.md
+  extract_cmd: none — Markdown is read directly
+  note: The README of leanblueprint at commit 56e066d.
+claims:
+  statements-marked-formalized-and-a-dependency-graph:
+    statement: A Lean blueprint marks a statement when it is fully formalized, and the statements
+      it uses form a dependency graph.
+    quotes:
+    - exact: which claims the surrounding environment is fully formalized
+      section: Usage
+    - exact: This information is used to create the dependency graph
+      section: Usage

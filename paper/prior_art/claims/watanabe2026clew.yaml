@@ -1,0 +1,23 @@
+source:
+  citation: watanabe2026clew
+  local: reference/scitex_clew_README_44b9426.md
+  sha256: 43654fdf0e946d704459b7b29b302a8cda45865dee4097012bf29f04aeb4255f
+  url: https://raw.githubusercontent.com/scitex-ai/scitex-clew/44b9426732b00e0b84b7b27f31684a5d9c3500f5/README.md
+  extract_cmd: none — Markdown is read directly
+  note: The README of scitex-clew 0.21.0 at commit 44b9426, copied from a clone made 2026-10-13.
+claims:
+  claims-traced-through-hashes:
+    statement: SciTeX Clew links a manuscript claim to the session that produced its source and traces
+      backward from the claim through outputs, scripts and inputs to the raw data, checking hashes,
+      without a rerun in its cache mode.
+    quotes:
+    - exact: manuscript claims to the computational sessions that produced them
+      section: Solution
+    - exact: Clew traces backward through outputs, processing scripts, and inputs to the original
+        raw data
+      section: Solution
+    - exact: Each mode supports both <b>cache verification</b> (millisecond hash comparison)
+      section: Three Verification Modes
+    notes: That the claim's value is stored but not compared with the source file, and that the source
+      is hashed whole, without a location inside it, are read in the code at this commit and pinned
+      in watanabe2026clew_verify and watanabe2026clew_register.

@@ -1,0 +1,15 @@
+source:
+  citation: taylor_notice_2023
+  local: reference/taylor_notice_2023.txt
+  sha256: fb5878ca714f75157119f9878c935a9f905f0666e0073ba8e7364f23237a1d48
+  url: https://doi.org/10.1016/j.ygyno.2023.06.002
+  extract_cmd: none - the text is read as it is
+  note: The retraction notice the reproducible-science-codecheck repository pins for failure case 26 (failure_cases/claims/taylor_notice_2023.yaml,
+    the same sha256). Pinned here for the count of investigations the failure-cases table prints beside
+    that case.
+claims:
+  two-investigations:
+    quotes:
+    - exact: following an internal investigation by the University of Louisville and an investigation
+        by the Office of Research Integrity (ORI)
+      section: Notice

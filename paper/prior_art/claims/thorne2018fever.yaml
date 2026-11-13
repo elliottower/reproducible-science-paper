@@ -10,9 +10,9 @@ claims:
     statement: FEVER predicts a label for a claim given retrieved text, and scores the prediction
       against human annotation.
     quotes:
-    - exact: ally verified against the introductory sections of
+    - exact: ally verified against the introductory sections
       section: Introduction
-    - exact: Wikipedia pages and classified as S UPPORTED,
+    - exact: Wikipedia pages and classified as S UPPORTED
       section: Introduction
     - exact: classes, systems and annotators need to also return
       section: Introduction

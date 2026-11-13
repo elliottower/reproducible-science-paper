@@ -1,0 +1,128 @@
+{
+  "source": "https://retractionwatch.com/the-retraction-watch-leaderboard/top-10-most-highly-cited-retracted-papers/",
+  "retrieved": "2026-10-07",
+  "page_sha256": "7b4745fd65e5296b40b6b87d995ac0ea05e5fa9425ea126781f1546db1b42370",
+  "citation_source": "journals indexed by Web of Science, as the page states",
+  "rows": [
+    {
+      "rank": 1,
+      "article": "Pluripotency of mesenchymal stem cells derived from adult . Nature . June 20, 2002. Y Jiang, BN Jahagirdar, RL Reinhardt, RE Schwartz, CD Keene, XR Ortiz-Gonzalez, M Reyes, T Lenvik, T Lund, M Blackstad, J Du, S Aldrich, A Lisberg, WC Low, DA Largaespada, CM Verfaillie",
+      "year_of_retraction": "2024",
+      "cites_before": "4492",
+      "cites_after": "35",
+      "total_cites": "4527",
+      "links": [
+        "https://www.nature.com/articles/nature00870",
+        "https://retractionwatch.com/2024/06/18/nature-retracts-highly-cited-2002-paper-that-claimed-adult-stem-cells-could-become-any-type-of-cell/"
+      ]
+    },
+    {
+      "rank": 2,
+      "article": "Hydroxychloroquine and azithromycin as a treatment of COVID-19: results of an open-label non-randomized clinical trial . International Journal of Antimicrobial Agents. March 20, 2020. P Gautret, JC Lagier, P Parola, VT Hoang, L Meddeb, M Mailhe, B Doudier, J Courjon, V Giordanengo, VE Vieira, HT Dupont, S Honoré, P Colson, E Chabrière, B La Scola , JM Rolain, P Brouqui, D Raoult",
+      "year_of_retraction": "2024",
+      "cites_before": "3168",
+      "cites_after": "56",
+      "total_cites": "3224",
+      "links": [
+        "https://www.sciencedirect.com/science/article/pii/S0924857920300996?via%3Dihub",
+        "https://retractionwatch.com/?s=Hydroxychloroquine+and+azithromycin+as+a+treatment+of+COVID-19%3A+results+of+an+open-label+non-randomized+clinical+trial"
+      ]
+    },
+    {
+      "rank": 3,
+      "article": "6-month consequences of COVID-19 in patients discharged from hospital: a cohort study . Lancet . January 8, 2021. C Huang, L Huang, Y Wang, X Li, L Ren, X Gu, L Kang, L Guo, M Liu, X Zhou, J Luo, Z Huang, S Tu, Y Zhao, L Chen, D Xu, Y Li, C Li, L Peng, Y Li, W Xie, D Cui, L Shang, G Fan, J Xu, G Wang, Y Wang, J Zhong, C Wang, J Wang, D Zhang, B Cao",
+      "year_of_retraction": "2023",
+      "cites_before": "2131",
+      "cites_after": "785",
+      "total_cites": "2916",
+      "links": [
+        "https://www.sciencedirect.com/science/article/pii/S0140673620326568",
+        "https://retractionwatch.com/2023/06/13/highly-cited-lancet-long-covid-study-retracted-and-republished/"
+      ]
+    },
+    {
+      "rank": 4,
+      "article": "Primary Prevention of Cardiovascular Disease with a Mediterranean Diet . New England Journal of Medicine . April 4, 2013. R Estruch, E Ros, J Salas-Salvadó, M-I Covas, D Corella, F Arós, E Gómez-Gracia, V Ruiz-Gutiérrez, M Fiol, J Lapetra, RM Lamuela-Raventos, L Serra-Majem, X Pintó, J Basora, MA Muñoz, JV Sorlí, JA Martínez, MA Martínez-González, for the PREDIMED Study Investigators",
+      "year_of_retraction": "2018",
+      "cites_before": "1740",
+      "cites_after": "921",
+      "total_cites": "2661",
+      "links": [
+        "https://www.nejm.org/doi/full/10.1056/NEJMoa1200303",
+        "https://retractionwatch.com/2018/06/13/does-the-mediterranean-diet-prevent-heart-attacks-nejm-retracts-and-replaces-high-profile-paper/"
+      ]
+    },
+    {
+      "rank": 5,
+      "article": "A specific amyloid-β protein assembly in the brain impairs memory . Nature. March 16, 2006. S Lesné, MT Koh, L Kotilinek, R Kayed, CG Glabe, A Yang, M Gallagher, KH Ashe",
+      "year_of_retraction": "2024",
+      "cites_before": "2360",
+      "cites_after": "40",
+      "total_cites": "2400",
+      "links": [
+        "https://www.nature.com/articles/nature04533",
+        "https://www.nature.com/articles/s41586-024-07691-8"
+      ]
+    },
+    {
+      "rank": 6,
+      "article": "Predictive Validity of a Medication Adherence Measure in an Outpatient Setting . The Journal of Clinical Hypertension . May 2, 2008. DE Morisky, A Ang, M Krousel-Wood, HJ Ward",
+      "year_of_retraction": "2023",
+      "cites_before": "1930",
+      "cites_after": "330",
+      "total_cites": "2260",
+      "links": [
+        "https://onlinelibrary.wiley.com/doi/full/10.1111/j.1751-7176.2008.07572.x?sid=nlm%3Apubmed",
+        "https://retractionwatch.com/2023/08/24/paper-that-helped-form-basis-of-pricy-research-tool-retracted/"
+      ]
+    },
+    {
+      "rank": 7,
+      "article": "MicroRNA signatures of tumor-derived exosomes as diagnostic biomarkers of ovarian cancer . Gynecologic Oncology . June 25, 2008. DD Taylor, C Gercel-Taylor",
+      "year_of_retraction": "2023",
+      "cites_before": "1868",
+      "cites_after": "85",
+      "total_cites": "1953",
+      "links": [
+        "https://www.sciencedirect.com/science/article/pii/S0090825808003430",
+        "https://retractionwatch.com/2022/11/22/biotech-exec-stole-an-image-and-reused-others-while-in-academia-us-federal-watchdog-says/"
+      ]
+    },
+    {
+      "rank": 8,
+      "article": "Ileal-lymphoid-nodular hyperplasia, non-specific colitis, and pervasive developmental disorder in children . Lancet. February 28, 1998. AJ Wakefield, SH Murch, A Anthony, J Linnell, DM Casson, M Malik, M Berelowitz, AP Dhillon, MA Thomson, P Harvey, A Valentine, SE Davies, JA Walker-Smith.",
+      "year_of_retraction": "2010",
+      "cites_before": "643",
+      "cites_after": "1154",
+      "total_cites": "1797",
+      "links": [
+        "https://www.sciencedirect.com/science/article/pii/S0140673697110960",
+        "https://retractionwatch.com/2011/01/06/some-quick-thoughts-and-links-on-andrew-wakefield-the-bmj-autism-vaccines-and-fraud/"
+      ]
+    },
+    {
+      "rank": 9,
+      "article": "Recent progress in processing and properties of ZnO . Progress in Materials Science . May 28, 2004. SJ Pearton, DP Norton, K Ip, YW Heo, T Steiner",
+      "year_of_retraction": "2020",
+      "cites_before": "1551",
+      "cites_after": "97",
+      "total_cites": "1648",
+      "links": [
+        "https://www.sciencedirect.com/science/article/pii/S0079642504000325",
+        "https://www.sciencedirect.com/science/article/pii/S0079642520300335"
+      ]
+    },
+    {
+      "rank": 10,
+      "article": "Visfatin: A protein secreted by visceral fat that mimics the effects of insulin . Science . January 21, 2005. A Fukuhara, M Matsuda, M Nishizawa, K Segawa, M Tanaka, K Kishimoto, Y Matsuki, M Murakami, T Ichisaka, H Murakami, E Watanabe, T Takagi, M Akiyoshi, T Ohtsubo, S Kihara, S Yamashita, M Makishima, T Funahashi, S Yamanaka, R Hiramatsu, Y Matsuzawa, I Shimomura",
+      "year_of_retraction": "2007",
+      "cites_before": "232",
+      "cites_after": "1351",
+      "total_cites": "1583",
+      "links": [
+        "https://www.science.org/doi/10.1126/science.1097243",
+        "https://www.science.org/doi/10.1126/science.318.5850.565b"
+      ]
+    }
+  ]
+}

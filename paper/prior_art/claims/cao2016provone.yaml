@@ -1,0 +1,22 @@
+source:
+  citation: cao2016provone
+  local: reference/cao2016provone.pdf
+  sha256: d034b16f447b2705c450e9e83819094c4fd8c27b6244c93787e37d74a2a26354
+  url: http://provenanceweek.org/2016/p3yl/papers/paper_82.pdf
+  extract_cmd: pdftotext -layout {} -
+claims:
+  dataone-adopted-provone:
+    statement: DataONE adopted and extended PROV as ProvONE to collect, store, index and browse the
+      provenance of the data packages held on its member nodes.
+    quotes:
+    - exact: The DataONE federated data network has adopted and extended the
+      section: Abstract
+    - exact: PROV model to support the collection, storage, indexing, and user browsing of
+      section: Abstract
+    - exact: the provenance of data packages stored in its member nodes.
+      section: Abstract
+  program-extends-plan:
+    statement: ProvONE extends prov:Plan with Program.
+    quotes:
+    - exact: prov:Plan with provone:Program as well as its own extension
+      section: 3 ProvONE

@@ -2,7 +2,7 @@ source:
   citation: abeysooriya2021genenames
   local: reference/abeysooriya2021genenames.pdf
   sha256: 9771216fa3f5cbea870a796bc7b297c695bc8d9fd9f192571d4a6970d1197638
-  url: https://doi.org/10.1371/journal.pcbi.1008984
+  url: https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1008984&type=printable
   extract_cmd: pdftotext -layout {} -
   note: Single-column PDF, but the running text is indented under -layout and the keyword 'genom*'
     loses its asterisk to the text layer, so quotations stop short of it.
@@ -16,7 +16,9 @@ claims:
       section: Results
     - exact: supplementary files in Excel format (with
       section: Results
-    - exact: Of these, 11,117 publications
+    - exact: 'Of these, 11,117 publications
+
+        were detected to contain at least one list of gene symbols.'
       section: Results
     notes: The screen looked for the 'xls' and 'xlsx' suffixes alone, so 32,841 bounds spreadsheet
       publication from below and says nothing about how often results appear in a structured format.
@@ -24,8 +26,26 @@ claims:
     statement: The screen covered open-access PubMed Central publications from 2014 to 2020, shortlisted
       by a genomics keyword in the title or abstract.
     quotes:
-    - exact: access publications to screen. We did not screen every publication in PMC because most
-        do
+    - exact: 'PMC (URL: https://www.ncbi.nlm.nih.gov/pmc/) was our starting point for shortlisting
+        open-
+
+        access publications to screen. We did not screen every publication in PMC because most do
+
+        not include genomic data.'
       section: Methods
-    - exact: for the period 2014 to 2020.
+    - exact: 'We used this approach to create lists of PMC identifiers by year
+
+        for the period 2014 to 2020.'
       section: Methods
+  gene-name-errors-in-excel-gene-lists:
+    statement: Gene name errors were found in 30.9% of the articles with supplementary Excel gene
+      lists, 3,436 of 11,117.
+    quotes:
+    - exact: after 2016. An improved scanning software we developed identified gene name errors in
+      section: Abstract
+    - exact: 30.9% (3,436/11,117) of articles with supplementary Excel gene lists;
+      section: Abstract
+    - exact: This is due to gene names being converted not just to
+      section: Abstract
+    - exact: dates and floating-point numbers, but also to internal date format (five-digit numbers).
+      section: Abstract

@@ -1,0 +1,41 @@
+source:
+  citation: lebo2013provo
+  local: reference/lebo2013provo_20261014.txt
+  sha256: 5e8099510c315a61df35aef083d2b7e1fb424742cd80cb17716aeec2a13c63b1
+  url: https://www.w3.org/TR/2013/REC-prov-o-20130430/
+  extract_cmd: none — the page was rendered to text before pinning
+  note: Fetched 2026-10-14. The page as served is kept beside this file as lebo2013provo_20261014.html
+    (sha256 6b96671ab84faf12ce3f041aca12c3f93a6df2ed242348810743179a68e69555); the .txt pinned here
+    is that file rendered to text by scripts/render_html_source.py, which breaks the line at every
+    element boundary, so a quotation that crosses inline markup carries a line break there. The W3C
+    Recommendation of 30 April 2013.
+claims:
+  owl2-encoding-of-the-prov-data-model:
+    statement: PROV-O expresses the PROV Data Model in OWL2, as classes, properties and restrictions
+      for representing and interchanging provenance information.
+    quotes:
+    - exact: The PROV Ontology (PROV-O) expresses the PROV Data Model
+      section: Abstract
+    - exact: It provides a set of classes, properties, and restrictions that can be used to represent
+        and interchange provenance information generated in different systems and under different
+        contexts.
+      section: Abstract
+  entity-activity-agent:
+    statement: Three classes, Entity, Activity and Agent, are the basis of PROV-O.
+    quotes:
+    - exact: 'Three classes provide a basis for the rest of PROV-O:'
+      section: Starting Point Terms
+    - exact: is a physical, digital, conceptual, or other kind of thing with some fixed aspects; entities
+        may be real or imaginary.
+      prefix: 'an prov:entity '
+      suffix: ' an prov:activity'
+      section: Starting Point Terms
+    - exact: is something that occurs over a period of time and acts upon or with entities;
+      prefix: 'an prov:activity '
+      suffix: ' it may include'
+      section: Starting Point Terms
+    - exact: is something that bears some form of responsibility for an activity taking place, for
+        the existence of an entity, or for another agent's activity.
+      prefix: '. an prov:agent '
+      suffix: ' the three primary'
+      section: Starting Point Terms

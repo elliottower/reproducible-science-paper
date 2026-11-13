@@ -37,7 +37,9 @@ claims:
     quotes:
     - exact: 'Finally, for method-code alignment, the Coding Agent audits the repository against the
 
-        manuscript to produce an audit report,'
+        manuscript to produce an audit report, which the Writer Agent then uses to rectify any discrepancies
+
+        in the method section.'
       section: Section 4.2
   rerun-covers-the-proposed-method-only:
     statement: In the reproducibility audit report the paper reproduces, the agent reran the proposed

@@ -1,0 +1,19 @@
+{
+  "certificate": "2020-008",
+  "printed": 300,
+  "linked_tables": 5,
+  "outputs_not_linked": 0,
+  "over_cap_not_counted": {
+    "4": 66,
+    "5": 45,
+    "S3": 129,
+    "S4": 3,
+    "S5": 45
+  },
+  "bound_both_sides": 0,
+  "bound_output_side": 0,
+  "unbindable_by_reason": {
+    "output cell is formatted text, not one number": 100,
+    "paper side unanchored": 200
+  }
+}

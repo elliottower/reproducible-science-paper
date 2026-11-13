@@ -1,0 +1,32 @@
+source:
+  citation: messeri2024illusions
+  local: reference/messeri2024illusions.pdf
+  sha256: afe40a433e5b9937017f95adb1c0f7c8442aaa7a900c59c3c24364abdc74dff5
+  url: https://lrc.northwestern.edu/language-instruction/professional-development1/artificial-intelligence-and-illusions-of-understanding-in-scientific-research-nature.pdf
+  note: Copy of the published Nature article hosted by Northwestern, downloaded by hand 2026-10-21.
+claims:
+  produce-more:
+    interpretation:
+      says: AI tools in science risk producing more while understanding less.
+      whose: messeri2024illusions
+    quotes:
+    - exact: The proliferation of AI tools in science risks introducing a phase of scientific enquiry
+        in which we produce more but understand less.
+  training:
+    interpretation:
+      says: Avoiding the epistemic risks of AI requires exposure to STS, social epistemology and philosophy
+        of science.
+      whose: messeri2024illusions
+    quotes:
+    - exact: Training the next generation of scientists to identify and avoid the epistemic risks of AI
+        will require not only technical education, but also exposure to scholarship in science and technology
+        studies, social epistemology and philosophy of science.
+  illusions:
+    interpretation:
+      says: People who trust AI tools to overcome their cognitive limits become prone to illusions of
+        understanding.
+      whose: messeri2024illusions
+    quotes:
+    - exact: individuals who trust AI tools to overcome their own cognitive limitations become susceptible
+        to illusions of understanding (Fig. 1 and Box 1) in which they believe that they understand more
+        about the world than they actually do.

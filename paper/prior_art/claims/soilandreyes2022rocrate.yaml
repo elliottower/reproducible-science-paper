@@ -1,0 +1,19 @@
+source:
+  citation: soilandreyes2022rocrate
+  local: reference/soilandreyes2022rocrate_arxiv_2108.06503.pdf
+  sha256: 05460cb6db71e5e4fdecbff58065d508c33b69e0f292c878ab45f40a197ff1d6
+  url: https://arxiv.org/pdf/2108.06503v2
+  extract_cmd: pdftotext -layout {} -
+  note: arXiv version 2 of the article published in Data Science.
+claims:
+  packaging-with-metadata-in-json-ld:
+    statement: RO-Crate packages research artefacts with their metadata, as Schema.org annotations
+      in JSON-LD, in a structured archive of the items that contributed to a research outcome.
+    quotes:
+    - exact: approach to packaging research artefacts along with their metadata in a machine readable
+        manner. RO-Crate is based on
+      section: Abstract
+    - exact: Schema.org annotations in JSON-LD,
+      section: Abstract
+    - exact: An RO-Crate is a structured archive of all the items that contributed to a research outcome
+      section: Abstract

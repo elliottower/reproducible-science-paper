@@ -12,3 +12,10 @@ claims:
     - exact: ReScience is a peer-reviewed journal that targets computational research and encourages
         the explicit replication of already published research, promoting new and open-source implementations
       section: Abstract
+  replication-by-new-implementation:
+    statement: ReScience publishes peer-reviewed replications of computational research through new,
+      open-source implementations.
+    quotes:
+    - exact: ReScience is a peer-reviewed journal that targets computational research and encourages
+        the explicit replication of already published research, promoting new and open-source implementations
+      section: Abstract
