@@ -2,7 +2,7 @@ schema_version: repro/1
 project: machine-checkable claims (this paper, checked against its own artifacts)
 provenance:
   repository: https://github.com/elliottower/reproducible-science-paper.git
-  commit: f639cd42d518fb5ecf3ea551dd2b93a81476e334
+  commit: 887b6e770a2fe944724e9152a7dafbfc52ecef01
   dirty: true
   generated_by: scripts/build_manifest.py
 artifacts:
